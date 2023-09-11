@@ -5,7 +5,7 @@
     </div>
     <div class="user-info">
       <h2 class="user-name">Joe Johnson</h2>
-      <p class="user-title">Web Developer</p>
+      <p class="user-title">Productivity Prodigy</p>
       <!-- SVG's BELOW -->
       <div class="badge-area">
         <svg
