@@ -598,6 +598,14 @@
           />
         </svg>
       </div>
+      <div class="experience">
+        <div class="level">
+          <span>Level 5</span>
+        </div>
+        <div class="experience-bar">
+          <div class="experience-fill"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -620,6 +628,7 @@ export default {
 .user-info {
   font-size: 18px;
   margin-left: 20px;
+  width: 75%;
 }
 
 .user-name,
@@ -638,5 +647,59 @@ export default {
 .icon {
   height: 50px;
   width: 50px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-bar {
+  height: 20px;
+  background-color: #ddd;
+  position: relative;
+}
+
+/* XP bar fill animation */
+.experience-fill {
+  width: 0; /* Start with zero width */
+  height: 100%;
+  background-color: #0f212f;
+  animation: fillAnimation 1.5s ease-in-out;
+}
+
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  position: relative;
+}
+
+/* XP bar fill animation */
+.experience-fill {
+  width: 65%; /* Set initial width to 30% */
+  height: 100%;
+  background-color: #4169e1; /* Fill color */
+}
+
+.level {
+  margin-top: 5px;
+  font-size: 16px; /* Adjust font size as needed */
 }
 </style>
