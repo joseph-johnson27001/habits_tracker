@@ -1,11 +1,11 @@
 <template>
   <div class="profile-header">
     <div class="profile-picture">
-      <img src="@/assets/images/joe-taj.jpg" alt="Profile Picture" />
+      <img :src="profileImage" alt="Profile Picture" />
     </div>
     <div class="user-info">
-      <h2 class="user-name">Joe Johnson</h2>
-      <p class="user-title">Productivity Prodigy</p>
+      <h2 class="user-name">{{ userName }}</h2>
+      <p class="user-title">{{ userTitle }}</p>
       <!-- SVG's BELOW -->
       <div class="badge-area">
         <svg
@@ -600,11 +600,14 @@
       </div>
       <div class="experience">
         <div class="level">
-          <span>Level 5</span>
+          <span>Level 5 (65%)</span>
         </div>
         <div class="experience-bar">
           <div class="experience-fill"></div>
         </div>
+        <span class="next-level"
+          >{{ nextLevelValue }} more tasks to next level!</span
+        >
       </div>
     </div>
   </div>
@@ -613,6 +616,14 @@
 <script>
 export default {
   name: "ProfileHeader",
+  data() {
+    return {
+      profileImage: require("@/assets/images/joe-taj.jpg"),
+      userName: "Joe Johnson",
+      userTitle: "Productivity Prodigy",
+      nextLevelValue: 12,
+    };
+  },
 };
 </script>
 
@@ -705,13 +716,17 @@ export default {
 
 /* XP bar fill animation */
 .experience-fill {
-  width: 65%; /* Set initial width to 30% */
+  width: 65%;
   height: 100%;
-  background-color: #4169e1; /* Fill color */
+  background-color: #4169e1;
 }
 
 .level {
   margin-top: 5px;
-  font-size: 16px; /* Adjust font size as needed */
+  font-size: 16px;
+}
+
+.next-level {
+  font-size: 12px;
 }
 </style>

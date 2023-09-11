@@ -30,9 +30,9 @@
           />
         </svg>
       </router-link>
-      <router-link to="/" class="nav-link"> Profile </router-link>
-      <router-link to="/" class="nav-link"> Habits </router-link>
-      <router-link to="/" class="nav-link"> Articles </router-link>
+      <router-link to="/" class="nav-link"> PROFILE </router-link>
+      <router-link to="/" class="nav-link"> HABITS </router-link>
+      <router-link to="/" class="nav-link"> ARTICLES </router-link>
     </div>
     <!-- Add the Font Awesome icon here -->
     <div class="settings-icon">
