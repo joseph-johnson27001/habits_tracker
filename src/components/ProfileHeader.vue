@@ -623,6 +623,7 @@ export default {
   padding: 20px;
   border-radius: 0px 0px 5px 5px;
   border-bottom: 1px solid white;
+  background-color: #dff1ff;
 }
 
 .user-info {
@@ -635,6 +636,7 @@ export default {
 .user-title {
   color: #0f212f;
   font-weight: 300;
+  margin: 10px;
 }
 
 .profile-picture img {
