@@ -43,9 +43,9 @@ body {
 }
 
 .content-container {
-  background-color: white;
   max-width: 1200px;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #dff1ff;
 }
 </style>

@@ -22,7 +22,7 @@ export default {
 .navigation-bar {
   display: flex;
   background-color: white;
-  border-bottom: 1px solid #0f212f;
+  border-bottom: 1px solid #dff1ff;
   padding: 15px 0;
   justify-content: center;
 }
