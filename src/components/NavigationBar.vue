@@ -21,19 +21,20 @@ export default {
 <style scoped>
 .navigation-bar {
   display: flex;
-  background-color: black;
-  padding: 10px 0;
+  background-color: white;
+  border-bottom: 1px solid #0f212f;
+  padding: 15px 0;
   justify-content: center;
 }
 
 .navigation-container {
-  width: 1250px;
+  width: 1200px;
 }
 
 .nav-link {
-  color: white;
+  color: #4169e1;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 25px;
   transition: color 0.3s;
   cursor: pointer;
 }

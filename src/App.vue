@@ -22,10 +22,15 @@ export default {
 </script>
 
 <style>
+* {
+  font-family: "Assistant", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
+
 #app {
   font-family: "Roboto", sans-serif;
 }
@@ -41,7 +46,6 @@ body {
   background-color: white;
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 </style>

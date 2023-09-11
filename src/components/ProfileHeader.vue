@@ -1,8 +1,8 @@
 <template>
   <div class="profile-header">
     <div class="user-info">
-      <h2>Joe Johnson</h2>
-      <p>Web Developer</p>
+      <h2 class="user-name">Joe Johnson</h2>
+      <p class="user-title">Web Developer</p>
     </div>
     <div class="profile-picture">
       <img src="@/assets/images/joe-taj.jpg" alt="Profile Picture" />
@@ -22,7 +22,8 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #dff1ff;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .user-info {
@@ -30,10 +31,16 @@ export default {
   margin-left: 20px;
 }
 
+.user-name,
+.user-title {
+  color: #0f212f;
+  font-weight: 300;
+}
+
 .profile-picture img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  object-fit: cover;
+  border: 2px solid white;
 }
 </style>
