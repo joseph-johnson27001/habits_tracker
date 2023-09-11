@@ -1,9 +1,9 @@
 <template>
   <nav class="navigation-bar">
     <div class="navigation-container">
-      <router-link to="/" class="nav-link" id="home-button">
-        Profile
-      </router-link>
+      <router-link to="/" class="nav-link"> Profile </router-link>
+      <router-link to="/" class="nav-link"> Feed </router-link>
+      <router-link to="/" class="nav-link"> Habits </router-link>
     </div>
   </nav>
 </template>
@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .navigation-bar {
   display: flex;
-  background-color: #004080;
+  background-color: black;
   padding: 10px 0;
   justify-content: center;
 }
