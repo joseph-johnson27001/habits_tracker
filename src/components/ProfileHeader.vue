@@ -621,9 +621,8 @@ export default {
   display: flex;
   align-items: center;
   padding: 20px;
-  border-radius: 0px 0px 5px 5px;
-  border-bottom: 1px solid white;
   background-color: #dff1ff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .user-info {
@@ -633,8 +632,8 @@ export default {
 }
 
 .user-name,
-.user-title {
-  color: #0f212f;
+.user-title,
+.profile-picture img {
   font-weight: 300;
   margin: 10px;
 }
@@ -646,9 +645,20 @@ export default {
   border: 2px solid white;
 }
 
+.user-name {
+  color: #4169e1;
+  margin-left: 0px;
+}
+
+.user-title {
+  font-size: 1.3rem;
+  margin-left: 0px;
+}
+
 .icon {
   height: 50px;
   width: 50px;
+  margin: 0px 2px;
 }
 
 .experience {

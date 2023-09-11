@@ -64,6 +64,7 @@ export default {
   height: 25px;
   width: 30px;
   margin-top: 5px;
+  margin-left: -5px;
 }
 
 .navigation-container {
