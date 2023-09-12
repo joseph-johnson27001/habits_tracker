@@ -1,5 +1,6 @@
 <template>
   <div class="news-feed">
+    <SearchBar />
     <div class="feed-item" v-for="(item, index) in feedItems" :key="index">
       <div class="user-info">
         <img
@@ -16,8 +17,13 @@
 </template>
 
 <script>
+import SearchBar from "@/components/NewsFeed/SearchBar.vue"; // Import the SearchBar component
+
 export default {
   name: "NewsFeed",
+  components: {
+    SearchBar,
+  },
   data() {
     return {
       feedItems: [
@@ -86,10 +92,8 @@ export default {
 /* Add component-specific styles here */
 .news-feed {
   padding: 10px;
-  height: 100%;
   overflow-y: auto;
   border-right: 1px solid #e0e0e0; /* Light gray border */
-  border-top: 1px solid #e0e0e0; /* Light gray border */
 }
 
 .feed-item {

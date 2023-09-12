@@ -1,13 +1,8 @@
 <template>
   <div class="search-bar">
-    <input
-      type="text"
-      class="search-input"
-      placeholder="Search for posts, users, etc."
-    />
+    <input type="text" class="search-input" placeholder="Search..." />
     <button class="search-button">
       <i class="fa fa-search"></i>
-      <!-- Font Awesome magnifying glass icon -->
     </button>
   </div>
 </template>
@@ -32,6 +27,12 @@ export default {
   border-radius: 4px;
   font-size: 16px;
   margin-right: 10px; /* Spacing between input and button */
+  transition: border-color 0.1s; /* Add a transition for smooth color change */
+}
+
+.search-input:focus {
+  border-color: #6da9e4; /* Change the border color when focused */
+  outline: none;
 }
 
 .search-button {
@@ -42,7 +43,7 @@ export default {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: background-color 0.1s;
 }
 
 .search-button:hover {
