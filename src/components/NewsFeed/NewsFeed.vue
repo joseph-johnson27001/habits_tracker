@@ -1,6 +1,5 @@
 <template>
   <div class="news-feed">
-    <h1>FEED</h1>
     <div class="feed-item" v-for="(item, index) in feedItems" :key="index">
       <div class="user-info">
         <img
@@ -10,9 +9,8 @@
         />
         <span class="user-name">{{ item.userName }}</span>
       </div>
-      <div class="timestamp">{{ item.timestamp }}</div>
       <div class="content">{{ item.content }}</div>
-      <!-- You can add more details like comments, reactions, etc. here -->
+      <div class="timestamp">{{ item.timestamp }}</div>
     </div>
   </div>
 </template>
@@ -25,7 +23,7 @@ export default {
       feedItems: [
         {
           userName: "John Doe",
-          userImage: "https://picsum.photos/50/50",
+          userImage: "https://picsum.photos/51/50",
           timestamp: "2 hours ago",
           content: "Achieved my fitness goal today! 💪🏋️‍♂️",
         },
@@ -90,14 +88,13 @@ export default {
   padding: 10px;
   height: 100%;
   overflow-y: auto;
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid #e0e0e0; /* Light gray border */
+  border-top: 1px solid #e0e0e0; /* Light gray border */
 }
 
 .feed-item {
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0; /* Light gray border */
 }
 
 .user-info {
@@ -109,21 +106,22 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px; /* Increased margin for better spacing */
 }
 
 .user-name {
   font-weight: bold;
+  font-size: 18px; /* Slightly larger font size */
 }
 
 .timestamp {
   color: #888;
   margin-top: 5px;
+  font-size: 14px; /* Slightly smaller font size */
 }
 
 .content {
   margin-top: 10px;
+  font-size: 16px; /* Slightly larger font size */
 }
-
-/* You can add more styles as needed */
 </style>

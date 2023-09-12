@@ -1,6 +1,7 @@
 <template>
   <div class="news">
     <div class="news-feed">
+      <SearchBar />
       <NewsFeed />
     </div>
     <div class="social-stats">
@@ -12,10 +13,12 @@
 <script>
 import NewsFeed from "@/components/NewsFeed/NewsFeed.vue";
 import SocialStats from "@/components/NewsFeed/SocialStatistics.vue";
+import SearchBar from "@/components/NewsFeed/SearchBar.vue"; // Import the SearchBar component
 
 export default {
   name: "NewsPage",
   components: {
+    SearchBar,
     NewsFeed,
     SocialStats,
   },
