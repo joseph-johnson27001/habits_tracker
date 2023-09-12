@@ -629,6 +629,7 @@ export default {
 
 <style scoped>
 .profile-header {
+  border-radius: 5px;
   display: flex;
   align-items: center;
   padding: 20px;
