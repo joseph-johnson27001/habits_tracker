@@ -19,7 +19,6 @@ export default {
     NewsFeed,
     SocialStats,
   },
-  data() {},
 };
 </script>
 
