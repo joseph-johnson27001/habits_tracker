@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation-bar">
     <div class="navigation-container">
-      <router-link to="/" class="nav-link">
+      <router-link to="/news" class="nav-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1024 1024"

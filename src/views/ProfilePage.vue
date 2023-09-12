@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ProfileHeader from "@/components/ProfileHeader.vue";
+import ProfileHeader from "@/components/ProfilePage/ProfileHeader.vue";
 // import AchievementsSection from "./AchievementsSection.vue";
 // import BadgesSection from "./BadgesSection.vue";
 // import StatisticsSection from "./StatisticsSection.vue";
