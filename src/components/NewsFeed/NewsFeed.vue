@@ -101,6 +101,25 @@ export default {
           content:
             "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
         },
+        {
+          userName: "Olivia Lewis",
+          userImage: "https://picsum.photos/49/50",
+          timestamp: "13 hours ago",
+          content: "Hiked to the summit of Mount Adventure. What a view! ⛰️🌄",
+        },
+        {
+          userName: "Liam Parker",
+          userImage: "https://picsum.photos/46/50",
+          timestamp: "14 hours ago",
+          content:
+            "Completed a 30-day coding challenge. Feeling accomplished! 💻🚀",
+        },
+        {
+          userName: "Emma Turner",
+          userImage: "https://picsum.photos/45/50",
+          timestamp: "15 hours ago",
+          content: "Started a new book series. Can't put it down! 📚❤️",
+        },
       ],
     };
   },
@@ -115,13 +134,20 @@ export default {
 }
 
 .feed-item {
-  background-color: #f8f8f8;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #e0e0e0; /* Light gray border */
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   margin-bottom: 15px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.feed-item:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 
 .user-info {
@@ -134,6 +160,7 @@ export default {
   height: 50px;
   border-radius: 50%;
   margin-right: 15px;
+  border: 1px solid white;
 }
 
 .user-name {

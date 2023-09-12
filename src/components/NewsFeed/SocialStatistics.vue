@@ -190,8 +190,11 @@ export default {
   background-color: #f2f2f2;
 }
 
+.leaderboard tr {
+  transition: background-color 0.3s;
+}
 .leaderboard tr:hover {
-  background-color: #dff1ff;
+  background-color: #f2f2f2;
 }
 
 /* Upcoming Events Styles */
@@ -291,6 +294,12 @@ export default {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.article-item:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 
 .article-item h4 {
