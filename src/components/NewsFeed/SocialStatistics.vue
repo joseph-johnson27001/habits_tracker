@@ -146,7 +146,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #f8f8f8;
+  background-color: #dff1ff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
@@ -186,14 +186,17 @@ export default {
 .leaderboard tr:nth-child(even) {
   background-color: white;
 }
+.leaderboard tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 
 .leaderboard tr:hover {
-  background-color: #f2f2f2;
+  background-color: #dff1ff;
 }
 
 /* Upcoming Events Styles */
 .upcoming-events.card {
-  background-color: #f8f8f8;
+  background-color: #dff1ff;
   border-radius: 8px;
   border: 1px solid #ccc;
   padding: 20px;
@@ -226,9 +229,6 @@ export default {
 .upcoming-events li:hover {
   background-color: #f2f2f2;
   transform: translateY(-2px);
-}
-
-.event-info {
 }
 
 .event-info h4 {
