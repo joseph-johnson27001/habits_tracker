@@ -26,19 +26,13 @@ export default {
 .news {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  height: 100vh;
 }
 
 .news-feed {
   padding: 10px;
-  border-right: 1px solid #ccc;
-  height: 100%;
-  overflow-y: auto;
 }
 
 .social-stats {
   padding: 10px;
-  height: 100%;
-  overflow-y: auto;
 }
 </style>

@@ -6,8 +6,8 @@ import NewsPage from "@/views/NewsFeedPage.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", component: ProfilePage },
-  { path: "/news", component: NewsPage },
+  { path: "/", component: NewsPage },
+  { path: "/profile", component: ProfilePage },
 ];
 
 const router = new VueRouter({
