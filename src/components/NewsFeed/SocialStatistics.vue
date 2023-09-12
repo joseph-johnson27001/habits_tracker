@@ -105,7 +105,6 @@ export default {
           title: "Exploring Nature's Wonders",
           summary: "Adventures in the great outdoors and the beauty of nature.",
         },
-        // Add more recent articles here
       ],
       challenges: [
         {
@@ -195,17 +194,6 @@ export default {
 }
 .leaderboard tr:hover {
   background-color: #f2f2f2;
-}
-
-/* Upcoming Events Styles */
-.upcoming-events.card {
-  background-color: #dff1ff;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  cursor: pointer;
 }
 
 .upcoming-events h3 {
