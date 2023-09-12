@@ -21,12 +21,15 @@
       </table>
     </div>
 
-    <!-- Upcoming Events -->
+    <!-- Uocming Events -->
     <div class="upcoming-events card">
       <h3>Upcoming Events</h3>
       <ul>
         <li v-for="(event, index) in upcomingEvents" :key="index">
-          {{ event.name }} - {{ event.date }}
+          <div class="event-info">
+            <h4>{{ event.name }}</h4>
+            <p>Date: {{ event.date }}</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -71,15 +74,15 @@ export default {
     return {
       leaderboard: [
         { name: "Achiever123", score: 100 },
-        { name: "FitnessFreak", score: 85 },
-        { name: "ZenMaster", score: 72 },
         { name: "CulinaryArtist", score: 95 },
-        { name: "BookWorm", score: 78 },
-        { name: "GamerPro", score: 88 },
-        { name: "NatureExplorer", score: 70 },
         { name: "MindfulMeditator", score: 91 },
-        { name: "AdventureSeeker", score: 75 },
         { name: "CreativeArtist", score: 89 },
+        { name: "GamerPro", score: 88 },
+        { name: "FitnessFreak", score: 85 },
+        { name: "BookWorm", score: 78 },
+        { name: "AdventureSeeker", score: 75 },
+        { name: "ZenMaster", score: 72 },
+        { name: "NatureExplorer", score: 70 },
       ],
       upcomingEvents: [
         { name: "Fitness Challenge: 'Run to the Sky'", date: "2023-10-15" },
@@ -88,16 +91,6 @@ export default {
         { name: "Book Club Meeting: 'Literary Escape'", date: "2024-01-10" },
         { name: "Gaming Tournament: 'Epic Showdown'", date: "2024-02-15" },
         { name: "Nature Hike: 'Wilderness Adventure'", date: "2024-03-20" },
-        { name: "Yoga Retreat: 'Serenity in Nature'", date: "2024-04-25" },
-        {
-          name: "Mindfulness Workshop: 'Inner Peace Journey'",
-          date: "2024-05-30",
-        },
-        { name: "Art Exhibition: 'Creative Expressions'", date: "2024-06-15" },
-        {
-          name: "Adventure Expedition: 'Quest for the Unknown'",
-          date: "2024-07-20",
-        },
       ],
       recentArticles: [
         {
@@ -195,10 +188,20 @@ export default {
 }
 
 .leaderboard tr:hover {
-  background-color: #dcdcdc;
+  background-color: #f2f2f2;
 }
 
 /* Upcoming Events Styles */
+.upcoming-events.card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
 .upcoming-events h3 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -210,8 +213,33 @@ export default {
 }
 
 .upcoming-events li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.upcoming-events li:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
+}
+
+.event-info {
+}
+
+.event-info h4 {
   font-size: 16px;
+  margin: 0;
+}
+
+.event-info p {
+  font-size: 14px;
+  color: #888;
+  margin: 5px 0;
 }
 
 /* Challenges Styles */
@@ -230,6 +258,13 @@ export default {
   margin-bottom: 10px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.challenge-item:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 
 .challenge-item h4 {
@@ -255,6 +290,7 @@ export default {
   margin-bottom: 10px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .article-item h4 {
