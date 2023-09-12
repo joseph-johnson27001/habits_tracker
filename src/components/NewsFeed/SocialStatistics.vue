@@ -2,7 +2,7 @@
   <div class="social-stats">
     <!-- Leaderboard -->
     <div class="leaderboard card">
-      <h3>Monthly Leaderboard</h3>
+      <h3>Leaderboard</h3>
       <table>
         <thead>
           <tr>
@@ -29,6 +29,19 @@
           {{ event.name }} - {{ event.date }}
         </li>
       </ul>
+    </div>
+
+    <!-- Recent Articles -->
+    <div class="recent-articles card">
+      <h3>Recent Articles</h3>
+      <div
+        class="article-item"
+        v-for="(article, index) in recentArticles"
+        :key="index"
+      >
+        <h4>{{ article.title }}</h4>
+        <p>{{ article.summary }}</p>
+      </div>
     </div>
 
     <!-- Challenges -->
@@ -86,6 +99,21 @@ export default {
           date: "2024-07-20",
         },
       ],
+      recentArticles: [
+        {
+          title: "How to Achieve Your Goals",
+          summary: "Tips and tricks for setting and achieving your goals.",
+        },
+        {
+          title: "Healthy Habits for a Better Life",
+          summary: "Discover habits that can improve your overall well-being.",
+        },
+        {
+          title: "Exploring Nature's Wonders",
+          summary: "Adventures in the great outdoors and the beauty of nature.",
+        },
+        // Add more recent articles here
+      ],
       challenges: [
         {
           name: "Daily Workout",
@@ -124,12 +152,8 @@ export default {
 </script>
 
 <style scoped>
-/* Add component-specific styles here */
-.social-stats {
-}
-
 .card {
-  background-color: #fff;
+  background-color: #f8f8f8;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
@@ -137,10 +161,8 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Leaderboard Styles */
 .leaderboard {
   margin-bottom: 20px;
-  cursor: pointer;
 }
 
 .leaderboard h3 {
@@ -154,6 +176,7 @@ export default {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .leaderboard th,
@@ -168,7 +191,7 @@ export default {
 }
 
 .leaderboard tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .leaderboard tr:hover {
@@ -223,5 +246,24 @@ export default {
   font-size: 16px;
   font-weight: bold;
   color: #4169e1;
+}
+
+.article-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-item h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.article-item p {
+  font-size: 14px;
+  margin: 5px 0;
 }
 </style>

@@ -133,22 +133,22 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 15px; /* Increased margin for better spacing */
+  margin-right: 15px;
 }
 
 .user-name {
   font-weight: bold;
-  font-size: 18px; /* Slightly larger font size */
+  font-size: 18px;
 }
 
 .timestamp {
   color: #888;
   margin-top: 5px;
-  font-size: 14px; /* Slightly smaller font size */
+  font-size: 14px;
 }
 
 .content {
   margin-top: 10px;
-  font-size: 16px; /* Slightly larger font size */
+  font-size: 16px;
 }
 </style>
