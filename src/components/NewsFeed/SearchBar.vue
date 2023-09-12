@@ -17,7 +17,7 @@ export default {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Adjust spacing as needed */
+  margin-bottom: 20px;
 }
 
 .search-input {
@@ -26,17 +26,17 @@ export default {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  margin-right: 10px; /* Spacing between input and button */
-  transition: border-color 0.1s; /* Add a transition for smooth color change */
+  margin-right: 10px;
+  transition: border-color 0.1s;
 }
 
 .search-input:focus {
-  border-color: #6da9e4; /* Change the border color when focused */
+  border-color: #6da9e4;
   outline: none;
 }
 
 .search-button {
-  background-color: #4169e1; /* Adjust color to your preference */
+  background-color: #4169e1;
   color: white;
   border: none;
   border-radius: 4px;
@@ -47,6 +47,6 @@ export default {
 }
 
 .search-button:hover {
-  background-color: #3156a6; /* Adjust hover color as desired */
+  background-color: #3156a6;
 }
 </style>

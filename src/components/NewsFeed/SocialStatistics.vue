@@ -208,11 +208,11 @@ export default {
 }
 
 .upcoming-events li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 10px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
   border: 1px solid #ccc;
@@ -249,7 +249,7 @@ export default {
   padding: 10px;
   margin-bottom: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
 }
