@@ -47,5 +47,7 @@ body {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
 }
 </style>

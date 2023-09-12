@@ -606,7 +606,7 @@
           <div class="experience-fill"></div>
         </div>
         <span class="next-level"
-          >{{ nextLevelValue }} more tasks to next level!</span
+          >Complete {{ nextLevelValue }} more tasks to next level!</span
         >
       </div>
     </div>
@@ -633,7 +633,7 @@ export default {
   align-items: center;
   padding: 20px;
   background-color: #dff1ff;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid lightgrey;
 }
 
 .user-info {

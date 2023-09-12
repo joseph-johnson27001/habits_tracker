@@ -55,7 +55,7 @@ export default {
 .navigation-bar {
   display: flex;
   background-color: white;
-  border-bottom: 1px solid #dff1ff;
+  border-bottom: 1px solid lightgray;
   padding: 10px 0;
   justify-content: center;
 }
