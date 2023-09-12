@@ -1,6 +1,6 @@
 <template>
   <div class="search-bar">
-    <input type="text" class="search-input" placeholder="Search..." />
+    <input type="text" class="search-input" placeholder="Search" />
     <button class="search-button">
       <i class="fa fa-search"></i>
     </button>

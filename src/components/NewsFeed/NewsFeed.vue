@@ -81,7 +81,26 @@ export default {
           content:
             "Visited a breathtaking natural wonder today. Nature is amazing! 🌄🌿",
         },
-        // Add more feed items here
+        {
+          userName: "Liam Miller",
+          userImage: "https://picsum.photos/46/50",
+          timestamp: "10 hours ago",
+          content: "Completed a 30-day coding challenge. 💻🚀",
+        },
+        {
+          userName: "Ava Robinson",
+          userImage: "https://picsum.photos/47/50",
+          timestamp: "11 hours ago",
+          content:
+            "Attended a virtual photography exhibition. Captured some stunning shots! 📷🌟",
+        },
+        {
+          userName: "Noah Clark",
+          userImage: "https://picsum.photos/48/50",
+          timestamp: "12 hours ago",
+          content:
+            "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
+        },
       ],
     };
   },
