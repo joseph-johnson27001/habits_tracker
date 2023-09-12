@@ -112,12 +112,16 @@ export default {
 .news-feed {
   padding: 10px;
   overflow-y: auto;
-  border-right: 1px solid #e0e0e0; /* Light gray border */
 }
 
 .feed-item {
+  background-color: #f8f8f8;
+  border-radius: 5px;
   padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #e0e0e0; /* Light gray border */
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
 }
 
 .user-info {

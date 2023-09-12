@@ -1,7 +1,7 @@
 <template>
   <div class="social-stats">
     <!-- Leaderboard -->
-    <div class="leaderboard">
+    <div class="leaderboard card">
       <h3>Monthly Leaderboard</h3>
       <table>
         <thead>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Upcoming Events -->
-    <div class="upcoming-events">
+    <div class="upcoming-events card">
       <h3>Upcoming Events</h3>
       <ul>
         <li v-for="(event, index) in upcomingEvents" :key="index">
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Challenges -->
-    <div class="challenges">
+    <div class="challenges card">
       <h3>Challenges</h3>
       <div
         class="challenge-item"
@@ -126,9 +126,14 @@ export default {
 <style scoped>
 /* Add component-specific styles here */
 .social-stats {
-  background-color: #f8f8f8;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
