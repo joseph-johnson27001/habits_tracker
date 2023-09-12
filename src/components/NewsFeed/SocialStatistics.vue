@@ -145,10 +145,11 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #dff1ff;
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
+  padding-top: 5px;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -167,7 +168,7 @@ export default {
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
