@@ -1,9 +1,19 @@
 <template>
   <div class="sidebar">
     <!-- Sidebar content goes here -->
-    <router-link to="/dashboard">Dashboard</router-link>
-    <router-link to="/profile">Profile</router-link>
-    <!-- Add more sidebar items as needed -->
+    <router-link to="/" class="sidebar-item">
+      <i class="fas fa-list fa-lg"></i>
+    </router-link>
+    <router-link to="/habits" class="sidebar-item">
+      <i class="fas fa-chart-line fa-lg"></i>
+    </router-link>
+    <router-link to="/articles" class="sidebar-item">
+      <i class="fas fa-newspaper fa-lg"></i>
+    </router-link>
+    <!-- Move the settings icon to the bottom -->
+    <router-link to="/settings" class="sidebar-item settings">
+      <i class="fas fa-cog fa-lg"></i>
+    </router-link>
   </div>
 </template>
 
@@ -16,18 +26,28 @@ export default {
 <style scoped>
 .sidebar {
   background-color: white;
-  color: #4169e1;
   padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.sidebar a {
-  color: "#4169e1";
+.sidebar-item {
+  color: #4169e1;
   text-decoration: none;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
+  padding: 5px;
 }
 
-.sidebar a:hover {
-  text-decoration: underline;
+.sidebar-item i {
+  margin: auto;
+}
+
+.sidebar-item.settings {
+  margin-top: auto;
 }
 </style>

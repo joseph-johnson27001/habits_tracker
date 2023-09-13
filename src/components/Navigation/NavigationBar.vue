@@ -31,8 +31,8 @@
         </svg>
       </router-link>
       <router-link to="/profile" class="nav-link"> PROFILE </router-link>
-      <router-link to="/" class="nav-link"> HABITS </router-link>
-      <router-link to="/" class="nav-link"> ARTICLES </router-link>
+      <!-- <router-link to="/" class="nav-link"> HABITS </router-link>
+      <router-link to="/" class="nav-link"> ARTICLES </router-link> -->
     </div>
     <!-- Add the Font Awesome icon here -->
     <div class="settings-icon">

@@ -48,7 +48,7 @@ body {
 }
 
 .sidebar-section {
-  margin-top: 5rem;
+  margin-top: 5vh;
 }
 
 .content-container {
