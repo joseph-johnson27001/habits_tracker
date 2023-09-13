@@ -80,10 +80,10 @@ export default {
 }
 
 .user-profile-image {
-  width: 35px; /* Adjust the width as needed */
-  height: 35px; /* Adjust the height as needed */
-  border-radius: 50%; /* Make it circular */
-  margin-right: 10px; /* Add some spacing from the right side */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
   cursor: pointer;
   border: 1px solid #ccc;
 }
