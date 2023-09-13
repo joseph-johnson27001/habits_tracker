@@ -49,8 +49,7 @@ body {
 }
 
 .sidebar-section {
-  margin-top: 0.2vh;
-  margin-right: 60px;
+  margin-right: 50px;
 }
 
 .content-container {
@@ -61,6 +60,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-left: -40px;
-  margin-right: 60px;
+  margin-right: 50px;
 }
 </style>

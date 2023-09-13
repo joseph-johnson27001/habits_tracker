@@ -30,7 +30,7 @@
           />
         </svg>
       </router-link>
-      <p>JOES WONDERFUL HABIT TRACKER</p>
+      <h4>HABIT TRACKER</h4>
       <router-link to="/profile" class="nav-link">
         <img
           :src="profileImage"
@@ -67,7 +67,7 @@ export default {
 }
 
 .icon {
-  height: 28px;
+  height: 30px;
   width: 30px;
   margin-left: 15px;
 }

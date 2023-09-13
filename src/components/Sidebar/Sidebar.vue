@@ -27,7 +27,7 @@ export default {
   padding: 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

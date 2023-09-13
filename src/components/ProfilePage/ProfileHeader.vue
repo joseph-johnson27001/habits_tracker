@@ -634,7 +634,7 @@ export default {
   align-items: center;
   padding: 20px;
   background-color: #dff1ff;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #ccc;
 }
 
 .user-info {
