@@ -67,14 +67,14 @@ export default {
 }
 
 .title {
-  margin: 15px 100px 15px 0px;
+  margin: 15px 80px 15px 0px;
   font-weight: 400;
 }
 
 .icon {
   height: 30px;
   width: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .navigation-container {

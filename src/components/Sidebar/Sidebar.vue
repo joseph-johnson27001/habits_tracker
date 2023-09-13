@@ -30,7 +30,7 @@ export default {
 .sidebar {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   height: 85vh;
   display: flex;
@@ -66,7 +66,7 @@ export default {
   margin: auto;
   font-size: 18px;
   cursor: pointer;
-  transition: transform 0.4s linear;
+  transition: transform 0.6s linear;
 }
 
 /* Add animation on hover */
@@ -76,6 +76,6 @@ export default {
 
 .sidebar-item:hover {
   transform: scale(1.1);
-  color: green;
+  color: #3156a6;
 }
 </style>
