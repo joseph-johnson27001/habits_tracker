@@ -30,13 +30,24 @@
           />
         </svg>
       </router-link>
-      <router-link to="/profile" class="nav-link"> PROFILE </router-link>
+      <router-link to="/profile" class="nav-link">
+        <img
+          :src="profileImage"
+          alt="User Profile"
+          class="user-profile-image"
+        />
+      </router-link>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      profileImage: require("@/assets/images/joe-taj.jpg"),
+    };
+  },
   methods: {
     isRouteActive(route) {
       return this.$route.path === route;
@@ -52,31 +63,28 @@ export default {
   border-bottom: 1px solid lightgray;
   padding: 10px 0;
   justify-content: center;
+  align-items: center;
 }
 
 .icon {
-  height: 25px;
+  height: 28px;
   width: 30px;
-  margin-top: 5px;
-  margin-left: -5px;
+  margin-left: 10px;
 }
 
 .navigation-container {
   width: 1200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.nav-link {
-  color: #4169e1;
-  text-decoration: none;
-  margin: 0 35px;
-  font-size: 18px;
-  transition: color 0.3s;
+.user-profile-image {
+  width: 35px; /* Adjust the width as needed */
+  height: 35px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make it circular */
+  margin-right: 10px; /* Add some spacing from the right side */
   cursor: pointer;
-}
-
-.nav-link:hover {
-  color: #0f212f;
+  border: 1px solid #ccc;
 }
 </style>
