@@ -2,6 +2,9 @@
   <div id="app">
     <NavigationBar />
     <div class="background">
+      <div class="sidebar-section">
+        <SidebarSection />
+      </div>
       <div class="content-container">
         <router-view />
         <!-- This is where matched components will be rendered -->
@@ -12,11 +15,13 @@
 
 <script>
 import NavigationBar from "./components/Navigation/NavigationBar.vue";
+import SidebarSection from "./components/Sidebar/Sidebar.vue";
 
 export default {
   name: "App",
   components: {
     NavigationBar,
+    SidebarSection,
   },
 };
 </script>
@@ -42,6 +47,10 @@ body {
   min-height: 100vh;
 }
 
+.sidebar-section {
+  margin-top: 5rem;
+}
+
 .content-container {
   max-width: 1200px;
   width: 100%;
@@ -50,5 +59,6 @@ body {
   border-right: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
   border-radius: 8px;
+  margin-left: 50px;
 }
 </style>
