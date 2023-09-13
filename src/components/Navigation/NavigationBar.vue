@@ -62,7 +62,6 @@ export default {
   display: flex;
   background-color: white;
   border-bottom: 1px solid lightgray;
-  padding: 5px 0;
   justify-content: center;
   align-items: center;
 }
@@ -70,7 +69,7 @@ export default {
 .icon {
   height: 28px;
   width: 30px;
-  padding-left: 10px;
+  margin-left: 15px;
 }
 
 .navigation-container {
@@ -84,7 +83,7 @@ export default {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: -5px;
   cursor: pointer;
   border: 1px solid #ccc;
 }

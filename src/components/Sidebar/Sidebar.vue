@@ -54,7 +54,7 @@ export default {
   text-decoration: none;
   display: block;
   margin-bottom: 35px;
-  transition: color 0.2, transform 0.2s linear;
+  transition: color 0.2, transform 0.3s linear;
 }
 
 .sidebar-item i {
@@ -66,7 +66,7 @@ export default {
 
 /* Add animation on hover */
 .sidebar-item .settings-icon:hover {
-  transform: rotate(100deg);
+  transform: rotate(90deg);
 }
 
 .sidebar-item:hover {

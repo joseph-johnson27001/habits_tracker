@@ -49,7 +49,7 @@ body {
 }
 
 .sidebar-section {
-  margin-top: 2vh;
+  margin-top: 0.2vh;
   margin-right: 60px;
 }
 
@@ -61,6 +61,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-left: -40px;
-  margin-right: 80px;
+  margin-right: 60px;
 }
 </style>
