@@ -6,7 +6,7 @@
       <table>
         <thead>
           <tr>
-            <th>Rank</th>
+            <th>#</th>
             <th>User</th>
             <th>Score</th>
           </tr>
@@ -104,6 +104,11 @@ export default {
         {
           title: "Exploring Nature's Wonders",
           summary: "Adventures in the great outdoors and the beauty of nature.",
+        },
+        {
+          title: "The Art of Mindfulness",
+          summary:
+            "Learn how to practice mindfulness and reduce stress in your daily life.",
         },
       ],
       challenges: [

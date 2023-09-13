@@ -30,7 +30,7 @@
           />
         </svg>
       </router-link>
-      <h4>HABIT TRACKER</h4>
+      <h4 class="title">JOES WONDERFUL HABIT TRACKER</h4>
       <router-link to="/profile" class="nav-link">
         <img
           :src="profileImage"
@@ -66,10 +66,15 @@ export default {
   align-items: center;
 }
 
+.title {
+  margin: 15px 100px 15px 0px;
+  font-weight: 400;
+}
+
 .icon {
   height: 30px;
   width: 30px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .navigation-container {
@@ -83,7 +88,6 @@ export default {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  margin-right: -5px;
   cursor: pointer;
   border: 1px solid #ccc;
 }

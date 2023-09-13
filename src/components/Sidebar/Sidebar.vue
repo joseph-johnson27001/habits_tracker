@@ -1,14 +1,19 @@
 <template>
   <div class="sidebar">
-    <router-link to="/" class="sidebar-item">
-      <i class="fas fa-list fa-lg"></i>
-    </router-link>
-    <router-link to="/habits" class="sidebar-item">
-      <i class="fas fa-chart-line fa-lg"></i>
-    </router-link>
-    <router-link to="/articles" class="sidebar-item">
-      <i class="fas fa-newspaper fa-lg"></i>
-    </router-link>
+    <div>
+      <router-link to="/" class="sidebar-item">
+        <i class="fas fa-list fa-lg"></i>
+      </router-link>
+      <router-link to="/habits" class="sidebar-item">
+        <i class="fas fa-chart-line fa-lg"></i>
+      </router-link>
+      <router-link to="/articles" class="sidebar-item">
+        <i class="fas fa-newspaper fa-lg"></i>
+      </router-link>
+      <router-link to="/store" class="sidebar-item">
+        <i class="fas fa-shopping-cart fa-lg"></i>
+      </router-link>
+    </div>
     <router-link to="/settings" class="sidebar-item settings">
       <i class="fas fa-cog fa-lg settings-icon"></i>
     </router-link>
