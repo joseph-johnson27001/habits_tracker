@@ -44,6 +44,7 @@ export default {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.1s;
+  border: 1px solid #ccc;
 }
 
 .search-button:hover {

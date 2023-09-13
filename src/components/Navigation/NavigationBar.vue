@@ -30,6 +30,7 @@
           />
         </svg>
       </router-link>
+      <p>JOES WONDERFUL HABIT TRACKER</p>
       <router-link to="/profile" class="nav-link">
         <img
           :src="profileImage"
@@ -61,7 +62,7 @@ export default {
   display: flex;
   background-color: white;
   border-bottom: 1px solid lightgray;
-  padding: 10px 0;
+  padding: 5px 0;
   justify-content: center;
   align-items: center;
 }
@@ -69,7 +70,7 @@ export default {
 .icon {
   height: 28px;
   width: 30px;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .navigation-container {
@@ -83,7 +84,7 @@ export default {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-
+  margin-right: 10px;
   cursor: pointer;
   border: 1px solid #ccc;
 }

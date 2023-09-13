@@ -45,10 +45,11 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  padding-top: 15px;
 }
 
 .sidebar-section {
-  margin-top: 5vh;
+  margin-top: 2vh;
   margin-right: 60px;
 }
 
@@ -57,8 +58,7 @@ body {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #dff1ff;
-  border-right: 1px solid lightgrey;
-  border-left: 1px solid lightgrey;
+  border: 1px solid #ccc;
   border-radius: 8px;
   margin-left: -40px;
   margin-right: 80px;
