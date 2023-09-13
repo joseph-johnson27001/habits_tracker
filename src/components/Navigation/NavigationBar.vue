@@ -31,12 +31,6 @@
         </svg>
       </router-link>
       <router-link to="/profile" class="nav-link"> PROFILE </router-link>
-      <!-- <router-link to="/" class="nav-link"> HABITS </router-link>
-      <router-link to="/" class="nav-link"> ARTICLES </router-link> -->
-    </div>
-    <!-- Add the Font Awesome icon here -->
-    <div class="settings-icon">
-      <i class="fas fa-cog"></i>
     </div>
   </nav>
 </template>
@@ -84,33 +78,5 @@ export default {
 
 .nav-link:hover {
   color: #0f212f;
-}
-
-.settings-icon {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-}
-
-.settings-icon i {
-  font-size: 18px;
-  color: #4169e1;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-/* Add animation on hover */
-.settings-icon i:hover {
-  animation: spin 0.4s linear; /* Spin animation */
-}
-
-/* Define the spin animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
 }
 </style>

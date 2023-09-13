@@ -1,6 +1,5 @@
 <template>
   <div class="sidebar">
-    <!-- Sidebar content goes here -->
     <router-link to="/" class="sidebar-item">
       <i class="fas fa-list fa-lg"></i>
     </router-link>
@@ -10,9 +9,8 @@
     <router-link to="/articles" class="sidebar-item">
       <i class="fas fa-newspaper fa-lg"></i>
     </router-link>
-    <!-- Move the settings icon to the bottom -->
     <router-link to="/settings" class="sidebar-item settings">
-      <i class="fas fa-cog fa-lg"></i>
+      <i class="fas fa-cog fa-lg settings-icon"></i>
     </router-link>
   </div>
 </template>
@@ -40,7 +38,6 @@ export default {
   text-decoration: none;
   display: block;
   margin-bottom: 35px;
-  padding: 5px;
 }
 
 .sidebar-item i {
@@ -50,5 +47,24 @@ export default {
 .sidebar-item.settings {
   margin-top: auto;
   margin-bottom: 0px;
+}
+
+.sidebar-item {
+  color: #4169e1;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 35px;
+}
+
+.sidebar-item i {
+  margin: auto;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.4s linear;
+}
+
+/* Add animation on hover */
+.sidebar-item .settings-icon:hover {
+  transform: rotate(145deg);
 }
 </style>
