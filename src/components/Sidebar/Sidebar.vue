@@ -49,5 +49,6 @@ export default {
 
 .sidebar-item.settings {
   margin-top: auto;
+  margin-bottom: 0px;
 }
 </style>
