@@ -54,17 +54,23 @@ export default {
   text-decoration: none;
   display: block;
   margin-bottom: 35px;
+  transition: color 0.2, transform 0.2s linear;
 }
 
 .sidebar-item i {
   margin: auto;
   font-size: 18px;
   cursor: pointer;
-  transition: color 0.3s, transform 0.4s linear;
+  transition: transform 0.4s linear;
 }
 
 /* Add animation on hover */
 .sidebar-item .settings-icon:hover {
-  transform: rotate(145deg);
+  transform: rotate(100deg);
+}
+
+.sidebar-item:hover {
+  transform: scale(1.1);
+  color: green;
 }
 </style>
