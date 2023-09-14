@@ -1,6 +1,6 @@
 <template>
   <div class="completed-section">
-    <h1>COMPLETED AIMS</h1>
+    <h1>RECENTLY COMPLETED</h1>
     <ul class="completed-list">
       <li
         class="completed-item"
@@ -26,8 +26,7 @@ export default {
         },
         {
           title: "🎯 Completed Weekly Aim",
-          description:
-            "Congratulations on completing your weekly fitness goal! 💪",
+          description: "You completed your weekly fitness goal! 💪",
         },
         {
           title: "🥇 Completed Monthly Aim",
@@ -46,10 +45,8 @@ export default {
 }
 
 .completed-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .completed-item:hover {

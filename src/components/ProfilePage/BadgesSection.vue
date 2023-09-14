@@ -1,6 +1,6 @@
 <template>
   <div class="badges-section">
-    <h1>BADGES SECTION</h1>
+    <h1>BADGES</h1>
   </div>
 </template>
 
