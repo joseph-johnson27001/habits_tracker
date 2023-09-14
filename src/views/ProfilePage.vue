@@ -1,11 +1,7 @@
 <template>
   <div class="profile-page">
     <ProfileHeader />
-    <div class="top-area">
-      <div class="card">
-        <HabitsSection />
-      </div>
-    </div>
+    <div class="top-area"></div>
     <div class="profile-content">
       <div class="left-section">
         <div class="card">
@@ -23,9 +19,11 @@
           <StatisticsSection />
         </div>
         <div class="card">
+          <HabitsSection />
+        </div>
+        <div class="card">
           <CompletedSection />
         </div>
-        <!-- Content for the right 1/3 section goes here -->
       </div>
     </div>
   </div>

@@ -57,7 +57,6 @@ export default {
           description:
             "You've mastered rocket science and reached for the stars!",
         },
-        // Add more achievements as needed
       ],
     };
   },
@@ -81,7 +80,6 @@ export default {
   cursor: pointer;
 }
 
-/* Remove the right border from the last item */
 .achievement-item:nth-child(3n) {
   border-right: none;
 }
