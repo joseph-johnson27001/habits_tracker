@@ -32,7 +32,7 @@ export default {
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  height: 85vh;
+  height: 86vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

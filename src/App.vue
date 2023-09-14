@@ -67,5 +67,6 @@ h1 {
   border-radius: 8px;
   margin-left: -40px;
   margin-right: 50px;
+  margin-bottom: 10px;
 }
 </style>

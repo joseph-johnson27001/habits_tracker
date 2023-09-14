@@ -34,5 +34,6 @@ export default {
 
 .social-stats {
   padding: 10px;
+  padding-left: 0px;
 }
 </style>
