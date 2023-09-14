@@ -1,9 +1,9 @@
 <template>
   <div class="profile-page">
     <ProfileHeader />
-    <div class="statistics-area">
+    <div class="top-area">
       <div class="card">
-        <StatisticsSection />
+        <HabitsSection />
       </div>
     </div>
     <div class="profile-content">
@@ -11,11 +11,19 @@
         <div class="card">
           <AchievementsSection />
         </div>
-        <!-- Content for the left 2/3 section goes here -->
+        <div class="card">
+          <RecentNewsSection />
+        </div>
       </div>
       <div class="right-section">
         <div class="card">
           <BadgesSection />
+        </div>
+        <div class="card">
+          <StatisticsSection />
+        </div>
+        <div class="card">
+          <CompletedSection />
         </div>
         <!-- Content for the right 1/3 section goes here -->
       </div>
@@ -27,15 +35,21 @@
 import ProfileHeader from "@/components/ProfilePage/ProfileHeader.vue";
 import AchievementsSection from "@/components/ProfilePage/AchievementsSection.vue";
 import BadgesSection from "@/components/ProfilePage/BadgesSection.vue";
+import CompletedSection from "@/components/ProfilePage/CompletedAims.vue";
 import StatisticsSection from "@/components/ProfilePage/StatisticsSection.vue";
+import HabitsSection from "@/components/ProfilePage/HabitStreaks.vue";
+import RecentNewsSection from "@/components/ProfilePage/RecentNews.vue";
 
 export default {
   name: "ProfilePage",
   components: {
     ProfileHeader,
+    CompletedSection,
     AchievementsSection,
     BadgesSection,
     StatisticsSection,
+    HabitsSection,
+    RecentNewsSection,
   },
 };
 </script>
@@ -48,7 +62,7 @@ export default {
   gap: 10px;
 }
 
-.statistics-area {
+.top-area {
   margin: 20px;
 }
 
