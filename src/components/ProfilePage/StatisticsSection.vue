@@ -51,9 +51,13 @@ export default {
   margin-bottom: 20px;
   padding: 10px;
   display: flex;
-  justify-content: space-between; /* Align values to both ends */
+  justify-content: space-between;
   border-bottom: 1px solid #ccc;
   background-color: white;
+}
+
+.stat-item:hover {
+  background-color: #f2f2f2;
 }
 
 .stat-label {
