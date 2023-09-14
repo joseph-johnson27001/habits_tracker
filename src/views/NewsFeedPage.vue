@@ -25,15 +25,16 @@ export default {
 <style scoped>
 .news {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 .news-feed {
   padding: 10px;
+  padding-right: 0px;
 }
 
 .social-stats {
   padding: 10px;
-  padding-left: 0px;
+  padding-left: 5px;
 }
 </style>
