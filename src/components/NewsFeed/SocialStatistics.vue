@@ -216,11 +216,9 @@ export default {
   margin-bottom: 10px;
   padding: 10px;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .upcoming-events li:hover {
@@ -249,12 +247,10 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
 }
@@ -281,12 +277,10 @@ export default {
 }
 
 .article-item {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
