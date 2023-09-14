@@ -2,7 +2,7 @@
   <div class="social-stats">
     <!-- Leaderboard -->
     <div class="leaderboard card">
-      <h3>Leaderboard</h3>
+      <h1>Leaderboard</h1>
       <table>
         <thead>
           <tr>
@@ -21,35 +21,9 @@
       </table>
     </div>
 
-    <!-- Uocming Events -->
-    <div class="upcoming-events card">
-      <h3>Upcoming Events</h3>
-      <ul>
-        <li v-for="(event, index) in upcomingEvents" :key="index">
-          <div class="event-info">
-            <h4>{{ event.name }}</h4>
-            <p>Date: {{ event.date }}</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Recent Articles -->
-    <div class="recent-articles card">
-      <h3>Recent Articles</h3>
-      <div
-        class="article-item"
-        v-for="(article, index) in recentArticles"
-        :key="index"
-      >
-        <h4>{{ article.title }}</h4>
-        <p>{{ article.summary }}</p>
-      </div>
-    </div>
-
     <!-- Challenges -->
     <div class="challenges card">
-      <h3>Challenges</h3>
+      <h1>Challenges</h1>
       <div
         class="challenge-item"
         v-for="(challenge, index) in challenges"
@@ -62,6 +36,32 @@
         <div class="challenge-progress">
           <p>{{ challenge.progress }} / {{ challenge.target }}</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Events -->
+    <div class="upcoming-events card">
+      <h1>Upcoming Events</h1>
+      <ul>
+        <li v-for="(event, index) in upcomingEvents" :key="index">
+          <div class="event-info">
+            <h4>{{ event.name }}</h4>
+            <p>Date: {{ event.date }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Recent Articles -->
+    <div class="recent-articles card">
+      <h1>Recent Articles</h1>
+      <div
+        class="article-item"
+        v-for="(article, index) in recentArticles"
+        :key="index"
+      >
+        <h4>{{ article.title }}</h4>
+        <p>{{ article.summary }}</p>
       </div>
     </div>
   </div>

@@ -40,6 +40,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
 .background {
   background-color: #f2f2f2;
   display: flex;

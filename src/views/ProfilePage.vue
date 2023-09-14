@@ -73,11 +73,5 @@ export default {
   padding: 20px;
   margin-bottom: 20px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.card:hover {
-  background-color: #f2f2f2;
-  transform: translateY(-2px);
 }
 </style>

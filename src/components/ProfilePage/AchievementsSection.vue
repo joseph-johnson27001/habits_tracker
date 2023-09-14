@@ -1,6 +1,6 @@
 <template>
   <div class="achievements-section">
-    <h1>ACHIEVMENTS SECTION</h1>
+    <h1>ACHIEVEMENTS SECTION</h1>
   </div>
 </template>
 

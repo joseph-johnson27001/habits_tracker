@@ -1,16 +1,69 @@
 <template>
   <div class="completed-section">
-    <h1>COMPLETED AIMS SECTION</h1>
+    <h1>COMPLETED AIMS</h1>
+    <ul class="completed-list">
+      <li
+        class="completed-item"
+        v-for="(aim, index) in completedAims"
+        :key="index"
+      >
+        <div class="completed-item-title">{{ aim.title }}</div>
+        <div class="completed-item-description">{{ aim.description }}</div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   name: "CompletedSection",
-  // Add your component logic here
+  data() {
+    return {
+      completedAims: [
+        {
+          title: "🏆 Completed Daily Aim",
+          description: "You've completed your daily writing goal! 📝",
+        },
+        {
+          title: "🎯 Completed Weekly Aim",
+          description:
+            "Congratulations on completing your weekly fitness goal! 💪",
+        },
+        {
+          title: "🥇 Completed Monthly Aim",
+          description: "You've achieved your monthly reading target! 📚",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style scoped>
-/* Add component-specific styles here */
+.completed-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.completed-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.completed-item:hover {
+  background-color: #f2f2f2;
+}
+
+.completed-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.completed-item-description {
+  font-size: 14px;
+  color: #555;
+}
 </style>
