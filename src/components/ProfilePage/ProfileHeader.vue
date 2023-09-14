@@ -634,7 +634,8 @@ export default {
   padding: 20px;
   background-color: #dff1ff;
   border-bottom: 1px solid #ccc;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .user-info {
