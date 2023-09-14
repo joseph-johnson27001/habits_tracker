@@ -1,13 +1,15 @@
 <template>
   <div class="habits-section">
-    <h1>HABIT STREAKS SECTION</h1>
-    <div class="habit-list">
+    <h1>CURRENT STREAKS</h1>
+    <!-- <div class="habit-list">
       <div
         class="habit-item"
         v-for="(habit, index) in habitStreaks"
         :key="index"
       >
-        <div class="habit-title">{{ habit.title }}</div>
+        <div class="habit-title">
+          <h1>{{ habit.title }}</h1>
+        </div>
         <div class="habit-progress">
           <div
             class="habit-graph"
@@ -17,21 +19,22 @@
             <habit-donut-chart
               :data="graph.chartData"
               :options="graph.chartOptions"
+              class="donut-graph"
             ></habit-donut-chart>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import HabitDonutChart from "@/components/ProfilePage/components/HabitGraphs/HabitDonutChart.vue";
+// import HabitDonutChart from "@/components/ProfilePage/components/HabitGraphs/HabitDonutChart.vue";
 
 export default {
   name: "HabitsSection",
   components: {
-    HabitDonutChart,
+    // HabitDonutChart,
   },
   data() {
     return {
@@ -103,7 +106,15 @@ export default {
 .habit-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 100px;
+}
+
+.habit-title {
+  display: flex;
+  justify-content: center;
+}
+
+.donut-graph {
+  max-height: 200px;
 }
 
 /* Add your other component-specific styles here */
