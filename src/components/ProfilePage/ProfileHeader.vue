@@ -619,8 +619,8 @@ export default {
   data() {
     return {
       profileImage: require("@/assets/images/joe-taj.jpg"),
-      userName: "Joe Johnson",
-      userTitle: "Productivity Prodigy",
+      userName: this.$store.state.userName,
+      userTitle: this.$store.state.userTitle,
       nextLevelValue: 12,
     };
   },
