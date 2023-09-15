@@ -1,7 +1,7 @@
 <template>
   <div class="habits-section">
-    <h1>CURRENT STREAKS</h1>
-    <!-- <div class="habit-list">
+    <h1>CURRENT TOP STREAK</h1>
+    <div class="habit-list">
       <div
         class="habit-item"
         v-for="(habit, index) in habitStreaks"
@@ -24,69 +24,31 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
-// import HabitDonutChart from "@/components/ProfilePage/components/HabitGraphs/HabitDonutChart.vue";
+import HabitDonutChart from "@/components/ProfilePage/components/HabitGraphs/HabitDonutChart.vue";
 
 export default {
   name: "HabitsSection",
   components: {
-    // HabitDonutChart,
+    HabitDonutChart,
   },
   data() {
     return {
       habitStreaks: [
         {
-          title: "Writing",
+          title: "30 Days of Meditating",
           graphs: [
             {
               chartData: {
                 labels: ["Completed", "Remaining"],
                 datasets: [
                   {
-                    data: [50, 50],
-                    backgroundColor: ["#36A2EB", "#FFCE56"],
-                  },
-                ],
-              },
-              chartOptions: {
-                responsive: true,
-              },
-            },
-          ],
-        },
-        {
-          title: "Reading",
-          graphs: [
-            {
-              chartData: {
-                labels: ["Completed", "Remaining"],
-                datasets: [
-                  {
-                    data: [80, 20],
-                    backgroundColor: ["#4CAF50", "#FF5733"],
-                  },
-                ],
-              },
-              chartOptions: {
-                responsive: true,
-              },
-            },
-          ],
-        },
-        {
-          title: "Meditating",
-          graphs: [
-            {
-              chartData: {
-                labels: ["Completed", "Remaining"],
-                datasets: [
-                  {
-                    data: [25, 75],
-                    backgroundColor: ["#FFCE56", "#FF5733"],
+                    data: [24, 6],
+                    backgroundColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)"],
                   },
                 ],
               },
@@ -104,17 +66,19 @@ export default {
 
 <style scoped>
 .habit-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
 }
 
 .habit-title {
   display: flex;
   justify-content: center;
+  margin-bottom: -25px;
 }
 
 .donut-graph {
   max-height: 200px;
+  max-width: 200px;
 }
 
 /* Add your other component-specific styles here */

@@ -22,11 +22,11 @@ export default {
           plugins: {
             legend: {
               display: true,
-              position: "bottom", // You can change the legend position
+              position: "none",
             },
             title: {
               display: true,
-              text: this.options.title, // You can add a title to your chart
+              text: this.options.title,
               fontSize: 16,
             },
           },

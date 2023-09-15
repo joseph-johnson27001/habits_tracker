@@ -44,6 +44,42 @@ export default {
           message: "achieved a new high score in the challenges.",
           timestamp: "3 days ago",
         },
+        {
+          icon: "📚",
+          message: "read 5 chapters of a book.",
+          timestamp: "4 days ago",
+        },
+        {
+          icon: "✅",
+          message: "marked 20 tasks as completed.",
+          timestamp: "5 days ago",
+        },
+        {
+          icon: "🎂",
+          message: "celebrated a birthday!",
+          timestamp: "1 week ago",
+        },
+        {
+          icon: "🥇",
+          message: "won first place in a competition.",
+          timestamp: "2 weeks ago",
+        },
+        {
+          icon: "🚀",
+          message: "launched a new project successfully.",
+          timestamp: "3 weeks ago",
+        },
+        {
+          icon: "🍔",
+          message: "tried a new restaurant and loved it.",
+          timestamp: "4 weeks ago",
+        },
+        {
+          icon: "🎵",
+          message: "attended a live music concert.",
+          timestamp: "1 month ago",
+        },
+        // Add more activities as needed
       ],
     };
   },
