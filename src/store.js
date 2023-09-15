@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    userName: "Joseph Johnson",
+    userName: "Joe Johnson",
     userTitle: "Productivity Wizard",
   },
 });
