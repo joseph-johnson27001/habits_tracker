@@ -4,8 +4,11 @@
       <router-link to="/" class="sidebar-item">
         <i class="fas fa-list fa-lg"></i>
       </router-link>
-      <router-link to="/habits" class="sidebar-item">
+      <router-link to="/statistics" class="sidebar-item">
         <i class="fas fa-chart-line fa-lg"></i>
+      </router-link>
+      <router-link to="/habits" class="sidebar-item">
+        <i class="fas fa-check-square fa-lg"></i>
       </router-link>
       <router-link to="/articles" class="sidebar-item">
         <i class="fas fa-newspaper fa-lg"></i>

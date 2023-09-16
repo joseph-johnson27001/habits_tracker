@@ -58,6 +58,15 @@ h1 {
   margin-right: 50px;
 }
 
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .content-container {
   max-width: 1200px;
   width: 100%;

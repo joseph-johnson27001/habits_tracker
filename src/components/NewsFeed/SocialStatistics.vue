@@ -161,15 +161,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .leaderboard {
   margin-bottom: 20px;
 }

@@ -63,13 +63,4 @@ export default {
 .top-area {
   margin: 20px;
 }
-
-.card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
 </style>
