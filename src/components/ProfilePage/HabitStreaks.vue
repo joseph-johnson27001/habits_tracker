@@ -1,6 +1,11 @@
 <template>
   <div class="habits-section">
-    <h1>CURRENT TOP STREAK</h1>
+    <div class="heading-area">
+      <h1>HABITS</h1>
+      <router-link :to="'/habits/' + userName" class="view-more-link">
+        <i class="fas fa-angle-right"></i>
+      </router-link>
+    </div>
     <div class="habit-list">
       <div
         class="habit-item"

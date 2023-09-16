@@ -1,6 +1,11 @@
 <template>
   <div class="recent-news-section">
-    <h1>RECENT NEWS</h1>
+    <div class="heading-area">
+      <h1>RECENT NEWS</h1>
+      <router-link :to="'/news/' + userName" class="view-more-link">
+        <i class="fas fa-angle-right"></i>
+      </router-link>
+    </div>
     <ul class="recent-activity-list">
       <!-- Loop through recent activities -->
       <li

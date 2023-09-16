@@ -69,4 +69,15 @@ h1 {
   margin-right: 50px;
   margin-bottom: 10px;
 }
+
+.heading-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-more-link {
+  text-decoration: none;
+  color: #4169e1;
+}
 </style>

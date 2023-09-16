@@ -1,6 +1,11 @@
 <template>
   <div class="achievements-section">
-    <h1>ACHIEVEMENTS</h1>
+    <div class="heading-area">
+      <h1>ACHIEVEMENTS</h1>
+      <router-link :to="'/achievements/' + userName" class="view-more-link">
+        <i class="fas fa-angle-right"></i>
+      </router-link>
+    </div>
     <div class="achievements-list">
       <!-- Loop through achievements and display them -->
       <div
@@ -25,6 +30,7 @@ export default {
   name: "AchievementsSection",
   data() {
     return {
+      userName: this.$store.state.userName,
       achievements: [
         {
           icon: "🏆",

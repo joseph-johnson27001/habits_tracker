@@ -1,6 +1,11 @@
 <template>
   <div class="statistics-section">
-    <h1>STATISTICS</h1>
+    <div class="heading-area">
+      <h1>STATISTICS</h1>
+      <router-link :to="'/statistics/' + userName" class="view-more-link">
+        <i class="fas fa-angle-right"></i>
+      </router-link>
+    </div>
     <div class="statistics-summary">
       <div class="stat-item">
         <div class="stat-label">Total Completed Habits</div>

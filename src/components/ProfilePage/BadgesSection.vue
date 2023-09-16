@@ -1,6 +1,11 @@
 <template>
   <div class="badges-section">
-    <h1>BADGES</h1>
+    <div class="heading-area">
+      <h1>BADGES</h1>
+      <router-link :to="'/badges/' + userName" class="view-more-link">
+        <i class="fas fa-angle-right"></i>
+      </router-link>
+    </div>
     <div class="badge-list">
       <div class="badge-item" v-for="(badge, index) in badges" :key="index">
         <span class="badge-icon">{{ badge.icon }}</span>
@@ -14,6 +19,7 @@ export default {
   name: "BadgesSection",
   data() {
     return {
+      userName: this.$store.state.userName,
       badges: [
         {
           name: "Badge 1",
