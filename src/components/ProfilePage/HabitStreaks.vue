@@ -80,6 +80,4 @@ export default {
   max-height: 200px;
   max-width: 200px;
 }
-
-/* Add your other component-specific styles here */
 </style>

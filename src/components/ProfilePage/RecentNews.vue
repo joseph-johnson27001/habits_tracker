@@ -1,6 +1,6 @@
 <template>
   <div class="recent-news-section">
-    <h1>RECENT NEWS SECTION</h1>
+    <h1>RECENT NEWS</h1>
     <ul class="recent-activity-list">
       <!-- Loop through recent activities -->
       <li
@@ -79,7 +79,6 @@ export default {
           message: "attended a live music concert.",
           timestamp: "1 month ago",
         },
-        // Add more activities as needed
       ],
     };
   },
@@ -87,11 +86,6 @@ export default {
 </script>
 
 <style scoped>
-/* Add your styling for recent news section here */
-.recent-news-section {
-  /* Add styles for the section */
-}
-
 .recent-activity-list {
   list-style-type: none;
   padding: 0;
@@ -101,8 +95,15 @@ export default {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  border-bottom: 1px solid #ccc; /* Add border */
-  padding-bottom: 10px; /* Add some padding for spacing */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.recent-activity-item:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 
 .activity-icon {
