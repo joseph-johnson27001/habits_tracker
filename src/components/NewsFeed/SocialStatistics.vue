@@ -2,7 +2,10 @@
   <div class="social-stats">
     <!-- Leaderboard -->
     <div class="leaderboard card">
-      <h1>Leaderboard</h1>
+      <div class="heading-area">
+        <h1>LEADERBOARD</h1>
+        <i class="fas fa-angle-right view-more-link"></i>
+      </div>
       <table>
         <thead>
           <tr>
@@ -23,7 +26,10 @@
 
     <!-- Challenges -->
     <div class="challenges card">
-      <h1>Challenges</h1>
+      <div class="heading-area">
+        <h1>CHALLENGES</h1>
+        <i class="fas fa-angle-right view-more-link"></i>
+      </div>
       <div
         class="challenge-item"
         v-for="(challenge, index) in challenges"
@@ -41,7 +47,10 @@
 
     <!-- Upcoming Events -->
     <div class="upcoming-events card">
-      <h1>Upcoming Events</h1>
+      <div class="heading-area">
+        <h1>UPCOMING EVENTS</h1>
+        <i class="fas fa-angle-right view-more-link"></i>
+      </div>
       <ul>
         <li v-for="(event, index) in upcomingEvents" :key="index">
           <div class="event-info">
@@ -54,7 +63,10 @@
 
     <!-- Recent Articles -->
     <div class="recent-articles card">
-      <h1>Recent Articles</h1>
+      <div class="heading-area">
+        <h1>RECENT ARTICLES</h1>
+        <i class="fas fa-angle-right view-more-link"></i>
+      </div>
       <div
         class="article-item"
         v-for="(article, index) in recentArticles"

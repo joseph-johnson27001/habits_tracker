@@ -2,9 +2,7 @@
   <div class="achievements-section">
     <div class="heading-area">
       <h1>ACHIEVEMENTS</h1>
-      <router-link :to="'/achievements/' + userName" class="view-more-link">
-        <i class="fas fa-angle-right"></i>
-      </router-link>
+      <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <div class="achievements-list">
       <!-- Loop through achievements and display them -->

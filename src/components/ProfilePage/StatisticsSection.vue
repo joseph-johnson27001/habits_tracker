@@ -2,9 +2,7 @@
   <div class="statistics-section">
     <div class="heading-area">
       <h1>STATISTICS</h1>
-      <router-link :to="'/statistics/' + userName" class="view-more-link">
-        <i class="fas fa-angle-right"></i>
-      </router-link>
+      <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <div class="statistics-summary">
       <div class="stat-item">

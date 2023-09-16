@@ -2,12 +2,7 @@
   <div class="completed-section">
     <div class="heading-area">
       <h1>RECENT COMPLETED</h1>
-      <router-link
-        :to="'/recently-completed/' + userName"
-        class="view-more-link"
-      >
-        <i class="fas fa-angle-right"></i>
-      </router-link>
+      <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <ul class="completed-list">
       <li

@@ -2,9 +2,7 @@
   <div class="habits-section">
     <div class="heading-area">
       <h1>HABITS</h1>
-      <router-link :to="'/habits/' + userName" class="view-more-link">
-        <i class="fas fa-angle-right"></i>
-      </router-link>
+      <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <div class="habit-list">
       <div

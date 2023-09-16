@@ -2,9 +2,7 @@
   <div class="badges-section">
     <div class="heading-area">
       <h1>BADGES</h1>
-      <router-link :to="'/badges/' + userName" class="view-more-link">
-        <i class="fas fa-angle-right"></i>
-      </router-link>
+      <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <div class="badge-list">
       <div class="badge-item" v-for="(badge, index) in badges" :key="index">
