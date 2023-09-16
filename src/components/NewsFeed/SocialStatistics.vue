@@ -166,7 +166,6 @@ export default {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
-  padding-top: 5px;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -214,14 +213,10 @@ export default {
   background-color: #f2f2f2;
 }
 
-.upcoming-events h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
 .upcoming-events ul {
   list-style: none;
   padding: 0;
+  margin-top: 0px;
 }
 
 .upcoming-events li {

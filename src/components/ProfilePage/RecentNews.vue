@@ -53,11 +53,6 @@ export default {
           timestamp: "4 days ago",
         },
         {
-          icon: "✅",
-          message: "marked 20 tasks as completed.",
-          timestamp: "5 days ago",
-        },
-        {
           icon: "🎂",
           message: "celebrated a birthday!",
           timestamp: "1 week ago",
@@ -71,11 +66,6 @@ export default {
           icon: "🚀",
           message: "launched a new project successfully.",
           timestamp: "3 weeks ago",
-        },
-        {
-          icon: "🍔",
-          message: "tried a new restaurant and loved it.",
-          timestamp: "4 weeks ago",
         },
         {
           icon: "🎵",

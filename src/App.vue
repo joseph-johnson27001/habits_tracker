@@ -80,6 +80,7 @@ h1 {
   text-decoration: none;
   color: #4169e1;
   transition: color 0.2, transform 0.3s linear;
+  cursor: pointer;
 }
 
 .view-more-link:hover {
