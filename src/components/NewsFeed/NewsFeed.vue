@@ -19,32 +19,28 @@
 
       <!-- Interaction Area -->
 
+      <div class="button-row">
+        <span @click="likePost(item)" class="like-button">
+          <i class="fas fa-heart clickable-icon like-button"></i>
+          <span class="like-count">{{ item.likes }}</span>
+        </span>
+        <span class="comment-button">
+          <i
+            class="fas fa-comment clickable-icon"
+            @click="toggleComments(item)"
+          ></i>
+          <span class="comment-count" @click="toggleComments(item)">{{
+            item.comments.length
+          }}</span>
+        </span>
+      </div>
       <div class="interaction-area">
-        <div class="interaction-container">
-          <div class="button-row">
-            <span @click="likePost(item)" class="like-button">
-              <i class="fas fa-heart clickable-icon like-button"></i>
-              <span class="like-count">{{ item.likes }}</span>
-            </span>
-            <span class="comment-button">
-              <i
-                class="fas fa-comment clickable-icon"
-                @click="toggleComments(item)"
-              ></i>
-              <span class="comment-count" @click="toggleComments(item)">{{
-                item.comments.length
-              }}</span>
-            </span>
-          </div>
-          <div>
-            <input
-              v-model="newComment"
-              @keyup.enter="addComment(item)"
-              class="comment-input"
-              placeholder="Add a comment..."
-            />
-          </div>
-        </div>
+        <input
+          v-model="newComment"
+          @keyup.enter="addComment(item)"
+          class="comment-input"
+          placeholder="Add a comment..."
+        />
       </div>
 
       <!-- Display comments if commentsVisible is true -->
@@ -316,6 +312,7 @@ export default {
 .interaction-area {
   border-top: 1px solid #ccc;
   padding-top: 10px;
+  display: flex;
 }
 
 .interaction-container {
@@ -326,6 +323,7 @@ export default {
 .button-row {
   display: flex;
   align-items: center;
+  padding-bottom: 5px;
 }
 
 .like-button {
@@ -355,7 +353,6 @@ export default {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  margin-right: 10px;
   transition: border-color 0.1s;
 }
 
