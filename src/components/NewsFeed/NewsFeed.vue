@@ -15,24 +15,25 @@
         </div>
       </div>
       <div class="content">{{ item.content }}</div>
-      <div class="timestamp">{{ item.timestamp }}</div>
+      <div style="display: flex; justify-content: space-between">
+        <div class="timestamp">{{ item.timestamp }}</div>
+        <!-- Interaction Area -->
 
-      <!-- Interaction Area -->
-
-      <div class="button-row">
-        <span @click="likePost(item)" class="like-button">
-          <i class="fas fa-heart clickable-icon like-button"></i>
-          <span class="like-count">{{ item.likes }}</span>
-        </span>
-        <span class="comment-button">
-          <i
-            class="fas fa-comment clickable-icon"
-            @click="toggleComments(item)"
-          ></i>
-          <span class="comment-count" @click="toggleComments(item)">{{
-            item.comments.length
-          }}</span>
-        </span>
+        <div class="button-row">
+          <span @click="likePost(item)" class="like-button">
+            <i class="fas fa-heart clickable-icon like-button"></i>
+            <span class="like-count">{{ item.likes }}</span>
+          </span>
+          <span class="comment-button">
+            <i
+              class="fas fa-comment clickable-icon"
+              @click="toggleComments(item)"
+            ></i>
+            <span class="comment-count" @click="toggleComments(item)">{{
+              item.comments.length
+            }}</span>
+          </span>
+        </div>
       </div>
       <div class="interaction-area">
         <input
@@ -72,6 +73,7 @@ export default {
   },
   data() {
     return {
+      newComment: "",
       feedItems: [
         {
           userName: "John Doe",
@@ -105,7 +107,7 @@ export default {
           userImage: "https://picsum.photos/49/50",
           timestamp: "4 hours ago",
           content:
-            "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀",
+            "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀 ",
           likes: 15,
           comments: [
             "Wow, that's impressive!",
