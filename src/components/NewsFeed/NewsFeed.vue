@@ -266,11 +266,7 @@ export default {
   background-color: white;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  transition: transform 0.2s;
-}
-
-.feed-item:hover {
-  transform: translateY(-2px);
+  transition: border 0.2s;
 }
 
 .user-info {
@@ -288,7 +284,7 @@ export default {
 
 .user-name {
   color: #4169e1;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 18px;
   cursor: pointer;
   transition: color 0.1s;
