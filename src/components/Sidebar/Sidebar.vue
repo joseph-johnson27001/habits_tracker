@@ -62,7 +62,6 @@ export default {
   transition: transform 0.6s linear;
 }
 
-/* Add animation on hover */
 .sidebar-item .settings-icon:hover {
   transform: rotate(90deg);
 }

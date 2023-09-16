@@ -76,6 +76,7 @@ h1 {
   align-items: center;
 }
 
+.clickable-icon,
 .view-more-link {
   text-decoration: none;
   color: #4169e1;
@@ -83,6 +84,7 @@ h1 {
   cursor: pointer;
 }
 
+.clickable-icon:hover,
 .view-more-link:hover {
   transform: scale(1.1);
   color: #3156a6;

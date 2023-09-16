@@ -16,6 +16,52 @@
       </div>
       <div class="content">{{ item.content }}</div>
       <div class="timestamp">{{ item.timestamp }}</div>
+
+      <!-- Interaction Area -->
+
+      <div class="interaction-area">
+        <div class="interaction-container">
+          <div class="button-row">
+            <span @click="likePost(item)" class="like-button">
+              <i class="fas fa-heart clickable-icon like-button"></i>
+              <span class="like-count">{{ item.likes }}</span>
+            </span>
+            <span class="comment-button">
+              <i
+                class="fas fa-comment clickable-icon"
+                @click="toggleComments(item)"
+              ></i>
+              <span class="comment-count" @click="toggleComments(item)">{{
+                item.comments.length
+              }}</span>
+            </span>
+          </div>
+          <div>
+            <input
+              v-model="newComment"
+              @keyup.enter="addComment(item)"
+              class="comment-input"
+              placeholder="Add a comment..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Display comments if commentsVisible is true -->
+      <div v-if="item.commentsVisible" class="comments-section">
+        <input
+          v-model="newComment"
+          @keyup.enter="addComment(item)"
+          placeholder="Add a comment..."
+        />
+        <div
+          class="comment"
+          v-for="(comment, cIndex) in item.comments"
+          :key="cIndex"
+        >
+          {{ comment }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -37,6 +83,12 @@ export default {
           userImage: "https://picsum.photos/51/50",
           timestamp: "2 hours ago",
           content: "Achieved my fitness goal today! 💪🏋️‍♂️",
+          likes: 10,
+          comments: [
+            "Great job, John!",
+            "That's awesome! Keep it up!",
+            "I'm inspired by your dedication!",
+          ],
         },
         {
           userName: "Alice Smith",
@@ -45,6 +97,11 @@ export default {
           timestamp: "3 hours ago",
           content:
             "Completed the 30-day meditation challenge. Feeling zen! 🧘‍♀️✨",
+          likes: 5,
+          comments: [
+            "Meditation is amazing, isn't it?",
+            "You're an inspiration to us all!",
+          ],
         },
         {
           userName: "Emily Johnson",
@@ -53,6 +110,11 @@ export default {
           timestamp: "4 hours ago",
           content:
             "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀",
+          likes: 15,
+          comments: [
+            "Wow, that's impressive!",
+            "You're a productivity superstar!",
+          ],
         },
         {
           userName: "David Brown",
@@ -61,6 +123,11 @@ export default {
           timestamp: "5 hours ago",
           content:
             "Received the 'Master Chef' trophy for trying a new recipe every day this month. 🏅👨‍🍳",
+          likes: 8,
+          comments: [
+            "Your culinary skills are amazing!",
+            "I want to taste your recipes!",
+          ],
         },
         {
           userName: "Olivia White",
@@ -69,6 +136,8 @@ export default {
           timestamp: "6 hours ago",
           content:
             "Finished reading 10 books in a week. A new personal best! 📚🥇",
+          likes: 12,
+          comments: ["That's so impressive!", "What books did you read?"],
         },
         {
           userName: "Michael Green",
@@ -77,6 +146,11 @@ export default {
           timestamp: "7 hours ago",
           content:
             "Completed the '30 Days of Gratitude' challenge. Feeling thankful for life's little joys. 🙏😊",
+          likes: 6,
+          comments: [
+            "Gratitude is key to happiness!",
+            "Keep spreading positivity!",
+          ],
         },
         {
           userName: "Sophia Adams",
@@ -84,6 +158,11 @@ export default {
           userImage: "https://picsum.photos/45/50",
           timestamp: "8 hours ago",
           content: "Achieved a new high score in my favorite video game. 🎮🏆",
+          likes: 20,
+          comments: [
+            "Gamer skills on point!",
+            "I challenge you to beat my score!",
+          ],
         },
         {
           userName: "Ethan Wilson",
@@ -92,6 +171,11 @@ export default {
           timestamp: "9 hours ago",
           content:
             "Visited a breathtaking natural wonder today. Nature is amazing! 🌄🌿",
+          likes: 7,
+          comments: [
+            "Nature is the best stress reliever!",
+            "Where did you go?",
+          ],
         },
         {
           userName: "Liam Miller",
@@ -99,6 +183,8 @@ export default {
           userImage: "https://picsum.photos/46/50",
           timestamp: "10 hours ago",
           content: "Completed a 30-day coding challenge. 💻🚀",
+          likes: 18,
+          comments: ["Coding wizard!", "What projects did you work on?"],
         },
         {
           userName: "Ava Robinson",
@@ -107,6 +193,11 @@ export default {
           timestamp: "11 hours ago",
           content:
             "Attended a virtual photography exhibition. Captured some stunning shots! 📷🌟",
+          likes: 14,
+          comments: [
+            "Your photos are breathtaking!",
+            "Share some of your work with us!",
+          ],
         },
         {
           userName: "Noah Clark",
@@ -115,6 +206,8 @@ export default {
           timestamp: "12 hours ago",
           content:
             "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
+          likes: 9,
+          comments: ["Multilingual genius!", "Teach me some phrases!"],
         },
         {
           userName: "Olivia Lewis",
@@ -122,6 +215,8 @@ export default {
           userImage: "https://picsum.photos/49/50",
           timestamp: "13 hours ago",
           content: "Hiked to the summit of Mount Adventure. What a view! ⛰️🌄",
+          likes: 25,
+          comments: ["Adventurer of the year!", "Tell us about your journey!"],
         },
         {
           userName: "Liam Parker",
@@ -130,6 +225,8 @@ export default {
           timestamp: "14 hours ago",
           content:
             "Completed a 30-day coding challenge. Feeling accomplished! 💻🚀",
+          likes: 22,
+          comments: ["Coding genius!", "What languages did you code in?"],
         },
         {
           userName: "Emma Turner",
@@ -137,9 +234,29 @@ export default {
           userImage: "https://picsum.photos/45/50",
           timestamp: "15 hours ago",
           content: "Started a new book series. Can't put it down! 📚❤️",
+          likes: 11,
+          comments: ["Bookworm alert!", "Tell us about the book!"],
         },
       ],
     };
+  },
+  methods: {
+    likePost(item) {
+      item.likes += 1;
+    },
+    showComments(item) {
+      console.log(item);
+    },
+    toggleComments(item) {
+      console.log(item);
+      item.commentsVisible = !item.commentsVisible;
+    },
+    addComment(item) {
+      if (this.newComment.trim() !== "") {
+        item.comments.push(this.newComment);
+        this.newComment = "";
+      }
+    },
   },
 };
 </script>
@@ -159,11 +276,10 @@ export default {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .feed-item:hover {
-  background-color: #f2f2f2;
   transform: translateY(-2px);
 }
 
@@ -189,10 +305,62 @@ export default {
   color: #888;
   margin-top: 5px;
   font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .content {
   margin-top: 10px;
   font-size: 16px;
+}
+
+.interaction-area {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.interaction-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.like-button i,
+.comment-button i {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.like-count,
+.comment-count {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: border-color 0.1s;
+}
+
+.comment-input:focus {
+  border-color: #6da9e4;
+  outline: none;
 }
 </style>
