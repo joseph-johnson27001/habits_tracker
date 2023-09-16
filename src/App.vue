@@ -79,5 +79,11 @@ h1 {
 .view-more-link {
   text-decoration: none;
   color: #4169e1;
+  transition: color 0.2, transform 0.3s linear;
+}
+
+.view-more-link:hover {
+  transform: scale(1.1);
+  color: #3156a6;
 }
 </style>

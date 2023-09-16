@@ -38,13 +38,6 @@ export default {
   justify-content: space-between;
 }
 
-.sidebar-item {
-  color: #4169e1;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 35px;
-}
-
 .sidebar-item i {
   margin: auto;
 }
