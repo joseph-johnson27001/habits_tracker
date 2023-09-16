@@ -312,8 +312,6 @@ export default {
 }
 
 .interaction-area {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
   display: flex;
 }
 
