@@ -20,19 +20,29 @@
         <!-- Interaction Area -->
 
         <div class="button-row">
-          <span @click="likePost(item)" class="like-button">
-            <i class="fas fa-heart clickable-icon like-button"></i>
-            <span class="like-count">{{ item.likes }}</span>
-          </span>
           <span class="comment-button">
             <i
-              class="fas fa-comment clickable-icon"
+              class="far fa-comment fa-lg clickable-icon"
               @click="toggleComments(item)"
             ></i>
             <span class="comment-count" @click="toggleComments(item)">{{
               item.comments.length
             }}</span>
           </span>
+          <span @click="likePost(item)" class="like-button">
+            <i class="far fa-thumbs-up fa-lg clickable-icon like-button"></i>
+            <span class="like-count">{{ item.likes }}</span>
+          </span>
+        </div>
+      </div>
+      <!-- Display comments if commentsVisible is true -->
+      <div v-if="item.commentsVisible" class="comments-section">
+        <div
+          class="comment"
+          v-for="(comment, cIndex) in item.comments"
+          :key="cIndex"
+        >
+          {{ comment }}
         </div>
       </div>
       <div class="interaction-area">
@@ -42,22 +52,6 @@
           class="comment-input"
           placeholder="Add a comment..."
         />
-      </div>
-
-      <!-- Display comments if commentsVisible is true -->
-      <div v-if="item.commentsVisible" class="comments-section">
-        <input
-          v-model="newComment"
-          @keyup.enter="addComment(item)"
-          placeholder="Add a comment..."
-        />
-        <div
-          class="comment"
-          v-for="(comment, cIndex) in item.comments"
-          :key="cIndex"
-        >
-          {{ comment }}
-        </div>
       </div>
     </div>
   </div>
@@ -73,7 +67,6 @@ export default {
   },
   data() {
     return {
-      newComment: "",
       feedItems: [
         {
           userName: "John Doe",
@@ -273,7 +266,6 @@ export default {
   background-color: white;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  cursor: pointer;
   transition: transform 0.2s;
 }
 
@@ -295,8 +287,16 @@ export default {
 }
 
 .user-name {
+  color: #4169e1;
   font-weight: bold;
   font-size: 18px;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.user-name:hover {
+  transform: scale(1.1);
+  color: #3156a6;
 }
 
 .timestamp {
@@ -332,19 +332,18 @@ export default {
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-left: 8px;
 }
 
 .like-button i,
 .comment-button i {
-  font-size: 1.5rem;
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .like-count,
 .comment-count {
   font-size: 1rem;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .comment-input {
