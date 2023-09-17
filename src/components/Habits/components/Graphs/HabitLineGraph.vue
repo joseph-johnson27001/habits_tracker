@@ -29,9 +29,10 @@ export default {
             labels: this.habitData.labels,
             datasets: [
               {
-                label: "Progress",
-                borderColor: "rgb(75, 192, 192)",
-                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                label: "Habit Progress",
+                borderColor: "rgba(75, 192, 192, 1)",
+                fill: true,
+                backgroundColor: this.generateGradientBackground(),
                 data: this.habitData.data,
               },
             ],
@@ -41,7 +42,7 @@ export default {
             maintainAspectRatio: false,
             plugins: {
               legend: {
-                display: false, // Disable the legend
+                display: false,
               },
             },
           },
@@ -52,12 +53,19 @@ export default {
         this.chart.update();
       }
     },
+    generateGradientBackground() {
+      const gradient = this.$refs.lineChart
+        .getContext("2d")
+        .createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, "rgba(75, 192, 192, 0.5)"); // Adjust opacity here
+      gradient.addColorStop(0.5, "rgba(75, 192, 192, 0.2)"); // Adjust opacity here
+      gradient.addColorStop(1, "rgba(75, 192, 192, 0.1)"); // Adjust opacity here
+      return gradient;
+    },
   },
-
   mounted() {
     this.renderLineChart();
   },
-
   beforeDestroy() {
     if (this.chart) {
       this.chart.destroy();
@@ -66,4 +74,6 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+/* Add any custom styles for the chart container here */
+</style>
