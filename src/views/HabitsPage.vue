@@ -1,21 +1,31 @@
 <template>
   <div class="habits-page">
-    <div class="card">
+    <div class="card" v-for="(habit, index) in habits" :key="index">
       <div class="heading-container">
-        <h1>Meditating</h1>
+        <h1>{{ habit.name }}</h1>
       </div>
-
-      <HabitsCards />
+      <!-- Pass the individual habit data to HabitCard component -->
+      <p>{{ habit.value }}</p>
+      <HabitCard :habit="habit" />
     </div>
   </div>
 </template>
 
 <script>
-import HabitsCards from "@/components/Habits/components/HabitsCards.vue";
+import HabitCard from "@/components/Habits/components/HabitCard.vue";
 
 export default {
   components: {
-    HabitsCards,
+    HabitCard,
+  },
+  data() {
+    return {
+      habits: [
+        { name: "Meditating", value: "Meditating Graph Goes Here" },
+        { name: "Working Out", value: "Working Out Graph Goes Here" },
+        { name: "Reading", value: "Reading Graph Goes Here" },
+      ],
+    };
   },
 };
 </script>
