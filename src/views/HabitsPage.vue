@@ -1,12 +1,20 @@
 <template>
   <div class="habits-page">
-    <div class="card" v-for="(habit, index) in habits" :key="index">
+    <!-- Display the current habit card -->
+    <div class="card">
       <div class="heading-container">
-        <h1>{{ habit.name }}</h1>
+        <h1>{{ habits[currentIndex].name }}</h1>
       </div>
-      <!-- Pass the individual habit data to HabitCard component -->
-      <p>{{ habit.value }}</p>
-      <HabitCard :habit="habit" />
+      <p>{{ habits[currentIndex].value }}</p>
+      <HabitCard :habit="habits[currentIndex]" />
+    </div>
+
+    <!-- Add navigation buttons to move between cards -->
+    <div class="carousel-navigation">
+      <button @click="prevCard" :disabled="currentIndex === 0">Previous</button>
+      <button @click="nextCard" :disabled="currentIndex === habits.length - 1">
+        Next
+      </button>
     </div>
   </div>
 </template>
@@ -25,7 +33,22 @@ export default {
         { name: "Working Out", value: "Working Out Graph Goes Here" },
         { name: "Reading", value: "Reading Graph Goes Here" },
       ],
+      currentIndex: 0, // Initialize with the first card
     };
+  },
+  methods: {
+    nextCard() {
+      // Move to the next card if not at the end
+      if (this.currentIndex < this.habits.length - 1) {
+        this.currentIndex++;
+      }
+    },
+    prevCard() {
+      // Move to the previous card if not at the beginning
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      }
+    },
   },
 };
 </script>
@@ -37,5 +60,10 @@ export default {
 .heading-container {
   border-bottom: 1px solid #ccc;
   padding: 5px;
+}
+.carousel-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 </style>
