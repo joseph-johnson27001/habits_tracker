@@ -39,6 +39,11 @@ export default {
           options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false, // Disable the legend
+              },
+            },
           },
         });
       } else {
