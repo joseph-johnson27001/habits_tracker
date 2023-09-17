@@ -86,11 +86,11 @@ export default {
 }
 .slide-fade-next-enter,
 .slide-fade-prev-leave-to {
-  transform: translateX(150%); /* Change this to 100% */
+  transform: translateX(150%);
 }
 .slide-fade-prev-enter,
 .slide-fade-next-leave-to {
-  transform: translateX(-150%); /* Change this to -100% */
+  transform: translateX(-150%);
 }
 
 .arrow-button {
