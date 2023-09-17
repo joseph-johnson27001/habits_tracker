@@ -66,15 +66,12 @@ export default {
   methods: {
     nextCard() {
       this.direction = "next";
-      if (this.currentIndex < this.habits.length - 1) {
-        this.currentIndex++;
-      }
+      this.currentIndex = (this.currentIndex + 1) % this.habits.length;
     },
     prevCard() {
       this.direction = "prev";
-      if (this.currentIndex > 0) {
-        this.currentIndex--;
-      }
+      this.currentIndex =
+        (this.currentIndex - 1 + this.habits.length) % this.habits.length;
     },
   },
 };
@@ -100,15 +97,17 @@ export default {
 .slide-fade-prev-leave-active,
 .slide-fade-prev-enter-active,
 .slide-fade-next-leave-active {
-  transition: transform 0.6s;
+  transition: transform 0.6s, opacity 0.2s;
 }
 .slide-fade-next-enter,
 .slide-fade-prev-leave-to {
-  transform: translateX(150%);
+  /* transform: translateX(150%); */
+  opacity: 0;
 }
 .slide-fade-prev-enter,
 .slide-fade-next-leave-to {
-  transform: translateX(-150%);
+  /* transform: translateX(-150%); */
+  opacity: 0;
 }
 
 .arrow-button {
