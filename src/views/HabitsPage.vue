@@ -23,7 +23,6 @@
           <h1>{{ habits[currentIndex].name }}</h1>
         </div>
         <div class="habit-card-content">
-          <HabitCard :habit="habits[currentIndex]" />
           <HabitLineGraph :habitData="habits[currentIndex].graphData" />
         </div>
         <div class="arrow-button next-button" @click="nextCard">
@@ -35,12 +34,10 @@
 </template>
 
 <script>
-import HabitCard from "@/components/Habits/components/HabitCard.vue";
 import HabitLineGraph from "@/components/Habits/components/Graphs/HabitLineGraph.vue";
 
 export default {
   components: {
-    HabitCard,
     HabitLineGraph,
   },
   data() {
