@@ -9,8 +9,8 @@
           <h1>{{ habits[currentIndex].name }}</h1>
         </div>
         <div class="habit-card-content">
-          <p>{{ habits[currentIndex].value }}</p>
           <HabitCard :habit="habits[currentIndex]" />
+          <HabitLineGraph :habitData="habits[currentIndex].graphData" />
         </div>
         <div class="arrow-button next-button" @click="nextCard">
           <i class="fas fa-chevron-right clickable-icon"></i>
@@ -22,17 +22,37 @@
 
 <script>
 import HabitCard from "@/components/Habits/components/HabitCard.vue";
+import HabitLineGraph from "@/components/Habits/components/Graphs/HabitLineGraph.vue";
 
 export default {
   components: {
     HabitCard,
+    HabitLineGraph,
   },
   data() {
     return {
       habits: [
-        { name: "Meditating", value: "Meditating Graph Goes Here" },
-        { name: "Working Out", value: "Working Out Graph Goes Here" },
-        { name: "Reading", value: "Reading Graph Goes Here" },
+        {
+          name: "Meditating",
+          graphData: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            data: [10, 15, 12, 20, 18],
+          },
+        },
+        {
+          name: "Working Out",
+          graphData: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            data: [5, 8, 10, 7, 12],
+          },
+        },
+        {
+          name: "Reading",
+          graphData: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            data: [8, 12, 15, 10, 17],
+          },
+        },
       ],
       currentIndex: 0,
       direction: "next",
@@ -63,13 +83,11 @@ export default {
 <style>
 .card {
   position: relative;
-  height: 500px;
 }
 .habits-page {
   padding: 10px;
 }
 .heading-container {
-  border-bottom: 1px solid #ccc;
   padding: 5px;
 }
 .carousel-navigation {
