@@ -3,7 +3,7 @@
     <transition :name="transitionName" mode="out-in">
       <div :key="currentIndex" class="card">
         <div class="arrow-button prev-button" @click="prevCard">
-          <i class="fas fa-chevron-left"></i>
+          <i class="fas fa-chevron-left clickable-icon"></i>
         </div>
         <div class="heading-container">
           <h1>{{ habits[currentIndex].name }}</h1>
@@ -13,7 +13,7 @@
           <HabitCard :habit="habits[currentIndex]" />
         </div>
         <div class="arrow-button next-button" @click="nextCard">
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right clickable-icon"></i>
         </div>
       </div>
     </transition>
@@ -82,27 +82,25 @@ export default {
 .slide-fade-prev-leave-active,
 .slide-fade-prev-enter-active,
 .slide-fade-next-leave-active {
-  transition: transform 0.75s;
+  transition: transform 0.6s;
 }
 .slide-fade-next-enter,
 .slide-fade-prev-leave-to {
-  transform: translateX(200%);
+  transform: translateX(150%); /* Change this to 100% */
 }
 .slide-fade-prev-enter,
 .slide-fade-next-leave-to {
-  transform: translateX(-200%);
+  transform: translateX(-150%); /* Change this to -100% */
 }
 
 .arrow-button {
   background-color: transparent;
   border: none;
-  color: #4169e1; /* Blue color */
+  color: #4169e1;
   cursor: pointer;
   font-size: 24px;
-  outline: none;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
 }
 
 .prev-button {
