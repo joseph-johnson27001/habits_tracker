@@ -1,5 +1,19 @@
 <template>
   <div class="habits-page">
+    <div class="habit-tracker-container">
+      <div
+        v-for="(habit, index) in habits"
+        :key="index"
+        class="card habit-tracker"
+      >
+        <h2>{{ habit.name }}</h2>
+        <p>Days Tracked: {{ habit.daysTracked }}</p>
+      </div>
+      <div class="card habit-tracker" @click="addHabit">
+        <h2>Add another habit</h2>
+      </div>
+    </div>
+
     <transition :name="transitionName" mode="out-in">
       <div :key="currentIndex" class="card">
         <div class="arrow-button prev-button" @click="prevCard">
@@ -38,6 +52,7 @@ export default {
             labels: ["Jan", "Feb", "Mar", "Apr", "May"],
             data: [10, 15, 12, 20, 18],
           },
+          daysTracked: 25,
         },
         {
           name: "Working Out",
@@ -45,6 +60,7 @@ export default {
             labels: ["Jan", "Feb", "Mar", "Apr", "May"],
             data: [5, 8, 10, 7, 12],
           },
+          daysTracked: 20,
         },
         {
           name: "Reading",
@@ -52,6 +68,23 @@ export default {
             labels: ["Jan", "Feb", "Mar", "Apr", "May"],
             data: [8, 12, 15, 10, 17],
           },
+          daysTracked: 30,
+        },
+        {
+          name: "Fasting",
+          graphData: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            data: [5, 10, 8, 15, 12],
+          },
+          daysTracked: 10,
+        },
+        {
+          name: "Coding",
+          graphData: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            data: [12, 18, 20, 25, 30],
+          },
+          daysTracked: 20,
         },
       ],
       currentIndex: 0,
@@ -73,6 +106,16 @@ export default {
       this.currentIndex =
         (this.currentIndex - 1 + this.habits.length) % this.habits.length;
     },
+    addHabit() {
+      this.habits.push({
+        name: "New Habit",
+        graphData: {
+          labels: [],
+          data: [],
+        },
+        daysTracked: 0,
+      });
+    },
   },
 };
 </script>
@@ -83,6 +126,11 @@ export default {
 }
 .habits-page {
   padding: 10px;
+}
+.habit-tracker-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 .heading-container {
   padding: 5px;
