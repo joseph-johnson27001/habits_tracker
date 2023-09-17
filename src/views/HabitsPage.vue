@@ -1,8 +1,10 @@
 <template>
   <div class="habits-page">
-    <!-- Display the current habit card with slide animation -->
     <transition :name="transitionName" mode="out-in">
       <div :key="currentIndex" class="card">
+        <div class="arrow-button prev-button" @click="prevCard">
+          <i class="fas fa-chevron-left"></i>
+        </div>
         <div class="heading-container">
           <h1>{{ habits[currentIndex].name }}</h1>
         </div>
@@ -10,16 +12,11 @@
           <p>{{ habits[currentIndex].value }}</p>
           <HabitCard :habit="habits[currentIndex]" />
         </div>
+        <div class="arrow-button next-button" @click="nextCard">
+          <i class="fas fa-chevron-right"></i>
+        </div>
       </div>
     </transition>
-
-    <!-- Add navigation buttons to move between cards -->
-    <div class="carousel-navigation">
-      <button @click="prevCard" :disabled="currentIndex === 0">Previous</button>
-      <button @click="nextCard" :disabled="currentIndex === habits.length - 1">
-        Next
-      </button>
-    </div>
   </div>
 </template>
 
@@ -37,8 +34,8 @@ export default {
         { name: "Working Out", value: "Working Out Graph Goes Here" },
         { name: "Reading", value: "Reading Graph Goes Here" },
       ],
-      currentIndex: 0, // Initialize with the first card
-      direction: "next", // Initialize animation direction
+      currentIndex: 0,
+      direction: "next",
     };
   },
   computed: {
@@ -48,19 +45,13 @@ export default {
   },
   methods: {
     nextCard() {
-      // Set animation direction to "next"
       this.direction = "next";
-
-      // Move to the next card if not at the end
       if (this.currentIndex < this.habits.length - 1) {
         this.currentIndex++;
       }
     },
     prevCard() {
-      // Set animation direction to "prev"
       this.direction = "prev";
-
-      // Move to the previous card if not at the beginning
       if (this.currentIndex > 0) {
         this.currentIndex--;
       }
@@ -70,6 +61,10 @@ export default {
 </script>
 
 <style>
+.card {
+  position: relative;
+  height: 500px;
+}
 .habits-page {
   padding: 10px;
 }
@@ -82,26 +77,39 @@ export default {
   justify-content: space-between;
   margin-top: 10px;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: transform 0.86s, opacity 0.5s;
-}
+
 .slide-fade-next-enter-active,
 .slide-fade-prev-leave-active,
 .slide-fade-prev-enter-active,
 .slide-fade-next-leave-active {
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.75s;
 }
 .slide-fade-next-enter,
 .slide-fade-prev-leave-to {
-  transform: translateX(100%);
-  opacity: 0;
+  transform: translateX(200%);
 }
 .slide-fade-prev-enter,
 .slide-fade-next-leave-to {
-  transform: translateX(-100%);
-  opacity: 0;
+  transform: translateX(-200%);
+}
+
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  color: #4169e1; /* Blue color */
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
 }
 </style>
