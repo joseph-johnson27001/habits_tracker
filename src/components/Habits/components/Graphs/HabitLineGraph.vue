@@ -57,9 +57,9 @@ export default {
       const gradient = this.$refs.lineChart
         .getContext("2d")
         .createLinearGradient(0, 0, 0, 200);
-      gradient.addColorStop(0, "rgba(75, 192, 192, 0.5)"); // Adjust opacity here
-      gradient.addColorStop(0.5, "rgba(75, 192, 192, 0.2)"); // Adjust opacity here
-      gradient.addColorStop(1, "rgba(75, 192, 192, 0.1)"); // Adjust opacity here
+      gradient.addColorStop(0, "rgba(75, 192, 192, 0.5)");
+      gradient.addColorStop(0.5, "rgba(75, 192, 192, 0.3)");
+      gradient.addColorStop(1, "rgba(75, 192, 192, 0.1)");
       return gradient;
     },
   },
