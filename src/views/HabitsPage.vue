@@ -7,7 +7,10 @@
         class="card habit-tracker"
       >
         <h1>{{ habit.name }}</h1>
-        <p>Total {{ habit.yAxisLabel }}: {{ habit.trackedData }}</p>
+        <p>
+          Total {{ habit.yAxisLabel }}:
+          {{ calculateTotalData(habit.graphData) }}
+        </p>
       </div>
       <div class="card habit-tracker">
         <h1>Add A New Habit</h1>
@@ -56,8 +59,38 @@ export default {
         {
           name: "Meditating",
           graphData: {
-            labels: ["1st", "2nd", "3rd", "4th", "5th"],
-            data: [10, 15, 12, 20, 18],
+            labels: [
+              "1st",
+              "2nd",
+              "3rd",
+              "4th",
+              "5th",
+              "6th",
+              "7th",
+              "8th",
+              "9th",
+              "10th",
+              "11th",
+              "12th",
+              "13th",
+              "14th",
+              "15th",
+              "16th",
+              "17th",
+              "18th",
+              "19th",
+              "20th",
+              "21st",
+              "22nd",
+              "23rd",
+              "24th",
+              "25th",
+              "26th",
+            ],
+            data: [
+              10, 15, 12, 20, 18, 22, 17, 19, 21, 25, 24, 18, 23, 20, 15, 12,
+              10, 18, 22, 24, 20, 19, 15, 13, 16, 14,
+            ],
           },
           trackedData: 25,
           yAxisLabel: "Minutes",
@@ -66,8 +99,19 @@ export default {
         {
           name: "Working Out",
           graphData: {
-            labels: ["1st", "2nd", "3rd", "4th", "5th"],
-            data: [5, 8, 10, 7, 12],
+            labels: [
+              "1st",
+              "2nd",
+              "3rd",
+              "4th",
+              "5th",
+              "6th",
+              "7th",
+              "8th",
+              "9th",
+              "10th",
+            ],
+            data: [5, 8, 10, 7, 12, 15, 13, 11, 9, 14],
           },
           trackedData: 20,
           yAxisLabel: "Repetitions",
@@ -76,8 +120,23 @@ export default {
         {
           name: "Reading",
           graphData: {
-            labels: ["1st", "2nd", "3rd", "4th", "5th"],
-            data: [8, 12, 15, 10, 17],
+            labels: [
+              "1st",
+              "2nd",
+              "3rd",
+              "4th",
+              "5th",
+              "6th",
+              "7th",
+              "8th",
+              "9th",
+              "10th",
+              "11th",
+              "12th",
+              "13th",
+              "14th",
+            ],
+            data: [8, 12, 15, 10, 17, 20, 19, 18, 21, 25, 24, 18, 23, 20],
           },
           trackedData: 30,
           yAxisLabel: "Pages",
@@ -86,8 +145,8 @@ export default {
         {
           name: "Fasting",
           graphData: {
-            labels: ["1st", "2nd", "3rd", "4th", "5th"],
-            data: [5, 10, 8, 15, 12],
+            labels: ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+            data: [5, 10, 8, 15, 12, 9, 13, 11],
           },
           trackedData: 10,
           yAxisLabel: "Hours",
@@ -96,8 +155,21 @@ export default {
         {
           name: "Coding",
           graphData: {
-            labels: ["1st", "2nd", "3rd", "4th", "5th"],
-            data: [12, 18, 20, 25, 30],
+            labels: [
+              "1st",
+              "2nd",
+              "3rd",
+              "4th",
+              "5th",
+              "6th",
+              "7th",
+              "8th",
+              "9th",
+              "10th",
+              "11th",
+              "12th",
+            ],
+            data: [12, 18, 20, 25, 30, 28, 27, 26, 22, 24, 23, 20],
           },
           trackedData: 20,
           yAxisLabel: "Minutes",
@@ -115,6 +187,9 @@ export default {
     },
   },
   methods: {
+    calculateTotalData(graphData) {
+      return graphData.data.reduce((acc, val) => acc + val, 0);
+    },
     nextCard() {
       this.direction = "next";
       this.currentIndex = (this.currentIndex + 1) % this.habits.length;
