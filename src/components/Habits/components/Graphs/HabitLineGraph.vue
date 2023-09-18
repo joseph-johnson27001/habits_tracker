@@ -86,7 +86,6 @@ export default {
         "rgb(75, 192, 192, 1)",
         "rgb(54, 162, 235, 1)",
         "rgb(153, 102, 255, 1)",
-        "rgb(201, 203, 207, 1)",
       ];
       const randomIndex = Math.floor(Math.random() * possibleColors.length);
       const selectedColor = possibleColors[randomIndex];

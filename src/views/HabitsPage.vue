@@ -6,11 +6,17 @@
         :key="index"
         class="card habit-tracker"
       >
-        <h2>{{ habit.name }}</h2>
+        <h1>{{ habit.name }}</h1>
         <p>Days Tracked: {{ habit.daysTracked }}</p>
       </div>
-      <div class="card habit-tracker" @click="addHabit">
-        <h2>Add another habit</h2>
+      <div class="card habit-tracker">
+        <h1>Add A New Habit</h1>
+        <div class="add-button">
+          <i
+            class="fas fa-plus-circle fa-xl clickable-icon"
+            @click="addHabit"
+          ></i>
+        </div>
       </div>
     </div>
 
@@ -50,42 +56,42 @@ export default {
         {
           name: "Meditating",
           graphData: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [10, 15, 12, 20, 18],
           },
           daysTracked: 25,
           yAxisLabel: "Minutes",
-          xAxisLabel: "Days",
+          xAxisLabel: "Date",
         },
         {
           name: "Working Out",
           graphData: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [5, 8, 10, 7, 12],
           },
           daysTracked: 20,
           yAxisLabel: "Repetitions",
-          xAxisLabel: "Days",
+          xAxisLabel: "Date",
         },
         {
           name: "Reading",
           graphData: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [8, 12, 15, 10, 17],
           },
           daysTracked: 30,
           yAxisLabel: "Pages",
-          xAxisLabel: "Days",
+          xAxisLabel: "Date",
         },
         {
           name: "Fasting",
           graphData: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [5, 10, 8, 15, 12],
           },
           daysTracked: 10,
           yAxisLabel: "Hours",
-          xAxisLabel: "Days",
+          xAxisLabel: "Date",
         },
         {
           name: "Coding",
@@ -95,7 +101,7 @@ export default {
           },
           daysTracked: 20,
           yAxisLabel: "Minutes",
-          xAxisLabel: "Days",
+          xAxisLabel: "Date",
         },
       ],
       currentIndex: 0,
@@ -132,7 +138,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+h1 {
+  color: #4169e1;
+}
 .card {
   position: relative;
 }
@@ -186,5 +195,24 @@ export default {
 
 .next-button {
   right: 10px;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Create a circular shape */
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
+  cursor: pointer;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.add-button i {
+  margin: 0;
+  padding: 0;
+  color: #4169e1;
 }
 </style>
