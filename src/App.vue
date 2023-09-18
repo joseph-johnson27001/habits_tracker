@@ -77,6 +77,7 @@ h1 {
   margin-left: -40px;
   margin-right: 50px;
   margin-bottom: 10px;
+  padding: 20px;
 }
 
 .heading-area {

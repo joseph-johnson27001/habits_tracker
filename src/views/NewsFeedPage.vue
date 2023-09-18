@@ -28,13 +28,7 @@ export default {
   grid-template-columns: 2fr 1fr;
 }
 
-.news-feed {
-  padding: 10px;
-  padding-right: 0px;
-}
-
 .social-stats {
-  padding: 10px;
   padding-left: 5px;
 }
 </style>

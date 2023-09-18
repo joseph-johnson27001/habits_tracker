@@ -255,7 +255,6 @@ export default {
 
 <style scoped>
 .news-feed {
-  padding: 10px;
   overflow-y: auto;
 }
 

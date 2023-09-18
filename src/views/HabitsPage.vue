@@ -225,9 +225,9 @@ h1 {
   position: relative;
 }
 
-.habits-page {
-  padding: 10px;
-}
+/* .habits-page {
+  padding: 20px;
+} */
 .habit-tracker {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;

@@ -56,7 +56,7 @@ export default {
 .profile-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin: 20px;
+
   gap: 10px;
 }
 
