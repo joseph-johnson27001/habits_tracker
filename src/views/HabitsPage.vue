@@ -221,6 +221,10 @@ h1 {
   color: #4169e1;
 }
 
+.card {
+  position: relative;
+}
+
 .habits-page {
   padding: 10px;
 }
