@@ -7,7 +7,7 @@
         class="card habit-tracker"
       >
         <h1>{{ habit.name }}</h1>
-        <p>Days Tracked: {{ habit.daysTracked }}</p>
+        <p>Total {{ habit.yAxisLabel }}: {{ habit.trackedData }}</p>
       </div>
       <div class="card habit-tracker">
         <h1>Add A New Habit</h1>
@@ -59,7 +59,7 @@ export default {
             labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [10, 15, 12, 20, 18],
           },
-          daysTracked: 25,
+          trackedData: 25,
           yAxisLabel: "Minutes",
           xAxisLabel: "Date",
         },
@@ -69,7 +69,7 @@ export default {
             labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [5, 8, 10, 7, 12],
           },
-          daysTracked: 20,
+          trackedData: 20,
           yAxisLabel: "Repetitions",
           xAxisLabel: "Date",
         },
@@ -79,7 +79,7 @@ export default {
             labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [8, 12, 15, 10, 17],
           },
-          daysTracked: 30,
+          trackedData: 30,
           yAxisLabel: "Pages",
           xAxisLabel: "Date",
         },
@@ -89,7 +89,7 @@ export default {
             labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [5, 10, 8, 15, 12],
           },
-          daysTracked: 10,
+          trackedData: 10,
           yAxisLabel: "Hours",
           xAxisLabel: "Date",
         },
@@ -99,7 +99,7 @@ export default {
             labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [12, 18, 20, 25, 30],
           },
-          daysTracked: 20,
+          trackedData: 20,
           yAxisLabel: "Minutes",
           xAxisLabel: "Date",
         },
