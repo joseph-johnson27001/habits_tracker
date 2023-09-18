@@ -79,10 +79,18 @@ export default {
       }
     },
     generateRandomColor() {
-      const red = Math.floor(Math.random() * 256);
-      const green = Math.floor(Math.random() * 256);
-      const blue = Math.floor(Math.random() * 256);
-      return `rgba(${red}, ${green}, ${blue}, 1)`;
+      const possibleColors = [
+        "rgb(255, 99, 132, 1)",
+        "rgb(255, 159, 64, 1)",
+        "rgb(255, 205, 86, 1)",
+        "rgb(75, 192, 192, 1)",
+        "rgb(54, 162, 235, 1)",
+        "rgb(153, 102, 255, 1)",
+        "rgb(201, 203, 207, 1)",
+      ];
+      const randomIndex = Math.floor(Math.random() * possibleColors.length);
+      const selectedColor = possibleColors[randomIndex];
+      return selectedColor;
     },
     generateGradientBackground() {
       const gradient = this.$refs.lineChart
