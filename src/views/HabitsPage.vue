@@ -6,7 +6,10 @@
         :key="index"
         class="card habit-tracker"
       >
-        <h1>{{ habit.name }}</h1>
+        <div class="heading-area">
+          <h1>{{ habit.name }}</h1>
+          <i class="fas fa-angle-right view-more-link"></i>
+        </div>
         <p>
           Total {{ habit.yAxisLabel }}:
           {{ calculateTotalData(habit.graphData) }}
