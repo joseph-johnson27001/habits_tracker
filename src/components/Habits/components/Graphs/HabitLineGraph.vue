@@ -43,6 +43,7 @@ export default {
                 fill: true,
                 backgroundColor: this.generateGradientBackground(),
                 data: this.habitData.data,
+                tension: 0.2,
               },
             ],
           },
@@ -60,11 +61,17 @@ export default {
                   display: true,
                   text: this.xAxisLabel, // Set x-axis label
                 },
+                grid: {
+                  display: false, // Hide x-axis gridlines
+                },
               },
               y: {
                 title: {
                   display: true,
                   text: this.yAxisLabel, // Set y-axis label
+                },
+                grid: {
+                  display: false, // Hide y-axis gridlines
                 },
               },
             },
@@ -95,7 +102,7 @@ export default {
       const gradient = this.$refs.lineChart
         .getContext("2d")
         .createLinearGradient(0, 0, 0, 200);
-      gradient.addColorStop(0, `${this.lineChartColor.replace("1)", "0.5)")}`);
+      gradient.addColorStop(0, `${this.lineChartColor.replace("1)", "0.8)")}`);
       gradient.addColorStop(
         0.5,
         `${this.lineChartColor.replace("1)", "0.3)")}`

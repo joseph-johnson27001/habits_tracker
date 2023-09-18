@@ -155,6 +155,8 @@ h1 {
 }
 .heading-container {
   padding: 5px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
 }
 .carousel-navigation {
   display: flex;
@@ -203,11 +205,11 @@ h1 {
   justify-content: center;
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Create a circular shape */
-  color: white; /* Icon color */
-  font-size: 24px; /* Icon size */
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
-  margin: 0 auto; /* Center the button horizontally */
+  margin: 0 auto;
 }
 
 .add-button i {
