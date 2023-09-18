@@ -64,17 +64,17 @@ export default {
   border-bottom: 1px solid lightgray;
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
 }
 
 .title {
-  margin: 15px 80px 15px 0px;
   font-weight: 400;
+  margin: 12px;
 }
 
 .icon {
   height: 30px;
   width: 30px;
-  margin-left: 20px;
 }
 
 .navigation-container {
