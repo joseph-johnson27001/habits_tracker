@@ -8,7 +8,7 @@
       >
         <div class="heading-area">
           <h1>{{ habit.name }}</h1>
-          <i class="fas fa-angle-right view-more-link"></i>
+          <!-- <i class="fas fa-angle-right view-more-link"></i> -->
         </div>
         <p>
           Total {{ habit.yAxisLabel }}:
@@ -220,11 +220,17 @@ export default {
 h1 {
   color: #4169e1;
 }
-.card {
-  position: relative;
-}
+
 .habits-page {
   padding: 10px;
+}
+.habit-tracker {
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.habit-tracker:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 .habit-tracker-container {
   display: grid;
