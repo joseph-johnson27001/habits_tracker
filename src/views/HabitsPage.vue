@@ -23,7 +23,11 @@
           <h1>{{ habits[currentIndex].name }}</h1>
         </div>
         <div class="habit-card-content">
-          <HabitLineGraph :habitData="habits[currentIndex].graphData" />
+          <HabitLineGraph
+            :habitData="habits[currentIndex].graphData"
+            :yAxisLabel="habits[currentIndex].yAxisLabel"
+            :xAxisLabel="habits[currentIndex].xAxisLabel"
+          />
         </div>
         <div class="arrow-button next-button" @click="nextCard">
           <i class="fas fa-chevron-right clickable-icon"></i>
@@ -50,6 +54,8 @@ export default {
             data: [10, 15, 12, 20, 18],
           },
           daysTracked: 25,
+          yAxisLabel: "Minutes",
+          xAxisLabel: "Days",
         },
         {
           name: "Working Out",
@@ -58,6 +64,8 @@ export default {
             data: [5, 8, 10, 7, 12],
           },
           daysTracked: 20,
+          yAxisLabel: "Repetitions",
+          xAxisLabel: "Days",
         },
         {
           name: "Reading",
@@ -66,6 +74,8 @@ export default {
             data: [8, 12, 15, 10, 17],
           },
           daysTracked: 30,
+          yAxisLabel: "Pages",
+          xAxisLabel: "Days",
         },
         {
           name: "Fasting",
@@ -74,20 +84,25 @@ export default {
             data: [5, 10, 8, 15, 12],
           },
           daysTracked: 10,
+          yAxisLabel: "Hours",
+          xAxisLabel: "Days",
         },
         {
           name: "Coding",
           graphData: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+            labels: ["1st", "2nd", "3rd", "4th", "5th"],
             data: [12, 18, 20, 25, 30],
           },
           daysTracked: 20,
+          yAxisLabel: "Minutes",
+          xAxisLabel: "Days",
         },
       ],
       currentIndex: 0,
       direction: "next",
     };
   },
+
   computed: {
     transitionName() {
       return this.direction === "prev" ? "slide-fade-prev" : "slide-fade-next";
@@ -146,12 +161,12 @@ export default {
 }
 .slide-fade-next-enter,
 .slide-fade-prev-leave-to {
-  transform: translateX(-150%);
+  /* transform: translateX(-150%); */
   opacity: 0;
 }
 .slide-fade-prev-enter,
 .slide-fade-next-leave-to {
-  transform: translateX(150%);
+  /* transform: translateX(150%); */
   opacity: 0;
 }
 
