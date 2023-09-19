@@ -632,6 +632,7 @@ export default {
   display: flex;
   align-items: center;
   padding: 20px;
+  padding-top: 10px;
   background-color: #dff1ff;
   border-bottom: 1px solid #ccc;
   border-top-left-radius: 8px;

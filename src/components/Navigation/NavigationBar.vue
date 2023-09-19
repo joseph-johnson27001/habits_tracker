@@ -65,6 +65,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding-left: 20px;
+  margin-top: 5px;
 }
 
 .title {

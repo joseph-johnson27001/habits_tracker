@@ -101,7 +101,7 @@ export default {
     generateGradientBackground() {
       const gradient = this.$refs.lineChart
         .getContext("2d")
-        .createLinearGradient(0, 0, 0, 200);
+        .createLinearGradient(0, 0, 0, 400);
       gradient.addColorStop(0, `${this.lineChartColor.replace("1)", "0.8)")}`);
       gradient.addColorStop(
         0.5,
