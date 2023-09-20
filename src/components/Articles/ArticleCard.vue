@@ -65,6 +65,8 @@ export default {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .article-details {
