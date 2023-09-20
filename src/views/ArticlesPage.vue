@@ -49,8 +49,6 @@ export default {
         "Fitness",
         "Cooking",
         "Travel",
-        "Education",
-        "Entertainment",
       ],
       selectedCategory: "All",
       articles: [
@@ -153,8 +151,8 @@ export default {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  justify-content: space-between;
+  margin: 20px 20px;
   flex-wrap: wrap;
 }
 
