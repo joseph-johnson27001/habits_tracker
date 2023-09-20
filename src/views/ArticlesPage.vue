@@ -1,8 +1,9 @@
 <template>
   <div class="articles-page">
     <!-- Article Cards -->
-    <div class="article-cards card">
+    <div class="article-cards">
       <ArticleCard
+        class="card"
         v-for="(article, index) in articles"
         :key="index"
         :article="article"
@@ -10,7 +11,7 @@
         :author="article.author"
         :datePublished="article.datePublished"
         :category="article.category"
-        :imageSrc="article.imgSrc"
+        :imageSrc="article.imageSrc"
         :description="article.description"
       />
     </div>
@@ -36,6 +37,25 @@ export default {
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero in purus consequat, id ultrices felis egestas.",
         },
+        {
+          title: "The Art of Time Management",
+          author: "Jane Smith",
+          datePublished: "October 5, 2023",
+          category: "Productivity",
+          imageSrc: "/path/to/your-image-2.jpg",
+          description:
+            "In this article, discover the strategies and techniques for effective time management to achieve your goals and boost productivity.",
+        },
+        {
+          title: "Mindfulness and Stress Reduction",
+          author: "Alice Johnson",
+          datePublished: "October 20, 2023",
+          category: "Wellness",
+          imageSrc: "/path/to/your-image-3.jpg",
+          description:
+            "Explore the benefits of mindfulness and learn how to reduce stress and improve your mental well-being through mindfulness practices.",
+        },
+
         // Add more articles here
       ],
     };
