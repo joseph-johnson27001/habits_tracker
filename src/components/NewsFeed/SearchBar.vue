@@ -17,7 +17,7 @@ export default {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .search-input {

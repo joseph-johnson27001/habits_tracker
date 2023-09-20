@@ -47,7 +47,6 @@ export default {
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  cursor: pointer;
 }
 
 .article-card:hover {

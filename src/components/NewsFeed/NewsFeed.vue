@@ -1,7 +1,7 @@
 <template>
   <div class="news-feed">
     <SearchBar />
-    <div class="feed-item" v-for="(item, index) in feedItems" :key="index">
+    <div class="feed-item card" v-for="(item, index) in feedItems" :key="index">
       <div class="user-info">
         <img
           :src="item.userImage"
@@ -256,17 +256,6 @@ export default {
 <style scoped>
 .news-feed {
   overflow-y: auto;
-}
-
-.feed-item {
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #e0e0e0;
-  background-color: white;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  transition: border 0.2s;
 }
 
 .user-info {

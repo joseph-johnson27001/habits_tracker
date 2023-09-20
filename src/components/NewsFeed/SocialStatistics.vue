@@ -161,15 +161,6 @@ export default {
 </script>
 
 <style scoped>
-.leaderboard {
-  margin-bottom: 20px;
-}
-
-.leaderboard h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
 .leaderboard table {
   width: 100%;
   border-collapse: collapse;
@@ -236,10 +227,6 @@ export default {
 }
 
 /* Challenges Styles */
-.challenges h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
 
 .challenge-item {
   display: flex;
