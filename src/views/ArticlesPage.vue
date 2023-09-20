@@ -33,7 +33,7 @@ export default {
           author: "John Doe",
           datePublished: "September 15, 2023",
           category: "Personal Development",
-          imageSrc: "/path/to/your-image.jpg",
+          imageSrc: "https://picsum.photos/201/150",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero in purus consequat, id ultrices felis egestas.",
         },
@@ -42,7 +42,7 @@ export default {
           author: "Jane Smith",
           datePublished: "October 5, 2023",
           category: "Productivity",
-          imageSrc: "/path/to/your-image-2.jpg",
+          imageSrc: "https://picsum.photos/200/150",
           description:
             "In this article, discover the strategies and techniques for effective time management to achieve your goals and boost productivity.",
         },
@@ -51,7 +51,7 @@ export default {
           author: "Alice Johnson",
           datePublished: "October 20, 2023",
           category: "Wellness",
-          imageSrc: "/path/to/your-image-3.jpg",
+          imageSrc: "https://picsum.photos/220/150",
           description:
             "Explore the benefits of mindfulness and learn how to reduce stress and improve your mental well-being through mindfulness practices.",
         },
