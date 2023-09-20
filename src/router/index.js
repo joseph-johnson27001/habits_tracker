@@ -4,6 +4,7 @@ import ProfilePage from "@/views/ProfilePage.vue";
 import NewsPage from "@/views/NewsFeedPage.vue";
 import HabitsPage from "@/views/HabitsPage.vue";
 import ArticlesPage from "@/views/ArticlesPage.vue";
+import LeaderboardPage from "@/views/LeaderboardPage.vue";
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,7 @@ const routes = [
   { path: "/profile", component: ProfilePage },
   { path: "/habits", component: HabitsPage },
   { path: "/articles", component: ArticlesPage },
+  { path: "/leaderboard", component: LeaderboardPage },
 ];
 
 const router = new VueRouter({
