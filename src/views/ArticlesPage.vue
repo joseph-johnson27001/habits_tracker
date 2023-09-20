@@ -33,7 +33,7 @@ export default {
           author: "John Doe",
           datePublished: "September 15, 2023",
           category: "Personal Development",
-          imageSrc: "https://picsum.photos/201/150",
+          imageSrc: "https://picsum.photos/150/150",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero in purus consequat, id ultrices felis egestas.",
         },
