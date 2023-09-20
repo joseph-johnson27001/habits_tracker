@@ -1,10 +1,13 @@
 <template>
   <div class="articles-page">
     <div class="card">
-      <!-- Navigation for Article Types -->
       <ul class="article-type-navigation">
         <li v-for="(category, index) in categories" :key="index">
-          <a :href="`#${category.toLowerCase()}`">{{ category }}</a>
+          <a
+            @click="selectCategory(category)"
+            :class="{ active: selectedCategory === category }"
+            >{{ category }}</a
+          >
         </li>
       </ul>
     </div>
@@ -13,7 +16,7 @@
     <div class="article-cards">
       <ArticleCard
         class="card"
-        v-for="(article, index) in articles"
+        v-for="(article, index) in filteredArticles"
         :key="index"
         :article="article"
         :title="article.title"
@@ -49,6 +52,7 @@ export default {
         "Education",
         "Entertainment",
       ],
+      selectedCategory: "All",
       articles: [
         {
           title: "How to Set and Achieve Your Goals",
@@ -58,6 +62,7 @@ export default {
           imageSrc: "https://picsum.photos/150/150",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero in purus consequat, id ultrices felis egestas.",
+          type: "Productivity",
         },
         {
           title: "The Art of Time Management",
@@ -67,6 +72,7 @@ export default {
           imageSrc: "https://picsum.photos/151/150",
           description:
             "In this article, discover the strategies and techniques for effective time management to achieve your goals and boost productivity.",
+          type: "Productivity",
         },
         {
           title: "Mindfulness and Stress Reduction",
@@ -76,11 +82,68 @@ export default {
           imageSrc: "https://picsum.photos/152/150",
           description:
             "Explore the benefits of mindfulness and learn how to reduce stress and improve your mental well-being through mindfulness practices.",
+          type: "Wellness",
+        },
+        {
+          title: "Mastering Technology Trends",
+          author: "David Clark",
+          datePublished: "November 10, 2023",
+          category: "Technology",
+          imageSrc: "https://picsum.photos/153/150",
+          description:
+            "Stay updated with the latest technology trends and innovations. Learn how to leverage technology for personal and professional growth.",
+          type: "Technology",
+        },
+        {
+          title: "Financial Planning 101",
+          author: "Sarah Johnson",
+          datePublished: "November 25, 2023",
+          category: "Finance",
+          imageSrc: "https://picsum.photos/154/150",
+          description:
+            "Discover the essentials of financial planning, from budgeting to investing. Take control of your finances and secure your future.",
+          type: "Finance",
+        },
+        {
+          title: "Achieving Fitness Goals",
+          author: "Mike Anderson",
+          datePublished: "December 5, 2023",
+          category: "Fitness",
+          imageSrc: "https://picsum.photos/155/150",
+          description:
+            "Get fit and stay healthy with expert advice on setting and achieving fitness goals. Transform your lifestyle with exercise and nutrition tips.",
+          type: "Fitness",
+        },
+        {
+          title: "The Art of Culinary Delights",
+          author: "Emily Turner",
+          datePublished: "December 20, 2023",
+          category: "Cooking",
+          imageSrc: "https://picsum.photos/156/150",
+          description:
+            "Explore the world of culinary delights and learn to cook like a pro. From gourmet recipes to kitchen techniques, elevate your cooking skills.",
+          type: "Cooking",
         },
 
         // Add more articles here
       ],
     };
+  },
+  computed: {
+    filteredArticles() {
+      if (this.selectedCategory === "All") {
+        return this.articles;
+      } else {
+        return this.articles.filter(
+          (article) => article.type === this.selectedCategory
+        );
+      }
+    },
+  },
+  methods: {
+    selectCategory(category) {
+      this.selectedCategory = category;
+    },
   },
 };
 </script>
@@ -97,7 +160,7 @@ export default {
 
 .article-type-navigation li {
   margin: 0 10px;
-  text-decoration: ;
+  cursor: pointer;
 }
 
 .article-type-navigation a {
