@@ -9,9 +9,9 @@
       <p class="date">{{ datePublished }}</p>
       <p class="category">{{ category }}</p>
       <p class="description">{{ description }}</p>
-      <div class="click-icon-container">
+      <!-- <div class="click-icon-container">
         <i class="fas fa-arrow-right clickable-icon"></i>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -46,6 +46,13 @@ export default {
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 
 .article-thumbnail {
