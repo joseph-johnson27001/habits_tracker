@@ -42,7 +42,7 @@ export default {
           author: "Jane Smith",
           datePublished: "October 5, 2023",
           category: "Productivity",
-          imageSrc: "https://picsum.photos/200/150",
+          imageSrc: "https://picsum.photos/151/150",
           description:
             "In this article, discover the strategies and techniques for effective time management to achieve your goals and boost productivity.",
         },
@@ -51,7 +51,7 @@ export default {
           author: "Alice Johnson",
           datePublished: "October 20, 2023",
           category: "Wellness",
-          imageSrc: "https://picsum.photos/220/150",
+          imageSrc: "https://picsum.photos/152/150",
           description:
             "Explore the benefits of mindfulness and learn how to reduce stress and improve your mental well-being through mindfulness practices.",
         },

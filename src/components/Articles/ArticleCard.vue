@@ -1,5 +1,5 @@
 <template>
-  <div class="article-card">
+  <div class="article-card" @click="navigateToArticle">
     <div class="article-thumbnail">
       <img :src="imageSrc" alt="Article Thumbnail" />
     </div>
@@ -9,8 +9,8 @@
       <p class="date">{{ datePublished }}</p>
       <p class="category">{{ category }}</p>
       <p class="description">{{ description }}</p>
-      <div class="read-more-container">
-        <button class="read-more-button" @click="readMore">Read More</button>
+      <div class="click-icon-container">
+        <i class="fas fa-arrow-right clickable-icon"></i>
       </div>
     </div>
   </div>
@@ -27,19 +27,25 @@ export default {
     description: String,
     articleLink: String,
   },
+  methods: {
+    navigateToArticle() {
+      console.log("HELLO");
+    },
+  },
 };
 </script>
 
 <style scoped>
 .article-card {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .article-thumbnail {
@@ -94,19 +100,7 @@ export default {
   justify-content: right;
 }
 
-.read-more-button {
-  margin-top: 16px;
-  background-color: #4169e1;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.read-more-button:hover {
-  background-color: #0033a0;
+.click-icon-container {
+  text-align: right;
 }
 </style>
