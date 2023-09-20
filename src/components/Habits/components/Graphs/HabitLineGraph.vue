@@ -102,12 +102,12 @@ export default {
       const gradient = this.$refs.lineChart
         .getContext("2d")
         .createLinearGradient(0, 0, 0, 400);
-      gradient.addColorStop(0, `${this.lineChartColor.replace("1)", "0.8)")}`);
+      gradient.addColorStop(0, `${this.lineChartColor.replace("1)", "0.2)")}`);
       gradient.addColorStop(
         0.5,
-        `${this.lineChartColor.replace("1)", "0.3)")}`
+        `${this.lineChartColor.replace("1)", "0.1)")}`
       );
-      gradient.addColorStop(1, `${this.lineChartColor.replace("1)", "0.1)")}`);
+      gradient.addColorStop(1, `${this.lineChartColor.replace("1)", "0")}`);
       return gradient;
     },
   },
