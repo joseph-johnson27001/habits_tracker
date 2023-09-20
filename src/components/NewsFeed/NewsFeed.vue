@@ -45,14 +45,14 @@
           {{ comment }}
         </div>
       </div>
-      <div class="interaction-area">
+      <!-- <div class="interaction-area">
         <input
           v-model="newComment"
           @keyup.enter="addComment(item)"
           class="comment-input"
           placeholder="Add a comment..."
         />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -256,6 +256,14 @@ export default {
 <style scoped>
 .news-feed {
   overflow-y: auto;
+}
+.feed-item {
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.feed-item:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
 }
 
 .user-info {

@@ -24,7 +24,7 @@ export default {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 16px;
   margin-right: 10px;
   transition: border-color 0.1s;
