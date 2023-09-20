@@ -7,8 +7,8 @@
       <router-link to="/habits" class="sidebar-item">
         <i class="fas fa-chart-line fa-lg"></i>
       </router-link>
-      <router-link to="/statistics" class="sidebar-item">
-        <i class="fas fa-check-square fa-lg"></i>
+      <router-link to="/leaderboard" class="sidebar-item">
+        <i class="fas fa-trophy fa-lg"></i>
       </router-link>
       <router-link to="/articles" class="sidebar-item">
         <i class="fas fa-newspaper fa-lg"></i>

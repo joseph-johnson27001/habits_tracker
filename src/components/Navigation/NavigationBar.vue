@@ -61,7 +61,7 @@ export default {
 .navigation-bar {
   display: flex;
   background-color: white;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #ccc;
   justify-content: center;
   align-items: center;
   padding-left: 20px;
