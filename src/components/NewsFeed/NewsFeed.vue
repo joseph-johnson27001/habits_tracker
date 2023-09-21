@@ -91,13 +91,13 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
               text: "Great job, John!",
               commenter: "Alice Smith",
-              timestamp: "1 hour ago",
+              timestamp: "Just now",
             },
             {
               text: "That's awesome! Keep it up!",
@@ -123,7 +123,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -134,7 +134,7 @@ export default {
             {
               text: "You're an inspiration to us all!",
               commenter: "Emily Johnson",
-              timestamp: "1 hour ago",
+              timestamp: "Just now",
             },
           ],
         },
@@ -150,7 +150,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -177,7 +177,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -203,7 +203,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -230,7 +230,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -256,7 +256,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -283,7 +283,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -310,7 +310,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -336,7 +336,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -363,7 +363,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -389,7 +389,7 @@ export default {
           newComment: {
             text: "",
             commenter: "Joe Johnson",
-            timestamp: "1 hour ago",
+            timestamp: "Just now",
           },
           comments: [
             {
@@ -424,7 +424,7 @@ export default {
         item.newComment = {
           text: "",
           commenter: "Joe Johnson",
-          timestamp: "1 hour ago",
+          timestamp: "Just now",
         };
       }
     },
