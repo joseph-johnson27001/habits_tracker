@@ -258,6 +258,7 @@ export default {
   overflow-y: auto;
 }
 .feed-item {
+  cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -274,9 +275,9 @@ export default {
 .user-image {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 5px;
   margin-right: 15px;
-  border: 1px solid white;
+  border: 1px solid #ccc;
 }
 
 .user-name {

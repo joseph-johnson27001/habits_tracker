@@ -151,20 +151,20 @@ export default {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-between;
-  margin: 20px 20px;
+  justify-content: space-around;
+  margin: 20px 0;
   flex-wrap: wrap;
 }
 
 .article-type-navigation li {
   margin: 0 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .article-type-navigation a {
   text-decoration: none;
   color: #4169e1;
-  font-weight: bold;
   transition: color 0.2s;
 }
 

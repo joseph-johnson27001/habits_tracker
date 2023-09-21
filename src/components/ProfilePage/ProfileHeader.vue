@@ -653,10 +653,10 @@ export default {
 }
 
 .profile-picture img {
-  max-width: 150px;
-  max-height: 150px;
-  border-radius: 50%;
-  border: 2px solid white;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .user-name {
