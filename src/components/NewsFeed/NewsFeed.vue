@@ -44,15 +44,15 @@
         >
           {{ comment }}
         </div>
+        <div class="interaction-area">
+          <input
+            v-model="newComment"
+            @keyup.enter="addComment(item)"
+            class="comment-input"
+            placeholder="Add a comment..."
+          />
+        </div>
       </div>
-      <!-- <div class="interaction-area">
-        <input
-          v-model="newComment"
-          @keyup.enter="addComment(item)"
-          class="comment-input"
-          placeholder="Add a comment..."
-        />
-      </div> -->
     </div>
   </div>
 </template>
@@ -98,7 +98,7 @@ export default {
         {
           userName: "Emily Johnson",
           userTitle: "Productivity Pro",
-          userImage: "https://picsum.photos/49/50",
+          userImage: "https://picsum.photos/59/50",
           timestamp: "4 hours ago",
           content:
             "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀 ",
@@ -111,7 +111,7 @@ export default {
         {
           userName: "David Brown",
           userTitle: "Chef Extraordinaire",
-          userImage: "https://picsum.photos/48/50",
+          userImage: "https://picsum.photos/58/50",
           timestamp: "5 hours ago",
           content:
             "Received the 'Master Chef' trophy for trying a new recipe every day this month. 🏅👨‍🍳",
@@ -124,7 +124,7 @@ export default {
         {
           userName: "Olivia White",
           userTitle: "Bookworm",
-          userImage: "https://picsum.photos/47/50",
+          userImage: "https://picsum.photos/57/50",
           timestamp: "6 hours ago",
           content:
             "Finished reading 10 books in a week. A new personal best! 📚🥇",
@@ -134,7 +134,7 @@ export default {
         {
           userName: "Michael Green",
           userTitle: "Gratitude Practitioner",
-          userImage: "https://picsum.photos/46/50",
+          userImage: "https://picsum.photos/56/50",
           timestamp: "7 hours ago",
           content:
             "Completed the '30 Days of Gratitude' challenge. Feeling thankful for life's little joys. 🙏😊",
@@ -147,7 +147,7 @@ export default {
         {
           userName: "Sophia Adams",
           userTitle: "Gamer Pro",
-          userImage: "https://picsum.photos/45/50",
+          userImage: "https://picsum.photos/65/50",
           timestamp: "8 hours ago",
           content: "Achieved a new high score in my favorite video game. 🎮🏆",
           likes: 20,
@@ -159,7 +159,7 @@ export default {
         {
           userName: "Ethan Wilson",
           userTitle: "Nature Explorer",
-          userImage: "https://picsum.photos/44/50",
+          userImage: "https://picsum.photos/64/50",
           timestamp: "9 hours ago",
           content:
             "Visited a breathtaking natural wonder today. Nature is amazing! 🌄🌿",
@@ -172,7 +172,7 @@ export default {
         {
           userName: "Liam Miller",
           userTitle: "Coder",
-          userImage: "https://picsum.photos/46/50",
+          userImage: "https://picsum.photos/66/50",
           timestamp: "10 hours ago",
           content: "Completed a 30-day coding challenge. 💻🚀",
           likes: 18,
@@ -181,7 +181,7 @@ export default {
         {
           userName: "Ava Robinson",
           userTitle: "Photographer",
-          userImage: "https://picsum.photos/47/50",
+          userImage: "https://picsum.photos/67/50",
           timestamp: "11 hours ago",
           content:
             "Attended a virtual photography exhibition. Captured some stunning shots! 📷🌟",
@@ -194,7 +194,7 @@ export default {
         {
           userName: "Noah Clark",
           userTitle: "Polyglot",
-          userImage: "https://picsum.photos/48/50",
+          userImage: "https://picsum.photos/68/50",
           timestamp: "12 hours ago",
           content:
             "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
@@ -204,7 +204,7 @@ export default {
         {
           userName: "Olivia Lewis",
           userTitle: "Adventurer",
-          userImage: "https://picsum.photos/49/50",
+          userImage: "https://picsum.photos/69/50",
           timestamp: "13 hours ago",
           content: "Hiked to the summit of Mount Adventure. What a view! ⛰️🌄",
           likes: 25,
@@ -213,7 +213,7 @@ export default {
         {
           userName: "Liam Parker",
           userTitle: "Coder",
-          userImage: "https://picsum.photos/46/50",
+          userImage: "https://picsum.photos/66/50",
           timestamp: "14 hours ago",
           content:
             "Completed a 30-day coding challenge. Feeling accomplished! 💻🚀",
@@ -223,7 +223,7 @@ export default {
         {
           userName: "Emma Turner",
           userTitle: "Book Lover",
-          userImage: "https://picsum.photos/45/50",
+          userImage: "https://picsum.photos/65/50",
           timestamp: "15 hours ago",
           content: "Started a new book series. Can't put it down! 📚❤️",
           likes: 11,
