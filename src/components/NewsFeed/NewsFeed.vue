@@ -45,6 +45,7 @@
         </div>
         <div class="interaction-area">
           <input
+            v-model="item.newComment"
             @keyup.enter="addComment(item)"
             class="comment-input"
             placeholder="Add a comment..."
@@ -252,14 +253,13 @@ export default {
       console.log(item);
     },
     toggleComments(item) {
-      console.log("toggleComments called for item:", item);
       item.commentsVisible = !item.commentsVisible;
     },
 
     addComment(item) {
-      if (this.newComment.trim() !== "") {
-        item.comments.push(this.newComment);
-        this.newComment = "";
+      if (item.newComment.trim() !== "") {
+        item.comments.push(item.newComment);
+        item.newComment = "";
       }
     },
   },
@@ -352,7 +352,6 @@ export default {
   font-size: 1rem;
   margin-left: 2px;
 }
-
 .comment-input {
   flex: 1;
   padding: 10px;
@@ -365,5 +364,19 @@ export default {
 .comment-input:focus {
   border-color: #6da9e4;
   outline: none;
+}
+
+.comment {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.comment-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
 }
 </style>
