@@ -97,7 +97,7 @@ export default {
             {
               text: "Great job, John!",
               commenter: "Alice Smith",
-              timestamp: "Just now",
+              timestamp: "1 hour ago",
             },
             {
               text: "That's awesome! Keep it up!",
@@ -437,6 +437,7 @@ export default {
   overflow-y: auto;
 }
 .feed-item {
+  padding-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -530,9 +531,8 @@ export default {
 .comment {
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
 }
 
 .comment-header {

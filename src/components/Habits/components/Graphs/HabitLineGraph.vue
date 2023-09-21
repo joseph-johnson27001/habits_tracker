@@ -44,6 +44,7 @@ export default {
                 backgroundColor: this.generateGradientBackground(),
                 data: this.habitData.data,
                 tension: 0.2,
+                // pointRadius: 0,
               },
             ],
           },
