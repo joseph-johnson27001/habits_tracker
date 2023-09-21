@@ -35,7 +35,6 @@
           </span>
         </div>
       </div>
-      <!-- Display comments if commentsVisible is true -->
       <div v-if="item.commentsVisible" class="comments-section">
         <div
           class="comment"
@@ -46,7 +45,6 @@
         </div>
         <div class="interaction-area">
           <input
-            v-model="newComment"
             @keyup.enter="addComment(item)"
             class="comment-input"
             placeholder="Add a comment..."
@@ -76,6 +74,7 @@ export default {
           timestamp: "2 hours ago",
           content: "Achieved my fitness goal today! 💪🏋️‍♂️",
           likes: 10,
+          commentsVisible: false,
           comments: [
             "Great job, John!",
             "That's awesome! Keep it up!",
@@ -90,6 +89,7 @@ export default {
           content:
             "Completed the 30-day meditation challenge. Feeling zen! 🧘‍♀️✨",
           likes: 5,
+          commentsVisible: false,
           comments: [
             "Meditation is amazing, isn't it?",
             "You're an inspiration to us all!",
@@ -103,6 +103,7 @@ export default {
           content:
             "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀 ",
           likes: 15,
+          commentsVisible: false,
           comments: [
             "Wow, that's impressive!",
             "You're a productivity superstar!",
@@ -116,6 +117,7 @@ export default {
           content:
             "Received the 'Master Chef' trophy for trying a new recipe every day this month. 🏅👨‍🍳",
           likes: 8,
+          commentsVisible: false,
           comments: [
             "Your culinary skills are amazing!",
             "I want to taste your recipes!",
@@ -129,6 +131,7 @@ export default {
           content:
             "Finished reading 10 books in a week. A new personal best! 📚🥇",
           likes: 12,
+          commentsVisible: false,
           comments: ["That's so impressive!", "What books did you read?"],
         },
         {
@@ -139,6 +142,7 @@ export default {
           content:
             "Completed the '30 Days of Gratitude' challenge. Feeling thankful for life's little joys. 🙏😊",
           likes: 6,
+          commentsVisible: false,
           comments: [
             "Gratitude is key to happiness!",
             "Keep spreading positivity!",
@@ -151,6 +155,7 @@ export default {
           timestamp: "8 hours ago",
           content: "Achieved a new high score in my favorite video game. 🎮🏆",
           likes: 20,
+          commentsVisible: false,
           comments: [
             "Gamer skills on point!",
             "I challenge you to beat my score!",
@@ -164,6 +169,7 @@ export default {
           content:
             "Visited a breathtaking natural wonder today. Nature is amazing! 🌄🌿",
           likes: 7,
+          commentsVisible: false,
           comments: [
             "Nature is the best stress reliever!",
             "Where did you go?",
@@ -176,6 +182,7 @@ export default {
           timestamp: "10 hours ago",
           content: "Completed a 30-day coding challenge. 💻🚀",
           likes: 18,
+          commentsVisible: false,
           comments: ["Coding wizard!", "What projects did you work on?"],
         },
         {
@@ -186,6 +193,7 @@ export default {
           content:
             "Attended a virtual photography exhibition. Captured some stunning shots! 📷🌟",
           likes: 14,
+          commentsVisible: false,
           comments: [
             "Your photos are breathtaking!",
             "Share some of your work with us!",
@@ -199,6 +207,7 @@ export default {
           content:
             "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
           likes: 9,
+          commentsVisible: false,
           comments: ["Multilingual genius!", "Teach me some phrases!"],
         },
         {
@@ -208,6 +217,7 @@ export default {
           timestamp: "13 hours ago",
           content: "Hiked to the summit of Mount Adventure. What a view! ⛰️🌄",
           likes: 25,
+          commentsVisible: false,
           comments: ["Adventurer of the year!", "Tell us about your journey!"],
         },
         {
@@ -218,6 +228,7 @@ export default {
           content:
             "Completed a 30-day coding challenge. Feeling accomplished! 💻🚀",
           likes: 22,
+          commentsVisible: false,
           comments: ["Coding genius!", "What languages did you code in?"],
         },
         {
@@ -227,6 +238,7 @@ export default {
           timestamp: "15 hours ago",
           content: "Started a new book series. Can't put it down! 📚❤️",
           likes: 11,
+          commentsVisible: false,
           comments: ["Bookworm alert!", "Tell us about the book!"],
         },
       ],
@@ -240,9 +252,10 @@ export default {
       console.log(item);
     },
     toggleComments(item) {
-      console.log(item);
+      console.log("toggleComments called for item:", item);
       item.commentsVisible = !item.commentsVisible;
     },
+
     addComment(item) {
       if (this.newComment.trim() !== "") {
         item.comments.push(this.newComment);
