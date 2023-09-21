@@ -48,7 +48,9 @@
               class="commenter-image"
             />
             <div class="timestamp-container">
-              <span class="commenter">{{ comment.commenter }}</span>
+              <span class="commenter commenter-name">{{
+                comment.commenter
+              }}</span>
               <span class="comment-date">{{ comment.timestamp }}</span>
             </div>
           </div>
@@ -464,6 +466,15 @@ export default {
   transition: color 0.1s;
 }
 
+.commenter-name {
+  color: #4169e1;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.commenter-name:hover {
+  color: #3156a6;
+}
 .user-name:hover {
   transform: scale(1.1);
   color: #3156a6;
@@ -541,6 +552,7 @@ export default {
   height: 30px;
   border-radius: 4px;
   margin-right: 10px;
+  border: 1px solid #ccc;
 }
 
 .commenter {
