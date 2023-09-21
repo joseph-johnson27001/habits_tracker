@@ -41,11 +41,15 @@
           v-for="(comment, cIndex) in item.comments"
           :key="cIndex"
         >
-          {{ comment }}
+          <div class="comment-header">
+            <span class="commenter">{{ comment.commenter }}</span>
+            <span class="comment-date">{{ comment.timestamp }}</span>
+          </div>
+          <div class="comment-text">{{ comment.text }}</div>
         </div>
         <div class="interaction-area">
           <input
-            v-model="item.newComment"
+            v-model="item.newComment.text"
             @keyup.enter="addComment(item)"
             class="comment-input"
             placeholder="Add a comment..."
@@ -66,7 +70,6 @@ export default {
   },
   data() {
     return {
-      newComment: "",
       feedItems: [
         {
           userName: "John Doe",
@@ -76,10 +79,27 @@ export default {
           content: "Achieved my fitness goal today! 💪🏋️‍♂️",
           likes: 10,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Great job, John!",
-            "That's awesome! Keep it up!",
-            "I'm inspired by your dedication!",
+            {
+              text: "Great job, John!",
+              commenter: "Alice Smith",
+              timestamp: "1 hour ago",
+            },
+            {
+              text: "That's awesome! Keep it up!",
+              commenter: "Emily Johnson",
+              timestamp: "55 minutes ago",
+            },
+            {
+              text: "I'm inspired by your dedication!",
+              commenter: "David Brown",
+              timestamp: "30 minutes ago",
+            },
           ],
         },
         {
@@ -91,9 +111,22 @@ export default {
             "Completed the 30-day meditation challenge. Feeling zen! 🧘‍♀️✨",
           likes: 5,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Meditation is amazing, isn't it?",
-            "You're an inspiration to us all!",
+            {
+              text: "Meditation is amazing, isn't it?",
+              commenter: "John Doe",
+              timestamp: "2 hours ago",
+            },
+            {
+              text: "You're an inspiration to us all!",
+              commenter: "Emily Johnson",
+              timestamp: "1 hour ago",
+            },
           ],
         },
         {
@@ -102,38 +135,26 @@ export default {
           userImage: "https://picsum.photos/59/50",
           timestamp: "4 hours ago",
           content:
-            "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀 ",
+            "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀",
           likes: 15,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Wow, that's impressive!",
-            "You're a productivity superstar!",
+            {
+              text: "Wow, that's impressive!",
+              commenter: "John Doe",
+              timestamp: "3 hours ago",
+            },
+            {
+              text: "You're a productivity superstar!",
+              commenter: "Alice Smith",
+              timestamp: "2 hours ago",
+            },
           ],
-        },
-        {
-          userName: "David Brown",
-          userTitle: "Chef Extraordinaire",
-          userImage: "https://picsum.photos/58/50",
-          timestamp: "5 hours ago",
-          content:
-            "Received the 'Master Chef' trophy for trying a new recipe every day this month. 🏅👨‍🍳",
-          likes: 8,
-          commentsVisible: false,
-          comments: [
-            "Your culinary skills are amazing!",
-            "I want to taste your recipes!",
-          ],
-        },
-        {
-          userName: "Olivia White",
-          userTitle: "Bookworm",
-          userImage: "https://picsum.photos/57/50",
-          timestamp: "6 hours ago",
-          content:
-            "Finished reading 10 books in a week. A new personal best! 📚🥇",
-          likes: 12,
-          commentsVisible: false,
-          comments: ["That's so impressive!", "What books did you read?"],
         },
         {
           userName: "Michael Green",
@@ -144,9 +165,22 @@ export default {
             "Completed the '30 Days of Gratitude' challenge. Feeling thankful for life's little joys. 🙏😊",
           likes: 6,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Gratitude is key to happiness!",
-            "Keep spreading positivity!",
+            {
+              text: "Gratitude is key to happiness!",
+              commenter: "Sophia Adams",
+              timestamp: "6 hours ago",
+            },
+            {
+              text: "Keep spreading positivity!",
+              commenter: "Liam Miller",
+              timestamp: "5 hours ago",
+            },
           ],
         },
         {
@@ -157,9 +191,22 @@ export default {
           content: "Achieved a new high score in my favorite video game. 🎮🏆",
           likes: 20,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Gamer skills on point!",
-            "I challenge you to beat my score!",
+            {
+              text: "Gamer skills on point!",
+              commenter: "Ethan Wilson",
+              timestamp: "7 hours ago",
+            },
+            {
+              text: "I challenge you to beat my score!",
+              commenter: "Liam Miller",
+              timestamp: "6 hours ago",
+            },
           ],
         },
         {
@@ -171,9 +218,22 @@ export default {
             "Visited a breathtaking natural wonder today. Nature is amazing! 🌄🌿",
           likes: 7,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Nature is the best stress reliever!",
-            "Where did you go?",
+            {
+              text: "Nature is the best stress reliever!",
+              commenter: "Ava Robinson",
+              timestamp: "8 hours ago",
+            },
+            {
+              text: "Where did you go?",
+              commenter: "Olivia Lewis",
+              timestamp: "7 hours ago",
+            },
           ],
         },
         {
@@ -184,7 +244,23 @@ export default {
           content: "Completed a 30-day coding challenge. 💻🚀",
           likes: 18,
           commentsVisible: false,
-          comments: ["Coding wizard!", "What projects did you work on?"],
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
+          comments: [
+            {
+              text: "Coding wizard!",
+              commenter: "Ava Robinson",
+              timestamp: "9 hours ago",
+            },
+            {
+              text: "What projects did you work on?",
+              commenter: "Noah Clark",
+              timestamp: "8 hours ago",
+            },
+          ],
         },
         {
           userName: "Ava Robinson",
@@ -195,9 +271,22 @@ export default {
             "Attended a virtual photography exhibition. Captured some stunning shots! 📷🌟",
           likes: 14,
           commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
           comments: [
-            "Your photos are breathtaking!",
-            "Share some of your work with us!",
+            {
+              text: "Your photos are breathtaking!",
+              commenter: "Olivia Lewis",
+              timestamp: "10 hours ago",
+            },
+            {
+              text: "Share some of your work with us!",
+              commenter: "Noah Clark",
+              timestamp: "9 hours ago",
+            },
           ],
         },
         {
@@ -209,7 +298,23 @@ export default {
             "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
           likes: 9,
           commentsVisible: false,
-          comments: ["Multilingual genius!", "Teach me some phrases!"],
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
+          comments: [
+            {
+              text: "Multilingual genius!",
+              commenter: "Ethan Wilson",
+              timestamp: "11 hours ago",
+            },
+            {
+              text: "Teach me some phrases!",
+              commenter: "Liam Miller",
+              timestamp: "10 hours ago",
+            },
+          ],
         },
         {
           userName: "Olivia Lewis",
@@ -219,7 +324,23 @@ export default {
           content: "Hiked to the summit of Mount Adventure. What a view! ⛰️🌄",
           likes: 25,
           commentsVisible: false,
-          comments: ["Adventurer of the year!", "Tell us about your journey!"],
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
+          comments: [
+            {
+              text: "Adventurer of the year!",
+              commenter: "Sophia Adams",
+              timestamp: "12 hours ago",
+            },
+            {
+              text: "Tell us about your journey!",
+              commenter: "Liam Parker",
+              timestamp: "11 hours ago",
+            },
+          ],
         },
         {
           userName: "Liam Parker",
@@ -230,7 +351,23 @@ export default {
             "Completed a 30-day coding challenge. Feeling accomplished! 💻🚀",
           likes: 22,
           commentsVisible: false,
-          comments: ["Coding genius!", "What languages did you code in?"],
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
+          comments: [
+            {
+              text: "Coding genius!",
+              commenter: "Ava Robinson",
+              timestamp: "13 hours ago",
+            },
+            {
+              text: "What languages did you code in?",
+              commenter: "Noah Clark",
+              timestamp: "12 hours ago",
+            },
+          ],
         },
         {
           userName: "Emma Turner",
@@ -240,7 +377,23 @@ export default {
           content: "Started a new book series. Can't put it down! 📚❤️",
           likes: 11,
           commentsVisible: false,
-          comments: ["Bookworm alert!", "Tell us about the book!"],
+          newComment: {
+            text: "",
+            commenter: "Joe Johnson",
+            timestamp: "1 hour ago",
+          },
+          comments: [
+            {
+              text: "Bookworm alert!",
+              commenter: "Olivia Lewis",
+              timestamp: "14 hours ago",
+            },
+            {
+              text: "Tell us about the book!",
+              commenter: "Liam Parker",
+              timestamp: "13 hours ago",
+            },
+          ],
         },
       ],
     };
@@ -257,9 +410,13 @@ export default {
     },
 
     addComment(item) {
-      if (item.newComment.trim() !== "") {
+      if (item.newComment.text.trim() !== "") {
         item.comments.push(item.newComment);
-        item.newComment = "";
+        item.newComment = {
+          text: "",
+          commenter: "Joe Johnson",
+          timestamp: "1 hour ago",
+        };
       }
     },
   },
@@ -276,7 +433,6 @@ export default {
 }
 
 .feed-item:hover {
-  background-color: #f2f2f2;
   transform: translateY(-2px);
 }
 
@@ -352,8 +508,36 @@ export default {
   font-size: 1rem;
   margin-left: 2px;
 }
+
+.comment {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.commenter {
+  color: #007bff; /* Blue color for commenter's name */
+}
+
+.comment-date {
+  color: #888;
+}
+
+.comment-text {
+  font-size: 16px;
+}
+
+/* Style comment input */
 .comment-input {
-  flex: 1;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -364,19 +548,5 @@ export default {
 .comment-input:focus {
   border-color: #6da9e4;
   outline: none;
-}
-
-.comment {
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 8px;
-  border-radius: 4px;
-}
-
-.comment-input {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px;
 }
 </style>
