@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="content">{{ item.content }}</div>
-      <div style="display: flex; justify-content: space-between">
+      <div class="timestamp-container">
         <div class="timestamp">{{ item.timestamp }}</div>
         <!-- Interaction Area -->
 
@@ -42,8 +42,15 @@
           :key="cIndex"
         >
           <div class="comment-header">
-            <span class="commenter">{{ comment.commenter }}</span>
-            <span class="comment-date">{{ comment.timestamp }}</span>
+            <img
+              :src="item.userImage"
+              alt="Commenter's Profile Image"
+              class="commenter-image"
+            />
+            <div class="timestamp-container">
+              <span class="commenter">{{ comment.commenter }}</span>
+              <span class="comment-date">{{ comment.timestamp }}</span>
+            </div>
           </div>
           <div class="comment-text">{{ comment.text }}</div>
         </div>
@@ -519,12 +526,25 @@ export default {
 
 .comment-header {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 5px;
 }
 
+.timestamp-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.commenter-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
 .commenter {
-  color: #007bff; /* Blue color for commenter's name */
+  color: #4169e1; /* Blue color for commenter's name */
 }
 
 .comment-date {
