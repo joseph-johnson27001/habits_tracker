@@ -531,9 +531,10 @@ export default {
 .comment {
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
 }
+
+/* STYLES FOR COMMENT LOCATIONS */
 
 .comment-header {
   display: flex;
