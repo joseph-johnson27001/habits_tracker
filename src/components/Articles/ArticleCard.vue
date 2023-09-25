@@ -38,7 +38,6 @@ export default {
 <style scoped>
 .article-card {
   background-color: #fff;
-  border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -64,7 +63,7 @@ export default {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
   border-radius: 8px;
 }
 

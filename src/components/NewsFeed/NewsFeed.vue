@@ -444,7 +444,7 @@ export default {
   height: 50px;
   border-radius: 5px;
   margin-right: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
 }
 
 .user-name {
@@ -522,6 +522,7 @@ export default {
   margin-bottom: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .comment-header {
@@ -541,7 +542,7 @@ export default {
   height: 30px;
   border-radius: 4px;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
 }
 
 .commenter {
@@ -562,12 +563,10 @@ export default {
   border-radius: 4px;
   font-size: 16px;
   transition: border-color 0.1s;
-  box-color: 0.2s;
 }
 
 .comment-input:focus {
   border-color: #6da9e4;
   outline: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 </style>

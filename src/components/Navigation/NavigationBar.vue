@@ -61,7 +61,7 @@ export default {
 .navigation-bar {
   display: flex;
   background-color: white;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #6da9e4;
   justify-content: center;
   align-items: center;
   padding-left: 20px;
@@ -90,6 +90,6 @@ export default {
   height: 35px;
   border-radius: 8px;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
 }
 </style>

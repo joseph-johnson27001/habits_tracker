@@ -31,10 +31,10 @@ export default {
 
 <style scoped>
 .sidebar {
+  border: 1px solid #6da9e4;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #ccc;
   height: 86vh;
   display: flex;
   flex-direction: column;
