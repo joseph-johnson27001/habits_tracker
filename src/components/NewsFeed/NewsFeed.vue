@@ -562,11 +562,12 @@ export default {
   border-radius: 4px;
   font-size: 16px;
   transition: border-color 0.1s;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-color: 0.2s;
 }
 
 .comment-input:focus {
   border-color: #6da9e4;
   outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 </style>
