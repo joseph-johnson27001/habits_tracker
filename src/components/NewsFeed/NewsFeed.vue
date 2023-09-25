@@ -519,9 +519,9 @@ export default {
 .comment {
   padding: 10px;
   background-color: #ecf6ff;
-  margin-bottom: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   border: 1px solid #ccc;
 }
 
@@ -562,11 +562,11 @@ export default {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  transition: border-color 0.1s;
+  transition: box-shadow 0.1s;
 }
 
 .comment-input:focus {
-  border-color: #6da9e4;
+  border: 1px solid #6da9e4;
   outline: none;
 }
 </style>
