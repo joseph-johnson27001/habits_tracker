@@ -79,7 +79,7 @@ export default {
           userTitle: "Fitness Enthusiast",
           userImage: "https://picsum.photos/51/50",
           timestamp: "2 hours ago",
-          content: "Achieved my fitness goal today! 💪🏋️‍♂️",
+          content: "Achieved my fitness goal today! 💪🏋️‍♂️ ",
           likes: 10,
           commentsVisible: false,
           newComment: {
@@ -504,6 +504,10 @@ export default {
   display: flex;
   align-items: center;
   margin-left: 8px;
+}
+
+.comment-button {
+  cursor: pointer;
 }
 
 .like-button i,
