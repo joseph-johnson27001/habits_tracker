@@ -18,7 +18,6 @@
       <div class="timestamp-container">
         <div class="timestamp">{{ item.timestamp }}</div>
         <!-- Interaction Area -->
-
         <div class="button-row">
           <span class="comment-button">
             <i
@@ -529,12 +528,10 @@ export default {
 }
 
 .comment {
-  margin-bottom: 10px;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid white;
+  background-color: #f4faff;
 }
-
-/* STYLES FOR COMMENT LOCATIONS */
 
 .comment-header {
   display: flex;
