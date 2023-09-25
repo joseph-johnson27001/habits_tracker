@@ -60,7 +60,7 @@ h1 {
 
 .card {
   background-color: white;
-  border: 1px solid #6da9e4;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 10px;

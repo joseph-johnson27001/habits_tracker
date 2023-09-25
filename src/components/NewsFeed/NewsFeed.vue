@@ -432,6 +432,7 @@ export default {
 }
 .feed-item {
   padding-bottom: 10px;
+  border: 1px solid #ccc;
 }
 
 .user-info {
@@ -520,8 +521,8 @@ export default {
   padding: 10px;
   background-color: #ecf6ff;
   margin-bottom: 6px;
-  border-radius: 5px;
-  border: 1px solid grey;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .comment-header {
@@ -558,7 +559,7 @@ export default {
 .comment-input {
   width: 100%;
   padding: 10px;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   transition: box-shadow 0.1s;
