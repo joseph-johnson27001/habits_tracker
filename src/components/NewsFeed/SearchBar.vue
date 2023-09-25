@@ -28,6 +28,7 @@ export default {
   font-size: 16px;
   margin-right: 10px;
   transition: border-color 0.1s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .search-input:focus {

@@ -19,14 +19,9 @@
         <div class="timestamp">{{ item.timestamp }}</div>
         <!-- Interaction Area -->
         <div class="button-row">
-          <span class="comment-button">
-            <i
-              class="far fa-comment fa-lg clickable-icon"
-              @click="toggleComments(item)"
-            ></i>
-            <span class="comment-count" @click="toggleComments(item)">{{
-              item.comments.length
-            }}</span>
+          <span class="comment-button" @click="toggleComments(item)">
+            <i class="far fa-comment fa-lg clickable-icon"></i>
+            <span class="comment-count">{{ item.comments.length }}</span>
           </span>
           <span @click="likePost(item)" class="like-button">
             <i class="far fa-thumbs-up fa-lg clickable-icon like-button"></i>
@@ -437,12 +432,6 @@ export default {
 }
 .feed-item {
   padding-bottom: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.feed-item:hover {
-  transform: translateY(-2px);
 }
 
 .user-info {
@@ -532,7 +521,7 @@ export default {
   background-color: #ecf6ff;
   margin-bottom: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .comment-header {
@@ -556,7 +545,7 @@ export default {
 }
 
 .commenter {
-  color: #4169e1; /* Blue color for commenter's name */
+  color: #4169e1;
 }
 
 .comment-date {
@@ -566,8 +555,6 @@ export default {
 .comment-text {
   font-size: 16px;
 }
-
-/* Style comment input */
 .comment-input {
   width: 100%;
   padding: 10px;
@@ -575,7 +562,7 @@ export default {
   border-radius: 4px;
   font-size: 16px;
   transition: border-color 0.1s;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .comment-input:focus {
