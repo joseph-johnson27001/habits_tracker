@@ -23,7 +23,7 @@ export default {
 .search-input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #6da9e4;
+  border: 1px solid grey;
   border-radius: 5px;
   font-size: 16px;
   margin-right: 10px;
@@ -32,6 +32,7 @@ export default {
 
 .search-input:focus {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #6da9e4;
   outline: none;
 }
 
@@ -44,7 +45,7 @@ export default {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.1s;
-  border: 1px solid #6da9e4;
+  border: 1px solid grey;
 }
 
 .search-button:hover {
