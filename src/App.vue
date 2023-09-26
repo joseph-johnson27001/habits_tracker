@@ -72,7 +72,7 @@ h1 {
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #dff1ff;
-  border: 1px solid #6da9e4;
+  border: 1px solid #ccc;
   border-radius: 8px;
   margin-left: -40px;
   margin-right: 50px;
