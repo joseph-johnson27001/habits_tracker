@@ -9,7 +9,10 @@
       @focus="showSearchResults"
       @blur="hideSearchResults"
     />
-    <div v-if="searchResults.length > 0 && showResults" class="search-results">
+    <div
+      v-if="searchResults.length > 0 && showResults && searchText.length > 0"
+      class="search-results"
+    >
       <div
         v-for="result in searchResults"
         :key="result.id"
