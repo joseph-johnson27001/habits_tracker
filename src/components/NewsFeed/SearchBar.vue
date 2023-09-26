@@ -58,6 +58,66 @@ export default {
           userTitle: "Gratitude Practitioner",
           userImage: "https://picsum.photos/56/50",
         },
+        {
+          userName: "Sarah Brown",
+          userTitle: "Nature Explorer",
+          userImage: "https://picsum.photos/52/50",
+        },
+        {
+          userName: "David Miller",
+          userTitle: "Tech Enthusiast",
+          userImage: "https://picsum.photos/53/50",
+        },
+        {
+          userName: "Linda Wilson",
+          userTitle: "Foodie",
+          userImage: "https://picsum.photos/54/50",
+        },
+        {
+          userName: "Robert Harris",
+          userTitle: "Bookworm",
+          userImage: "https://picsum.photos/55/50",
+        },
+        {
+          userName: "Olivia Turner",
+          userTitle: "Traveler",
+          userImage: "https://picsum.photos/57/50",
+        },
+        {
+          userName: "Daniel Clark",
+          userTitle: "Photographer",
+          userImage: "https://picsum.photos/58/50",
+        },
+        {
+          userName: "Sophia Adams",
+          userTitle: "Artist",
+          userImage: "https://picsum.photos/60/50",
+        },
+        {
+          userName: "Liam Miller",
+          userTitle: "Musician",
+          userImage: "https://picsum.photos/61/50",
+        },
+        {
+          userName: "Ella Davis",
+          userTitle: "Fashionista",
+          userImage: "https://picsum.photos/62/50",
+        },
+        {
+          userName: "Matthew White",
+          userTitle: "Gamer",
+          userImage: "https://picsum.photos/63/50",
+        },
+        {
+          userName: "Ava Martinez",
+          userTitle: "Animal Lover",
+          userImage: "https://picsum.photos/64/50",
+        },
+        {
+          userName: "Jackson Lee",
+          userTitle: "Adventurer",
+          userImage: "https://picsum.photos/65/50",
+        },
       ],
       showResults: false,
       searchText: "",
