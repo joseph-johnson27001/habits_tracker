@@ -7,7 +7,6 @@
       @input="searchUsers"
       v-model="searchText"
       @focus="showSearchResults"
-      @blur="hideSearchResults"
     />
     <div
       v-if="searchResults.length > 0 && showResults && searchText.length > 0"
@@ -17,6 +16,7 @@
         v-for="result in searchResults"
         :key="result.id"
         class="search-result"
+        @click="handleSearchResultClick(result)"
       >
         <img
           :src="result.userImage"
@@ -135,6 +135,11 @@ export default {
       this.showResults = true;
     },
     hideSearchResults() {
+      this.showResults = false;
+    },
+    handleSearchResultClick(result) {
+      this.searchText = result.userName;
+      this.searchUsers();
       this.showResults = false;
     },
   },
