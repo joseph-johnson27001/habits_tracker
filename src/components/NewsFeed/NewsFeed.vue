@@ -545,9 +545,9 @@ export default {
 .commenter-image {
   width: 30px;
   height: 30px;
-  border-radius: 4px;
+  border-radius: 50%;
   margin-right: 10px;
-  border: 1px solid #6da9e4;
+  border: 1px solid #ccc;
 }
 
 .commenter {
