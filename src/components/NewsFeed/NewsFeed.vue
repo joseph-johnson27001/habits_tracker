@@ -443,9 +443,9 @@ export default {
 .user-image {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   margin-right: 15px;
-  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: 1px solid #6da9e4;
 }
 
 .user-name {
@@ -545,9 +545,9 @@ export default {
 .commenter-image {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: 1px solid #6da9e4;
 }
 
 .commenter {
