@@ -223,4 +223,17 @@ export default {
   background-color: #3156a6;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Hide scrollbar on search items */
+.search-results::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
 </style>
