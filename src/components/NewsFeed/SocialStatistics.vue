@@ -1,5 +1,26 @@
 <template>
   <div class="social-stats">
+    <!-- Challenges -->
+    <div class="challenges card">
+      <div class="heading-area">
+        <h1>ACTIVE CHALLENGES</h1>
+        <i class="fas fa-angle-right view-more-link"></i>
+      </div>
+      <div
+        class="challenge-item"
+        v-for="(challenge, index) in challenges"
+        :key="index"
+      >
+        <div class="challenge-info">
+          <h4>{{ challenge.name }}</h4>
+          <p>{{ challenge.description }}</p>
+        </div>
+        <div class="challenge-progress">
+          <p>{{ challenge.progress }} / {{ challenge.target }}</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Leaderboard -->
     <div class="leaderboard card">
       <div class="heading-area">
@@ -22,27 +43,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <!-- Challenges -->
-    <div class="challenges card">
-      <div class="heading-area">
-        <h1>CHALLENGES</h1>
-        <i class="fas fa-angle-right view-more-link"></i>
-      </div>
-      <div
-        class="challenge-item"
-        v-for="(challenge, index) in challenges"
-        :key="index"
-      >
-        <div class="challenge-info">
-          <h4>{{ challenge.name }}</h4>
-          <p>{{ challenge.description }}</p>
-        </div>
-        <div class="challenge-progress">
-          <p>{{ challenge.progress }} / {{ challenge.target }}</p>
-        </div>
-      </div>
     </div>
 
     <!-- Upcoming Events -->
