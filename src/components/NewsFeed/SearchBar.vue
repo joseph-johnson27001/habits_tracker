@@ -183,6 +183,10 @@ export default {
   cursor: pointer;
 }
 
+.search-result:hover {
+  background-color: #f2f2f2;
+}
+
 .search-result-info {
   flex: 1;
   display: flex;
