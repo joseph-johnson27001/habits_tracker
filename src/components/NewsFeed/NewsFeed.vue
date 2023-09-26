@@ -443,9 +443,9 @@ export default {
 .user-image {
   width: 50px;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 50%;
   margin-right: 15px;
-  border: 1px solid #6da9e4;
+  border: 1px solid #ccc;
 }
 
 .user-name {

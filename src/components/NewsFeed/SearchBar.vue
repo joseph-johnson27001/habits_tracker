@@ -190,8 +190,8 @@ export default {
 }
 
 .search-result-name {
-  font-weight: bold;
-  font-size: 16px;
+  color: #4169e1;
+  font-weight: 400;
 }
 
 .search-result-title {
@@ -204,6 +204,7 @@ export default {
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
+  border: 1px solid #ccc;
 }
 
 .search-button {

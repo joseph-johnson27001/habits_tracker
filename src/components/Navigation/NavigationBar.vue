@@ -88,8 +88,8 @@ export default {
 .user-profile-image {
   width: 35px;
   height: 35px;
-  border-radius: 8px;
+  border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #6da9e4;
+  border: 1px solid #ccc;
 }
 </style>
