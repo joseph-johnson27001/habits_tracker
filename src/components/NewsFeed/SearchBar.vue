@@ -6,8 +6,10 @@
       placeholder="Search"
       @input="searchUsers"
       v-model="searchText"
+      @focus="showSearchResults"
+      @blur="hideSearchResults"
     />
-    <div v-if="searchResults.length > 0" class="search-results">
+    <div v-if="searchResults.length > 0 && showResults" class="search-results">
       <div
         v-for="result in searchResults"
         :key="result.id"
@@ -18,7 +20,10 @@
           alt="User Profile Image"
           class="search-result-image"
         />
-        {{ result.userName }}
+        <div class="search-result-info">
+          <div class="search-result-name">{{ result.userName }}</div>
+          <div class="search-result-title">{{ result.userTitle }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,117 +39,26 @@ export default {
           userName: "John Doe",
           userTitle: "Fitness Enthusiast",
           userImage: "https://picsum.photos/51/50",
-          timestamp: "2 hours ago",
-          content: "Achieved my fitness goal today! 💪🏋️‍♂️ ",
-          likes: 10,
-          commentsVisible: false,
-          newComment: {
-            text: "",
-            commenter: "Joe Johnson",
-            timestamp: "Just now",
-          },
-          comments: [
-            {
-              text: "Great job, John!",
-              commenter: "Alice Smith",
-              timestamp: "1 hour ago",
-            },
-            {
-              text: "That's awesome! Keep it up!",
-              commenter: "Emily Johnson",
-              timestamp: "55 minutes ago",
-            },
-            {
-              text: "I'm inspired by your dedication!",
-              commenter: "David Brown",
-              timestamp: "30 minutes ago",
-            },
-          ],
         },
         {
           userName: "Alice Smith",
           userTitle: "Yoga Lover",
           userImage: "https://picsum.photos/50/50",
-          timestamp: "3 hours ago",
-          content:
-            "Completed the 30-day meditation challenge. Feeling zen! 🧘‍♀️✨",
-          likes: 5,
-          commentsVisible: false,
-          newComment: {
-            text: "",
-            commenter: "Joe Johnson",
-            timestamp: "Just now",
-          },
-          comments: [
-            {
-              text: "Meditation is amazing, isn't it?",
-              commenter: "John Doe",
-              timestamp: "2 hours ago",
-            },
-            {
-              text: "You're an inspiration to us all!",
-              commenter: "Emily Johnson",
-              timestamp: "Just now",
-            },
-          ],
         },
         {
           userName: "Emily Johnson",
           userTitle: "Productivity Pro",
           userImage: "https://picsum.photos/59/50",
-          timestamp: "4 hours ago",
-          content:
-            "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀",
-          likes: 15,
-          commentsVisible: false,
-          newComment: {
-            text: "",
-            commenter: "Joe Johnson",
-            timestamp: "Just now",
-          },
-          comments: [
-            {
-              text: "Wow, that's impressive!",
-              commenter: "John Doe",
-              timestamp: "3 hours ago",
-            },
-            {
-              text: "You're a productivity superstar!",
-              commenter: "Alice Smith",
-              timestamp: "2 hours ago",
-            },
-          ],
         },
         {
           userName: "Michael Green",
           userTitle: "Gratitude Practitioner",
           userImage: "https://picsum.photos/56/50",
-          timestamp: "7 hours ago",
-          content:
-            "Completed the '30 Days of Gratitude' challenge. Feeling thankful for life's little joys. 🙏😊",
-          likes: 6,
-          commentsVisible: false,
-          newComment: {
-            text: "",
-            commenter: "Joe Johnson",
-            timestamp: "Just now",
-          },
-          comments: [
-            {
-              text: "Gratitude is key to happiness!",
-              commenter: "Sophia Adams",
-              timestamp: "6 hours ago",
-            },
-            {
-              text: "Keep spreading positivity!",
-              commenter: "Liam Miller",
-              timestamp: "5 hours ago",
-            },
-          ],
         },
       ],
+      showResults: false,
       searchText: "",
-      searchResults: [], // Define searchResults here within the data function
+      searchResults: [],
     };
   },
   methods: {
@@ -153,6 +67,12 @@ export default {
       this.searchResults = this.feedItems.filter((item) =>
         item.userName.toLowerCase().includes(searchTerm)
       );
+    },
+    showSearchResults() {
+      this.showResults = true;
+    },
+    hideSearchResults() {
+      this.showResults = false;
     },
   },
 };
@@ -198,6 +118,22 @@ export default {
   align-items: center;
   padding: 8px;
   cursor: pointer;
+}
+
+.search-result-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.search-result-title {
+  font-size: 14px;
+  color: #666;
 }
 
 .search-result-image {
