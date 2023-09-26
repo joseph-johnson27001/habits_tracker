@@ -30,7 +30,7 @@
           />
         </svg>
       </router-link>
-      <h4 class="title">JOES WONDERFUL HABIT TRACKER</h4>
+      <h4 class="title">OWN YOUR PROGRESS</h4>
       <router-link to="/profile" class="nav-link">
         <img
           :src="profileImage"

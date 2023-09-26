@@ -568,6 +568,7 @@ export default {
   border-radius: 4px;
   font-size: 16px;
   transition: box-shadow 0.1s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .comment-input:focus {
