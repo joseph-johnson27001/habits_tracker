@@ -445,7 +445,7 @@ export default {
   height: 50px;
   border-radius: 5px;
   margin-right: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
 }
 
 .user-name {
@@ -527,6 +527,7 @@ export default {
   margin-bottom: 6px;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
 }
 
 .comment-header {
@@ -546,7 +547,7 @@ export default {
   height: 30px;
   border-radius: 4px;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
 }
 
 .commenter {

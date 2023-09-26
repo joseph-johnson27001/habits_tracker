@@ -63,7 +63,7 @@ export default {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 1px solid grey;
   border-radius: 8px;
 }
 

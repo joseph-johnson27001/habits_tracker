@@ -656,7 +656,7 @@ export default {
   max-width: 200px;
   max-height: 200px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #6da9e4;
 }
 
 .user-name {
