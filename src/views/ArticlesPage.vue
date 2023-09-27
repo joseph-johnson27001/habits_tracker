@@ -59,7 +59,7 @@ export default {
           category: "Personal Development",
           imageSrc: "https://picsum.photos/150/150",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero in purus consequat, id ultrices felis egestas.",
+            "Unlock the secrets to setting and accomplishing your goals with precision. Dive into proven techniques and actionable strategies that will propel you towards success and fulfillment in every aspect of your life.",
           type: "Productivity",
         },
         {
