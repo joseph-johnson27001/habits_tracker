@@ -217,23 +217,4 @@ export default {
   color: #444; /* Description color */
   flex-grow: 1; /* Allow description to grow */
 }
-
-.read-more-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.read-more-button {
-  background-color: #4169e1; /* Button background color */
-  color: white; /* Button text color */
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.read-more-button:hover {
-  background-color: #0033a0; /* Hover background color */
-}
 </style>

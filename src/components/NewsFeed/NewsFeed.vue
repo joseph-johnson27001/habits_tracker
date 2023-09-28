@@ -463,11 +463,11 @@ export default {
 }
 
 .commenter-name:hover {
-  color: #3156a6;
+  color: #3a59c0;
 }
 .user-name:hover {
   transform: scale(1.1);
-  color: #3156a6;
+  color: #3a59c0;
 }
 
 .timestamp {

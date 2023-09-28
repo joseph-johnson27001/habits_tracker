@@ -110,6 +110,5 @@ export default {
 .badge-icon {
   width: 80px;
   height: 80px;
-  /* Add styling for badge icons here */
 }
 </style>

@@ -89,7 +89,7 @@ h1 {
 .clickable-icon,
 .view-more-link {
   text-decoration: none;
-  color: #4169e1;
+  color: #3a59c0;
   transition: color 0.2, transform 0.3s linear;
   cursor: pointer;
 }
@@ -97,6 +97,6 @@ h1 {
 .clickable-icon:hover,
 .view-more-link:hover {
   transform: scale(1.1);
-  color: #3156a6;
+  color: #3a59c0;
 }
 </style>

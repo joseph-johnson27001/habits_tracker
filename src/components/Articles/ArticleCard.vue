@@ -102,11 +102,6 @@ export default {
   color: #333;
 }
 
-.read-more-container {
-  display: flex;
-  justify-content: right;
-}
-
 .click-icon-container {
   text-align: right;
 }

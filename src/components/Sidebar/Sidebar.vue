@@ -71,6 +71,6 @@ export default {
 
 .sidebar-item:hover {
   transform: scale(1.1);
-  color: #3156a6;
+  color: #3a59c0;
 }
 </style>
