@@ -2,7 +2,6 @@
   <div class="card">
     <h1>LEADERBOARD GRAPH</h1>
     <div class="graph-container">
-      <!-- Simulated graph here (you can use a chart library like Chart.js) -->
       <canvas id="leaderboard-graph"></canvas>
     </div>
   </div>
@@ -38,26 +37,25 @@ export default {
             max: 100,
             stepSize: 10,
             grid: {
-              display: false, // Hide Y-axis gridlines
+              display: false,
             },
           },
           x: {
             grid: {
-              display: false, // Hide X-axis gridlines
+              display: false,
             },
           },
         },
         plugins: {
           legend: {
-            display: false, // Hide the legend (square at the top)
+            display: false,
           },
         },
       };
 
-      // Create a chart using a chart library (e.g., Chart.js)
       const ctx = document.getElementById("leaderboard-graph").getContext("2d");
       new Chart(ctx, {
-        type: "bar", // You can choose the type of chart (bar, line, pie, etc.)
+        type: "bar",
         data: data,
         options: options,
       });

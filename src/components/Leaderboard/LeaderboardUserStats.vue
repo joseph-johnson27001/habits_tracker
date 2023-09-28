@@ -5,7 +5,6 @@
         <h2>Name: {{ user.name }}</h2>
         <p>Rank: {{ user.rank }}{{ getRankSuffix(user.rank) }}</p>
         <p>Score: {{ user.score }}</p>
-        <!-- Add more user stats as needed -->
       </div>
     </div>
   </div>
@@ -62,12 +61,12 @@ export default {
 <style scoped>
 .user-stats {
   display: flex;
-  flex-direction: column; /* Display items vertically */
+  flex-direction: column;
   gap: 20px;
 }
 
 .user-stat {
-  flex: none; /* Prevent wrapping */
+  flex: none;
   padding: 20px;
   background-color: #f4f4f4;
   border-radius: 8px;
@@ -83,6 +82,4 @@ p {
   font-size: 16px;
   margin: 5px 0;
 }
-
-/* Add more styles as needed */
 </style>
