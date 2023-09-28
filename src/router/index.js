@@ -5,6 +5,7 @@ import NewsPage from "@/views/NewsFeedPage.vue";
 import HabitsPage from "@/views/HabitsPage.vue";
 import ArticlesPage from "@/views/ArticlesPage.vue";
 import LeaderboardPage from "@/views/LeaderboardPage.vue";
+import SettingsPage from "@/views/SettingsPage.vue";
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,7 @@ const routes = [
   { path: "/habits", component: HabitsPage },
   { path: "/articles", component: ArticlesPage },
   { path: "/leaderboard", component: LeaderboardPage },
+  { path: "/settings", component: SettingsPage },
 ];
 
 const router = new VueRouter({
