@@ -6,6 +6,7 @@
         :key="index"
         :data="graphData"
         :canvasId="'leaderboard-graph-' + index"
+        :title="graphData.graphTitle"
       />
     </div>
     <div>
@@ -27,6 +28,7 @@ export default {
     return {
       graphDataArray: [
         {
+          graphTitle: "Meditating",
           labels: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"],
           datasets: [
             {
@@ -39,6 +41,7 @@ export default {
           ],
         },
         {
+          graphTitle: "Running",
           labels: ["Player A", "Player B", "Player C", "Player D", "Player E"],
           datasets: [
             {
@@ -51,6 +54,7 @@ export default {
           ],
         },
         {
+          graphTitle: "Fasting",
           labels: ["Player X", "Player Y", "Player Z", "Player W", "Player V"],
           datasets: [
             {

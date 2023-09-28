@@ -1,5 +1,9 @@
 <template>
   <div class="card">
+    <!-- Add a title for the graph -->
+    <div class="heading-container">
+      <h1>{{ title }}</h1>
+    </div>
     <div class="graph-container">
       <!-- Use a dynamic canvas id to differentiate between graphs -->
       <canvas :id="canvasId" height="400"></canvas>
@@ -17,6 +21,10 @@ export default {
     },
     canvasId: {
       type: String,
+      required: true,
+    },
+    title: {
+      type: String, // Add a title prop
       required: true,
     },
   },
@@ -65,3 +73,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h1 {
+  color: #4169e1;
+}
+.heading-container {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+</style>
