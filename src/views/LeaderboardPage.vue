@@ -35,11 +35,16 @@ export default {
             "Emily Johnson",
             "Michael Green",
             "Sarah Brown",
+            "Sophia Adams",
+            "Liam Miller",
+            "Ella Davis",
+            "Matthew White",
+            "Ava Martinez",
           ],
           datasets: [
             {
               label: "Score",
-              data: [85, 92, 78, 88, 95],
+              data: [85, 92, 78, 88, 95, 70, 88, 75, 92, 81],
               backgroundColor: "rgba(75, 192, 192, 0.2)",
               borderColor: "rgba(75, 192, 192, 1)",
               borderWidth: 1,
