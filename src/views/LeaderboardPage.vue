@@ -1,10 +1,10 @@
 <template>
   <div class="leaderboard-page">
     <div>
-      <LeaderboardUserStats />
+      <LeaderboardGraph />
     </div>
     <div>
-      <LeaderboardGraph />
+      <LeaderboardUserStats />
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
 <style>
 .leaderboard-page {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 10px;
 }
 </style>
