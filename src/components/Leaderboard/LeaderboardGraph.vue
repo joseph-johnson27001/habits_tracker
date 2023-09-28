@@ -77,6 +77,10 @@ export default {
 <style scoped>
 h1 {
   color: #4169e1;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.1s;
 }
 .heading-container {
   padding: 5px;

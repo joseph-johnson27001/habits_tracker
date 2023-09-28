@@ -163,8 +163,10 @@ export default {
 }
 
 .article-type-navigation a {
-  text-decoration: none;
   color: #4169e1;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
   transition: color 0.2s;
 }
 
