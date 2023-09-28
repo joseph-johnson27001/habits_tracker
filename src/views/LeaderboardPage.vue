@@ -29,7 +29,13 @@ export default {
       graphDataArray: [
         {
           graphTitle: "Meditating",
-          labels: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"],
+          labels: [
+            "John Doe",
+            "Alice Smith",
+            "Emily Johnson",
+            "Michael Green",
+            "Sarah Brown",
+          ],
           datasets: [
             {
               label: "Score",
@@ -42,7 +48,13 @@ export default {
         },
         {
           graphTitle: "Running",
-          labels: ["Player A", "Player B", "Player C", "Player D", "Player E"],
+          labels: [
+            "David Miller",
+            "Linda Wilson",
+            "Robert Harris",
+            "Olivia Turner",
+            "Daniel Clark",
+          ],
           datasets: [
             {
               label: "Score",
@@ -55,7 +67,13 @@ export default {
         },
         {
           graphTitle: "Fasting",
-          labels: ["Player X", "Player Y", "Player Z", "Player W", "Player V"],
+          labels: [
+            "Sophia Adams",
+            "Liam Miller",
+            "Ella Davis",
+            "Matthew White",
+            "Ava Martinez",
+          ],
           datasets: [
             {
               label: "Score",
