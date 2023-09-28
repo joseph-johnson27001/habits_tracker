@@ -1,8 +1,8 @@
 <template>
   <div class="card">
-    <h1>LEADERBOARD GRAPH</h1>
     <div class="graph-container">
-      <canvas id="leaderboard-graph"></canvas>
+      <!-- Use a dynamic canvas id to differentiate between graphs -->
+      <canvas :id="canvasId"></canvas>
     </div>
   </div>
 </template>
@@ -10,23 +10,22 @@
 <script>
 import Chart from "chart.js/auto";
 export default {
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+    canvasId: {
+      type: String,
+      required: true,
+    },
+  },
   mounted() {
     this.renderLeaderboardGraph();
   },
   methods: {
     renderLeaderboardGraph() {
-      const data = {
-        labels: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"],
-        datasets: [
-          {
-            label: "Score",
-            data: [85, 92, 78, 88, 95],
-            backgroundColor: "rgba(75, 192, 192, 0.2)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 1,
-          },
-        ],
-      };
+      const { labels, datasets } = this.data;
 
       const options = {
         responsive: true,
@@ -53,10 +52,13 @@ export default {
         },
       };
 
-      const ctx = document.getElementById("leaderboard-graph").getContext("2d");
+      const ctx = document.getElementById(this.canvasId).getContext("2d");
       new Chart(ctx, {
         type: "bar",
-        data: data,
+        data: {
+          labels: labels,
+          datasets: datasets,
+        },
         options: options,
       });
     },
