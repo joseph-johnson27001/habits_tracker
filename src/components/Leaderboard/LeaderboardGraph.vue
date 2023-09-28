@@ -1,12 +1,10 @@
 <template>
   <div class="card">
-    <!-- Add a title for the graph -->
     <div class="heading-container">
       <h1>{{ title }}</h1>
     </div>
     <div class="graph-container">
-      <!-- Use a dynamic canvas id to differentiate between graphs -->
-      <canvas :id="canvasId" height="400"></canvas>
+      <canvas :id="canvasId" height="300"></canvas>
     </div>
   </div>
 </template>
