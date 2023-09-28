@@ -2,8 +2,8 @@
   <div class="card">
     <div class="user-stats">
       <div class="user-stat" v-for="(user, index) in users" :key="index">
-        <h2>Name: {{ user.name }}</h2>
-        <p>Rank: {{ user.rank }}{{ getRankSuffix(user.rank) }}</p>
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.rank }}{{ getRankSuffix(user.rank) }}</p>
         <p>Score: {{ user.score }}</p>
       </div>
     </div>
@@ -34,6 +34,36 @@ export default {
           name: "Michael Green",
           rank: 4,
           score: 86,
+        },
+        {
+          name: "Sarah Brown",
+          rank: 5,
+          score: 84,
+        },
+        {
+          name: "David Miller",
+          rank: 6,
+          score: 82,
+        },
+        {
+          name: "Linda Wilson",
+          rank: 7,
+          score: 80,
+        },
+        {
+          name: "Robert Harris",
+          rank: 8,
+          score: 78,
+        },
+        {
+          name: "Olivia Turner",
+          rank: 9,
+          score: 76,
+        },
+        {
+          name: "Daniel Clark",
+          rank: 10,
+          score: 74,
         },
       ],
     };

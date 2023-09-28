@@ -2,7 +2,7 @@
   <div class="card">
     <div class="graph-container">
       <!-- Use a dynamic canvas id to differentiate between graphs -->
-      <canvas :id="canvasId"></canvas>
+      <canvas :id="canvasId" height="400"></canvas>
     </div>
   </div>
 </template>
