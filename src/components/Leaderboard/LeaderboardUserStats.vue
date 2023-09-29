@@ -141,6 +141,7 @@ p {
 
 .user-container {
   width: 100%;
+  border-bottom: 1px solid #ccc;
 }
 
 .user-name {
