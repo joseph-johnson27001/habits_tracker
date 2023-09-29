@@ -1,7 +1,9 @@
 <template>
   <div class="card">
+    <h1>MONTHLY LEADERBOARD</h1>
     <div class="user-stats">
       <div class="user-stat" v-for="(user, index) in users" :key="index">
+        <img :src="user.imageURL" alt="User Avatar" />
         <h2>{{ user.name }}</h2>
         <p>{{ user.rank }}{{ getRankSuffix(user.rank) }}</p>
         <p>Score: {{ user.score }}</p>
@@ -19,51 +21,61 @@ export default {
           name: "John Doe",
           rank: 1,
           score: 95,
+          imageURL: "https://picsum.photos/50/50?random=1",
         },
         {
           name: "Alice Smith",
           rank: 2,
           score: 92,
+          imageURL: "https://picsum.photos/50/50?random=2",
         },
         {
           name: "Emily Johnson",
           rank: 3,
           score: 88,
+          imageURL: "https://picsum.photos/50/50?random=3",
         },
         {
           name: "Michael Green",
           rank: 4,
           score: 86,
+          imageURL: "https://picsum.photos/50/50?random=4",
         },
         {
           name: "Sarah Brown",
           rank: 5,
           score: 84,
+          imageURL: "https://picsum.photos/50/50?random=5",
         },
         {
           name: "David Miller",
           rank: 6,
           score: 82,
+          imageURL: "https://picsum.photos/50/50?random=6",
         },
         {
           name: "Linda Wilson",
           rank: 7,
           score: 80,
+          imageURL: "https://picsum.photos/50/50?random=7",
         },
         {
           name: "Robert Harris",
           rank: 8,
           score: 78,
+          imageURL: "https://picsum.photos/50/50?random=8",
         },
         {
           name: "Olivia Turner",
           rank: 9,
           score: 76,
+          imageURL: "https://picsum.photos/50/50?random=9",
         },
         {
           name: "Daniel Clark",
           rank: 10,
           score: 74,
+          imageURL: "https://picsum.photos/50/50?random=10",
         },
       ],
     };
