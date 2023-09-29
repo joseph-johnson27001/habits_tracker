@@ -157,7 +157,6 @@ p {
 }
 
 .user-name:hover {
-  transform: scale(1.1);
   color: #3a59c0;
 }
 </style>
