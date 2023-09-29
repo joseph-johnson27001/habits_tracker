@@ -9,11 +9,13 @@
           :key="index"
         >
           <img :src="user.imageURL" alt="User Avatar" class="user-image" />
-          <div>
-            <span class="user-name">{{ user.name }} </span>
-            <span class="user-title"
-              >{{ user.rank }}{{ getRankSuffix(user.rank) }}</span
-            >
+          <div class="user-container">
+            <div class="user-heading">
+              <span class="user-name">{{ user.name }} </span>
+              <span class="user-title"
+                >{{ user.rank }}{{ getRankSuffix(user.rank) }}</span
+              >
+            </div>
             <p>Score: {{ user.score }}</p>
           </div>
         </div>
@@ -137,12 +139,21 @@ p {
   border: 1px solid #6da9e4;
 }
 
+.user-container {
+  width: 100%;
+}
+
 .user-name {
   color: #4169e1;
   font-weight: 400;
   font-size: 18px;
   cursor: pointer;
   transition: color 0.1s;
+}
+
+.user-heading {
+  display: flex;
+  justify-content: space-between;
 }
 
 .user-name:hover {
