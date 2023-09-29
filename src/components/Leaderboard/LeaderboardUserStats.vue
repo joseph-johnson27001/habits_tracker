@@ -2,11 +2,21 @@
   <div class="card">
     <h1>MONTHLY LEADERBOARD</h1>
     <div class="user-stats">
-      <div class="user-stat" v-for="(user, index) in users" :key="index">
-        <img :src="user.imageURL" alt="User Avatar" />
-        <h2>{{ user.name }}</h2>
-        <p>{{ user.rank }}{{ getRankSuffix(user.rank) }}</p>
-        <p>Score: {{ user.score }}</p>
+      <div>
+        <div
+          class="leaderboard-card"
+          v-for="(user, index) in users"
+          :key="index"
+        >
+          <img :src="user.imageURL" alt="User Avatar" class="user-image" />
+          <div>
+            <span class="user-name">{{ user.name }} </span>
+            <span class="user-title"
+              >{{ user.rank }}{{ getRankSuffix(user.rank) }}</span
+            >
+            <p>Score: {{ user.score }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -107,21 +117,36 @@ export default {
   gap: 20px;
 }
 
-.user-stat {
-  flex: none;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  font-size: 18px;
-  margin: 0;
-}
-
 p {
   font-size: 16px;
   margin: 5px 0;
+}
+
+.leaderboard-card {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 4px;
+  border: 1px solid #6da9e4;
+}
+
+.user-name {
+  color: #4169e1;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.user-name:hover {
+  transform: scale(1.1);
+  color: #3a59c0;
 }
 </style>
