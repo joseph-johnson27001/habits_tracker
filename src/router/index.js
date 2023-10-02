@@ -6,6 +6,7 @@ import HabitsPage from "@/views/HabitsPage.vue";
 import ArticlesPage from "@/views/ArticlesPage.vue";
 import LeaderboardPage from "@/views/LeaderboardPage.vue";
 import SettingsPage from "@/views/SettingsPage.vue";
+import StorePage from "@/views/StorePage.vue";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,7 @@ const routes = [
   { path: "/articles", component: ArticlesPage },
   { path: "/leaderboard", component: LeaderboardPage },
   { path: "/settings", component: SettingsPage },
+  { path: "/store", component: StorePage },
 ];
 
 const router = new VueRouter({
