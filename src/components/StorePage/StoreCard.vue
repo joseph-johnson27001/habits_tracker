@@ -1,3 +1,5 @@
 <template>
-  <div class="card">Store</div>
+  <div class="card">
+    <h1>STORE</h1>
+  </div>
 </template>
