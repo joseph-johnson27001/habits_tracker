@@ -95,14 +95,14 @@ export default {
           },
         },
         {
-          name: "Gardening",
+          name: "Swimming",
           completionPercentage: 50,
           dayStreak: {
             value: 30,
             label: "Days in a Row:",
           },
           totalDistance: {
-            value: 20 + " km",
+            value: 5 + " km",
             label: "Total Distance:",
           },
           numberOfDaysUntilAchievements: {
@@ -110,7 +110,7 @@ export default {
             label: "Number of Days Until Next Achievement:",
           },
           distanceToAchievements: {
-            value: 200,
+            value: 5,
             label: "Distance Until Next Achievement:",
           },
         },
