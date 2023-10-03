@@ -13,6 +13,12 @@
         <div v-for="(field, fieldIndex) in habit.fields" :key="fieldIndex">
           <p>{{ field.label }} {{ field.value }}</p>
         </div>
+        <div class="progress-bar">
+          <div
+            class="progress-fill fill-animation"
+            :style="`width: ${habit.progress}%; transition-delay: ${habit.delay}s`"
+          ></div>
+        </div>
       </div>
       <div class="card habit-tracker" id="add-habit-container">
         <div class="add-button">
@@ -63,7 +69,7 @@ export default {
           },
           minutesToAchievements: {
             value: 90,
-            label: "Miuntes Until Next Achievement:",
+            label: "Minutes Until Next Achievement:",
           },
         },
         {
@@ -128,11 +134,13 @@ export default {
   },
   computed: {
     filteredHabits() {
-      return this.habits.map((habit) => {
+      return this.habits.map((habit, index) => {
         const fields = Object.keys(habit).filter((field) => field !== "name");
         return {
           name: habit.name,
           fields: fields.map((field) => habit[field]),
+          progress: Math.random() * 100, // Generate random progress percentage individually
+          delay: index * 0.5, // Adjust the delay as needed
         };
       });
     },
@@ -172,5 +180,16 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
 }
 </style>
