@@ -41,7 +41,7 @@ export default {
             label: "Days in a Row:",
           },
           totalDistance: {
-            value: 12,
+            value: 12 + " km",
             label: "Total Distance:",
           },
           numberOfDaysUntilAchievements: {
@@ -98,7 +98,7 @@ export default {
             label: "Days in a Row:",
           },
           totalDistance: {
-            value: 0,
+            value: 20 + " km",
             label: "Total Distance:",
           },
           numberOfDaysUntilAchievements: {
