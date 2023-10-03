@@ -2,18 +2,14 @@
   <div class="habits-page">
     <div class="habit-tracker-container">
       <div
-        v-for="(habit, index) in habits"
-        :key="index"
         class="card habit-tracker"
+        v-for="(habit, index) in filteredHabits"
+        :key="index"
       >
-        <div class="heading-area">
-          <h1>{{ habit.name }}</h1>
-          <!-- <i class="fas fa-angle-right view-more-link"></i> -->
+        <h1>{{ habit.name }}</h1>
+        <div v-for="(field, fieldIndex) in habit.fields" :key="fieldIndex">
+          <p>{{ field.label }} {{ field.value }}</p>
         </div>
-        <p>
-          Total {{ habit.yAxisLabel }}:
-          {{ calculateTotalData(habit.graphData) }}
-        </p>
       </div>
       <div class="card habit-tracker">
         <h1>Add A New Habit</h1>
@@ -25,183 +21,128 @@
         </div>
       </div>
     </div>
-
-    <transition :name="transitionName" mode="out-in">
-      <div :key="currentIndex" class="card">
-        <div class="arrow-button prev-button" @click="prevCard">
-          <i class="fas fa-chevron-left clickable-icon"></i>
-        </div>
-        <div class="heading-container">
-          <h1>{{ habits[currentIndex].name }}</h1>
-        </div>
-        <div class="habit-card-content">
-          <HabitLineGraph
-            :habitData="habits[currentIndex].graphData"
-            :yAxisLabel="habits[currentIndex].yAxisLabel"
-            :xAxisLabel="habits[currentIndex].xAxisLabel"
-          />
-        </div>
-        <div class="arrow-button next-button" @click="nextCard">
-          <i class="fas fa-chevron-right clickable-icon"></i>
-        </div>
-      </div>
-    </transition>
   </div>
 </template>
 
 <script>
-import HabitLineGraph from "@/components/Habits/components/Graphs/HabitLineGraph.vue";
-
 export default {
-  components: {
-    HabitLineGraph,
-  },
   data() {
     return {
       habits: [
         {
+          name: "Running",
+          dayStreak: {
+            value: 3,
+            label: "Days in a Row:",
+          },
+          totalDistance: {
+            value: 12,
+            label: "Total Distance:",
+          },
+          numberOfDaysUntilAchievements: {
+            value: 2,
+            label: "Number of Days Until Next Achievement:",
+          },
+          distanceToAchievements: {
+            value: 38,
+            label: "Distance Until Next Achievement:",
+          },
+        },
+        {
           name: "Meditating",
-          graphData: {
-            labels: [
-              "1st",
-              "2nd",
-              "3rd",
-              "4th",
-              "5th",
-              "6th",
-              "7th",
-              "8th",
-              "9th",
-              "10th",
-              "11th",
-              "12th",
-              "13th",
-              "14th",
-              "15th",
-              "16th",
-              "17th",
-              "18th",
-              "19th",
-              "20th",
-              "21st",
-              "22nd",
-              "23rd",
-              "24th",
-              "25th",
-              "26th",
-            ],
-            data: [
-              10, 15, 12, 20, 18, 22, 17, 19, 21, 25, 24, 18, 23, 20, 15, 12,
-              10, 18, 22, 24, 20, 19, 15, 13, 16, 14,
-            ],
+          dayStreak: {
+            value: 7,
+            label: "Days in a Row:",
           },
-          trackedData: 25,
-          yAxisLabel: "Minutes",
-          xAxisLabel: "Date",
-        },
-        // {
-        //   name: "Working Out",
-        //   graphData: {
-        //     labels: [
-        //       "1st",
-        //       "2nd",
-        //       "3rd",
-        //       "4th",
-        //       "5th",
-        //       "6th",
-        //       "7th",
-        //       "8th",
-        //       "9th",
-        //       "10th",
-        //     ],
-        //     data: [5, 8, 10, 7, 12, 15, 13, 11, 9, 14],
-        //   },
-        //   trackedData: 20,
-        //   yAxisLabel: "Repetitions",
-        //   xAxisLabel: "Date",
-        // },
-        // {
-        //   name: "Reading",
-        //   graphData: {
-        //     labels: [
-        //       "1st",
-        //       "2nd",
-        //       "3rd",
-        //       "4th",
-        //       "5th",
-        //       "6th",
-        //       "7th",
-        //       "8th",
-        //       "9th",
-        //       "10th",
-        //       "11th",
-        //       "12th",
-        //       "13th",
-        //       "14th",
-        //     ],
-        //     data: [8, 12, 15, 10, 17, 20, 19, 18, 21, 25, 24, 18, 23, 20],
-        //   },
-        //   trackedData: 30,
-        //   yAxisLabel: "Pages",
-        //   xAxisLabel: "Date",
-        // },
-        {
-          name: "Fasting",
-          graphData: {
-            labels: ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
-            data: [5, 10, 8, 15, 12, 9, 13, 11],
+          totalMinutes: {
+            value: 210,
+            label: "Total Minutes:",
           },
-          trackedData: 10,
-          yAxisLabel: "Hours",
-          xAxisLabel: "Date",
+          daysStreak: {
+            value: 3,
+            label: "Days in a Row:",
+          },
+          numberOfDaysUntilAchievements: {
+            value: 3,
+            label: "Number of Days Until Next Achievement:",
+          },
+          minutesToAchievements: {
+            value: 90,
+            label: "Miuntes Until Next Achievement:",
+          },
         },
         {
-          name: "Coding",
-          graphData: {
-            labels: [
-              "1st",
-              "2nd",
-              "3rd",
-              "4th",
-              "5th",
-              "6th",
-              "7th",
-              "8th",
-              "9th",
-              "10th",
-              "11th",
-              "12th",
-            ],
-            data: [12, 18, 20, 25, 30, 28, 27, 26, 22, 24, 23, 20],
+          name: "Reading",
+          dayStreak: {
+            value: 14,
+            label: "Days in a Row:",
           },
-          trackedData: 20,
-          yAxisLabel: "Minutes",
-          xAxisLabel: "Date",
+          totalMinutes: {
+            value: 420,
+            label: "Total Minutes:",
+          },
+          numberOfDaysUntilAchievements: {
+            value: 5,
+            label: "Number of Days Until Next Achievement:",
+          },
+          minutesToAchievements: {
+            value: 60,
+            label: "Minutes Until Next Achievement:",
+          },
+        },
+        {
+          name: "Gardening",
+          dayStreak: {
+            value: 30,
+            label: "Days in a Row:",
+          },
+          totalDistance: {
+            value: 0,
+            label: "Total Distance:",
+          },
+          numberOfDaysUntilAchievements: {
+            value: 10,
+            label: "Number of Days Until Next Achievement:",
+          },
+          distanceToAchievements: {
+            value: 200,
+            label: "Distance Until Next Achievement:",
+          },
+        },
+        {
+          name: "Yoga",
+          dayStreak: {
+            value: 5,
+            label: "Days in a Row:",
+          },
+          totalMinutes: {
+            value: 150,
+            label: "Total Minutes:",
+          },
+          numberOfDaysUntilAchievements: {
+            value: 2,
+            label: "Number of Days Until Next Achievement:",
+          },
+          minutesToAchievements: {
+            value: 30,
+            label: "Minutes Until Next Achievement:",
+          },
         },
       ],
-      currentIndex: 0,
-      direction: "next",
     };
   },
-
   computed: {
-    transitionName() {
-      return this.direction === "prev" ? "slide-fade-prev" : "slide-fade-next";
+    filteredHabits() {
+      return this.habits.map((habit) => {
+        const fields = Object.keys(habit).filter((field) => field !== "name");
+        return {
+          name: habit.name,
+          fields: fields.map((field) => habit[field]),
+        };
+      });
     },
   },
   methods: {
-    calculateTotalData(graphData) {
-      return graphData.data.reduce((acc, val) => acc + val, 0);
-    },
-    nextCard() {
-      this.direction = "next";
-      this.currentIndex = (this.currentIndex + 1) % this.habits.length;
-    },
-    prevCard() {
-      this.direction = "prev";
-      this.currentIndex =
-        (this.currentIndex - 1 + this.habits.length) % this.habits.length;
-    },
     addHabit() {
       this.habits.push({
         name: "New Habit",
@@ -239,53 +180,8 @@ h1 {
 }
 .habit-tracker-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
-}
-.heading-container {
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-.carousel-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.slide-fade-next-enter-active,
-.slide-fade-prev-leave-active,
-.slide-fade-prev-enter-active,
-.slide-fade-next-leave-active {
-  transition: transform 0.6s, opacity 0.2s;
-}
-.slide-fade-next-enter,
-.slide-fade-prev-leave-to {
-  /* transform: translateX(-150%); */
-  opacity: 0;
-}
-.slide-fade-prev-enter,
-.slide-fade-next-leave-to {
-  /* transform: translateX(150%); */
-  opacity: 0;
-}
-
-.arrow-button {
-  background-color: transparent;
-  border: none;
-  color: #4169e1;
-  cursor: pointer;
-  font-size: 24px;
-  position: absolute;
-  top: 50%;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
 }
 
 .add-button {
