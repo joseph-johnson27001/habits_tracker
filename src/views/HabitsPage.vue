@@ -6,7 +6,10 @@
         v-for="(habit, index) in filteredHabits"
         :key="index"
       >
-        <h1>{{ habit.name }}</h1>
+        <div class="heading-area">
+          <h1>{{ habit.name }}</h1>
+          <i class="fas fa-angle-right view-more-link"></i>
+        </div>
         <div v-for="(field, fieldIndex) in habit.fields" :key="fieldIndex">
           <p>{{ field.label }} {{ field.value }}</p>
         </div>
