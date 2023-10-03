@@ -61,10 +61,6 @@ export default {
             value: 210,
             label: "Total Minutes:",
           },
-          daysStreak: {
-            value: 3,
-            label: "Days in a Row:",
-          },
           numberOfDaysUntilAchievements: {
             value: 3,
             label: "Number of Days Until Next Achievement:",
@@ -183,7 +179,7 @@ h1 {
 }
 .habit-tracker-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
