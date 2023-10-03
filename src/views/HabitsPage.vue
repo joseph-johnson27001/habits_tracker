@@ -16,7 +16,7 @@
         <div class="progress-bar">
           <div
             class="progress-fill fill-animation"
-            :style="`width: ${habit.progress}%; transition-delay: ${habit.delay}s`"
+            :style="'width: ' + habit.progress + '%'"
           ></div>
         </div>
       </div>
@@ -36,6 +36,7 @@ export default {
       habits: [
         {
           name: "Running",
+          completionPercentage: 60,
           dayStreak: {
             value: 3,
             label: "Days in a Row:",
@@ -55,6 +56,7 @@ export default {
         },
         {
           name: "Meditating",
+          completionPercentage: 20,
           dayStreak: {
             value: 7,
             label: "Days in a Row:",
@@ -74,6 +76,7 @@ export default {
         },
         {
           name: "Reading",
+          completionPercentage: 30,
           dayStreak: {
             value: 14,
             label: "Days in a Row:",
@@ -93,6 +96,7 @@ export default {
         },
         {
           name: "Gardening",
+          completionPercentage: 50,
           dayStreak: {
             value: 30,
             label: "Days in a Row:",
@@ -112,6 +116,7 @@ export default {
         },
         {
           name: "Yoga",
+          completionPercentage: 90,
           dayStreak: {
             value: 5,
             label: "Days in a Row:",
@@ -134,13 +139,12 @@ export default {
   },
   computed: {
     filteredHabits() {
-      return this.habits.map((habit, index) => {
+      return this.habits.map((habit) => {
         const fields = Object.keys(habit).filter((field) => field !== "name");
         return {
           name: habit.name,
           fields: fields.map((field) => habit[field]),
-          progress: Math.random() * 100, // Generate random progress percentage individually
-          delay: index * 0.5, // Adjust the delay as needed
+          progress: habit.completionPercentage,
         };
       });
     },
@@ -191,5 +195,16 @@ h1 {
 .progress-fill {
   height: 100%;
   background-color: #4caf50;
+}
+
+.fill-animation {
+  animation: fill 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
 }
 </style>
