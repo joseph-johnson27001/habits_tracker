@@ -14,13 +14,9 @@
           <p>{{ field.label }} {{ field.value }}</p>
         </div>
       </div>
-      <div class="card habit-tracker">
-        <h1>Add A New Habit</h1>
+      <div class="card habit-tracker" id="add-habit-container">
         <div class="add-button">
-          <i
-            class="fas fa-plus-circle fa-xl clickable-icon"
-            @click="addHabit"
-          ></i>
+          <h1>Add A New Habit</h1>
         </div>
       </div>
     </div>
@@ -141,18 +137,7 @@ export default {
       });
     },
   },
-  methods: {
-    addHabit() {
-      this.habits.push({
-        name: "New Habit",
-        graphData: {
-          labels: [],
-          data: [],
-        },
-        daysTracked: 0,
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -179,26 +164,13 @@ h1 {
 }
 .habit-tracker-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
 
-.add-button {
+#add-habit-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  margin: 0 auto;
-}
-
-.add-button i {
-  margin: 0;
-  padding: 0;
-  color: #4169e1;
+  align-items: center;
 }
 </style>
