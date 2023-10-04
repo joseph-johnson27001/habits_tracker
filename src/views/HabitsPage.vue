@@ -5,7 +5,7 @@
         class="card habit-tracker"
         v-for="(habit, index) in filteredHabits"
         :key="index"
-        @click="navigateToHabitPage(habit.id)"
+        @click="navigateToHabitPage(habit.name)"
       >
         <div class="heading-area">
           <h1>{{ habit.name }}</h1>
@@ -151,8 +151,8 @@ export default {
     },
   },
   methods: {
-    navigateToHabitPage(habitId) {
-      this.$router.push({ name: "habit", params: { habitId } });
+    navigateToHabitPage(habitName) {
+      this.$router.push({ name: "habit", params: { habitName } });
     },
   },
 };

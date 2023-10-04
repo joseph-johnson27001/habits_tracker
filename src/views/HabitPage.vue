@@ -1,11 +1,13 @@
 <template>
-  <div>Super fun happy page</div>
+  <div class="card">
+    <h1>{{ habitName }}</h1>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    habitId: {
+    habitName: {
       type: String,
       required: true,
     },
