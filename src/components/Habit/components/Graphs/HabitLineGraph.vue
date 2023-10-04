@@ -4,7 +4,7 @@
       <h1>Habit:</h1>
     </div>
     <div class="graph-container">
-      <canvas ref="lineChart" height="300"></canvas>
+      <canvas ref="lineChart" height="400"></canvas>
     </div>
   </div>
 </template>
@@ -72,6 +72,7 @@ export default {
                 },
               },
               y: {
+                beginAtZero: true,
                 title: {
                   display: true,
                   text: this.yAxisLabel,

@@ -10,8 +10,13 @@
         </div>
       </div>
       <div class="card">
-        <HabitLineGraph :habitData="habitData" />
+        <div class="heading-container">
+          <h1>Heading</h1>
+        </div>
       </div>
+    </div>
+    <div class="card">
+      <HabitLineGraph :habitData="habitData" />
     </div>
   </div>
 </template>
@@ -31,8 +36,23 @@ export default {
   data() {
     return {
       habitData: {
-        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        data: [3, 4, 5, 3, 6, 2, 7],
+        labels: [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+        ],
+        data: [30, 40, 50, 30, 60, 20, 70, 50, 70, 50, 20, 10, 40, 50],
       },
     };
   },
@@ -51,11 +71,5 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 20px;
-}
-
-.heading-container {
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
 }
 </style>
