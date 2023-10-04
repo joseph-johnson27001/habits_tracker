@@ -5,11 +5,12 @@
     </div>
     <div class="habit-layout">
       <div class="card">
-        <HabitLineGraph
-          :habitData="habitData"
-          yAxisLabel="Times Completed"
-          xAxisLabel="Days of the Week"
-        />
+        <div class="heading-container">
+          <h1>Heading</h1>
+        </div>
+      </div>
+      <div class="card">
+        <HabitLineGraph :habitData="habitData" />
       </div>
     </div>
   </div>
@@ -48,6 +49,13 @@ h1 {
 }
 .habit-layout {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.heading-container {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
 }
 </style>
