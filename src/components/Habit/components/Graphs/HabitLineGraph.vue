@@ -1,6 +1,11 @@
 <template>
   <div>
-    <canvas ref="lineChart" height="300"></canvas>
+    <div class="heading-container">
+      <h1>Habit:</h1>
+    </div>
+    <div class="graph-container">
+      <canvas ref="lineChart" height="300"></canvas>
+    </div>
   </div>
 </template>
 
@@ -60,19 +65,19 @@ export default {
               x: {
                 title: {
                   display: true,
-                  text: this.xAxisLabel, // Set x-axis label
+                  text: this.xAxisLabel,
                 },
                 grid: {
-                  display: false, // Hide x-axis gridlines
+                  display: false,
                 },
               },
               y: {
                 title: {
                   display: true,
-                  text: this.yAxisLabel, // Set y-axis label
+                  text: this.yAxisLabel,
                 },
                 grid: {
-                  display: false, // Hide y-axis gridlines
+                  display: false,
                 },
               },
             },
@@ -124,5 +129,16 @@ export default {
 </script>
 
 <style scoped>
-/* Add any custom styles for the chart container here */
+h1 {
+  color: #4169e1;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+.heading-container {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
 </style>
