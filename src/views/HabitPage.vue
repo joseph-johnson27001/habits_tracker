@@ -1,17 +1,16 @@
 <template>
   <div class="card">
-    <h1>{{ habitName }}</h1>
+    <h1>{{ habitId }}</h1>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    habitName: {
+    habitId: {
       type: String,
       required: true,
     },
   },
-  // ...
 };
 </script>

@@ -15,7 +15,7 @@ const routes = [
   { path: "/", component: NewsPage },
   { path: "/profile", component: ProfilePage },
   { path: "/habits", component: HabitsPage },
-  { path: "/habit/:habitId", name: "habit", component: HabitPage, props: true },
+  { path: "/habit/", name: "habit", component: HabitPage, props: true },
   { path: "/articles", component: ArticlesPage },
   { path: "/leaderboard", component: LeaderboardPage },
   { path: "/settings", component: SettingsPage },

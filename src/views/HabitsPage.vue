@@ -151,8 +151,8 @@ export default {
     },
   },
   methods: {
-    navigateToHabitPage(habitName) {
-      this.$router.push({ name: "habit", params: { habitName } });
+    navigateToHabitPage(habitId) {
+      this.$router.push({ name: "habit", params: { habitId } });
     },
   },
 };
