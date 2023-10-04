@@ -27,11 +27,11 @@ export default {
     },
     yAxisLabel: {
       type: String,
-      required: true,
+      // required: true,
     },
     xAxisLabel: {
       type: String,
-      required: true,
+      // required: true,
     },
   },
   methods: {
