@@ -11,10 +11,10 @@
         <div class="basic-info-content">
           <div
             class="basic-info-item"
-            v-for="(value, label, index) in habitBasicInfo.fields"
-            :key="index"
+            v-for="(field, fieldIndex) in filteredHabitData.fields"
+            :key="fieldIndex"
           >
-            <strong v-if="label">{{ value.label }}</strong> {{ value.value }}
+            <strong>{{ field.label }}</strong> {{ field.value }}
           </div>
         </div>
       </div>
@@ -45,6 +45,7 @@ export default {
   data() {
     return {
       habitBasicInfo: this.$store.state.selectedHabitData,
+      filteredHabitData: {},
       habitData: {
         labels: [
           "Mon",
@@ -68,6 +69,19 @@ export default {
   },
   mounted() {
     console.log(this.habitBasicInfo);
+
+    // Create a copy of the habitBasicInfo
+    this.filteredHabitData = { ...this.habitBasicInfo };
+
+    // Check if the fields array exists and has more than one item
+    if (
+      this.filteredHabitData.fields &&
+      this.filteredHabitData.fields.length > 1
+    ) {
+      // Remove the first item from the fields array
+      this.filteredHabitData.fields.shift();
+      console.log(this.filteredHabitData);
+    }
   },
 };
 </script>
