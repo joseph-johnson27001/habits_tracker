@@ -11,7 +11,7 @@
         <div class="basic-info-content">
           <div
             class="basic-info-item"
-            v-for="(field, fieldIndex) in habitBasicInfo.fields"
+            v-for="(field, fieldIndex) in filteredFields"
             :key="fieldIndex"
           >
             <strong>{{ field.label }}</strong> {{ field.value }}
@@ -68,6 +68,12 @@ export default {
         data: [30, 40, 50, 30, 60, 20, 70, 50, 70, 50, 20, 10, 40, 50],
       },
     };
+  },
+  computed: {
+    filteredFields() {
+      // Filter out fields without labels
+      return this.habitBasicInfo.fields.filter((field) => field.label);
+    },
   },
 };
 </script>
