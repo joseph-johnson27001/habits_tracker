@@ -11,10 +11,10 @@
         <div class="basic-info-content">
           <div
             class="basic-info-item"
-            v-for="(value, label) in habitBasicInfo"
-            :key="label"
+            v-for="(value, label, index) in habitBasicInfo.fields"
+            :key="index"
           >
-            <strong>{{ label }}</strong> {{ value }}
+            <strong v-if="label">{{ value.label }}</strong> {{ value.value }}
           </div>
         </div>
       </div>
@@ -65,6 +65,9 @@ export default {
         data: [30, 40, 50, 30, 60, 20, 70, 50, 70, 50, 20, 10, 40, 50],
       },
     };
+  },
+  mounted() {
+    console.log(this.habitBasicInfo);
   },
 };
 </script>

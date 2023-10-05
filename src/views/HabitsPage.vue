@@ -47,7 +47,7 @@ export default {
           },
           numberOfDaysUntilAchievements: {
             value: 2,
-            label: "Number of Days Until Next Achievement:",
+            label: "Days Until Next Achievement:",
           },
           distanceToAchievements: {
             value: 38,
@@ -67,7 +67,7 @@ export default {
           },
           numberOfDaysUntilAchievements: {
             value: 3,
-            label: "Number of Days Until Next Achievement:",
+            label: "Days Until Next Achievement:",
           },
           minutesToAchievements: {
             value: 90,
@@ -87,7 +87,7 @@ export default {
           },
           numberOfDaysUntilAchievements: {
             value: 5,
-            label: "Number of Days Until Next Achievement:",
+            label: "Days Until Next Achievement:",
           },
           minutesToAchievements: {
             value: 60,
@@ -107,7 +107,7 @@ export default {
           },
           numberOfDaysUntilAchievements: {
             value: 10,
-            label: "Number of Days Until Next Achievement:",
+            label: "Days Until Next Achievement:",
           },
           distanceToAchievements: {
             value: 5,
@@ -127,7 +127,7 @@ export default {
           },
           numberOfDaysUntilAchievements: {
             value: 2,
-            label: "Number of Days Until Next Achievement:",
+            label: "Days Until Next Achievement:",
           },
           minutesToAchievements: {
             value: 30,
@@ -151,13 +151,7 @@ export default {
   },
   methods: {
     updateHabitInfo(habit) {
-      const selectedHabitData = {
-        name: habit.name,
-      };
-      habit.fields.forEach((field) => {
-        selectedHabitData[field.label] = field.value;
-      });
-      this.$store.state.selectedHabitData = selectedHabitData;
+      this.$store.state.selectedHabitData = habit;
     },
     navigateToHabitPage(habit) {
       const name = habit.name;
