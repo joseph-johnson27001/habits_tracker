@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <div class="heading-container">
-      <h1>Habit:</h1>
-    </div>
-    <div class="graph-container">
-      <canvas ref="lineChart" height="400"></canvas>
-    </div>
+  <div class="graph-container">
+    <canvas ref="lineChart" height="400"></canvas>
   </div>
 </template>
 
@@ -27,11 +22,9 @@ export default {
     },
     yAxisLabel: {
       type: String,
-      // required: true,
     },
     xAxisLabel: {
       type: String,
-      // required: true,
     },
   },
   methods: {

@@ -11,7 +11,7 @@
         <div class="basic-info-content">
           <div
             class="basic-info-item"
-            v-for="(field, fieldIndex) in filteredHabitData.fields"
+            v-for="(field, fieldIndex) in habitBasicInfo.fields"
             :key="fieldIndex"
           >
             <strong>{{ field.label }}</strong> {{ field.value }}
@@ -20,11 +20,14 @@
       </div>
       <div class="card">
         <div class="heading-container">
-          <h1>Heading</h1>
+          <h1>Aims</h1>
         </div>
       </div>
     </div>
     <div class="card">
+      <div class="heading-container">
+        <h1>Progress</h1>
+      </div>
       <HabitLineGraph :habitData="habitData" />
     </div>
   </div>
@@ -45,7 +48,6 @@ export default {
   data() {
     return {
       habitBasicInfo: this.$store.state.selectedHabitData,
-      filteredHabitData: {},
       habitData: {
         labels: [
           "Mon",
@@ -66,22 +68,6 @@ export default {
         data: [30, 40, 50, 30, 60, 20, 70, 50, 70, 50, 20, 10, 40, 50],
       },
     };
-  },
-  mounted() {
-    console.log(this.habitBasicInfo);
-
-    // Create a copy of the habitBasicInfo
-    this.filteredHabitData = { ...this.habitBasicInfo };
-
-    // Check if the fields array exists and has more than one item
-    if (
-      this.filteredHabitData.fields &&
-      this.filteredHabitData.fields.length > 1
-    ) {
-      // Remove the first item from the fields array
-      this.filteredHabitData.fields.shift();
-      console.log(this.filteredHabitData);
-    }
   },
 };
 </script>
