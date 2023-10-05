@@ -6,7 +6,7 @@
     <div class="habit-layout">
       <div class="card">
         <div class="heading-container">
-          <h1>Basic Info</h1>
+          <h1>Overview</h1>
         </div>
         <div class="basic-info-content">
           <div
