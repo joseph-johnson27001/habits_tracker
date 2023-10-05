@@ -71,7 +71,6 @@ export default {
   },
   computed: {
     filteredFields() {
-      // Filter out fields without labels
       return this.habitBasicInfo.fields.filter((field) => field.label);
     },
   },
@@ -80,6 +79,10 @@ export default {
 
 <style scoped>
 h1 {
+  color: #4169e1;
+}
+
+.heading-container {
   color: #4169e1;
   font-weight: 400;
   font-size: 18px;
