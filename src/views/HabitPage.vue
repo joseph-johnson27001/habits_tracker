@@ -1,12 +1,21 @@
 <template>
   <div>
     <div class="card">
-      <h1>Habit Name Here</h1>
+      <h1>{{ habitBasicInfo.name }}</h1>
     </div>
     <div class="habit-layout">
       <div class="card">
         <div class="heading-container">
-          <h1>Heading</h1>
+          <h1>Basic Info</h1>
+        </div>
+        <div class="basic-info-content">
+          <div
+            class="basic-info-item"
+            v-for="(value, label) in habitBasicInfo"
+            :key="label"
+          >
+            <strong>{{ label }}</strong> {{ value }}
+          </div>
         </div>
       </div>
       <div class="card">
@@ -35,6 +44,7 @@ export default {
   },
   data() {
     return {
+      habitBasicInfo: this.$store.state.selectedHabitData,
       habitData: {
         labels: [
           "Mon",
@@ -67,9 +77,32 @@ h1 {
   cursor: pointer;
   transition: color 0.1s;
 }
+
 .habit-layout {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 20px;
+}
+
+.heading-container {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.basic-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basic-info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basic-info-item strong {
+  font-weight: bold;
+  margin-right: 10px;
 }
 </style>

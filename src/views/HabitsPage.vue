@@ -5,11 +5,10 @@
         class="card habit-tracker"
         v-for="(habit, index) in filteredHabits"
         :key="index"
-        @click="navigateToHabitPage(habit.name)"
+        @click="navigateToHabitPage(habit)"
       >
         <div class="heading-area">
           <h1>{{ habit.name }}</h1>
-          <!-- <i class="fas fa-angle-right view-more-link"></i> -->
         </div>
         <div v-for="(field, fieldIndex) in habit.fields" :key="fieldIndex">
           <p>{{ field.label }} {{ field.value }}</p>
@@ -151,8 +150,19 @@ export default {
     },
   },
   methods: {
-    navigateToHabitPage(habitId) {
-      this.$router.push({ name: "habit", params: { habitId } });
+    updateHabitInfo(habit) {
+      const selectedHabitData = {
+        name: habit.name,
+      };
+      habit.fields.forEach((field) => {
+        selectedHabitData[field.label] = field.value;
+      });
+      this.$store.state.selectedHabitData = selectedHabitData;
+    },
+    navigateToHabitPage(habit) {
+      const name = habit.name;
+      this.updateHabitInfo(habit);
+      this.$router.push({ name: "habit", params: { name } });
     },
   },
 };
