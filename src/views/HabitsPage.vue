@@ -7,7 +7,7 @@
         :key="index"
         @click="navigateToHabitPage(habit)"
       >
-        <div class="heading-area">
+        <div class="heading-container">
           <h1>{{ habit.name }}</h1>
         </div>
         <div v-for="(field, fieldIndex) in habit.fields" :key="fieldIndex">
