@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card">
-      <h1>{{ habitBasicInfo.name }}</h1>
+      <h1>{{ habitBasicInfo.name.toUpperCase() }}</h1>
     </div>
     <div class="habit-layout">
       <div class="card">
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="graph-heading-container">
+      <div class="graph-heading-container heading-container">
         <h1>Progress</h1>
       </div>
       <HabitLineGraph :habitData="habitData" />
@@ -78,17 +78,6 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  color: #4169e1;
-}
-
-.heading-container {
-  color: #4169e1;
-  font-weight: 400;
-  font-size: 18px;
-  transition: color 0.1s;
-}
-
 .habit-layout {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -99,6 +88,11 @@ h1 {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
+}
+
+.heading-container h1 {
+  font-size: 18px;
+  color: #4169e1;
 }
 
 .basic-info-content {
