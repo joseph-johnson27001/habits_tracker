@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="heading-container">
+      <div class="graph-heading-container">
         <h1>Progress</h1>
       </div>
       <HabitLineGraph :habitData="habitData" />
@@ -77,7 +77,6 @@ h1 {
   color: #4169e1;
   font-weight: 400;
   font-size: 18px;
-  cursor: pointer;
   transition: color 0.1s;
 }
 
@@ -87,10 +86,10 @@ h1 {
   gap: 20px;
 }
 
-.heading-container {
-  border-bottom: 1px solid #ccc;
+.graph-heading-container {
   margin-bottom: 20px;
   padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .basic-info-content {
