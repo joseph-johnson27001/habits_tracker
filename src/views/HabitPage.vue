@@ -84,15 +84,19 @@ export default {
   gap: 20px;
 }
 
+.heading-container h1 {
+  font-size: 18px;
+  color: #4169e1;
+  padding-bottom: 5px;
+}
+
 .graph-heading-container {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
 }
-
-.heading-container h1 {
-  font-size: 18px;
-  color: #4169e1;
+.graph-heading-container h1 {
+  padding-bottom: 0px;
 }
 
 .basic-info-content {
