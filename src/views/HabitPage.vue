@@ -20,7 +20,17 @@
       </div>
       <div class="card">
         <div class="heading-container">
-          <h1>Aims</h1>
+          <h1>Aims & Achievements</h1>
+          <p style="color: green">
+            COMPLETED FIRST DAY
+            <span class="checkbox">&#10003;</span>
+          </p>
+          <p style="color: green">
+            7 DAYS IN A ROW!
+            <span class="checkbox">&#10003;</span>
+          </p>
+          <p class="grayed-out">30 day streak!</p>
+          <p class="grayed-out">100 day streak!</p>
         </div>
       </div>
     </div>
@@ -113,5 +123,15 @@ export default {
 .basic-info-item strong {
   font-weight: bold;
   margin-right: 10px;
+}
+
+.checkbox {
+  margin-left: 5px; /* Add some spacing between the text and checkbox */
+  font-size: 1.2em; /* Adjust the font size of the checkbox */
+}
+
+/* Add styles for grayed-out text */
+.grayed-out {
+  color: #888; /* Use a gray color for uncompleted tasks */
 }
 </style>
