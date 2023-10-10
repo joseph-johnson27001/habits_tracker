@@ -22,14 +22,19 @@
       <div class="card">
         <div class="heading-container">
           <h1>Aims & Achievements</h1>
-          <p
+          <div
             v-for="(aim, aimIndex) in aimsAndAchievements"
             :key="aimIndex"
-            :style="{ color: aim.completed ? '#228B22' : '#888' }"
+            :style="{
+              color: aim.completed ? '#228B22' : '#888',
+              'font-weight': aim.completed ? 'bold' : 'normal',
+            }"
           >
-            {{ aim.text }}
-            <span class="checkbox" v-if="aim.completed">&#10003;</span>
-          </p>
+            <p>
+              {{ aim.text }}
+              <span v-if="aim.completed">&#10003;</span>
+            </p>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -133,10 +138,5 @@ export default {
 .basic-info-item strong {
   font-weight: bold;
   margin-right: 10px;
-}
-
-.checkbox {
-  margin-left: 5px;
-  font-size: 1.2em;
 }
 </style>
