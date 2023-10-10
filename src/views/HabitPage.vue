@@ -2,7 +2,7 @@
   <div>
     <div class="top-heading">
       <div class="card" style="display: flex; align-items: center">
-        <h1>{{ habitBasicInfo.name.toUpperCase() }}</h1>
+        <h1>{{ habitBasicInfo.name }}</h1>
       </div>
       <div class="card">
         <div class="heading-container">
