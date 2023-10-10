@@ -2,13 +2,9 @@
   <div class="badges-section">
     <div class="badge-list">
       <div class="badge-item" v-for="(badge, index) in badges" :key="index">
-        <span
-          :class="[
-            'badge-icon',
-            badge.completed ? 'color-badge' : 'gray-badge',
-          ]"
-          >{{ badge.icon }}</span
-        >
+        <span :class="['badge-icon', badge.completed ? '' : 'gray-badge']">{{
+          badge.icon
+        }}</span>
       </div>
     </div>
   </div>
