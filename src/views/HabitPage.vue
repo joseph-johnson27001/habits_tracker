@@ -32,7 +32,7 @@
 
       <div class="card">
         <div class="heading-container">
-          <h1>Aims & Achievements</h1>
+          <h1>Achievements</h1>
           <div class="achievement-content">
             <div
               v-for="(aim, aimIndex) in aimsAndAchievements"
@@ -154,8 +154,7 @@ h1 {
 
 .achievements-item,
 .basic-info-item {
-  margin-bottom: 20px;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
