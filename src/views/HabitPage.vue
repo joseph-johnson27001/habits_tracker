@@ -127,12 +127,12 @@ export default {
 .top-heading {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  gap: 10px;
 }
 .habit-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 10px;
 }
 
 h1 {

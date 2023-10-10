@@ -71,7 +71,7 @@ export default {
 .achievements-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 10px;
 }
 
 .achievement-item {

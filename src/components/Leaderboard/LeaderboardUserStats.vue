@@ -116,7 +116,7 @@ export default {
 .user-stats {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 p {
