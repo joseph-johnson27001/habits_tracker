@@ -55,27 +55,27 @@ export default {
         {
           name: "Badge 8",
           icon: "💪",
-          completed: false,
+          completed: true,
         },
         {
           name: "Badge 9",
           icon: "🌿",
-          completed: false,
+          completed: true,
         },
         {
           name: "Badge 10",
           icon: "🎉",
-          completed: false,
+          completed: true,
         },
         {
           name: "Badge 11",
           icon: "🧠",
-          completed: false,
+          completed: true,
         },
         {
           name: "Badge 12",
           icon: "🔥",
-          completed: false,
+          completed: true,
         },
         {
           name: "Badge 13",
@@ -95,6 +95,26 @@ export default {
         {
           name: "Badge 16",
           icon: "🚀",
+          completed: false,
+        },
+        {
+          name: "Badge 17",
+          icon: "🌍",
+          completed: false,
+        },
+        {
+          name: "Badge 18",
+          icon: "🌌",
+          completed: false,
+        },
+        {
+          name: "Badge 19",
+          icon: "🌊",
+          completed: false,
+        },
+        {
+          name: "Badge 20",
+          icon: "🎮",
           completed: false,
         },
       ],
