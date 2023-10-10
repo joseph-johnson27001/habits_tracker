@@ -20,8 +20,12 @@
             class="basic-info-item"
             v-for="(field, fieldIndex) in filteredFields"
             :key="fieldIndex"
+            style="display: flex; justify-content: space-between"
           >
-            <strong>{{ field.label }}</strong> {{ field.value }}
+            <p>
+              <strong>{{ field.label }}</strong>
+            </p>
+            <p>{{ field.value }}</p>
           </div>
         </div>
       </div>
@@ -29,20 +33,27 @@
       <div class="card">
         <div class="heading-container">
           <h1>Aims & Achievements</h1>
-          <div
-            v-for="(aim, aimIndex) in aimsAndAchievements"
-            :key="aimIndex"
-            :style="{
-              color: aim.completed ? '#228B22' : '#888',
-              'font-weight': aim.completed ? 'bold' : 'normal',
-            }"
-          >
-            <p>
-              {{ aim.text }}
-              <span v-if="aim.completed">&#10003;</span>
-            </p>
+          <div class="achievement-content">
+            <div
+              v-for="(aim, aimIndex) in aimsAndAchievements"
+              :key="aimIndex"
+              :style="{
+                color: aim.completed ? '#228B22' : '#888',
+                'font-weight': aim.completed ? 'bold' : 'normal',
+              }"
+              class="achievements-item"
+            >
+              <p>
+                {{ aim.text }}
+                <span v-if="aim.completed">&#10003;</span>
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="card">
+        <h1>Stats</h1>
+        <HabitsSection />
       </div>
     </div>
     <div class="card">
@@ -57,11 +68,13 @@
 <script>
 import HabitLineGraph from "@/components/Habit/components/Graphs/HabitLineGraph";
 import HabitBadges from "@/components/Habit/components/HabitBadges";
+import HabitsSection from "@/components/Habit/components/HabitStreaks";
 
 export default {
   components: {
     HabitLineGraph,
     HabitBadges,
+    HabitsSection,
   },
   props: {
     habitId: {
@@ -114,7 +127,7 @@ export default {
 }
 .habit-layout {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -132,19 +145,20 @@ h1 {
   padding-bottom: 0px;
 }
 
+.achievement-content,
 .basic-info-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.achievements-item,
 .basic-info-item {
+  margin-bottom: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
-}
-
-.basic-info-item strong {
-  font-weight: bold;
-  margin-right: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
 }
 </style>
