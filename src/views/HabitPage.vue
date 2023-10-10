@@ -136,7 +136,6 @@ export default {
 }
 
 h1 {
-  color: #4169e1;
   font-size: 18px;
 }
 

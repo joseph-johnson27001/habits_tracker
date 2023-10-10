@@ -44,6 +44,7 @@ h1 {
   font-size: 20px;
   margin-bottom: 10px;
   font-weight: 400;
+  color: #4169e1;
 }
 
 .background {
