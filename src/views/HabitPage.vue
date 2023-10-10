@@ -18,6 +18,7 @@
           </div>
         </div>
       </div>
+
       <div class="card">
         <div class="heading-container">
           <h1>Aims & Achievements</h1>
@@ -31,6 +32,11 @@
           </p>
           <p class="grayed-out">30 day streak!</p>
           <p class="grayed-out">100 day streak!</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="heading-container">
+          <h1>Badges Earned</h1>
         </div>
       </div>
     </div>
@@ -90,7 +96,7 @@ export default {
 <style scoped>
 .habit-layout {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -126,12 +132,11 @@ export default {
 }
 
 .checkbox {
-  margin-left: 5px; /* Add some spacing between the text and checkbox */
-  font-size: 1.2em; /* Adjust the font size of the checkbox */
+  margin-left: 5px;
+  font-size: 1.2em;
 }
 
-/* Add styles for grayed-out text */
 .grayed-out {
-  color: #888; /* Use a gray color for uncompleted tasks */
+  color: #888;
 }
 </style>
