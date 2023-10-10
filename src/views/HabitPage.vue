@@ -45,8 +45,12 @@
             >
               <p>
                 {{ aim.text }}
-                <span v-if="aim.completed">&#10003;</span>
               </p>
+              <span
+                v-if="aim.completed"
+                style="display: flex; align-items: center"
+                >&#10003;</span
+              >
             </div>
           </div>
         </div>
