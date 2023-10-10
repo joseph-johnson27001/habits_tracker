@@ -83,6 +83,27 @@ export default {
           name: "Badge 16",
           icon: "🚀",
         },
+        {
+          name: "Badge 16",
+          icon: "🚀",
+          completed: false,
+        },
+        {
+          name: "Badge 17",
+          icon: "🌍",
+        },
+        {
+          name: "Badge 18",
+          icon: "🌌",
+        },
+        {
+          name: "Badge 19",
+          icon: "🌊",
+        },
+        {
+          name: "Badge 20",
+          icon: "🎮",
+        },
       ],
     };
   },
