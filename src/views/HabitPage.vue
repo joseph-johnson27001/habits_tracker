@@ -109,10 +109,13 @@ export default {
   gap: 20px;
 }
 
-.heading-container h1 {
-  font-size: 18px;
+h1 {
   color: #4169e1;
   padding-bottom: 5px;
+}
+
+.heading-container h1 {
+  font-size: 18px;
 }
 
 .graph-heading-container {
