@@ -22,16 +22,14 @@
       <div class="card">
         <div class="heading-container">
           <h1>Aims & Achievements</h1>
-          <p style="color: green">
-            COMPLETED FIRST DAY
-            <span class="checkbox">&#10003;</span>
+          <p
+            v-for="(aim, aimIndex) in aimsAndAchievements"
+            :key="aimIndex"
+            :style="{ color: aim.completed ? '#228B22' : '#888' }"
+          >
+            {{ aim.text }}
+            <span class="checkbox" v-if="aim.completed">&#10003;</span>
           </p>
-          <p style="color: green">
-            7 DAYS IN A ROW!
-            <span class="checkbox">&#10003;</span>
-          </p>
-          <p class="grayed-out">30 day streak!</p>
-          <p class="grayed-out">100 day streak!</p>
         </div>
       </div>
       <div class="card">
@@ -83,6 +81,12 @@ export default {
         ],
         data: [30, 40, 50, 30, 60, 20, 70, 50, 70, 50, 20, 10, 40, 50],
       },
+      aimsAndAchievements: [
+        { text: "COMPLETED FIRST DAY", completed: true },
+        { text: "7 DAYS IN A ROW!", completed: true },
+        { text: "30 day streak!", completed: false },
+        { text: "100 day streak!", completed: false },
+      ],
     };
   },
   computed: {
@@ -134,9 +138,5 @@ export default {
 .checkbox {
   margin-left: 5px;
   font-size: 1.2em;
-}
-
-.grayed-out {
-  color: #888;
 }
 </style>
