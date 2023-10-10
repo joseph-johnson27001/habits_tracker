@@ -1,7 +1,14 @@
 <template>
   <div>
-    <div class="card">
-      <h1>{{ habitBasicInfo.name.toUpperCase() }}</h1>
+    <div class="top-heading">
+      <div class="card" style="display: flex; align-items: center">
+        <h1>{{ habitBasicInfo.name.toUpperCase() }}</h1>
+      </div>
+      <div class="card">
+        <div class="heading-container">
+          <HabitBadges />
+        </div>
+      </div>
     </div>
     <div class="habit-layout">
       <div class="card">
@@ -37,11 +44,6 @@
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="heading-container">
-          <h1>Badges Earned</h1>
-        </div>
-      </div>
     </div>
     <div class="card">
       <div class="graph-heading-container heading-container">
@@ -54,10 +56,12 @@
 
 <script>
 import HabitLineGraph from "@/components/Habit/components/Graphs/HabitLineGraph";
+import HabitBadges from "@/components/Habit/components/HabitBadges";
 
 export default {
   components: {
     HabitLineGraph,
+    HabitBadges,
   },
   props: {
     habitId: {
@@ -103,9 +107,14 @@ export default {
 </script>
 
 <style scoped>
+.top-heading {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
 .habit-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
 
