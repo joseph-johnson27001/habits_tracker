@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import HabitDonutChart from "@/components/ProfilePage/components/HabitGraphs/HabitDonutChart.vue";
+import HabitDonutChart from "@/components/Habit/components/Graphs/HabitDonutGraph.vue";
 
 export default {
   name: "HabitsSection",
