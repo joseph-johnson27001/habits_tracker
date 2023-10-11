@@ -71,7 +71,7 @@ export default {
 .achievements-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  grid-row-gap: 10px;
 }
 
 .achievement-item {
@@ -82,6 +82,11 @@ export default {
   align-items: center;
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
+}
+
+.achievement-item:nth-child(3n) {
+  border-right: none;
+  padding-left: none;
 }
 
 .achievement-item:nth-child(3n) {
