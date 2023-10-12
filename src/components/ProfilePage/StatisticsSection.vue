@@ -57,6 +57,7 @@ export default {
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
   background-color: white;
+  cursor: pointer;
 }
 
 .stat-item:hover {

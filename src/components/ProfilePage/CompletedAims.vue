@@ -50,6 +50,7 @@ export default {
 .completed-item {
   padding: 15px 10px;
   border-bottom: 1px solid #ccc;
+  cursor: pointer;
 }
 
 .completed-item:hover {
