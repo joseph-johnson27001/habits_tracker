@@ -122,8 +122,6 @@ export default {
             "Explore the world of culinary delights and learn to cook like a pro. From gourmet recipes to kitchen techniques, elevate your cooking skills.",
           type: "Cooking",
         },
-
-        // Add more articles here
       ],
     };
   },

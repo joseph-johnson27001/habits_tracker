@@ -80,8 +80,8 @@ export default {
       } else {
         this.chart.data.labels = this.habitData.labels;
         this.chart.data.datasets[0].data = this.habitData.data;
-        this.chart.options.scales.x.title.text = this.xAxisLabel; // Update x-axis label
-        this.chart.options.scales.y.title.text = this.yAxisLabel; // Update y-axis label
+        this.chart.options.scales.x.title.text = this.xAxisLabel;
+        this.chart.options.scales.y.title.text = this.yAxisLabel;
         this.chart.update();
       }
     },

@@ -22,7 +22,7 @@ export default {
       required: true,
     },
     title: {
-      type: String, // Add a title prop
+      type: String,
       required: true,
     },
   },
