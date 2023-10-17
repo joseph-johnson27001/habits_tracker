@@ -65,12 +65,12 @@ export default {
         {
           icon: "🚀",
           message: "launched a new project successfully.",
-          timestamp: "3 weeks ago",
+          timestamp: "1 month ago",
         },
         {
           icon: "🎵",
           message: "attended a live music concert.",
-          timestamp: "1 month ago",
+          timestamp: "2 months ago",
         },
       ],
     };
