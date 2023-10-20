@@ -39,7 +39,7 @@ export default {
         },
         {
           icon: "💪",
-          message: "completed tasks today.",
+          message: "completed all tasks today.",
           timestamp: "Yesterday",
         },
         {
