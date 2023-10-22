@@ -73,6 +73,7 @@ export default {
   },
   data() {
     return {
+      profileImage: require("@/assets/images/joe-taj.jpg"),
       feedItems: [
         {
           userName: "John Doe",
