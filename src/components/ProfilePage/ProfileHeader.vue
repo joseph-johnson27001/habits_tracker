@@ -631,10 +631,10 @@ export default {
 .profile-header {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding-bottom: 10px;
   padding-top: 10px;
   background-color: #dff1ff;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }

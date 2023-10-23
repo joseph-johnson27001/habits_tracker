@@ -1,7 +1,6 @@
 <template>
   <div class="profile-page">
     <ProfileHeader />
-    <div class="top-area"></div>
     <div class="profile-content">
       <div class="left-section">
         <div class="card">
@@ -57,9 +56,5 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 10px;
-}
-
-.top-area {
-  margin: 20px;
 }
 </style>
