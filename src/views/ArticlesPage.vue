@@ -114,7 +114,7 @@ export default {
         },
         {
           title: "The Art of Culinary Delights",
-          author: "Emily Turner",
+          author: "Emily Smith",
           datePublished: "December 20, 2023",
           category: "Cooking",
           imageSrc: "https://picsum.photos/156/150",
