@@ -84,7 +84,7 @@ export default {
         },
         {
           title: "Mastering Technology Trends",
-          author: "David Clark",
+          author: "David James",
           datePublished: "November 10, 2023",
           category: "Technology",
           imageSrc: "https://picsum.photos/153/150",
