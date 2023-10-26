@@ -19,27 +19,31 @@
           <span class="close" @click="showModal = false">&times;</span>
           <h2 class="modal-heading">Add New Data</h2>
           <form @submit.prevent="addNewData">
-            <div class="form-group">
-              <label for="label" class="form-label">Label:</label>
-              <input
-                type="text"
-                id="label"
-                v-model="newLabel"
-                required
-                class="form-input"
-              />
+            <div class="new-data">
+              <div class="form-group">
+                <label for="label" class="form-label">Label:</label>
+                <input
+                  type="text"
+                  id="label"
+                  v-model="newLabel"
+                  required
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <label for="data" class="form-label">Data:</label>
+                <input
+                  type="number"
+                  id="data"
+                  v-model="newData"
+                  required
+                  class="form-input"
+                />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="data" class="form-label">Data:</label>
-              <input
-                type="number"
-                id="data"
-                v-model="newData"
-                required
-                class="form-input"
-              />
+            <div style="display: flex; justify-content: end">
+              <button type="submit" class="modal-button">Add Data</button>
             </div>
-            <button type="submit" class="modal-button">Add Data</button>
           </form>
           <h2 class="modal-heading">Previous Data</h2>
           <table class="data-table">
@@ -319,5 +323,11 @@ h1 {
   padding-bottom: 12px;
   background-color: #4169e1;
   color: white;
+}
+
+.new-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 </style>
