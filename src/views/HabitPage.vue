@@ -54,6 +54,7 @@
                 <th>Label</th>
                 <th>Data</th>
                 <th v-if="!editMode">Edit</th>
+                <th v-if="editMode && editedRowIndex !== null">Save</th>
               </tr>
             </thead>
             <tbody>
