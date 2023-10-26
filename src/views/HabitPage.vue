@@ -12,27 +12,50 @@
       <div style="display: flex; align-items: center; justify-content: center">
         <button class="modal-button" @click="showModal = true">Add Data</button>
       </div>
+
+      <!-- MODAL -->
       <div v-if="showModal" class="modal">
         <div class="modal-content">
           <span class="close" @click="showModal = false">&times;</span>
-          <h1>Add New Data</h1>
+          <h2 class="modal-heading">Add New Data</h2>
           <form @submit.prevent="addNewData">
-            <label for="label" style="margin-right: 2px">Label:</label>
-            <input
-              type="text"
-              id="label"
-              v-model="newLabel"
-              required
-            /><br /><br />
-            <label for="data" style="margin-right: 2px">Data:</label>
-            <input
-              type="number"
-              id="data"
-              v-model="newData"
-              required
-            /><br /><br />
+            <div class="form-group">
+              <label for="label" class="form-label">Label:</label>
+              <input
+                type="text"
+                id="label"
+                v-model="newLabel"
+                required
+                class="form-input"
+              />
+            </div>
+            <div class="form-group">
+              <label for="data" class="form-label">Data:</label>
+              <input
+                type="number"
+                id="data"
+                v-model="newData"
+                required
+                class="form-input"
+              />
+            </div>
             <button type="submit" class="modal-button">Add Data</button>
           </form>
+          <h2 class="modal-heading">Previous Data</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(data, index) in habitData.labels" :key="index">
+                <td>{{ data }}</td>
+                <td>{{ habitData.data[index] }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -221,10 +244,10 @@ h1 {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 2% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 20%;
+  width: 80%;
 }
 
 .close {
@@ -241,12 +264,60 @@ h1 {
   cursor: pointer;
 }
 
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  padding: 10px;
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.modal-heading {
+  margin-bottom: 20px;
+}
+
 .modal-button {
   background-color: #4169e1;
   color: white;
   padding: 10px 20px;
-  margin-top: 10px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.data-table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.data-table td,
+.data-table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4169e1;
+  color: white;
 }
 </style>
