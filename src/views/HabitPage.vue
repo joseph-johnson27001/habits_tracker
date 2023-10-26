@@ -17,7 +17,7 @@
       <div v-if="showModal" class="modal">
         <div class="modal-content">
           <span class="close" @click="showModal = false">&times;</span>
-          <h2 class="modal-heading">Add New Data</h2>
+          <h1 class="modal-heading">Add New Data</h1>
           <form @submit.prevent="addNewData">
             <div class="new-data">
               <div class="form-group">
@@ -47,14 +47,19 @@
               </button>
             </div>
           </form>
-          <h2 class="modal-heading">Previous Data</h2>
+          <h1 class="modal-heading">Previous Data</h1>
           <table class="data-table">
             <thead>
               <tr>
                 <th>Label</th>
                 <th>Data</th>
-                <th v-if="!editMode">Edit</th>
-                <th v-if="editMode && editedRowIndex !== null">Save</th>
+                <th v-if="!editMode" class="edit-save-column">Edit</th>
+                <th
+                  v-if="editMode && editedRowIndex !== null"
+                  class="edit-save-column"
+                >
+                  Save
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -376,6 +381,10 @@ h1 {
 .editable-input {
   width: 80%;
   padding: 8px;
+}
+
+.edit-save-column {
+  width: 80px;
 }
 
 .edit-button {
