@@ -42,7 +42,9 @@
               </div>
             </div>
             <div style="display: flex; justify-content: end">
-              <button type="submit" class="modal-button">Add Data</button>
+              <button type="submit" v-if="!editMode" class="modal-button">
+                Add Data
+              </button>
             </div>
           </form>
           <h2 class="modal-heading">Previous Data</h2>
@@ -51,20 +53,32 @@
               <tr>
                 <th>Label</th>
                 <th>Data</th>
-                <th>Edit</th>
+                <th v-if="!editMode">Edit</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(data, index) in habitData.labels" :key="index">
-                <td>{{ data }}</td>
-                <td>
-                  <input
-                    v-model="habitData.data[index]"
-                    class="editable-input"
-                  />
+                <td v-if="!editMode || (editMode && editedRowIndex !== index)">
+                  {{ data }}
                 </td>
-                <td>
-                  <button class="edit-button" @click="editData()">Edit</button>
+                <td v-if="editMode && editedRowIndex === index">
+                  <input v-model="editedLabel" class="editable-input" />
+                </td>
+                <td v-if="!editMode || (editMode && editedRowIndex !== index)">
+                  {{ habitData.data[index] }}
+                </td>
+                <td v-if="editMode && editedRowIndex === index">
+                  <input v-model="editedData" class="editable-input" />
+                </td>
+                <td v-if="!editMode || (editMode && editedRowIndex !== index)">
+                  <button class="edit-button" @click="startEdit(index)">
+                    Edit
+                  </button>
+                </td>
+                <td v-if="editMode && editedRowIndex === index">
+                  <button class="save-button" @click="saveEdit(index)">
+                    Save
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -149,6 +163,10 @@ export default {
   },
   data() {
     return {
+      editMode: false,
+      editedRowIndex: null,
+      editedLabel: "",
+      editedData: null,
       showModal: false,
       newLabel: "",
       newData: null,
@@ -187,9 +205,19 @@ export default {
     },
   },
   methods: {
-    editData() {
-      this.habitDataKey += 1; // Incrementing the key to force the component to reload
+    startEdit(index) {
+      this.editedRowIndex = index;
+      this.editedLabel = this.habitData.labels[index];
+      this.editedData = this.habitData.data[index];
+      this.editMode = true;
+    },
+    saveEdit(index) {
+      this.habitData.labels[index] = this.editedLabel;
+      this.habitData.data[index] = this.editedData;
       this.showModal = false;
+      this.editMode = false;
+      this.editedRowIndex = null;
+      this.habitDataKey += 1; // Incrementing the key to force the component to reload
     },
     addNewData() {
       if (this.newLabel && this.newData !== null) {
@@ -350,6 +378,20 @@ h1 {
 }
 
 .edit-button {
+  background-color: #ffa500;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.save-button {
   background-color: #4caf50;
   border: none;
   color: white;
