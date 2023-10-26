@@ -10,7 +10,9 @@
         </div>
       </div>
       <div style="display: flex; align-items: center; justify-content: center">
-        <button class="modal-button" @click="showModal = true">Add Data</button>
+        <button class="modal-button" @click="showModal = true">
+          Update Data
+        </button>
       </div>
 
       <!-- MODAL -->
