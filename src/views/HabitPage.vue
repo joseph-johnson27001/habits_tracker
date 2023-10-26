@@ -5,6 +5,14 @@
         <h1>{{ habitBasicInfo.name }}</h1>
       </div>
       <div class="card">
+        <div class="heading-container">
+          <HabitBadges />
+        </div>
+      </div>
+      <div
+        class="card"
+        style="display: flex; align-items: center; justify-content: center"
+      >
         <button @click="showModal = true">Add Data</button>
       </div>
       <div v-if="showModal" class="modal">
@@ -28,11 +36,6 @@
             /><br /><br />
             <button type="submit">Add Data</button>
           </form>
-        </div>
-      </div>
-      <div class="card">
-        <div class="heading-container">
-          <HabitBadges />
         </div>
       </div>
     </div>
