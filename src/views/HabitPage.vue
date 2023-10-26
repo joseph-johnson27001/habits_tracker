@@ -51,12 +51,21 @@
               <tr>
                 <th>Label</th>
                 <th>Data</th>
+                <th>Edit</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(data, index) in habitData.labels" :key="index">
                 <td>{{ data }}</td>
-                <td>{{ habitData.data[index] }}</td>
+                <td>
+                  <input
+                    v-model="habitData.data[index]"
+                    class="editable-input"
+                  />
+                </td>
+                <td>
+                  <button class="edit-button" @click="editData()">Edit</button>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -178,6 +187,10 @@ export default {
     },
   },
   methods: {
+    editData() {
+      this.habitDataKey += 1; // Incrementing the key to force the component to reload
+      this.showModal = false;
+    },
     addNewData() {
       if (this.newLabel && this.newData !== null) {
         this.habitData.labels.push(this.newLabel);
@@ -329,5 +342,24 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+.editable-input {
+  width: 80%;
+  padding: 8px;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 </style>
