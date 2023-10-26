@@ -9,10 +9,7 @@
           <HabitBadges />
         </div>
       </div>
-      <div
-        class="card"
-        style="display: flex; align-items: center; justify-content: center"
-      >
+      <div style="display: flex; align-items: center; justify-content: center">
         <button class="modal-button" @click="showModal = true">Add Data</button>
       </div>
       <div v-if="showModal" class="modal">
