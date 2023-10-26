@@ -13,9 +13,7 @@
         class="card"
         style="display: flex; align-items: center; justify-content: center"
       >
-        <button class="add-data-button" @click="showModal = true">
-          Add Data
-        </button>
+        <button class="modal-button" @click="showModal = true">Add Data</button>
       </div>
       <div v-if="showModal" class="modal">
         <div class="modal-content">
