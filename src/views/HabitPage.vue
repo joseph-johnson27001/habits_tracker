@@ -13,28 +13,30 @@
         class="card"
         style="display: flex; align-items: center; justify-content: center"
       >
-        <button @click="showModal = true">Add Data</button>
+        <button class="add-data-button" @click="showModal = true">
+          Add Data
+        </button>
       </div>
       <div v-if="showModal" class="modal">
         <div class="modal-content">
           <span class="close" @click="showModal = false">&times;</span>
-          <h2>Add New Data</h2>
+          <h1>Add New Data</h1>
           <form @submit.prevent="addNewData">
-            <label for="label">Label:</label>
+            <label for="label" style="margin-right: 2px">Label:</label>
             <input
               type="text"
               id="label"
               v-model="newLabel"
               required
             /><br /><br />
-            <label for="data">Data:</label>
+            <label for="data" style="margin-right: 2px">Data:</label>
             <input
               type="number"
               id="data"
               v-model="newData"
               required
             /><br /><br />
-            <button type="submit">Add Data</button>
+            <button type="submit" class="modal-button">Add Data</button>
           </form>
         </div>
       </div>
@@ -211,11 +213,8 @@ h1 {
 
 .modal {
   display: block;
-
   position: fixed;
-
   z-index: 1;
-
   left: 0;
   top: 0;
   width: 100%;
@@ -230,7 +229,7 @@ h1 {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 20%;
 }
 
 .close {
@@ -244,6 +243,15 @@ h1 {
 .close:focus {
   color: black;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-button {
+  background-color: #4169e1;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
   cursor: pointer;
 }
 </style>
