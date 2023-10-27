@@ -8,6 +8,7 @@ import ArticlesPage from "@/views/ArticlesPage.vue";
 import LeaderboardPage from "@/views/LeaderboardPage.vue";
 import SettingsPage from "@/views/SettingsPage.vue";
 import StorePage from "@/views/StorePage.vue";
+import AritclePage from "@/views/AritclePage.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,7 @@ const routes = [
   { path: "/habits", component: HabitsPage },
   { path: "/habit/", name: "habit", component: HabitPage, props: true },
   { path: "/articles", component: ArticlesPage },
+  { path: "/article", component: AritclePage },
   { path: "/leaderboard", component: LeaderboardPage },
   { path: "/settings", component: SettingsPage },
   { path: "/store", component: StorePage },
