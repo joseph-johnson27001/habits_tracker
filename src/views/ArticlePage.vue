@@ -48,7 +48,7 @@ export default {
 <style scoped>
 .article-page {
   margin: 0 auto;
-  max-width: 1200px; /* Adjust the maximum width as needed */
+  max-width: 1200px;
 }
 
 .article-header {
@@ -64,5 +64,7 @@ export default {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 4px;
 }
 </style>
