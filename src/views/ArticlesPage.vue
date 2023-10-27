@@ -13,11 +13,15 @@
     </div>
 
     <!-- Article Cards -->
-    <div class="article-cards">
+    <router-link
+      class="article-cards"
+      tag="div"
+      v-for="(article, index) in filteredArticles"
+      :key="index"
+      to="/article"
+    >
       <ArticleCard
         class="card"
-        v-for="(article, index) in filteredArticles"
-        :key="index"
         :article="article"
         :title="article.title"
         :author="article.author"
@@ -26,7 +30,7 @@
         :imageSrc="article.imageSrc"
         :description="article.description"
       />
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -139,6 +143,9 @@ export default {
   methods: {
     selectCategory(category) {
       this.selectedCategory = category;
+    },
+    navigateToArticle() {
+      // WRITE FUNCTION HERE
     },
   },
 };

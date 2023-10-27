@@ -1,5 +1,5 @@
 <template>
-  <div class="article-card" @click="navigateToArticle">
+  <div class="article-card">
     <div class="article-thumbnail">
       <img :src="imageSrc" alt="Article Thumbnail" />
     </div>
@@ -26,11 +26,6 @@ export default {
     imageSrc: String,
     description: String,
     articleLink: String,
-  },
-  methods: {
-    navigateToArticle() {
-      console.log("HELLO");
-    },
   },
 };
 </script>
