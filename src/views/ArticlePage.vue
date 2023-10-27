@@ -57,6 +57,7 @@ export default {
 }
 
 .article-content {
+  text-align: justify;
   line-height: 1.6;
 }
 
