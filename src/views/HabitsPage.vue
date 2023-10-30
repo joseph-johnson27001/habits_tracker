@@ -184,8 +184,20 @@ h1 {
 }
 .habit-tracker-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .habit-tracker-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .habit-tracker-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 #add-habit-container {
