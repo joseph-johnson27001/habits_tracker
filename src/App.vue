@@ -81,6 +81,12 @@ h1 {
   padding: 20px;
 }
 
+@media (max-width: 992px) {
+  .content-container {
+    margin-right: 10px;
+  }
+}
+
 .heading-area {
   display: flex;
   justify-content: space-between;
