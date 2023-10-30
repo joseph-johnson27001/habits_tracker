@@ -338,6 +338,12 @@ h1 {
   margin-bottom: 15px;
 }
 
+.form-input:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #6da9e4;
+  outline: none;
+}
+
 .modal-heading {
   margin-bottom: 20px;
 }
@@ -353,6 +359,7 @@ h1 {
 }
 
 .data-table {
+  border-radius: 5px;
   font-family: Arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
