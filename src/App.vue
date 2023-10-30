@@ -94,8 +94,10 @@ h1 {
   }
 
   .content-container {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    max-width: 1200px;
+    width: 90%;
   }
 }
 
