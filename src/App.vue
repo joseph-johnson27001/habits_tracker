@@ -85,6 +85,8 @@ h1 {
   .background {
     flex-direction: column;
     align-items: center;
+    padding-top: 5px;
+    justify-content: start;
   }
 
   .sidebar-section {
