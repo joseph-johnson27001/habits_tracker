@@ -250,10 +250,7 @@ export default {
 }
 
 @media (min-width: 768px) {
-  .top-heading {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
+  .top-heading,
   .habit-layout {
     grid-template-columns: 1fr 1fr 1fr;
   }

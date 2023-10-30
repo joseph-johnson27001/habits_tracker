@@ -57,4 +57,10 @@ export default {
   grid-template-columns: 2fr 1fr;
   gap: 10px;
 }
+
+@media (max-width: 992px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
