@@ -3,7 +3,7 @@
     <div class="news-feed">
       <NewsFeed />
     </div>
-    <div class="social-stats">
+    <div class="social-stats" v-show="showSocialStats">
       <SocialStats />
     </div>
   </div>
@@ -19,6 +19,23 @@ export default {
     NewsFeed,
     SocialStats,
   },
+  data() {
+    return {
+      showSocialStats: true,
+    };
+  },
+  mounted() {
+    this.handleViewportChange();
+    window.addEventListener("resize", this.handleViewportChange);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleViewportChange);
+  },
+  methods: {
+    handleViewportChange() {
+      this.showSocialStats = window.innerWidth > 992;
+    },
+  },
 };
 </script>
 
@@ -30,5 +47,15 @@ export default {
 
 .social-stats {
   padding-left: 5px;
+}
+
+@media (max-width: 992px) {
+  .news {
+    grid-template-columns: 1fr;
+  }
+
+  .social-stats {
+    display: none;
+  }
 }
 </style>
