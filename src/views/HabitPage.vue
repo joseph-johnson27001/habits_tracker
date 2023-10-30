@@ -242,15 +242,21 @@ export default {
 </script>
 
 <style scoped>
-.top-heading {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
+.top-heading,
 .habit-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .top-heading {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .habit-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 h1 {
