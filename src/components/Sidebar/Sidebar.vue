@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <div>
+    <div class="item-container">
       <router-link to="/" class="sidebar-item">
         <i class="fas fa-list fa-lg"></i>
       </router-link>
@@ -72,5 +72,28 @@ export default {
 .sidebar-item:hover {
   transform: scale(1.1);
   color: #3a59c0;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    flex-direction: row;
+    height: 20px;
+    justify-content: space-around;
+  }
+
+  .sidebar-item {
+    margin-bottom: 0;
+    margin-right: 20px; /* Adjust as needed */
+  }
+
+  .sidebar-item.settings {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .item-container {
+    display: flex;
+  }
 }
 </style>

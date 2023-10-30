@@ -82,8 +82,20 @@ h1 {
 }
 
 @media (max-width: 992px) {
+  .background {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-section {
+    margin-bottom: 5px;
+    width: 95%;
+    margin-right: 0px;
+  }
+
   .content-container {
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
