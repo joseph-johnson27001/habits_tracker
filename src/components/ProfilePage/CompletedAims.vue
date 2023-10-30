@@ -1,7 +1,7 @@
 <template>
   <div class="completed-section">
     <div class="heading-area">
-      <h1>RECENT COMPLETED</h1>
+      <h1>RECENTLY COMPLETED</h1>
       <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <ul class="completed-list">
