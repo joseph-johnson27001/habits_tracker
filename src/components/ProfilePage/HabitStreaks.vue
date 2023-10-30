@@ -2,7 +2,9 @@
   <div class="habits-section">
     <div class="heading-area">
       <h1>HABITS</h1>
-      <i class="fas fa-angle-right view-more-link"></i>
+      <router-link to="/habits" class="nav-link">
+        <i class="fas fa-angle-right view-more-link"></i>
+      </router-link>
     </div>
     <div class="habit-list">
       <div
