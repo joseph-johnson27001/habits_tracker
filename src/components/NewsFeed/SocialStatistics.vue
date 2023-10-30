@@ -226,8 +226,6 @@ export default {
   margin: 5px 0;
 }
 
-/* Challenges Styles */
-
 .challenge-item {
   display: flex;
   justify-content: space-between;

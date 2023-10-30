@@ -189,7 +189,7 @@ export default {
 
 .article-details {
   padding: 10px;
-  flex-grow: 1; /* To expand the details section */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -198,28 +198,28 @@ export default {
 .title {
   font-size: 20px;
   margin: 0;
-  color: #333; /* Title color */
+  color: #333;
 }
 
 .author {
   font-style: italic;
-  color: #555; /* Author color */
+  color: #555;
 }
 
 .date {
   font-size: 14px;
-  color: #777; /* Date color */
+  color: #777;
 }
 
 .category {
   font-weight: bold;
   margin-top: 5px;
-  color: #4169e1; /* Category color */
+  color: #4169e1;
 }
 
 .description {
   margin-top: 10px;
-  color: #444; /* Description color */
-  flex-grow: 1; /* Allow description to grow */
+  color: #444;
+  flex-grow: 1;
 }
 </style>

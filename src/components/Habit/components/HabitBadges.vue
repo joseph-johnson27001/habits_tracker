@@ -146,6 +146,6 @@ export default {
 }
 
 .gray-badge {
-  filter: grayscale(100%); /* Apply grayscale filter to "gray out" the icon */
+  filter: grayscale(100%);
 }
 </style>

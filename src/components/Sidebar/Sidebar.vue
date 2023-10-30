@@ -83,7 +83,7 @@ export default {
 
   .sidebar-item {
     margin-bottom: 0;
-    margin-right: 20px; /* Adjust as needed */
+    margin-right: 20px;
   }
 
   .sidebar-item.settings {
