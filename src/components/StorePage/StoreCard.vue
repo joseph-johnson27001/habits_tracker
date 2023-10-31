@@ -249,4 +249,18 @@ export default {
   right: 10px;
   cursor: pointer;
 }
+.buy-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4169e1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #315b8e;
+}
 </style>
