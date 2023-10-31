@@ -25,7 +25,9 @@
     <div class="leaderboard card">
       <div class="heading-area">
         <h1>LEADERBOARD</h1>
-        <i class="fas fa-angle-right view-more-link"></i>
+        <router-link to="/leaderboard" class="nav-link">
+          <i class="fas fa-angle-right view-more-link"></i>
+        </router-link>
       </div>
       <table>
         <thead>
