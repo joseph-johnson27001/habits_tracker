@@ -7,6 +7,9 @@
       <router-link to="/habits" class="sidebar-item">
         <i class="fas fa-chart-line fa-lg"></i>
       </router-link>
+      <router-link to="/challenges" class="sidebar-item">
+        <i class="fas fa-flag-checkered fa-lg"></i>
+      </router-link>
       <router-link to="/leaderboard" class="sidebar-item">
         <i class="fas fa-trophy fa-lg"></i>
       </router-link>

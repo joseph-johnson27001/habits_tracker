@@ -9,6 +9,7 @@ import LeaderboardPage from "@/views/LeaderboardPage.vue";
 import SettingsPage from "@/views/SettingsPage.vue";
 import StorePage from "@/views/StorePage.vue";
 import ArticlePage from "@/views/ArticlePage.vue";
+import ChallengesPage from "@/views/ChallengesPage.vue";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,7 @@ const routes = [
   { path: "/leaderboard", component: LeaderboardPage },
   { path: "/settings", component: SettingsPage },
   { path: "/store", component: StorePage },
+  { path: "/challenges", component: ChallengesPage },
 ];
 
 const router = new VueRouter({
