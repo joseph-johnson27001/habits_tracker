@@ -189,6 +189,18 @@ export default {
   gap: 10px;
 }
 
+@media (max-width: 1024px) {
+  .items-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .items-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .store-item {
   display: flex;
   flex-direction: column;
