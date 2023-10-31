@@ -5,6 +5,7 @@
         v-for="challenge in challenges"
         :key="challenge.id"
         class="card challenge-item"
+        @click="showModal(challenge)"
       >
         <h1>{{ challenge.title }}</h1>
         <p>{{ challenge.description }}</p>
@@ -24,6 +25,27 @@
     <div v-else>
       <p>No challenges available at the moment.</p>
     </div>
+
+    <!-- Modal for displaying challenge details -->
+    <div class="modal" v-if="showingModal" @click="closeModal">
+      <div class="modal-content" @click.stop>
+        <h2>{{ selectedChallenge.title }}</h2>
+        <p>{{ selectedChallenge.description }}</p>
+        <p>Start Date: {{ selectedChallenge.startDate }}</p>
+        <p>End Date: {{ selectedChallenge.endDate }}</p>
+        <p>Participants: {{ selectedChallenge.participants }}</p>
+        <div class="awards-container">
+          <h3>Awards</h3>
+          <ul>
+            <li v-for="award in selectedChallenge.awards" :key="award.name">
+              <span class="badge-icon">{{ award.icon }}</span> {{ award.name }}
+            </li>
+          </ul>
+          <button class="join-button">Join Challenge</button>
+          <!-- This button will be linked to the join functionality in the future -->
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -32,6 +54,8 @@ export default {
   name: "ChallengesPage",
   data() {
     return {
+      showingModal: false,
+      selectedChallenge: {},
       challenges: [
         {
           id: 1,
@@ -140,6 +164,16 @@ export default {
       ],
     };
   },
+  methods: {
+    showModal(challenge) {
+      this.showingModal = true;
+      this.selectedChallenge = challenge;
+    },
+    closeModal() {
+      this.showingModal = false;
+      this.selectedChallenge = {};
+    },
+  },
 };
 </script>
 
@@ -189,5 +223,39 @@ export default {
 
 .badge-icon {
   font-size: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.join-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.join-button:hover {
+  background-color: #3151b7;
 }
 </style>
