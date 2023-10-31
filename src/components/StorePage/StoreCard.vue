@@ -28,7 +28,10 @@
         >
           Buy Now
         </button>
-        <p v-else>This item is currently locked.</p>
+        <div v-else>
+          <p>This item is currently locked.</p>
+          <p>{{ selectedItem.unlockCondition }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -160,6 +163,8 @@ export default {
     handleItemClick(item) {
       this.selectedItem = item;
       this.showingModal = true;
+      console.log("HELLO");
+      console.log(this.showingModal);
     },
     handleBuyClick(item) {
       if (!item.locked) {
@@ -214,5 +219,34 @@ export default {
 .item-image {
   font-size: 48px;
   margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 </style>
