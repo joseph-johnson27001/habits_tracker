@@ -1,5 +1,5 @@
 <template>
-  <StoreCard class="card" />
+  <StoreCard />
 </template>
 
 <script>
