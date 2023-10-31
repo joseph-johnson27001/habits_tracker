@@ -137,7 +137,6 @@ export default {
             { name: "Innovation Maestro Title", icon: "🖌️" },
           ],
         },
-        // Add more challenges as needed
       ],
     };
   },
@@ -145,14 +144,19 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  margin-bottom: 0px;
+}
 .challenges-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-.challenge-item {
-  margin-bottom: 20px;
+@media (max-width: 992px) {
+  .challenges-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .awards-container {
