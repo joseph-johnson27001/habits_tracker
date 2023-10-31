@@ -4,7 +4,7 @@
       <div
         v-for="item in storeItems"
         :key="item.id"
-        :class="['store-item', { locked: item.locked }]"
+        :class="['card', 'store-item', { locked: item.locked }]"
         @click="handleItemClick(item)"
       >
         <div class="item-image">{{ item.icon }}</div>
@@ -18,6 +18,7 @@
     <div class="modal" v-if="showingModal" @click="closeModal">
       <div class="modal-content" @click.stop>
         <span class="close-icon" @click="closeModal">&times;</span>
+        <div class="item-image modal-item-image">{{ selectedItem.icon }}</div>
         <h2>{{ selectedItem.name }}</h2>
         <p>{{ selectedItem.description }}</p>
         <button
@@ -177,7 +178,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .items-container {
   display: grid;
@@ -186,16 +186,12 @@ export default {
 }
 
 .store-item {
-  padding: 20px;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 0px;
 }
 
 .store-item:hover {
@@ -241,6 +237,9 @@ export default {
   max-height: 80%;
   overflow: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .close-icon {
@@ -249,6 +248,7 @@ export default {
   right: 10px;
   cursor: pointer;
 }
+
 .buy-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -262,5 +262,16 @@ export default {
 
 .buy-button:hover {
   background-color: #315b8e;
+}
+
+.modal-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-item-image {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 </style>
