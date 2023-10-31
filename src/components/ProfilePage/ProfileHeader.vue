@@ -643,6 +643,7 @@ export default {
   font-size: 18px;
   margin-left: 20px;
   width: 75%;
+  padding-bottom: 20px;
 }
 
 .user-name,
@@ -653,8 +654,8 @@ export default {
 }
 
 .profile-picture img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 225px;
+  max-height: 225px;
   border-radius: 8px;
   border: 1px solid #6da9e4;
 }
@@ -667,6 +668,7 @@ export default {
 .user-title {
   font-size: 1.3rem;
   margin-left: 0px;
+  margin-top: 0px;
 }
 
 .icon {
