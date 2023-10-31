@@ -65,7 +65,9 @@
     <div class="recent-articles card">
       <div class="heading-area">
         <h1>RECENT ARTICLES</h1>
-        <i class="fas fa-angle-right view-more-link"></i>
+        <router-link to="/articles" class="nav-link">
+          <i class="fas fa-angle-right view-more-link"></i>
+        </router-link>
       </div>
       <div
         class="article-item"
