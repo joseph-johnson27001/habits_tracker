@@ -29,7 +29,7 @@
           Buy Now
         </button>
         <div v-else>
-          <p>This item is currently locked.</p>
+          <p class="locked-text">You cannot currently purchase this item.</p>
           <p>{{ selectedItem.unlockCondition }}</p>
         </div>
       </div>
@@ -163,8 +163,6 @@ export default {
     handleItemClick(item) {
       this.selectedItem = item;
       this.showingModal = true;
-      console.log("HELLO");
-      console.log(this.showingModal);
     },
     handleBuyClick(item) {
       if (!item.locked) {
