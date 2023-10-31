@@ -194,14 +194,15 @@ export default {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.1s, transform 0.2s;
   margin-bottom: 0px;
 }
 
 .store-item:hover {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   transform: translateY(-2px);
   border: 1px solid #6da9e4;
+  filter: grayscale(0%);
 }
 
 .locked-item {
