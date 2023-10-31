@@ -77,6 +77,12 @@ export default {
   color: #3a59c0;
 }
 
+@media (min-width: 991px) {
+  .fa-flag-checkered {
+    margin-left: 2px !important;
+  }
+}
+
 @media (max-width: 992px) {
   .sidebar {
     flex-direction: row;
