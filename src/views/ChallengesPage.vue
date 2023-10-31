@@ -14,8 +14,8 @@
         <div class="awards-container">
           <h3>Awards</h3>
           <ul>
-            <li v-for="award in challenge.awards" :key="award.id">
-              {{ award.name }}
+            <li v-for="award in challenge.awards" :key="award.name">
+              <span class="badge-icon">{{ award.icon }}</span> {{ award.name }}
             </li>
           </ul>
         </div>
@@ -42,8 +42,8 @@ export default {
           endDate: "2023-11-30",
           participants: 120,
           awards: [
-            { id: 1, name: "Fitness Guru Badge" },
-            { id: 2, name: "Health Champion Title" },
+            { name: "Fitness Guru Badge", icon: "🏆" },
+            { name: "Health Champion Title", icon: "🥇" },
           ],
         },
         {
@@ -55,8 +55,8 @@ export default {
           endDate: "2023-12-31",
           participants: 85,
           awards: [
-            { id: 3, name: "Zen Master Badge" },
-            { id: 4, name: "Mindfulness Pro Title" },
+            { name: "Zen Master Badge", icon: "🎯" },
+            { name: "Mindfulness Pro Title", icon: "🌟" },
           ],
         },
         // Add more dummy challenges as needed
@@ -93,5 +93,9 @@ export default {
 
 .awards-container li {
   margin-bottom: 5px;
+}
+
+.badge-icon {
+  font-size: 20px;
 }
 </style>
