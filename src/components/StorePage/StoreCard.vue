@@ -4,14 +4,31 @@
       <div
         v-for="item in storeItems"
         :key="item.id"
-        class="store-item"
-        :class="{ locked: item.locked }"
+        :class="['store-item', { locked: item.locked }]"
         @click="handleItemClick(item)"
       >
         <div class="item-image">{{ item.icon }}</div>
         <h2>{{ item.name }}</h2>
         <p>{{ item.description }}</p>
-        <p v-if="item.locked" class="locked-text">Locked</p>
+        <p v-if="!item.locked" class="unlocked-text">Unlocked</p>
+        <p v-else class="locked-text">Locked</p>
+      </div>
+    </div>
+    <!-- Modal for displaying item details -->
+    <div class="modal" v-if="showingModal" @click="closeModal">
+      <div class="modal-content" @click.stop>
+        <span class="close-icon" @click="closeModal">&times;</span>
+        <h2>{{ selectedItem.name }}</h2>
+        <p>{{ selectedItem.description }}</p>
+        <button
+          v-if="!selectedItem.locked"
+          class="buy-button"
+          :disabled="selectedItem.locked"
+          @click="handleBuyClick(selectedItem)"
+        >
+          Buy Now
+        </button>
+        <p v-else>This item is currently locked.</p>
       </div>
     </div>
   </div>
@@ -22,6 +39,8 @@ export default {
   name: "StorePage",
   data() {
     return {
+      showingModal: false,
+      selectedItem: null,
       storeItems: [
         {
           id: 1,
@@ -134,35 +153,30 @@ export default {
           locked: true,
           unlockCondition: "Establish a consistent habit streak to unlock",
         },
-        // Add more store items with corresponding data and unlock conditions
       ],
     };
   },
   methods: {
     handleItemClick(item) {
-      if (item.locked) {
-        // Provide feedback to the user about the unlock condition
-        alert(`This item is locked. ${item.unlockCondition}`);
-      } else {
-        // Implement logic for purchasing the item or displaying more details
-        // This will be linked to your actual store functionality in the future
-        // For now, you can provide a message or simulate a purchase process
-        alert(`You have purchased: ${item.name}`);
+      this.selectedItem = item;
+      this.showingModal = true;
+    },
+    handleBuyClick(item) {
+      if (!item.locked) {
+        // Implement logic for the purchase functionality here
+        alert(`You have purchased the ${item.name}!`);
       }
+    },
+    closeModal() {
+      this.showingModal = false;
+      this.selectedItem = null;
     },
   },
 };
 </script>
 
 <style scoped>
-/* Your existing styles */
-
-.store {
-  /* Your store container styles */
-}
-
 .items-container {
-  /* Styles for the container holding store items */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
@@ -181,20 +195,23 @@ export default {
 }
 
 .store-item:hover {
-  /* Hover styles for each store item card */
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .locked-text {
-  /* Styles for the locked text on locked items */
   color: red;
   font-weight: bold;
   margin-top: 10px;
 }
 
+.unlocked-text {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .item-image {
-  /* Styles for the item image or icon */
   font-size: 48px;
   margin-bottom: 10px;
 }
