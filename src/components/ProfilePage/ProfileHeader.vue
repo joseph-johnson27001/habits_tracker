@@ -631,7 +631,7 @@ export default {
 .profile-header {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   /* padding-top: 10px; */
   background-color: #dff1ff;
   /* border-bottom: 1px solid #ccc; */
@@ -651,6 +651,7 @@ export default {
 .profile-picture img {
   font-weight: 300;
   margin: 10px;
+  margin-left: 5px;
 }
 
 .profile-picture img {
@@ -658,6 +659,7 @@ export default {
   max-height: 225px;
   border-radius: 8px;
   border: 1px solid #6da9e4;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .user-name {
