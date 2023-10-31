@@ -4,7 +4,11 @@
       <div
         v-for="item in storeItems"
         :key="item.id"
-        :class="['card', 'store-item', { locked: item.locked }]"
+        :class="[
+          'card',
+          'store-item',
+          { locked: item.locked, 'locked-item': item.locked },
+        ]"
         @click="handleItemClick(item)"
       >
         <div class="item-image">{{ item.icon }}</div>
@@ -198,6 +202,11 @@ export default {
   background-color: #f2f2f2;
   transform: translateY(-2px);
   border: 1px solid #6da9e4;
+}
+
+.locked-item {
+  background-color: #f2f2f2;
+  filter: grayscale(100%);
 }
 
 .locked-text {
