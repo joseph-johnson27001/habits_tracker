@@ -193,7 +193,6 @@ export default {
   align-items: center;
   background-color: white;
   border: 1px solid #ccc;
-  margin-bottom: 10px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
