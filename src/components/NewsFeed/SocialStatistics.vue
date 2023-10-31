@@ -4,7 +4,9 @@
     <div class="challenges card">
       <div class="heading-area">
         <h1>ACTIVE CHALLENGES</h1>
-        <i class="fas fa-angle-right view-more-link"></i>
+        <router-link to="/challenges" class="nav-link">
+          <i class="fas fa-angle-right view-more-link"></i>
+        </router-link>
       </div>
       <div
         class="challenge-item"
