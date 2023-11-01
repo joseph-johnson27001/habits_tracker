@@ -33,10 +33,6 @@ export default {
 </script>
 
 <style>
-.content-container.loading {
-  position: relative;
-}
-
 * {
   font-family: "Assistant", sans-serif;
 }
@@ -145,5 +141,9 @@ h1 {
 .view-more-link:hover {
   transform: scale(1.1);
   color: #3a59c0;
+}
+
+.content-container.loading {
+  position: relative;
 }
 </style>
