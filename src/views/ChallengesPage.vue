@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!this.$store.state.isLoading">
+  <div v-show="!this.$store.state.isLoading">
     <div v-if="challenges.length" class="challenges-container">
       <div
         v-for="challenge in challenges"

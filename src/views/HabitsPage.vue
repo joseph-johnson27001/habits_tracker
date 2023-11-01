@@ -1,5 +1,5 @@
 <template>
-  <div class="habits-page" v-if="!this.$store.state.isLoading">
+  <div class="habits-page" v-show="!this.$store.state.isLoading">
     <div class="habit-tracker-container">
       <div
         class="card habit-tracker"

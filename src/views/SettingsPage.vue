@@ -1,5 +1,5 @@
 <template>
-  <div class="settings-page" v-if="!this.$store.state.isLoading">
+  <div class="settings-page" v-show="!this.$store.state.isLoading">
     <div class="card">
       <div class="heading-area">
         <h1>SETTINGS</h1>

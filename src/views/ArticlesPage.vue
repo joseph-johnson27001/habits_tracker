@@ -1,5 +1,5 @@
 <template>
-  <div class="articles-page" v-if="!this.$store.state.isLoading">
+  <div class="articles-page" v-show="!this.$store.state.isLoading">
     <div class="card">
       <ul class="article-type-navigation">
         <li v-for="(category, index) in categories" :key="index">

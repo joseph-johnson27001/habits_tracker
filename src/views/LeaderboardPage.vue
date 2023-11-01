@@ -1,5 +1,5 @@
 <template>
-  <div class="leaderboard-page" v-if="!this.$store.state.isLoading">
+  <div class="leaderboard-page" v-show="!this.$store.state.isLoading">
     <div>
       <LeaderboardGraph
         v-for="(graphData, index) in graphDataArray"
