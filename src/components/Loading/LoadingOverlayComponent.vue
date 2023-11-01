@@ -14,7 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.08);
   z-index: 2;
 }
 
