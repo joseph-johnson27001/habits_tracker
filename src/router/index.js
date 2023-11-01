@@ -30,8 +30,14 @@ const router = new VueRouter({
   routes,
 });
 
+// Below function is for moving back to the top of the page on route change
+
 router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
+  const contentContainer = document.querySelector(".content-container");
+  if (contentContainer) {
+    contentContainer.scrollTop = 0; // Scrolls to the top of the content container
+  }
   next();
 });
 
