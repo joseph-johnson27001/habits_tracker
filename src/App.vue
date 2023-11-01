@@ -72,7 +72,7 @@ h1 {
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .content-container {
