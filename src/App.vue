@@ -5,7 +5,11 @@
       <div class="sidebar-section">
         <SidebarSection />
       </div>
-      <div class="content-container">
+      <div
+        class="content-container"
+        :class="{ loading: this.$store.state.isLoading }"
+      >
+        <LoadingOverlay v-if="this.$store.state.isLoading" />
         <router-view />
         <!-- This is where matched components will be rendered -->
       </div>
@@ -16,17 +20,23 @@
 <script>
 import NavigationBar from "./components/Navigation/NavigationBar.vue";
 import SidebarSection from "./components/Sidebar/Sidebar.vue";
+import LoadingOverlay from "./components/Loading/LoadingOverlayComponent.vue"; // Create Overlay component
 
 export default {
   name: "App",
   components: {
     NavigationBar,
     SidebarSection,
+    LoadingOverlay,
   },
 };
 </script>
 
 <style>
+.content-container.loading {
+  position: relative;
+}
+
 * {
   font-family: "Assistant", sans-serif;
 }
@@ -66,7 +76,7 @@ h1 {
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .content-container {

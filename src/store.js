@@ -8,6 +8,7 @@ const store = new Vuex.Store({
     userName: "Joe Johnson",
     userTitle: "Productivity Wizard",
     selectedHabitData: {},
+    isLoading: false,
   },
 });
 
