@@ -34,6 +34,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
 }
 
 #app {
@@ -79,6 +80,19 @@ h1 {
   margin-right: 50px;
   margin-bottom: 10px;
   padding: 20px;
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.content-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @media (max-width: 992px) {
