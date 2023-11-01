@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="!this.$store.state.isLoading">
     <div class="top-heading">
       <div class="card" style="display: flex; align-items: center">
         <h1>{{ habitBasicInfo.name }}</h1>

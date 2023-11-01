@@ -1,5 +1,7 @@
 <template>
-  <StoreCard />
+  <div v-if="!this.$store.state.isLoading">
+    <StoreCard />
+  </div>
 </template>
 
 <script>

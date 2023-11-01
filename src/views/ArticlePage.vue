@@ -1,5 +1,5 @@
 <template>
-  <div class="article-page card">
+  <div class="article-page card" v-if="!this.$store.state.isLoading">
     <div class="article-header">
       <h1>{{ article.title }}</h1>
       <p>By {{ article.author }} | Published on {{ article.datePublished }}</p>

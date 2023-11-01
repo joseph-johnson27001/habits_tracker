@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-page">
+  <div class="profile-page" v-if="!this.$store.state.isLoading">
     <ProfileHeader />
     <div class="profile-content">
       <div class="left-section">

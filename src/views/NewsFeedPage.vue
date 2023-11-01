@@ -1,5 +1,5 @@
 <template>
-  <div class="news">
+  <div class="news" v-if="!this.$store.state.isLoading">
     <div class="news-feed">
       <NewsFeed />
     </div>
