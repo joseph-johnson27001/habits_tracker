@@ -428,9 +428,6 @@ export default {
 </script>
 
 <style scoped>
-.news-feed {
-  overflow-y: auto;
-}
 .feed-item {
   padding-bottom: 10px;
   border: 1px solid #ccc;

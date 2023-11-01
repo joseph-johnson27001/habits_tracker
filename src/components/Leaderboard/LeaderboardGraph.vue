@@ -32,7 +32,6 @@ export default {
   methods: {
     renderLeaderboardGraph() {
       const { labels, datasets } = this.data;
-
       const options = {
         responsive: true,
         maintainAspectRatio: false,
