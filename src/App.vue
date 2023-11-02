@@ -43,6 +43,8 @@ body {
   overflow-y: hidden;
 }
 
+/* NEED TO CHANGE OVERFLOW RULES FOR SMALLER VIEWPORTS - REVERT IT TO DEFAULT BEHAVIOUR */
+
 #app {
   font-family: "Roboto", sans-serif;
 }
@@ -86,7 +88,7 @@ h1 {
   margin-right: 50px;
   margin-bottom: 10px;
   padding: 20px;
-  max-height: calc(100vh - 110px);
+  max-height: calc(100vh - 115px);
   overflow-y: auto;
 }
 
