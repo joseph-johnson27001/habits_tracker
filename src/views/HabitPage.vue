@@ -83,6 +83,7 @@
                       'invalid-input': isInvalidInput,
                     }"
                   />
+                  <br />
                   <label v-if="isInvalidInput" class="warning-label"
                     >Please enter a valid number.</label
                   >
