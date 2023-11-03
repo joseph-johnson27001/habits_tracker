@@ -66,6 +66,7 @@ h1 {
 
 .sidebar-section {
   margin-right: 50px;
+  padding-top: 10px;
 }
 
 .card {
