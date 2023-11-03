@@ -76,7 +76,16 @@
                   {{ habitData.data[index] }}
                 </td>
                 <td v-if="editMode && editedRowIndex === index">
-                  <input v-model="editedData" class="editable-input" />
+                  <input
+                    v-model="editedData"
+                    :class="{
+                      'editable-input': true,
+                      'invalid-input': isInvalidInput,
+                    }"
+                  />
+                  <label v-if="isInvalidInput" class="warning-label"
+                    >Please enter a valid number.</label
+                  >
                 </td>
                 <td v-if="!editMode || (editMode && editedRowIndex !== index)">
                   <button class="edit-button" @click="startEdit(index)">
@@ -171,6 +180,7 @@ export default {
   },
   data() {
     return {
+      isInvalidInput: false,
       editMode: false,
       editedRowIndex: null,
       editedLabel: "",
@@ -220,13 +230,22 @@ export default {
       this.editMode = true;
     },
     saveEdit(index) {
-      this.habitData.labels[index] = this.editedLabel;
-      this.habitData.data[index] = this.editedData;
-      this.showModal = false;
-      this.editMode = false;
-      this.editedRowIndex = null;
-      this.habitDataKey += 1; // Incrementing the key to force the component to reload
+      if (!isNaN(this.editedData)) {
+        this.habitData.labels[index] = this.editedLabel;
+        this.habitData.data[index] = this.editedData;
+        this.showModal = false;
+        this.editMode = false;
+        this.editedRowIndex = null;
+        this.habitDataKey += 1; // Incrementing the key to force the component to reload
+        this.isInvalidInput = false; // Reset the error state
+      } else {
+        // Handle the error by setting the error state to true
+        this.isInvalidInput = true;
+        // Optionally, you can reset the edited data to its previous value
+        this.editedData = this.habitData.data[index];
+      }
     },
+
     addNewData() {
       if (this.newLabel && this.newData !== null) {
         this.habitData.labels.push(this.newLabel);
@@ -427,5 +446,14 @@ h1 {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.invalid-input {
+  border: 1px solid red;
+}
+
+.warning-label {
+  color: red;
+  font-size: 14px;
 }
 </style>
