@@ -26,7 +26,7 @@ export default {
         title: "The Power of Daily Habits",
         author: "Emily Johnson",
         datePublished: "November 2, 2023",
-        imageSrc: "https://picsum.photos/1200/300",
+        imageSrc: "",
         description:
           "Discover the life-changing impact of building positive daily habits. Learn how small changes to your routine can lead to greater productivity, happiness, and overall well-being.",
         content: [
@@ -41,6 +41,34 @@ export default {
         ],
       },
     };
+  },
+  mounted() {
+    this.loadImage();
+  },
+  methods: {
+    async loadImage() {
+      this.$store.state.isLoading = true;
+      const imageUrl = await this.generateImageUrl(1200, 300); // Adjust the dimensions as needed
+
+      // Create a promise that resolves when the image has loaded
+      const imagePromise = new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(imageUrl);
+        img.onerror = () => reject(new Error("Image loading error"));
+        img.src = imageUrl;
+      });
+
+      try {
+        this.article.imageSrc = await imagePromise;
+      } catch (error) {
+        console.error(error);
+      } finally {
+        this.$store.state.isLoading = false;
+      }
+    },
+    generateImageUrl(width, height) {
+      return `https://picsum.photos/${width}/${height}`;
+    },
   },
 };
 </script>
