@@ -33,66 +33,96 @@ export default {
           name: "John Doe",
           rank: 1,
           score: 95,
-          imageURL: "https://picsum.photos/50/50?random=1",
+          imageURL: "",
         },
         {
           name: "Alice Smith",
           rank: 2,
           score: 92,
-          imageURL: "https://picsum.photos/50/50?random=2",
+          imageURL: "",
         },
         {
           name: "Emily Johnson",
           rank: 3,
           score: 88,
-          imageURL: "https://picsum.photos/50/50?random=3",
+          imageURL: "",
         },
         {
           name: "Michael Green",
           rank: 4,
           score: 86,
-          imageURL: "https://picsum.photos/50/50?random=4",
+          imageURL: "",
         },
         {
           name: "Sarah Brown",
           rank: 5,
           score: 84,
-          imageURL: "https://picsum.photos/50/50?random=5",
+          imageURL: "",
         },
         {
           name: "David Miller",
           rank: 6,
           score: 82,
-          imageURL: "https://picsum.photos/50/50?random=6",
+          imageURL: "",
         },
         {
           name: "Linda Wilson",
           rank: 7,
           score: 80,
-          imageURL: "https://picsum.photos/50/50?random=7",
+          imageURL: "",
         },
         {
           name: "Robert Harris",
           rank: 8,
           score: 78,
-          imageURL: "https://picsum.photos/50/50?random=8",
+          imageURL: "",
         },
         {
           name: "Olivia Turner",
           rank: 9,
           score: 76,
-          imageURL: "https://picsum.photos/50/50?random=9",
+          imageURL: "",
         },
         {
           name: "Daniel Clark",
           rank: 10,
           score: 74,
-          imageURL: "https://picsum.photos/50/50?random=10",
+          imageURL: "",
         },
       ],
     };
   },
+  mounted() {
+    this.loadImages();
+  },
   methods: {
+    generateImageUrl(width, height) {
+      return `https://picsum.photos/${width}/${height}`;
+    },
+    async loadImages() {
+      this.$store.state.isLoading = true;
+      const promises = this.users.map(async (user) => {
+        const width = 50 + Math.floor(Math.random() * 20);
+        const height = 50 + Math.floor(Math.random() * 20);
+        const imageUrl = this.generateImageUrl(width, height);
+
+        const imagePromise = new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(imageUrl);
+          img.onerror = () => reject(new Error("Image loading error"));
+          img.src = imageUrl;
+        });
+
+        try {
+          user.imageURL = await imagePromise;
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      await Promise.all(promises);
+      this.$store.state.isLoading = false;
+    },
     getRankSuffix(rank) {
       const suffixes = ["st", "nd", "rd"];
       const lastDigit = rank % 10;
