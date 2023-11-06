@@ -309,12 +309,18 @@ h1 {
 }
 
 .form-input {
-  padding: 10px 0px;
+  padding: 10px 0px 10px 10px;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   margin-bottom: 15px;
+}
+
+.form-input:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #6da9e4;
+  outline: none;
 }
 
 .modal-button {
