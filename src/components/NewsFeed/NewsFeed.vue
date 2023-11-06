@@ -402,7 +402,38 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.loadImages();
+  },
   methods: {
+    generateImageUrl(width, height) {
+      return `https://picsum.photos/${width}/${height}`;
+    },
+    async loadImages() {
+      this.$store.state.isLoading = true;
+      const promises = this.feedItems.map(async (item) => {
+        const width = 50 + Math.floor(Math.random() * 20);
+        const height = 50 + Math.floor(Math.random() * 20);
+        const imageUrl = this.generateImageUrl(width, height);
+
+        // Create a promise that resolves when the image has loaded
+        const imagePromise = new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(imageUrl);
+          img.onerror = () => reject(new Error("Image loading error"));
+          img.src = imageUrl;
+        });
+
+        try {
+          item.userImage = await imagePromise;
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      await Promise.all(promises);
+      this.$store.state.isLoading = false;
+    },
     likePost(item) {
       item.likes += 1;
     },
@@ -412,7 +443,6 @@ export default {
     toggleComments(item) {
       item.commentsVisible = !item.commentsVisible;
     },
-
     addComment(item) {
       if (item.newComment.text.trim() !== "") {
         item.comments.push(item.newComment);
