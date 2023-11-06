@@ -78,7 +78,7 @@ export default {
         {
           userName: "John Doe",
           userTitle: "Fitness Enthusiast",
-          userImage: "https://picsum.photos/51/50",
+          userImage: "",
           timestamp: "2 hours ago",
           content: "Achieved my fitness goal today! 💪🏋️‍♂️ ",
           likes: 10,
@@ -109,7 +109,7 @@ export default {
         {
           userName: "Alice Smith",
           userTitle: "Yoga Lover",
-          userImage: "https://picsum.photos/50/50",
+          userImage: "",
           timestamp: "3 hours ago",
           content:
             "Completed the 30-day meditation challenge. Feeling zen! 🧘‍♀️✨",
@@ -136,7 +136,7 @@ export default {
         {
           userName: "Emily Johnson",
           userTitle: "Productivity Pro",
-          userImage: "https://picsum.photos/59/50",
+          userImage: "",
           timestamp: "4 hours ago",
           content:
             "Earned the 'Productivity Prodigy' badge for completing all my tasks on time. 🏆🚀",
@@ -163,7 +163,7 @@ export default {
         {
           userName: "Michael Green",
           userTitle: "Gratitude Practitioner",
-          userImage: "https://picsum.photos/56/50",
+          userImage: "",
           timestamp: "7 hours ago",
           content:
             "Completed the '30 Days of Gratitude' challenge. Feeling thankful for life's little joys. 🙏😊",
@@ -190,7 +190,7 @@ export default {
         {
           userName: "Sophia Adams",
           userTitle: "Gamer Pro",
-          userImage: "https://picsum.photos/65/50",
+          userImage: "",
           timestamp: "8 hours ago",
           content: "Achieved a new high score in my favorite video game. 🎮🏆",
           likes: 20,
@@ -216,7 +216,7 @@ export default {
         {
           userName: "Ethan Wilson",
           userTitle: "Nature Explorer",
-          userImage: "https://picsum.photos/64/50",
+          userImage: "",
           timestamp: "9 hours ago",
           content:
             "Visited a breathtaking natural wonder today. Nature is amazing! 🌄🌿",
@@ -243,7 +243,7 @@ export default {
         {
           userName: "Liam Miller",
           userTitle: "Coder",
-          userImage: "https://picsum.photos/66/50",
+          userImage: "",
           timestamp: "10 hours ago",
           content: "Completed a 30-day coding challenge. 💻🚀",
           likes: 18,
@@ -269,7 +269,7 @@ export default {
         {
           userName: "Ava Robinson",
           userTitle: "Photographer",
-          userImage: "https://picsum.photos/67/50",
+          userImage: "",
           timestamp: "11 hours ago",
           content:
             "Attended a virtual photography exhibition. Captured some stunning shots! 📷🌟",
@@ -296,7 +296,7 @@ export default {
         {
           userName: "Noah Clark",
           userTitle: "Polyglot",
-          userImage: "https://picsum.photos/68/50",
+          userImage: "",
           timestamp: "12 hours ago",
           content:
             "Earned the 'Language Lover' badge for mastering a new language. 🌐🏅",
@@ -323,7 +323,7 @@ export default {
         {
           userName: "Olivia Lewis",
           userTitle: "Adventurer",
-          userImage: "https://picsum.photos/69/50",
+          userImage: "",
           timestamp: "13 hours ago",
           content: "Hiked to the summit of Mount Adventure. What a view! ⛰️🌄",
           likes: 25,
@@ -349,7 +349,7 @@ export default {
         {
           userName: "Liam Parker",
           userTitle: "Coder",
-          userImage: "https://picsum.photos/66/50",
+          userImage: "",
           timestamp: "14 hours ago",
           content:
             "Completed a 30-day coding challenge. Feeling accomplished! 💻🚀",
@@ -376,7 +376,7 @@ export default {
         {
           userName: "Emma Turner",
           userTitle: "Book Lover",
-          userImage: "https://picsum.photos/65/50",
+          userImage: "",
           timestamp: "15 hours ago",
           content: "Started a new book series. Can't put it down! 📚❤️",
           likes: 11,
