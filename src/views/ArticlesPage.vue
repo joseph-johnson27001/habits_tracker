@@ -61,7 +61,7 @@ export default {
           author: "John Doe",
           datePublished: "September 15, 2023",
           category: "Personal Development",
-          imageSrc: "https://picsum.photos/150/150",
+          imageSrc: "",
           description:
             "Unlock the secrets to setting and accomplishing your goals with precision. Dive into proven techniques and actionable strategies that will propel you towards success and fulfillment in every aspect of your life.",
           type: "Productivity",
@@ -71,7 +71,7 @@ export default {
           author: "Jane Smith",
           datePublished: "October 5, 2023",
           category: "Productivity",
-          imageSrc: "https://picsum.photos/151/150",
+          imageSrc: "",
           description:
             "In this article, discover the strategies and techniques for effective time management to achieve your goals and boost productivity.",
           type: "Productivity",
@@ -81,7 +81,7 @@ export default {
           author: "Alice Johnson",
           datePublished: "October 20, 2023",
           category: "Wellness",
-          imageSrc: "https://picsum.photos/152/150",
+          imageSrc: "",
           description:
             "Explore the benefits of mindfulness and learn how to reduce stress and improve your mental well-being through mindfulness practices.",
           type: "Wellness",
@@ -91,7 +91,7 @@ export default {
           author: "David James",
           datePublished: "November 10, 2023",
           category: "Technology",
-          imageSrc: "https://picsum.photos/153/150",
+          imageSrc: "",
           description:
             "Stay updated with the latest technology trends and innovations. Learn how to leverage technology for personal and professional growth.",
           type: "Technology",
@@ -101,7 +101,7 @@ export default {
           author: "Sarah Johnson",
           datePublished: "November 25, 2023",
           category: "Finance",
-          imageSrc: "https://picsum.photos/154/150",
+          imageSrc: "",
           description:
             "Discover the essentials of financial planning, from budgeting to investing. Take control of your finances and secure your future.",
           type: "Finance",
@@ -111,7 +111,7 @@ export default {
           author: "Mike Anderson",
           datePublished: "December 5, 2023",
           category: "Fitness",
-          imageSrc: "https://picsum.photos/155/150",
+          imageSrc: "",
           description:
             "Get fit and stay healthy with expert advice on setting and achieving fitness goals. Transform your lifestyle with exercise and nutrition tips.",
           type: "Fitness",
@@ -121,7 +121,7 @@ export default {
           author: "Emily Smith",
           datePublished: "December 20, 2023",
           category: "Cooking",
-          imageSrc: "https://picsum.photos/156/150",
+          imageSrc: "",
           description:
             "Explore the world of culinary delights and learn to cook like a pro. From gourmet recipes to kitchen techniques, elevate your cooking skills.",
           type: "Cooking",
@@ -140,7 +140,38 @@ export default {
       }
     },
   },
+  mounted() {
+    this.loadArticles();
+  },
   methods: {
+    async loadArticles() {
+      this.$store.state.isLoading = true;
+      const promises = this.articles.map(async (article) => {
+        const width = 150 + Math.floor(Math.random() * 20);
+        const height = 150 + Math.floor(Math.random() * 20);
+        const imageUrl = this.generateImageUrl(width, height);
+
+        // Create a promise that resolves when the image has loaded
+        const imagePromise = new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(imageUrl);
+          img.onerror = () => reject(new Error("Image loading error"));
+          img.src = imageUrl;
+        });
+
+        try {
+          article.imageSrc = await imagePromise;
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      await Promise.all(promises);
+      this.$store.state.isLoading = false;
+    },
+    generateImageUrl(width, height) {
+      return `https://picsum.photos/${width}/${height}`;
+    },
     selectCategory(category) {
       this.selectedCategory = category;
     },
