@@ -20,9 +20,32 @@
           ></div>
         </div>
       </div>
-      <div class="card habit-tracker" id="add-habit-container">
+      <div
+        class="card habit-tracker"
+        id="add-habit-container"
+        @click="addHabitModal()"
+      >
         <div class="add-button">
           <h1>Add A New Habit</h1>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL AREA -->
+    <div class="modal card" v-show="showModal">
+      <div class="modal-content">
+        <span class="close" @click="closeModal">&times;</span>
+        <h1>Add a New Habit</h1>
+        <div class="form-group">
+          <label for="habitName">Habit Name:</label>
+          <input
+            type="text"
+            id="habitName"
+            v-model="habitName"
+            class="form-input"
+          />
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px">
+          <button class="modal-button" @click="saveHabit">Save Habit</button>
         </div>
       </div>
     </div>
@@ -33,6 +56,8 @@
 export default {
   data() {
     return {
+      habitName: "",
+      showModal: false,
       habits: [
         {
           name: "Running",
@@ -150,6 +175,16 @@ export default {
     },
   },
   methods: {
+    addHabitModal() {
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
+    },
+    saveHabit() {
+      this.habitName = "";
+      this.showModal = false;
+    },
     updateHabitInfo(habit) {
       this.$store.state.selectedHabitData = habit;
     },
