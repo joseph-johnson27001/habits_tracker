@@ -175,9 +175,6 @@ export default {
     selectCategory(category) {
       this.selectedCategory = category;
     },
-    navigateToArticle() {
-      // WRITE FUNCTION HERE
-    },
   },
 };
 </script>
