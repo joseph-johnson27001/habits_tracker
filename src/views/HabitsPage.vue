@@ -309,7 +309,7 @@ h1 {
 }
 
 .form-input {
-  padding: 10px;
+  padding: 10px 0px;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
