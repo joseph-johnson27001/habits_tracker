@@ -19,7 +19,12 @@
         :key="index"
         class="habit-statistics card"
       >
-        <h1>{{ habit.name }}</h1>
+        <div>
+          <div class="habit-heading-container">
+            <h1>{{ habit.name }}</h1>
+            <i :class="habit.icon"></i>
+          </div>
+        </div>
         <p>Total Time Spent: {{ habit.totalTimeSpent }}</p>
         <p>Completion Count: {{ habit.completionCount }}</p>
         <p>Longest Streak: {{ habit.longestStreak }}</p>
@@ -47,6 +52,7 @@ export default {
           averagePerformance: "5 times per week",
           customMetric: "Distance Covered",
           goalProgress: "80%",
+          icon: "fas fa-running",
         },
         {
           name: "Reading",
@@ -57,6 +63,7 @@ export default {
           averagePerformance: "3 times per week",
           customMetric: "Books Completed",
           goalProgress: "60%",
+          icon: "fas fa-book",
         },
         {
           name: "Meditation",
@@ -67,6 +74,7 @@ export default {
           averagePerformance: "2 times per week",
           customMetric: "Minutes Meditated",
           goalProgress: "40%",
+          icon: "fas fa-praying-hands",
         },
         {
           name: "Coding",
@@ -77,6 +85,7 @@ export default {
           averagePerformance: "4 times per week",
           customMetric: "Projects Completed",
           goalProgress: "90%",
+          icon: "fas fa-code",
         },
         {
           name: "Gardening",
@@ -87,6 +96,7 @@ export default {
           averagePerformance: "3 times per week",
           customMetric: "Plants Grown",
           goalProgress: "70%",
+          icon: "fas fa-seedling",
         },
         {
           name: "Cooking",
@@ -97,6 +107,7 @@ export default {
           averagePerformance: "2 times per week",
           customMetric: "New Recipes Tried",
           goalProgress: "50%",
+          icon: "fas fa-utensils",
         },
         // Add more habits as needed
       ],
@@ -131,9 +142,13 @@ h2 {
   margin-bottom: 10px;
 }
 
+.habit-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .statistic {
   margin-bottom: 5px;
 }
-
-/* Add more custom styles as needed */
 </style>
