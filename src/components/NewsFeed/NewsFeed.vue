@@ -662,7 +662,7 @@ export default {
   padding: 10px 0px 10px 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   transition: box-shadow 0.1s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 5px;
