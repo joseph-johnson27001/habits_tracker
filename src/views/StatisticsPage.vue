@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="habit-statistics card">
+    <div class="habit-statistics card" style="margin-bottom: 10px">
       <h1>Overall</h1>
       <p>Habit with Longest Streak: {{ overall.longestStreakHabit }}</p>
       <p>
@@ -127,7 +127,7 @@ export default {
 .statistics-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 10px;
 }
 
 @media (max-width: 992px) {
@@ -136,18 +136,13 @@ export default {
   }
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
 .habit-heading-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.habit-heading-container i {
-  font-size: 24px;
+.habit-statistics {
+  margin-bottom: 0px;
 }
 </style>
