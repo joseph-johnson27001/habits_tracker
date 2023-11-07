@@ -22,7 +22,7 @@
         <div>
           <div class="habit-heading-container">
             <h1>{{ habit.name }}</h1>
-            <i :class="habit.icon"></i>
+            <span>{{ habit.icon }}</span>
           </div>
         </div>
         <p>Total Time Spent: {{ habit.totalTimeSpent }}</p>
@@ -52,7 +52,7 @@ export default {
           averagePerformance: "5 times per week",
           customMetric: "Distance Covered",
           goalProgress: "80%",
-          icon: "fas fa-running",
+          icon: "🏆",
         },
         {
           name: "Reading",
@@ -63,7 +63,7 @@ export default {
           averagePerformance: "3 times per week",
           customMetric: "Books Completed",
           goalProgress: "60%",
-          icon: "fas fa-book",
+          icon: "🥇",
         },
         {
           name: "Meditation",
@@ -74,7 +74,7 @@ export default {
           averagePerformance: "2 times per week",
           customMetric: "Minutes Meditated",
           goalProgress: "40%",
-          icon: "fas fa-praying-hands",
+          icon: "🎯",
         },
         {
           name: "Coding",
@@ -85,7 +85,7 @@ export default {
           averagePerformance: "4 times per week",
           customMetric: "Projects Completed",
           goalProgress: "90%",
-          icon: "fas fa-code",
+          icon: "🌟",
         },
         {
           name: "Gardening",
@@ -96,7 +96,7 @@ export default {
           averagePerformance: "3 times per week",
           customMetric: "Plants Grown",
           goalProgress: "70%",
-          icon: "fas fa-seedling",
+          icon: "🏅",
         },
         {
           name: "Cooking",
@@ -107,9 +107,8 @@ export default {
           averagePerformance: "2 times per week",
           customMetric: "New Recipes Tried",
           goalProgress: "50%",
-          icon: "fas fa-utensils",
+          icon: "🍳",
         },
-        // Add more habits as needed
       ],
       overall: {
         longestStreakHabit: "Running (77 days)",
@@ -128,7 +127,7 @@ export default {
 .statistics-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
 }
 
 @media (max-width: 992px) {
@@ -148,7 +147,7 @@ h2 {
   align-items: center;
 }
 
-.statistic {
-  margin-bottom: 5px;
+.habit-heading-container i {
+  font-size: 24px;
 }
 </style>
