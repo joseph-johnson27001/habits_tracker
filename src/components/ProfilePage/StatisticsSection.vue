@@ -2,7 +2,9 @@
   <div class="statistics-section">
     <div class="heading-area">
       <h1>STATISTICS</h1>
-      <i class="fas fa-angle-right view-more-link"></i>
+      <router-link to="/statistics" class="nav-link">
+        <i class="fas fa-angle-right view-more-link"></i>
+      </router-link>
     </div>
     <div class="statistics-summary">
       <div class="stat-item">
