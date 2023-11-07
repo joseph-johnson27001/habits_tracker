@@ -1,13 +1,23 @@
 <template>
-  <div class="card">
-    <h1>Overall</h1>
-    <p>Habit with Longest Streak: {{ overall.longestStreakHabit }}</p>
-    <p>Total Time Spent on All Habits: {{ overall.totalTimeSpentAllHabits }}</p>
-    <p>Total Habit Completions: {{ overall.totalHabitCompletions }}</p>
-    <p>Overall Average Performance: {{ overall.overallAveragePerformance }}</p>
-    <p>Overall Custom Metric: {{ overall.overallCustomMetric }}</p>
-    <p>Overall Goal Progress: {{ overall.overallGoalProgress }}</p>
-    <div v-for="(habit, index) in habits" :key="index" class="habit-statistics">
+  <div class="statistics-layout">
+    <div class="habit-statistics card">
+      <h1>Overall</h1>
+      <p>Habit with Longest Streak: {{ overall.longestStreakHabit }}</p>
+      <p>
+        Total Time Spent on All Habits: {{ overall.totalTimeSpentAllHabits }}
+      </p>
+      <p>Total Habit Completions: {{ overall.totalHabitCompletions }}</p>
+      <p>
+        Overall Average Performance: {{ overall.overallAveragePerformance }}
+      </p>
+      <p>Overall Custom Metric: {{ overall.overallCustomMetric }}</p>
+      <p>Overall Goal Progress: {{ overall.overallGoalProgress }}</p>
+    </div>
+    <div
+      v-for="(habit, index) in habits"
+      :key="index"
+      class="habit-statistics card"
+    >
       <h1>{{ habit.name }}</h1>
       <p>Total Time Spent: {{ habit.totalTimeSpent }}</p>
       <p>Completion Count: {{ habit.completionCount }}</p>
@@ -72,6 +82,12 @@ export default {
 </script>
 
 <style scoped>
+.statistics-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -79,12 +95,6 @@ h2 {
 
 .statistic {
   margin-bottom: 5px;
-}
-
-.habit-statistics {
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
 }
 
 /* Add more custom styles as needed */
