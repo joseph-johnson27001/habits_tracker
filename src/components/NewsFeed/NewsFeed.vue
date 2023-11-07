@@ -10,7 +10,9 @@
           required
           placeholder="Update Status"
         ></textarea>
-        <button type="submit" class="post-button">Post</button>
+        <div class="post-button-container">
+          <button type="submit" class="post-button">Post</button>
+        </div>
       </form>
     </div>
     <div class="feed-item card" v-for="(item, index) in feedItems" :key="index">
@@ -687,6 +689,11 @@ export default {
 /* .post-button:hover {
   background-color: #3a59c0;
 } */
+
+.post-button-container {
+  display: flex;
+  justify-content: end;
+}
 
 .status-form {
   margin-right: 10px;
