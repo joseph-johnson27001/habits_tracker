@@ -10,6 +10,7 @@ import SettingsPage from "@/views/SettingsPage.vue";
 import StorePage from "@/views/StorePage.vue";
 import ArticlePage from "@/views/ArticlePage.vue";
 import ChallengesPage from "@/views/ChallengesPage.vue";
+import StatisticsPage from "@/views/StatisticsPage.vue";
 import Store from "@/store";
 
 Vue.use(VueRouter);
@@ -25,6 +26,7 @@ const routes = [
   { path: "/settings", component: SettingsPage },
   { path: "/store", component: StorePage },
   { path: "/challenges", component: ChallengesPage },
+  { path: "/statistics", component: StatisticsPage },
 ];
 
 const router = new VueRouter({
