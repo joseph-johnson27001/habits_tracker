@@ -1,15 +1,16 @@
 <template>
   <div class="news-feed">
     <SearchBar />
-    <div class="status-update card">
-      <h1>Status Update</h1>
-      <form @submit.prevent="createStatusUpdate">
+    <div class="status-update">
+      <form @submit.prevent="createStatusUpdate" class="status-form">
         <textarea
           v-model="newStatusUpdate.content"
           id="content"
+          class="status-input"
           required
+          placeholder="Update Status"
         ></textarea>
-        <button type="submit">Post</button>
+        <button type="submit" class="post-button">Post</button>
       </form>
     </div>
     <div class="feed-item card" v-for="(item, index) in feedItems" :key="index">
@@ -88,7 +89,7 @@ export default {
         content: "",
         userName: this.$store.state.userName,
         userTitle: this.$store.state.userTitle,
-        timestamp: "",
+        timestamp: "Just now",
         likes: 0,
         commentsVisible: false,
         userImage: require("@/assets/images/joe-taj.jpg"),
@@ -650,5 +651,43 @@ export default {
   border: 1px solid #6da9e4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   outline: none;
+}
+
+.status-input {
+  width: 100%;
+  height: 100px;
+  padding: 10px 0px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: box-shadow 0.1s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.status-input:focus {
+  border: 1px solid #6da9e4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.post-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.post-button:hover {
+  background-color: #45a049;
+}
+
+.status-form {
+  margin-right: 10px;
 }
 </style>
