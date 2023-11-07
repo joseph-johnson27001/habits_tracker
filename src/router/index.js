@@ -45,19 +45,4 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-// BELOW: DUMMY FOR LOADING STATE EXAMPLE
-
-// router.beforeEach((to, from, next) => {
-//   Store.state.isLoading = true; // Set isLoading to true initially
-//   setTimeout(() => {
-//     window.scrollTo(0, 0);
-//     const contentContainer = document.querySelector(".content-container");
-//     if (contentContainer) {
-//       contentContainer.scrollTop = 0; // Scrolls to the top of the content container
-//     }
-//     Store.state.isLoading = false; // Set isLoading to false after 2 seconds
-//     next();
-//   }, 2000);
-// });
-
 export default router;
