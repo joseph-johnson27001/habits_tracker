@@ -693,6 +693,7 @@ export default {
 .post-button-container {
   display: flex;
   justify-content: end;
+  margin-right: -10px;
 }
 
 .status-form {
