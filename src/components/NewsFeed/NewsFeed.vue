@@ -1,6 +1,18 @@
 <template>
   <div class="news-feed">
     <SearchBar />
+    <div class="status-update card">
+      <h3>Create a New Status Update</h3>
+      <form @submit.prevent="createStatusUpdate">
+        <label for="content">Content:</label>
+        <textarea
+          v-model="newStatusUpdate.content"
+          id="content"
+          required
+        ></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </div>
     <div class="feed-item card" v-for="(item, index) in feedItems" :key="index">
       <div class="user-info">
         <img
@@ -73,6 +85,21 @@ export default {
   },
   data() {
     return {
+      newStatusUpdate: {
+        content: "",
+        userName: this.$store.state.userName,
+        userTitle: this.$store.state.userTitle,
+        timestamp: "",
+        likes: 0,
+        commentsVisible: false,
+        userImage: require("@/assets/images/joe-taj.jpg"),
+        newComment: {
+          text: "",
+          commenter: this.$store.state.userName,
+          timestamp: "Just now",
+        },
+        comments: [],
+      },
       profileImage: require("@/assets/images/joe-taj.jpg"),
       feedItems: [
         {
@@ -406,6 +433,27 @@ export default {
     this.loadImages();
   },
   methods: {
+    createStatusUpdate() {
+      if (this.newStatusUpdate.content.trim() === "") {
+        alert("Please fill in the status update content");
+      } else {
+        this.feedItems.unshift({ ...this.newStatusUpdate });
+        this.newStatusUpdate = {
+          content: "",
+          userName: this.$store.state.userName,
+          userTitle: this.$store.state.userTitle,
+          timestamp: "Just Now",
+          likes: 0,
+          commentsVisible: false,
+          newComment: {
+            text: "",
+            commenter: this.$store.state.userName,
+            timestamp: "Just now",
+          },
+          comments: [],
+        };
+      }
+    },
     generateImageUrl(width, height) {
       return `https://picsum.photos/${width}/${height}`;
     },
