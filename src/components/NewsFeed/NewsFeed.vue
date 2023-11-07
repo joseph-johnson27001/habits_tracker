@@ -444,6 +444,7 @@ export default {
           userTitle: this.$store.state.userTitle,
           timestamp: "Just Now",
           likes: 0,
+          userImage: require("@/assets/images/joe-taj.jpg"),
           commentsVisible: false,
           newComment: {
             text: "",
