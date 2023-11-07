@@ -2,9 +2,8 @@
   <div class="news-feed">
     <SearchBar />
     <div class="status-update card">
-      <h3>Create a New Status Update</h3>
+      <h1>Status Update</h1>
       <form @submit.prevent="createStatusUpdate">
-        <label for="content">Content:</label>
         <textarea
           v-model="newStatusUpdate.content"
           id="content"
