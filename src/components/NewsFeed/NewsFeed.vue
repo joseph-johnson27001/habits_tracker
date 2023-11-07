@@ -665,7 +665,7 @@ export default {
   border-radius: 4px;
   transition: box-shadow 0.1s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .status-input:focus {
@@ -675,20 +675,20 @@ export default {
 }
 
 .post-button {
-  background-color: #3a59c0;
+  background-color: #4169e1;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  /* transition: background-color 0.3s; */
+  transition: background-color 0.1s;
   margin-bottom: 10px;
 }
 
-/* .post-button:hover {
+.post-button:hover {
   background-color: #3a59c0;
-} */
+}
 
 .post-button-container {
   display: flex;
