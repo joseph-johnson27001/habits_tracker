@@ -693,7 +693,7 @@ export default {
 
 .post-button-container {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: -10px;
 }
 
