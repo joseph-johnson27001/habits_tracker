@@ -2,7 +2,15 @@
   <div class="news-feed">
     <SearchBar />
     <div class="status-update">
-      <form @submit.prevent="createStatusUpdate" class="status-form">
+      <form
+        @submit.prevent="createStatusUpdate"
+        class="status-form"
+        style="
+          display: grid;
+          grid-template-columns: 8fr 1fr;
+          margin-bottom: 20px;
+        "
+      >
         <textarea
           v-model="newStatusUpdate.content"
           id="content"
@@ -685,6 +693,7 @@ export default {
   font-size: 16px;
   transition: background-color 0.1s;
   margin-bottom: 10px;
+  height: min-content;
 }
 
 .post-button:hover {
@@ -695,6 +704,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   margin-right: -10px;
+  align-items: flex-end;
 }
 
 .status-form {
