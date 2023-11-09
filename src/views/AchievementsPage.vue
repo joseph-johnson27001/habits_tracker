@@ -1,17 +1,19 @@
 <template>
-  <div class="card">
-    <h1>{{ headingText }}</h1>
-    <select v-model="selectedCategory" @change="filterAchievements">
-      <option v-for="option in selectOptions" :value="option" :key="option">
-        {{ option }}
-      </option>
-    </select>
+  <div>
+    <div class="card">
+      <h1>{{ headingText }}</h1>
+      <select v-model="selectedCategory" @change="filterAchievements">
+        <option v-for="option in selectOptions" :value="option" :key="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
 
     <div class="achievement-list">
       <div
         v-for="(achievement, index) in filteredAchievements"
         :key="index"
-        class="achievement-item"
+        class="achievement-item card"
       >
         <div class="achievement-icon">{{ achievement.icon }}</div>
         <div class="achievement-details">
@@ -92,7 +94,6 @@ export default {
           title: "Art Enthusiast",
           description: "You've created beautiful art!",
         },
-        // Add more achievements with different areas
       ],
     };
   },
@@ -144,8 +145,14 @@ select:focus {
 
 .achievement-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 992px) {
+  .achievement-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .achievement-item {
