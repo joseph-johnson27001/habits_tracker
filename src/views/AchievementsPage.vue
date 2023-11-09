@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h1>{{ this.$store.state.userName }}'s Achievements</h1>
+    <h1>{{ headingText }}</h1>
     <select v-model="selectedCategory" @change="filterAchievements">
       <option v-for="option in selectOptions" :value="option" :key="option">
         {{ option }}
@@ -97,6 +97,13 @@ export default {
     };
   },
   computed: {
+    headingText() {
+      if (this.selectedCategory === "All") {
+        return `${this.$store.state.userName}'s Achievements`;
+      } else {
+        return `${this.$store.state.userName}'s ${this.selectedCategory} Achievements`;
+      }
+    },
     selectOptions() {
       const areas = new Set(this.achievements.map((item) => item.area));
       return ["All", ...areas];
