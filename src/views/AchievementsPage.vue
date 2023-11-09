@@ -119,6 +119,55 @@ export default {
 };
 </script>
 
-<style>
-/* your existing CSS styles for the achievements page */
+<style scoped>
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+select:focus {
+  border: 1px solid #6da9e4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.achievement-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.achievement-icon {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.achievement-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.achievement-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.achievement-item:hover {
+  background-color: #f2f2f2;
+  transform: translateY(-2px);
+}
 </style>
