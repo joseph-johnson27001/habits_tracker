@@ -2,15 +2,7 @@
   <div class="news-feed">
     <SearchBar />
     <div class="status-update">
-      <form
-        @submit.prevent="createStatusUpdate"
-        class="status-form"
-        style="
-          display: grid;
-          grid-template-columns: 8fr 1fr;
-          margin-bottom: 20px;
-        "
-      >
+      <form @submit.prevent="createStatusUpdate" class="status-form">
         <textarea
           v-model="newStatusUpdate.content"
           id="content"
@@ -708,6 +700,19 @@ export default {
 }
 
 .status-form {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  margin-bottom: 20px;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .status-form {
+    grid-template-columns: 1fr;
+  }
+  .post-button {
+    margin: 10px auto;
+    width: 100%;
+  }
 }
 </style>
