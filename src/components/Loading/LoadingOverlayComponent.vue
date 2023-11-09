@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .overlay {
   position: absolute;
   top: 0;

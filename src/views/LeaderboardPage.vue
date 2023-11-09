@@ -95,7 +95,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .leaderboard-page {
   display: grid;
   grid-template-columns: 3fr 1fr;
