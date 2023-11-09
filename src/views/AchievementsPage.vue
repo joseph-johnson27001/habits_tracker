@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="card">
+    <!-- <div class="card">
       <h1>{{ headingText }}</h1>
-    </div>
+    </div> -->
     <select
       v-model="selectedCategory"
       @change="filterAchievements"
