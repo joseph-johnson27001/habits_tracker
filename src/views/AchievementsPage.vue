@@ -343,6 +343,5 @@ select:focus {
 
 .achievement-item:not(.achieved) {
   filter: grayscale(100%);
-  pointer-events: none;
 }
 </style>
