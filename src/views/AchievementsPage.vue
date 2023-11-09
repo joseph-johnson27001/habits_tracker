@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h1>ACHIEVEMENTS</h1>
+    <h1>{{ this.$store.state.userName }}'s Achievements</h1>
     <select v-model="selectedCategory" @change="filterAchievements">
       <option v-for="option in selectOptions" :value="option" :key="option">
         {{ option }}
