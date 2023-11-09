@@ -2,7 +2,9 @@
   <div class="achievements-section">
     <div class="heading-area">
       <h1>ACHIEVEMENTS</h1>
-      <i class="fas fa-angle-right view-more-link"></i>
+      <router-link to="/achievements" class="nav-link">
+        <i class="fas fa-angle-right view-more-link"></i>
+      </router-link>
     </div>
     <div class="achievements-list">
       <!-- Loop through achievements and display them -->
