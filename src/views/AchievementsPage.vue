@@ -30,7 +30,7 @@ export default {
   name: "AchievementsPage",
   data() {
     return {
-      selectedCategory: "all",
+      selectedCategory: "All",
       achievements: [
         {
           area: "Fitness",
@@ -99,10 +99,10 @@ export default {
   computed: {
     selectOptions() {
       const areas = new Set(this.achievements.map((item) => item.area));
-      return ["all", ...areas];
+      return ["All", ...areas];
     },
     filteredAchievements() {
-      if (this.selectedCategory === "all") {
+      if (this.selectedCategory === "All") {
         return this.achievements;
       } else {
         return this.achievements.filter(
