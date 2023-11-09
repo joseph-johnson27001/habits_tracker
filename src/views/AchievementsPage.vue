@@ -318,7 +318,7 @@ select:focus {
   display: flex;
   align-items: center;
   transition: background-color 0.3s, transform 0.2s;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .achievement-icon {
