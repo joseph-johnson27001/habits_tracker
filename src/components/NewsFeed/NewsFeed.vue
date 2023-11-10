@@ -23,7 +23,9 @@
           class="user-image"
         />
         <div>
-          <span class="user-name">{{ item.userName }}</span>
+          <router-link to="/profile" style="text-decoration: none">
+            <span class="user-name">{{ item.userName }}</span>
+          </router-link>
           <br />
           <span class="user-title">{{ item.userTitle }}</span>
         </div>
@@ -56,9 +58,11 @@
               class="commenter-image"
             />
             <div class="timestamp-container">
-              <span class="commenter commenter-name">{{
-                comment.commenter
-              }}</span>
+              <router-link to="/profile" style="text-decoration: none">
+                <span class="commenter commenter-name">{{
+                  comment.commenter
+                }}</span>
+              </router-link>
               <span class="comment-date">{{ comment.timestamp }}</span>
             </div>
           </div>
