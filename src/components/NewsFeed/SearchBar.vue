@@ -12,22 +12,24 @@
       v-if="searchResults.length > 0 && showResults && searchText.length > 0"
       class="search-results"
     >
-      <div
-        v-for="result in searchResults"
-        :key="result.id"
-        class="search-result"
-        @click="handleSearchResultClick(result)"
-      >
-        <img
-          :src="result.userImage"
-          alt="User Profile Image"
-          class="search-result-image"
-        />
-        <div class="search-result-info">
-          <div class="search-result-name">{{ result.userName }}</div>
-          <div class="search-result-title">{{ result.userTitle }}</div>
+      <router-link to="/profile" style="text-decoration: none">
+        <div
+          v-for="result in searchResults"
+          :key="result.id"
+          class="search-result"
+          @click="handleSearchResultClick(result)"
+        >
+          <img
+            :src="result.userImage"
+            alt="User Profile Image"
+            class="search-result-image"
+          />
+          <div class="search-result-info">
+            <div class="search-result-name">{{ result.userName }}</div>
+            <div class="search-result-title">{{ result.userTitle }}</div>
+          </div>
         </div>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
