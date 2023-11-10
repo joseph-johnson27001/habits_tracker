@@ -12,7 +12,7 @@
         @click="handleItemClick(item)"
       >
         <div class="item-image">{{ item.icon }}</div>
-        <h2>{{ item.name }}</h2>
+        <h2 class="item-name">{{ item.name }}</h2>
         <p>{{ item.description }}</p>
         <p v-if="!item.locked" class="unlocked-text">Unlocked</p>
         <p v-else class="locked-text">Locked</p>
@@ -23,7 +23,7 @@
       <div class="modal-content" @click.stop>
         <span class="close-icon" @click="closeModal">&times;</span>
         <div class="item-image modal-item-image">{{ selectedItem.icon }}</div>
-        <h2>{{ selectedItem.name }}</h2>
+        <h2 class="modal-item-name">{{ selectedItem.name }}</h2>
         <p>{{ selectedItem.description }}</p>
         <button
           v-if="!selectedItem.locked"
@@ -261,7 +261,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .close-icon {
@@ -286,6 +286,10 @@ export default {
   background-color: #315b8e;
 }
 
+.modal-item-name {
+  margin: auto;
+}
+
 .modal-item-container {
   display: flex;
   flex-direction: column;
@@ -293,6 +297,8 @@ export default {
 }
 
 .modal-item-image {
+  display: flex;
+  justify-content: center;
   font-size: 48px;
   margin-bottom: 20px;
 }
