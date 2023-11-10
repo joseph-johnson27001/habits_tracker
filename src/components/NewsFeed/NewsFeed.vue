@@ -714,6 +714,10 @@ export default {
   .status-form {
     grid-template-columns: 1fr;
   }
+
+  .post-button-container {
+    margin-top: 15px;
+  }
   .post-button {
     margin: 10px auto;
     width: 100%;
