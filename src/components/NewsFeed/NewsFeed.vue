@@ -658,14 +658,14 @@ export default {
 
 .status-input {
   width: 100%;
-  height: 100px;
+  height: 60px;
   padding: 10px 0px 10px 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: box-shadow 0.1s;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   resize: none;
 }
 
@@ -684,8 +684,11 @@ export default {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.1s;
-  margin-bottom: 10px;
-  height: min-content;
+  /* margin-bottom: 10px; */
+  /* height: min-content; */
+  height: 100%;
+  margin-left: 20px;
+  width: 100%;
 }
 
 .post-button:hover {
@@ -697,11 +700,12 @@ export default {
   justify-content: flex-end;
   margin-right: -10px;
   align-items: flex-end;
+  height: 100%;
 }
 
 .status-form {
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 7fr 1fr;
   margin-bottom: 20px;
   margin-right: 10px;
 }
