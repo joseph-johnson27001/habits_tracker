@@ -628,7 +628,7 @@ export default {
     if (this.$store.state.selectedUser) {
       this.userName = this.$store.state.selectedUserName;
       this.userTitle = this.$store.state.selectedUserTitle;
-      this.profileImage = this.generateImageUrl(200, 200);
+      this.profileImage = this.generateImageUrl(225, 225);
     }
   },
   methods: {
@@ -667,8 +667,8 @@ export default {
 }
 
 .profile-picture img {
-  max-width: 225px;
-  max-height: 225px;
+  width: 225px;
+  height: 225px;
   border-radius: 8px;
   border: 1px solid #6da9e4;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
