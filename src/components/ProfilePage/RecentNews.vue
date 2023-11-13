@@ -16,7 +16,10 @@
         </div>
         <div class="activity-details">
           <p>
-            <span class="user-name">{{ $store.state.userName }}</span>
+            <span class="user-name" v-if="$store.state.selectedUser">{{
+              $store.state.selectedUserName
+            }}</span>
+            <span class="user-name" v-else>{{ $store.state.userName }}</span>
             {{ activity.message }}
           </p>
           <p class="activity-timestamp">{{ activity.timestamp }}</p>
