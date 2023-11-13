@@ -443,6 +443,8 @@ export default {
   methods: {
     viewProfile(item) {
       this.$store.state.selectedUserName = item.userName;
+      this.$store.state.selectedUserTitle = item.userTitle;
+      console.log(item);
       this.$store.state.selectedUser = true;
       // If selectedUser = true, then load these values on the profile page
     },

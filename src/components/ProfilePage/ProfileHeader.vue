@@ -624,6 +624,12 @@ export default {
       nextLevelValue: 12,
     };
   },
+  mounted() {
+    if (this.$store.state.selectedUser) {
+      this.userName = this.$store.state.selectedUserName;
+      this.userTitle = this.$store.state.selectedUserTitle;
+    }
+  },
 };
 </script>
 
