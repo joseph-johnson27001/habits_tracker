@@ -628,7 +628,13 @@ export default {
     if (this.$store.state.selectedUser) {
       this.userName = this.$store.state.selectedUserName;
       this.userTitle = this.$store.state.selectedUserTitle;
+      this.profileImage = this.generateImageUrl(200, 200);
     }
+  },
+  methods: {
+    generateImageUrl(width, height) {
+      return `https://picsum.photos/${width}/${height}`;
+    },
   },
 };
 </script>
