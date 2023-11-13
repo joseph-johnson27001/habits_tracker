@@ -9,7 +9,6 @@ const store = new Vuex.Store({
     userTitle: "Productivity Wizard",
     selectedHabitData: {},
     isLoading: false,
-    // If user clicks on different profile, selected user becomse true. If they click on own image, it becomes false.
     selectedUserName: null,
     selectedUserTitle: null,
     selectedUser: false,

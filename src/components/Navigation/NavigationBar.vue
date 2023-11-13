@@ -52,9 +52,7 @@ export default {
   },
   methods: {
     viewProfile() {
-      console.log("VIEWING");
       this.$store.state.selectedUser = false;
-      console.log(this.$store.state.selectedUser);
     },
     isRouteActive(route) {
       return this.$route.path === route;
