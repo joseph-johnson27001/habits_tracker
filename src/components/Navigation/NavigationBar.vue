@@ -53,6 +53,9 @@ export default {
   methods: {
     viewProfile() {
       this.$store.state.selectedUser = false;
+      if (this.$route.path === "/profile") {
+        this.$router.go();
+      }
     },
     isRouteActive(route) {
       return this.$route.path === route;
