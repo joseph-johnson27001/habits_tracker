@@ -625,10 +625,14 @@ export default {
     };
   },
   mounted() {
-    if (this.$store.state.selectedUser) {
+    if (this.$store.state.selectedUser == true) {
       this.userName = this.$store.state.selectedUserName;
       this.userTitle = this.$store.state.selectedUserTitle;
       this.profileImage = this.generateImageUrl(225, 225);
+    } else {
+      this.userName = this.$store.state.userName;
+      this.userTitle = this.$store.state.userTitle;
+      this.profileImage = require("@/assets/images/joe-taj.jpg");
     }
   },
   methods: {

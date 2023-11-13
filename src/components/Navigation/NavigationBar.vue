@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation-bar">
     <div class="navigation-container">
-      <router-link to="/" class="nav-link" @click="viewProfile()">
+      <router-link to="/" class="nav-link">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1024 1024"
@@ -36,6 +36,7 @@
           :src="profileImage"
           alt="User Profile"
           class="user-profile-image"
+          @click="viewProfile()"
         />
       </router-link>
     </div>
@@ -51,7 +52,9 @@ export default {
   },
   methods: {
     viewProfile() {
+      console.log("VIEWING");
       this.$store.state.selectedUser = false;
+      console.log(this.$store.state.selectedUser);
     },
     isRouteActive(route) {
       return this.$route.path === route;
