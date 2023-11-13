@@ -24,7 +24,9 @@
         />
         <div>
           <router-link to="/profile" style="text-decoration: none">
-            <span class="user-name">{{ item.userName }}</span>
+            <span class="user-name" @click="viewProfile(item)">{{
+              item.userName
+            }}</span>
           </router-link>
           <br />
           <span class="user-title">{{ item.userTitle }}</span>
@@ -439,6 +441,11 @@ export default {
     this.loadImages();
   },
   methods: {
+    viewProfile(item) {
+      this.$store.state.selectedUserName = item.userName;
+      this.$store.state.selectedUser = true;
+      // If selectedUser = true, then load these values on the profile page
+    },
     createStatusUpdate() {
       if (this.newStatusUpdate.content.trim() === "") {
         alert("Please fill in the status update content");
