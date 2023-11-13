@@ -9,6 +9,8 @@ const store = new Vuex.Store({
     userTitle: "Productivity Wizard",
     selectedHabitData: {},
     isLoading: false,
+    selectedUserName: null,
+    selectedUserImage: null,
   },
 });
 
