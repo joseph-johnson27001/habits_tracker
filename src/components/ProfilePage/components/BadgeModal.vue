@@ -1,12 +1,12 @@
 <template>
-  <div class="badge-modal-overlay" v-if="isVisible" @click="closeModal">
+  <div class="badge-modal-overlay" @click="closeModal">
     <div class="badge-modal">
       <div class="modal-content">
-        <h2>{{ selectedBadge.name }}</h2>
-        🏆
-        <p>{{ selectedBadge.description }}</p>
-        <p>Achieved on: {{ selectedBadge.achievedOn }}</p>
-        <button @click="closeModal">Close</button>
+        <h2 class="badge-name">{{ selectedBadge.name }}</h2>
+        <span class="badge-icon">🏆</span>
+        <p class="badge-description">{{ selectedBadge.description }}</p>
+        <p class="achieved-date">Achieved on: {{ selectedBadge.achievedOn }}</p>
+        <button class="close-button" @click="closeModal">Close</button>
       </div>
     </div>
   </div>
@@ -27,6 +27,8 @@ export default {
 </script>
 
 <style scoped>
+/* Add your existing styles here */
+
 .badge-modal-overlay {
   position: fixed;
   top: 0;
@@ -56,6 +58,41 @@ export default {
 .badge-icon {
   width: 80px;
   height: 80px;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.badge-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.badge-icon {
+  font-size: 40px;
+}
+
+.badge-description {
+  margin-bottom: 15px;
+}
+
+.achieved-date {
+  font-style: italic;
+  color: #555; /* Example color */
+  margin-bottom: 15px;
+}
+
+.close-button {
+  padding: 10px;
+  background-color: #3498db; /* Example background color */
+  color: #fff; /* Example text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 /* Add more styles as needed */
