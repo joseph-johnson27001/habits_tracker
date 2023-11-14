@@ -11,7 +11,11 @@
           <img :src="user.imageURL" alt="User Avatar" class="user-image" />
           <div class="user-container">
             <div class="user-heading">
-              <span class="user-name">{{ user.name }} </span>
+              <router-link to="/profile" style="text-decoration: none">
+                <span class="user-name" @click="viewProfile(user)"
+                  >{{ user.name }}
+                </span>
+              </router-link>
               <span class="user-title"
                 >{{ user.rank }}{{ getRankSuffix(user.rank) }}</span
               >
@@ -96,6 +100,11 @@ export default {
     this.loadImages();
   },
   methods: {
+    viewProfile(item) {
+      this.$store.state.selectedUserName = item.name;
+      this.$store.state.selectedUserTitle = "Productivity Pro";
+      this.$store.state.selectedUser = true;
+    },
     generateImageUrl(width, height) {
       return `https://picsum.photos/${width}/${height}`;
     },
