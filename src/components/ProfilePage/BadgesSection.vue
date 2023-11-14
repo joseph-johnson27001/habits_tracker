@@ -35,110 +35,144 @@ export default {
       userName: this.$store.state.userName,
       badges: [
         {
-          name: "Badge 1",
+          name: "Fitness Enthusiast",
           icon: "🏆",
           achievedOn: "1st February 2023",
+          description:
+            "You're a fitness enthusiast! This badge was earned for maintaining a streak of 30 consecutive days of exercise.",
         },
         {
-          name: "Badge 2",
+          name: "Champion",
           icon: "🥇",
           achievedOn: "2nd February 2023",
+          description:
+            "You're a true champion! This badge was earned for outstanding achievements.",
         },
         {
-          name: "Badge 3",
+          name: "Sharpshooter",
           icon: "🎯",
           achievedOn: "3rd February 2023",
+          description:
+            "Precision and accuracy define you. This badge was earned for exceptional focus.",
         },
         {
-          name: "Badge 4",
+          name: "Stellar Performer",
           icon: "🌟",
           achievedOn: "4th February 2023",
+          description:
+            "You shine like a star! This badge was earned for consistently stellar performances.",
         },
         {
-          name: "Badge 5",
+          name: "Top Athlete",
           icon: "🏅",
           achievedOn: "5th February 2023",
+          description:
+            "Congratulations! You're a top athlete, earning this badge for exceptional sportsmanship.",
         },
         {
-          name: "Badge 6",
+          name: "Rocket Scientist",
           icon: "🚀",
           achievedOn: "6th February 2023",
+          description:
+            "Your intelligence knows no bounds. This badge was earned for groundbreaking achievements.",
         },
         {
-          name: "Badge 7",
+          name: "Bookworm",
           icon: "📚",
           achievedOn: "7th February 2023",
+          description:
+            "You're a true bookworm! This badge was earned for a commitment to lifelong learning.",
         },
         {
-          name: "Badge 8",
+          name: "Strength and Power",
           icon: "💪",
           achievedOn: "8th February 2023",
+          description:
+            "Your strength and power are unmatched. This badge was earned for outstanding physical prowess.",
         },
         {
-          name: "Badge 9",
+          name: "Nature Explorer",
           icon: "🌿",
           achievedOn: "9th February 2023",
+          description:
+            "You love exploring nature. This badge was earned for a deep connection with the outdoors.",
         },
         {
-          name: "Badge 10",
+          name: "Celebration Master",
           icon: "🎉",
           achievedOn: "10th February 2023",
+          description:
+            "You know how to celebrate! This badge was earned for spreading joy and happiness.",
         },
         {
-          name: "Badge 11",
+          name: "Mastermind",
           icon: "🧠",
           achievedOn: "11th February 2023",
+          description:
+            "Your intellect is unmatched. This badge was earned for solving complex problems with ease.",
         },
         {
-          name: "Badge 12",
+          name: "Trailblazer",
           icon: "🔥",
           achievedOn: "12th February 2023",
+          description:
+            "You're a true trailblazer! This badge was earned for paving the way for others.",
         },
         {
-          name: "Badge 13",
+          name: "Honorable Achiever",
           icon: "🎖️",
           achievedOn: "13th February 2023",
+          description:
+            "You've earned the highest honor. This badge was awarded for outstanding achievements.",
         },
         {
-          name: "Badge 14",
+          name: "Illuminator",
           icon: "💡",
           achievedOn: "14th February 2023",
+          description:
+            "You bring light to every situation. This badge was earned for creativity and innovation.",
         },
         {
-          name: "Badge 15",
+          name: "Sunshine Spreader",
           icon: "🌞",
           achievedOn: "15th February 2023",
+          description:
+            "You spread sunshine wherever you go. This badge was earned for a positive and cheerful attitude.",
         },
         {
-          name: "Badge 16",
+          name: "Space Explorer",
           icon: "🚀",
           achievedOn: "16th February 2023",
+          description:
+            "You're an explorer of the cosmos. This badge was earned for an interest in space exploration.",
         },
         {
-          name: "Badge 16",
-          icon: "🚀",
-          completed: false,
-          achievedOn: "17th February 2023",
-        },
-        {
-          name: "Badge 17",
+          name: "Global Citizen",
           icon: "🌍",
-          achievedOn: "18th February 2023",
+          achievedOn: "17th February 2023",
+          description:
+            "You're a true global citizen. This badge was earned for promoting global unity and understanding.",
         },
         {
-          name: "Badge 18",
+          name: "Stargazer",
           icon: "🌌",
-          achievedOn: "19th February 2023",
+          achievedOn: "18th February 2023",
+          description:
+            "You're mesmerized by the stars. This badge was earned for a love of astronomy and stargazing.",
         },
         {
-          name: "Badge 19",
+          name: "Ocean Explorer",
           icon: "🌊",
-          achievedOn: "20th February 2023",
+          achievedOn: "19th February 2023",
+          description:
+            "You explore the depths of the ocean. This badge was earned for a passion for marine life.",
         },
         {
-          name: "Badge 20",
+          name: "Gamer Pro",
           icon: "🎮",
-          achievedOn: "21st February 2023",
+          achievedOn: "20th February 2023",
+          description:
+            "You're a gaming pro! This badge was earned for exceptional skills in the gaming world.",
         },
       ],
       isModalVisible: false,
