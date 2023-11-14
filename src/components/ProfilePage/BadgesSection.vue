@@ -5,16 +5,31 @@
       <i class="fas fa-angle-right view-more-link"></i>
     </div>
     <div class="badge-list">
-      <div class="badge-item" v-for="(badge, index) in badges" :key="index">
+      <div
+        class="badge-item"
+        v-for="(badge, index) in badges"
+        :key="index"
+        @click="openModal(badge)"
+      >
         <span class="badge-icon">{{ badge.icon }}</span>
       </div>
     </div>
+
+    <badge-modal
+      :is-visible="isModalVisible"
+      :selected-badge="selectedBadge"
+      @close="closeModal"
+    ></badge-modal>
   </div>
 </template>
 
 <script>
+import BadgeModal from "@/components/ProfilePage/components/BadgeModal.vue";
+
 export default {
-  name: "BadgesSection",
+  components: {
+    BadgeModal,
+  },
   data() {
     return {
       userName: this.$store.state.userName,
@@ -105,11 +120,22 @@ export default {
           icon: "🎮",
         },
       ],
+      isModalVisible: false,
+      selectedBadge: null,
     };
+  },
+  methods: {
+    openModal(badge) {
+      this.selectedBadge = badge;
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+      this.selectedBadge = null;
+    },
   },
 };
 </script>
-
 <style scoped>
 .badge-list {
   display: flex;
