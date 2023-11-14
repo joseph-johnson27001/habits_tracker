@@ -668,8 +668,7 @@ export default {
 .user-title,
 .profile-picture img {
   font-weight: 300;
-  margin: 10px;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 .profile-picture img {
