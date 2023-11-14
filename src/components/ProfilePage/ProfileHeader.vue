@@ -626,9 +626,15 @@ export default {
   },
   mounted() {
     if (this.$store.state.selectedUser == true) {
+      this.$store.state.isLoading = true;
       this.userName = this.$store.state.selectedUserName;
       this.userTitle = this.$store.state.selectedUserTitle;
       this.profileImage = this.generateImageUrl(225, 225);
+      const img = new Image();
+      img.src = this.profileImage;
+      img.onload = () => {
+        this.$store.state.isLoading = false;
+      };
     }
   },
   methods: {
