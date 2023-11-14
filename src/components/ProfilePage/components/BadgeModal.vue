@@ -3,6 +3,7 @@
     <div class="badge-modal">
       <div class="modal-content">
         <h2>{{ selectedBadge.name }}</h2>
+        🏆
         <p>{{ selectedBadge.description }}</p>
         <p>Achieved on: {{ selectedBadge.achievedOn }}</p>
         <button @click="closeModal">Close</button>
@@ -50,6 +51,11 @@ export default {
 
 .modal-content {
   text-align: center;
+}
+
+.badge-icon {
+  width: 80px;
+  height: 80px;
 }
 
 /* Add more styles as needed */

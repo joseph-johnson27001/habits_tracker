@@ -126,7 +126,10 @@ export default {
   },
   methods: {
     openModal(badge) {
-      this.selectedBadge = badge;
+      this.selectedBadge = {
+        ...badge,
+        icon: badge.icon,
+      };
       this.isModalVisible = true;
     },
     closeModal() {
