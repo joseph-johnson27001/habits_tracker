@@ -1,5 +1,5 @@
 <template>
-  <div class="badge-modal-overlay" @click="closeModal">
+  <div class="badge-modal-overlay" v-if="isVisible" @click="closeModal">
     <div class="badge-modal">
       <div class="modal-content">
         <h2 class="badge-name">{{ selectedBadge.name }}</h2>
@@ -27,8 +27,6 @@ export default {
 </script>
 
 <style scoped>
-/* Add your existing styles here */
-
 .badge-modal-overlay {
   position: fixed;
   top: 0;
