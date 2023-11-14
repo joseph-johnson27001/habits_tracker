@@ -37,87 +37,108 @@ export default {
         {
           name: "Badge 1",
           icon: "🏆",
+          achievedOn: "1st February 2023",
         },
         {
           name: "Badge 2",
           icon: "🥇",
+          achievedOn: "2nd February 2023",
         },
         {
           name: "Badge 3",
           icon: "🎯",
+          achievedOn: "3rd February 2023",
         },
         {
           name: "Badge 4",
           icon: "🌟",
+          achievedOn: "4th February 2023",
         },
         {
           name: "Badge 5",
           icon: "🏅",
+          achievedOn: "5th February 2023",
         },
         {
           name: "Badge 6",
           icon: "🚀",
+          achievedOn: "6th February 2023",
         },
         {
           name: "Badge 7",
           icon: "📚",
+          achievedOn: "7th February 2023",
         },
         {
           name: "Badge 8",
           icon: "💪",
+          achievedOn: "8th February 2023",
         },
         {
           name: "Badge 9",
           icon: "🌿",
+          achievedOn: "9th February 2023",
         },
         {
           name: "Badge 10",
           icon: "🎉",
+          achievedOn: "10th February 2023",
         },
         {
           name: "Badge 11",
           icon: "🧠",
+          achievedOn: "11th February 2023",
         },
         {
           name: "Badge 12",
           icon: "🔥",
+          achievedOn: "12th February 2023",
         },
         {
           name: "Badge 13",
           icon: "🎖️",
+          achievedOn: "13th February 2023",
         },
         {
           name: "Badge 14",
           icon: "💡",
+          achievedOn: "14th February 2023",
         },
         {
           name: "Badge 15",
           icon: "🌞",
+          achievedOn: "15th February 2023",
         },
         {
           name: "Badge 16",
           icon: "🚀",
+          achievedOn: "16th February 2023",
         },
         {
           name: "Badge 16",
           icon: "🚀",
           completed: false,
+          achievedOn: "17th February 2023",
         },
         {
           name: "Badge 17",
           icon: "🌍",
+          achievedOn: "18th February 2023",
         },
         {
           name: "Badge 18",
           icon: "🌌",
+          achievedOn: "19th February 2023",
         },
         {
           name: "Badge 19",
           icon: "🌊",
+          achievedOn: "20th February 2023",
         },
         {
           name: "Badge 20",
           icon: "🎮",
+          achievedOn: "21st February 2023",
         },
       ],
       isModalVisible: false,
