@@ -649,19 +649,15 @@ export default {
 .profile-header {
   display: flex;
   align-items: center;
-  /* padding-bottom: 20px; */
-  /* padding-top: 10px; */
   background-color: #dff1ff;
-  /* border-bottom: 1px solid #ccc; */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
 .user-info {
   font-size: 18px;
-  margin-left: 20px;
+  margin-left: 15px;
   width: 75%;
-  padding-bottom: 20px;
 }
 
 .user-name,
