@@ -33,8 +33,22 @@
       <!-- Notification Preferences -->
       <div class="setting-area">
         <h2>Notification Preferences</h2>
+        <div class="setting-option">
+          <label for="emailNotifications">Email Notifications</label>
+          <select id="emailNotifications" v-model="emailNotifications">
+            <option value="all">All</option>
+            <option value="important">Important Updates</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+        <div class="setting-option">
+          <label for="pushNotifications">Push Notifications</label>
+          <select id="pushNotifications" v-model="pushNotifications">
+            <option value="on">On</option>
+            <option value="off">Off</option>
+          </select>
+        </div>
       </div>
-      <!-- Add more notification preferences as needed -->
 
       <!-- Account Management -->
       <div class="setting-area">
@@ -67,14 +81,14 @@
       <!-- Email Preferences -->
       <div class="setting-area">
         <h2>Email Preferences</h2>
+        <!-- Add email preferences as needed -->
       </div>
-      <!-- Add email preferences as needed -->
 
       <!-- Feedback and Help -->
       <div class="setting-area">
         <h2>Feedback and Help</h2>
+        <!-- Add feedback and help options as needed -->
       </div>
-      <!-- Add feedback and help options as needed -->
     </div>
   </div>
 </template>
@@ -86,6 +100,8 @@ export default {
       profileVisibility: "public",
       isAutoStatusUpdates: true,
       isHidingHabits: false,
+      emailNotifications: "all",
+      pushNotifications: "on",
     };
   },
   methods: {
@@ -116,6 +132,7 @@ h2 {
 
 .setting-area {
   border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
 
 .setting-option {
@@ -124,6 +141,7 @@ h2 {
 
 .action-button {
   width: 100%;
+  max-width: 300px;
   padding: 10px;
   background-color: #3498db;
   color: #fff;
