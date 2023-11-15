@@ -6,60 +6,74 @@
       </div>
 
       <!-- Privacy Settings -->
-      <h2>Privacy Settings</h2>
-      <div class="setting-option">
-        <label for="profileVisibility">Profile Visibility</label>
-        <select id="profileVisibility" v-model="profileVisibility">
-          <option value="public">Public</option>
-          <option value="private">Private</option>
-          <option value="friends">Friends Only</option>
-        </select>
-      </div>
-      <div class="setting-option">
-        <label for="autoStatusUpdates">Automatic Status Updates</label>
-        <input
-          id="autoStatusUpdates"
-          type="checkbox"
-          v-model="isAutoStatusUpdates"
-        />
-      </div>
-      <div class="setting-option">
-        <label for="hideHabits">Hide Habits from Public</label>
-        <input id="hideHabits" type="checkbox" v-model="isHidingHabits" />
+      <div class="setting-area">
+        <h2>Privacy Settings</h2>
+        <div class="setting-option">
+          <label for="profileVisibility">Profile Visibility</label>
+          <select id="profileVisibility" v-model="profileVisibility">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+            <option value="friends">Friends Only</option>
+          </select>
+        </div>
+        <div class="setting-option">
+          <label for="autoStatusUpdates">Automatic Status Updates</label>
+          <input
+            id="autoStatusUpdates"
+            type="checkbox"
+            v-model="isAutoStatusUpdates"
+          />
+        </div>
+        <div class="setting-option">
+          <label for="hideHabits">Hide Habits from Public</label>
+          <input id="hideHabits" type="checkbox" v-model="isHidingHabits" />
+        </div>
       </div>
 
       <!-- Notification Preferences -->
-      <h2>Notification Preferences</h2>
+      <div class="setting-area">
+        <h2>Notification Preferences</h2>
+      </div>
       <!-- Add more notification preferences as needed -->
 
       <!-- Account Management -->
-      <h2>Account Management</h2>
-      <button class="action-button" @click="deactivateAccount">
-        Deactivate Account
-      </button>
-      <button class="action-button" @click="deleteAccount">
-        Delete Account
-      </button>
+      <div class="setting-area">
+        <h2>Account Management</h2>
+        <button class="action-button" @click="deactivateAccount">
+          Deactivate Account
+        </button>
+        <button class="action-button" @click="deleteAccount">
+          Delete Account
+        </button>
+      </div>
 
       <!-- Export Data -->
-      <h2>Export Data</h2>
-      <button class="action-button" @click="exportData">Export Data</button>
+      <div class="setting-area">
+        <h2>Export Data</h2>
+        <button class="action-button" @click="exportData">Export Data</button>
+      </div>
 
       <!-- Password Management -->
-      <h2>Password Management</h2>
-      <button class="action-button" @click="changePassword">
-        Change Password
-      </button>
-      <button class="action-button" @click="resetPassword">
-        Reset Password
-      </button>
+      <div class="setting-area">
+        <h2>Password Management</h2>
+        <button class="action-button" @click="changePassword">
+          Change Password
+        </button>
+        <button class="action-button" @click="resetPassword">
+          Reset Password
+        </button>
+      </div>
 
       <!-- Email Preferences -->
-      <h2>Email Preferences</h2>
+      <div class="setting-area">
+        <h2>Email Preferences</h2>
+      </div>
       <!-- Add email preferences as needed -->
 
       <!-- Feedback and Help -->
-      <h2>Feedback and Help</h2>
+      <div class="setting-area">
+        <h2>Feedback and Help</h2>
+      </div>
       <!-- Add feedback and help options as needed -->
     </div>
   </div>
@@ -98,6 +112,10 @@ export default {
 h1,
 h2 {
   margin-bottom: 10px;
+}
+
+.setting-area {
+  border-bottom: 1px solid #ccc;
 }
 
 .setting-option {
