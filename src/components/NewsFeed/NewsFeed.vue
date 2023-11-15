@@ -61,9 +61,11 @@
             />
             <div class="timestamp-container">
               <router-link to="/profile" style="text-decoration: none">
-                <span class="commenter commenter-name">{{
-                  comment.commenter
-                }}</span>
+                <span
+                  class="commenter commenter-name"
+                  @click="viewCommenterProfile(comment)"
+                  >{{ comment.commenter }}</span
+                >
               </router-link>
               <span class="comment-date">{{ comment.timestamp }}</span>
             </div>
@@ -444,6 +446,11 @@ export default {
     viewProfile(item) {
       this.$store.state.selectedUserName = item.userName;
       this.$store.state.selectedUserTitle = item.userTitle;
+      this.$store.state.selectedUser = true;
+    },
+    viewCommenterProfile(comment) {
+      this.$store.state.selectedUserName = comment.commenter;
+      this.$store.state.selectedUserTitle = "Productivity Pro";
       this.$store.state.selectedUser = true;
     },
     createStatusUpdate() {
