@@ -15,6 +15,7 @@
         v-for="(badge, index) in filteredBadges"
         :key="index"
         class="badge-item card"
+        @click="openModal(badge)"
       >
         <div class="badge-icon">{{ badge.icon }}</div>
         <div class="badge-details">
@@ -23,11 +24,20 @@
         </div>
       </div>
     </div>
+    <badge-modal
+      :is-visible="isModalVisible"
+      :selected-badge="selectedBadge"
+      @close="closeModal"
+    ></badge-modal>
   </div>
 </template>
 
 <script>
+import BadgeModal from "@/components/ProfilePage/components/BadgeModal.vue";
 export default {
+  components: {
+    BadgeModal,
+  },
   name: "BadgesPage",
   data() {
     return {
@@ -104,7 +114,6 @@ export default {
           achievedOn: "18th October 2023",
           habitType: "Art",
         },
-        // Add more badges as needed
       ],
       selectedCategory: "All",
       selectedBadge: null,
@@ -137,6 +146,14 @@ export default {
   methods: {
     filterBadges() {
       this.filteredBadges;
+    },
+    openModal(badge) {
+      this.selectedBadge = badge;
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+      this.selectedBadge = null;
     },
   },
 };
