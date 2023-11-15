@@ -1,15 +1,14 @@
 <template>
   <div class="settings-page" v-show="!this.$store.state.isLoading">
     <div class="card">
-      <div class="heading-area">
-        <h1>SETTINGS</h1>
-      </div>
-
+      <h1>SETTINGS</h1>
+    </div>
+    <div class="card">
       <!-- Privacy Settings -->
       <div class="setting-area">
-        <h2>Privacy Settings</h2>
+        <h1>Privacy Settings</h1>
         <div class="setting-option">
-          <label for="profileVisibility">Profile Visibility</label>
+          <label for="profileVisibility">Profile Visibility: </label>
           <select id="profileVisibility" v-model="profileVisibility">
             <option value="public">Public</option>
             <option value="private">Private</option>
@@ -17,7 +16,7 @@
           </select>
         </div>
         <div class="setting-option">
-          <label for="autoStatusUpdates">Automatic Status Updates</label>
+          <label for="autoStatusUpdates">Automatic Status Updates: </label>
           <input
             id="autoStatusUpdates"
             type="checkbox"
@@ -25,16 +24,16 @@
           />
         </div>
         <div class="setting-option">
-          <label for="hideHabits">Hide Habits from Public</label>
+          <label for="hideHabits">Hide Habits from Public: </label>
           <input id="hideHabits" type="checkbox" v-model="isHidingHabits" />
         </div>
       </div>
 
       <!-- Notification Preferences -->
       <div class="setting-area">
-        <h2>Notification Preferences</h2>
+        <h1>Notification Preferences</h1>
         <div class="setting-option">
-          <label for="emailNotifications">Email Notifications</label>
+          <label for="emailNotifications">Email Notifications: </label>
           <select id="emailNotifications" v-model="emailNotifications">
             <option value="all">All</option>
             <option value="important">Important Updates</option>
@@ -42,7 +41,7 @@
           </select>
         </div>
         <div class="setting-option">
-          <label for="pushNotifications">Push Notifications</label>
+          <label for="pushNotifications">Push Notifications: </label>
           <select id="pushNotifications" v-model="pushNotifications">
             <option value="on">On</option>
             <option value="off">Off</option>
@@ -52,7 +51,7 @@
 
       <!-- Account Management -->
       <div class="setting-area">
-        <h2>Account Management</h2>
+        <h1>Account Management</h1>
         <button class="action-button" @click="deactivateAccount">
           Deactivate Account
         </button>
@@ -63,13 +62,13 @@
 
       <!-- Export Data -->
       <div class="setting-area">
-        <h2>Export Data</h2>
+        <h1>Export Data</h1>
         <button class="action-button" @click="exportData">Export Data</button>
       </div>
 
       <!-- Password Management -->
       <div class="setting-area">
-        <h2>Password Management</h2>
+        <h1>Password Management</h1>
         <button class="action-button" @click="changePassword">
           Change Password
         </button>
@@ -78,16 +77,40 @@
         </button>
       </div>
 
-      <!-- Email Preferences -->
+      <!-- Email Management -->
       <div class="setting-area">
         <h2>Email Preferences</h2>
-        <!-- Add email preferences as needed -->
+        <div class="setting-option">
+          <label for="newsletterFrequency">Newsletter Frequency: </label>
+          <select id="newsletterFrequency" v-model="newsletterFrequency">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="never">Never</option>
+          </select>
+        </div>
+        <div class="setting-option">
+          <label for="promotionEmails">Receive Promotion Emails</label>
+          <input
+            id="promotionEmails"
+            type="checkbox"
+            v-model="receivePromotionEmails"
+          />
+        </div>
       </div>
 
       <!-- Feedback and Help -->
       <div class="setting-area">
         <h2>Feedback and Help</h2>
-        <!-- Add feedback and help options as needed -->
+        <div class="setting-option" style="display: flex; align-items: center">
+          <label for="provideFeedback">Provide Feedback: </label>
+          <textarea id="provideFeedback" v-model="userFeedback"></textarea>
+        </div>
+        <div class="setting-option">
+          <button class="action-button" @click="submitFeedback">
+            Submit Feedback
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -101,7 +124,10 @@ export default {
       isAutoStatusUpdates: true,
       isHidingHabits: false,
       emailNotifications: "all",
-      pushNotifications: "on",
+      pushNotifications: "On",
+      newsletterFrequency: "daily",
+      receivePromotionEmails: true,
+      userFeedback: "",
     };
   },
   methods: {
@@ -120,13 +146,15 @@ export default {
     resetPassword() {
       // Implement password reset logic
     },
+    submitFeedback() {
+      // Implement feedback submission logic
+    },
   },
 };
 </script>
 
 <style scoped>
-h1,
-h2 {
+h1 {
   margin-bottom: 10px;
 }
 
@@ -149,7 +177,7 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin: 0px 2px;
 }
 
 .action-button:hover {
