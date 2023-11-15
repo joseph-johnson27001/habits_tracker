@@ -1,4 +1,3 @@
-<!-- AchievementModal.vue -->
 <template>
   <div class="achievement-modal-overlay" v-if="isVisible" @click="closeModal">
     <div class="achievement-modal">
@@ -8,8 +7,8 @@
         <p class="achievement-description">
           {{ selectedAchievement.description }}
         </p>
-        <p class="achieved-date">
-          Achieved: {{ selectedAchievement.achieved }}
+        <p v-if="selectedAchievement.dateAchieved" class="achieved-date">
+          Achieved: {{ selectedAchievement.dateAchieved }}
         </p>
         <button class="close-button" @click="closeModal">Close</button>
       </div>
@@ -83,14 +82,14 @@ export default {
 
 .achieved-date {
   font-style: italic;
-  color: #555; /* Example color */
+  color: #555;
   margin-bottom: 15px;
 }
 
 .close-button {
   padding: 10px;
-  background-color: #3498db; /* Example background color */
-  color: #fff; /* Example text color */
+  background-color: #3498db;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;

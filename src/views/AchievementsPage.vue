@@ -56,6 +56,7 @@ export default {
           title: "High Achiever",
           description: "You've achieved excellence in your field.",
           achieved: true,
+          dateAchieved: "1st February 2023",
         },
         {
           area: "Health",
@@ -63,6 +64,7 @@ export default {
           title: "Gold Medalist",
           description: "You're the best of the best!",
           achieved: true,
+          dateAchieved: "1st January 2023",
         },
         {
           area: "Weightloss",
@@ -70,6 +72,7 @@ export default {
           title: "Weightlifting Champion",
           description: "You've conquered the weights!",
           achieved: true,
+          dateAchieved: "15th December 2022",
         },
         {
           area: "Meditation",
@@ -77,6 +80,7 @@ export default {
           title: "Meditation Master",
           description: "You've achieved inner peace.",
           achieved: true,
+          dateAchieved: "12th December 2022",
         },
         {
           area: "Reading",
@@ -84,6 +88,7 @@ export default {
           title: "Bookworm",
           description: "You've read a lot of books!",
           achieved: true,
+          dateAchieved: "9th December 2022",
         },
         {
           area: "Education",
@@ -91,6 +96,7 @@ export default {
           title: "Knowledge Seeker",
           description: "You've expanded your horizons!",
           achieved: true,
+          dateAchieved: "9th November 2022",
         },
         {
           area: "Coding",
@@ -98,6 +104,7 @@ export default {
           title: "Coding Ninja",
           description: "You've mastered the code!",
           achieved: true,
+          dateAchieved: "5th November 2022",
         },
         {
           area: "Cooking",
@@ -105,6 +112,7 @@ export default {
           title: "Master Chef",
           description: "You've created delicious dishes!",
           achieved: true,
+          dateAchieved: "5th October 2022",
         },
         {
           area: "Travel",
@@ -112,6 +120,7 @@ export default {
           title: "Globe Trotter",
           description: "You've seen the world!",
           achieved: true,
+          dateAchieved: "5th September 2022",
         },
         {
           area: "Art",
@@ -119,6 +128,7 @@ export default {
           title: "Art Enthusiast",
           description: "You've created beautiful art!",
           achieved: true,
+          dateAchieved: "1st September 2022",
         },
         {
           area: "Fitness",
@@ -126,6 +136,7 @@ export default {
           title: "Marathon Runner",
           description: "You've completed a full marathon!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Fitness",
@@ -133,6 +144,7 @@ export default {
           title: "Weightlifting Hero",
           description: "You've lifted twice your body weight!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Health",
@@ -140,6 +152,7 @@ export default {
           title: "Healthy Habits",
           description: "You've maintained a healthy routine for a year!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Health",
@@ -147,6 +160,7 @@ export default {
           title: "Yoga Master",
           description: "You've perfected all yoga poses!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Weightloss",
@@ -154,6 +168,7 @@ export default {
           title: "Diet Champion",
           description: "You've achieved your target weight!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Weightloss",
@@ -161,6 +176,7 @@ export default {
           title: "Calorie Crusher",
           description: "You've burned 5000 calories in one workout!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Meditation",
@@ -168,6 +184,7 @@ export default {
           title: "Zen Master",
           description: "You've meditated for 100 hours!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Meditation",
@@ -175,6 +192,7 @@ export default {
           title: "Mindfulness Guru",
           description: "You've achieved inner peace for 30 days!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Reading",
@@ -182,6 +200,7 @@ export default {
           title: "Bookworm Extraordinaire",
           description: "You've read 100 books in a year!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Reading",
@@ -189,6 +208,7 @@ export default {
           title: "Literature Lover",
           description: "You've read all the classics in one summer!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Education",
@@ -196,6 +216,7 @@ export default {
           title: "Professor Prestige",
           description: "You've completed a Ph.D. with honors!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Education",
@@ -203,6 +224,7 @@ export default {
           title: "History Buff",
           description: "You've aced every history exam with flying colors!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Coding",
@@ -210,6 +232,7 @@ export default {
           title: "Coding Connoisseur",
           description: "You've built a popular app with millions of users!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Coding",
@@ -217,6 +240,7 @@ export default {
           title: "Bug Buster",
           description: "You've fixed 1000 bugs in one week!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Cooking",
@@ -225,6 +249,7 @@ export default {
           description:
             "You've cooked a 5-course meal for a Michelin-starred chef!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Cooking",
@@ -232,6 +257,7 @@ export default {
           title: "Baking Prodigy",
           description: "You've won a national baking competition!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Travel",
@@ -239,6 +265,7 @@ export default {
           title: "Wanderlust Adventurer",
           description: "You've traveled to 50 countries in one year!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Travel",
@@ -246,6 +273,7 @@ export default {
           title: "Local Explorer",
           description: "You've visited every hidden gem in your city!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Art",
@@ -253,6 +281,7 @@ export default {
           title: "Masterpiece Creator",
           description: "You've had your artwork displayed in a famous gallery!",
           achieved: false,
+          dateAchieved: null,
         },
         {
           area: "Art",
@@ -260,6 +289,7 @@ export default {
           title: "Sculpting Prodigy",
           description: "You've sculpted a masterpiece out of marble!",
           achieved: false,
+          dateAchieved: null,
         },
       ],
     };
