@@ -506,9 +506,6 @@ export default {
     likePost(item) {
       item.likes += 1;
     },
-    showComments(item) {
-      console.log(item);
-    },
     toggleComments(item) {
       item.commentsVisible = !item.commentsVisible;
     },
