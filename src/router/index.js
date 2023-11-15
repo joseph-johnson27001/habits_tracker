@@ -44,7 +44,7 @@ router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
   const contentContainer = document.querySelector(".content-container");
   if (contentContainer) {
-    contentContainer.scrollTop = 0; // Scrolls to the top of the content container
+    contentContainer.scrollTop = 0;
   }
   next();
 });
