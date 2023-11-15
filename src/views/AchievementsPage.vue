@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- <div class="card">
-      <h1>{{ headingText }}</h1>
-    </div> -->
     <select
       v-model="selectedCategory"
       @change="filterAchievements"
@@ -19,6 +16,7 @@
         :key="index"
         class="achievement-item card"
         :class="{ achieved: achievement.achieved }"
+        @click="openModal(achievement)"
       >
         <div class="achievement-icon">{{ achievement.icon }}</div>
         <div class="achievement-details">
@@ -29,14 +27,27 @@
         </div>
       </div>
     </div>
+
+    <achievement-modal
+      :is-visible="isModalVisible"
+      :selected-achievement="selectedAchievement"
+      @close="closeModal"
+    ></achievement-modal>
   </div>
 </template>
 
 <script>
+import AchievementModal from "@/components/ProfilePage/components/AchievementsModal.vue";
+
 export default {
+  components: {
+    AchievementModal,
+  },
   name: "AchievementsPage",
   data() {
     return {
+      selectedAchievement: null,
+      isModalVisible: false,
       selectedCategory: "All",
       achievements: [
         {
@@ -278,6 +289,14 @@ export default {
   methods: {
     filterAchievements() {
       this.filteredAchievements;
+    },
+    openModal(achievement) {
+      this.selectedAchievement = achievement;
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+      this.selectedAchievement = null;
     },
   },
 };
