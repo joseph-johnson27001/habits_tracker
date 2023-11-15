@@ -10,6 +10,9 @@
         <p v-if="selectedAchievement.dateAchieved" class="achieved-date">
           Achieved: {{ selectedAchievement.dateAchieved }}
         </p>
+        <p v-else style="color: red">
+          You have not currently unlocked this achievement
+        </p>
         <button class="close-button" @click="closeModal">Close</button>
       </div>
     </div>
