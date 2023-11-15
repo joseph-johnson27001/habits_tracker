@@ -12,6 +12,7 @@
         class="achievement-item"
         v-for="(achievement, index) in achievements"
         :key="index"
+        @click="openModal(achievement)"
       >
         <div class="achievement-icon">{{ achievement.icon }}</div>
         <div class="achievement-details">
@@ -22,49 +23,77 @@
         </div>
       </div>
     </div>
+    <achievement-modal
+      :is-visible="isModalVisible"
+      :selected-achievement="selectedAchievement"
+      @close="closeModal"
+    ></achievement-modal>
   </div>
 </template>
 
 <script>
+import AchievementModal from "@/components/ProfilePage/components/AchievementsModal.vue";
+
 export default {
+  components: {
+    AchievementModal,
+  },
   name: "AchievementsSection",
   data() {
     return {
       userName: this.$store.state.userName,
+      selectedAchievement: null,
+      isModalVisible: false,
       achievements: [
         {
           icon: "🏆",
           title: "High Achiever",
           description: "You've achieved excellence in your field.",
+          dateAchieved: "1st February 2023",
         },
         {
           icon: "🥇",
           title: "Gold Medalist",
           description: "You're the best of the best!",
+          dateAchieved: "1st January 2023",
         },
         {
           icon: "🎯",
           title: "Sharpshooter",
           description: "You've hit all your targets.",
+          dateAchieved: "1st December 2022",
         },
         {
           icon: "🌟",
           title: "Star Collector",
           description: "You've collected all the stars!",
+          dateAchieved: "1st November 2022",
         },
         {
           icon: "🏅",
           title: "Top Performer",
           description: "You've consistently performed at the top level.",
+          dateAchieved: "1st October 2022",
         },
         {
           icon: "🚀",
           title: "Rocket Scientist",
           description:
             "You've mastered rocket science and reached for the stars!",
+          dateAchieved: "1st September 2022",
         },
       ],
     };
+  },
+  methods: {
+    openModal(achievement) {
+      this.selectedAchievement = achievement;
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+      this.selectedAchievement = null;
+    },
   },
 };
 </script>

@@ -27,7 +27,6 @@
         </div>
       </div>
     </div>
-
     <achievement-modal
       :is-visible="isModalVisible"
       :selected-achievement="selectedAchievement"
