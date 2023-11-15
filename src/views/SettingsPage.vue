@@ -79,7 +79,7 @@
 
       <!-- Email Management -->
       <div class="setting-area">
-        <h2>Email Preferences</h2>
+        <h1>Email Preferences</h1>
         <div class="setting-option">
           <label for="newsletterFrequency">Newsletter Frequency: </label>
           <select id="newsletterFrequency" v-model="newsletterFrequency">
@@ -101,7 +101,7 @@
 
       <!-- Feedback and Help -->
       <div class="setting-area">
-        <h2>Feedback and Help</h2>
+        <h1>Feedback and Help</h1>
         <div class="setting-option" style="display: flex; align-items: center">
           <label for="provideFeedback">Provide Feedback: </label>
           <textarea id="provideFeedback" v-model="userFeedback"></textarea>
