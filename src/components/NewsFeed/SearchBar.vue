@@ -139,10 +139,10 @@ export default {
     hideSearchResults() {
       this.showResults = false;
     },
-    handleSearchResultClick(result) {
-      this.searchText = result.userName;
-      this.searchUsers();
-      this.showResults = false;
+    handleSearchResultClick(item) {
+      this.$store.state.selectedUserName = item.userName;
+      this.$store.state.selectedUserTitle = item.userTitle;
+      this.$store.state.selectedUser = true;
     },
   },
 };
