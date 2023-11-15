@@ -30,7 +30,72 @@ export default {
   },
 };
 </script>
-
 <style scoped>
-/* Add your modal styles here */
+.achievement-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.achievement-modal {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.achievement-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.achievement-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.achievement-icon {
+  font-size: 40px;
+}
+
+.achievement-description {
+  margin-bottom: 15px;
+}
+
+.achieved-date {
+  font-style: italic;
+  color: #555; /* Example color */
+  margin-bottom: 15px;
+}
+
+.close-button {
+  padding: 10px;
+  background-color: #3498db; /* Example background color */
+  color: #fff; /* Example text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Add more styles as needed */
 </style>
