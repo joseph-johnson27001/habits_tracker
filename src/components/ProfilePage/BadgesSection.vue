@@ -2,7 +2,9 @@
   <div class="badges-section">
     <div class="heading-area">
       <h1>BADGES</h1>
-      <i class="fas fa-angle-right view-more-link"></i>
+      <router-link to="/badges" class="nav-link">
+        <i class="fas fa-angle-right view-more-link"></i>
+      </router-link>
     </div>
     <div class="badge-list">
       <div

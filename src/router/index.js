@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import ProfilePage from "@/views/ProfilePage.vue";
+import BadgesPage from "@/views/BadgesPage.vue";
 import NewsPage from "@/views/NewsFeedPage.vue";
 import HabitPage from "@/views/HabitPage.vue";
 import HabitsPage from "@/views/HabitsPage.vue";
@@ -20,6 +21,7 @@ const routes = [
   { path: "/", component: NewsPage },
   { path: "/profile", component: ProfilePage },
   { path: "/habits", component: HabitsPage },
+  { path: "/badges", component: BadgesPage },
   { path: "/habit/", name: "habit", component: HabitPage, props: true },
   { path: "/articles", component: ArticlesPage },
   { path: "/article", component: ArticlePage },
