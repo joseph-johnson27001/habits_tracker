@@ -44,6 +44,7 @@
             class="form-input"
           />
         </div>
+        <!-- Need to add input fields for if the user has already started -->
         <div style="display: flex; justify-content: center; margin-top: 20px">
           <button class="modal-button" @click="saveHabit">Save Habit</button>
         </div>

@@ -95,44 +95,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-select {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 10px 10px 10px;
-  outline: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input:focus,
-select:focus {
-  border: 1px solid #6da9e4;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #297fb8;
-}
-</style>
+<style scoped></style>
