@@ -6,7 +6,9 @@
     <div class="user-info">
       <div class="heading-container">
         <h2 class="user-name">{{ userName }}</h2>
-        <button v-if="!this.$store.state.selectedUser">Edit Profile</button>
+        <button v-if="!this.$store.state.selectedUser" class="edit-btn">
+          Edit Profile
+        </button>
       </div>
       <p class="user-title">{{ userTitle }}</p>
       <!-- SVG's BELOW -->
@@ -661,6 +663,21 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.edit-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #297fb8;
 }
 
 .user-info {
