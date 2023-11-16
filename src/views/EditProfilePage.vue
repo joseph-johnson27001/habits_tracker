@@ -52,10 +52,18 @@ export default {
       displayBadges: false,
       selectedAchievements: [],
       selectedMainHabit: "",
+      achievementOptions: [],
+      habitArray: [],
     };
+  },
+  mounted() {
+    this.fullName = this.$store.state.userName;
+    this.userTitle = this.$store.state.userTitle;
   },
   methods: {
     saveChanges() {
+      this.$store.state.userName = this.fullName;
+      this.$store.state.userTitle = this.userTitle;
       // Implement logic to save changes
       // You can access the updated data from this.firstName, this.lastName, etc.
     },
@@ -75,7 +83,7 @@ label {
 
 input,
 select {
-  box-sizing: border-box; /* Include padding and border in the total width and height */
+  box-sizing: border-box;
   width: 100%;
   padding: 10px 10px 10px 10px;
   outline: none;
