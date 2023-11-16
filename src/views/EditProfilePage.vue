@@ -68,8 +68,8 @@ export default {
       badgesArray: ["1", "2", "3"],
       selectedAchievements: [],
       achievementsArray: ["1", "2", "3"],
-      selectedMainHabit: [],
-      habitListArray: ["Habit 1", "Habit 2", "Habit 3"],
+      selectedMainHabit: ["Running"],
+      habitListArray: ["Running", "Reading", "Meditation", "Coding"],
       titlesArray: [
         "Productivity Pro",
         "Fitness Enthusiast",
