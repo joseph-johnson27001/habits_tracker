@@ -48,10 +48,10 @@ export default {
   data() {
     return {
       fullName: "",
-      userTitle: "", // User's title
-      displayBadges: false, // Whether to display badges or not
-      selectedAchievements: [], // Array to hold selected achievements
-      selectedMainHabit: "", // Hold the selected main habit
+      userTitle: "",
+      displayBadges: false,
+      selectedAchievements: [],
+      selectedMainHabit: "",
     };
   },
   methods: {
@@ -75,9 +75,10 @@ label {
 
 input,
 select {
+  box-sizing: border-box; /* Include padding and border in the total width and height */
   width: 100%;
-  padding: 10px 0px 10px 10px;
-  outline: none !important;
+  padding: 10px 10px 10px 10px;
+  outline: none;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
