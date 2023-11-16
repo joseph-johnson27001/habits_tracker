@@ -23,6 +23,9 @@
       <label for="displayBadges">Display Badges</label>
       <select id="displayBadges" v-model="displayBadges" multiple>
         <!-- Options for achievements go here -->
+        <option v-for="badge in badgesArray" :key="badge">
+          {{ badge }}
+        </option>
       </select>
     </div>
 
@@ -31,6 +34,9 @@
       <label for="latestAchievements">Latest Achievements</label>
       <select id="latestAchievements" v-model="selectedAchievements" multiple>
         <!-- Options for achievements go here -->
+        <option v-for="achievement in achievementsArray" :key="achievement">
+          {{ achievement }}
+        </option>
       </select>
     </div>
 
@@ -39,6 +45,9 @@
       <label for="mainHabit">Main Habit</label>
       <select id="mainHabit" v-model="selectedMainHabit">
         <!-- Options for habits go here -->
+        <option v-for="habit in habitListArray" :key="habit">
+          {{ habit }}
+        </option>
       </select>
     </div>
 
@@ -56,8 +65,11 @@ export default {
       fullName: "",
       userTitle: "",
       displayBadges: [],
+      badgesArray: ["1", "2", "3"],
       selectedAchievements: [],
-      selectedMainHabit: "",
+      achievementsArray: ["1", "2", "3"],
+      selectedMainHabit: [],
+      habitListArray: ["Habit 1", "Habit 2", "Habit 3"],
       titlesArray: [
         "Productivity Pro",
         "Fitness Enthusiast",
