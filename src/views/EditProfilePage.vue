@@ -11,7 +11,11 @@
     <!-- Edit User Title -->
     <div class="form-group">
       <label for="userTitle">User Title</label>
-      <input type="text" id="userTitle" v-model="userTitle" />
+      <select id="userTitle" v-model="userTitle">
+        <!-- Options for achievements go here -->
+        <option>{{ userTitle }}</option>
+        <option v-for="title in titlesArray" :key="title">{{ title }}</option>
+      </select>
     </div>
 
     <!-- Edit Badges Display Preference -->
@@ -39,7 +43,9 @@
     </div>
 
     <!-- Save Button -->
-    <button @click="saveChanges">Save Changes</button>
+    <router-link to="/profile" style="text-decoration: none">
+      <button @click="saveChanges">Save Changes</button>
+    </router-link>
   </div>
 </template>
 
@@ -52,6 +58,12 @@ export default {
       displayBadges: false,
       selectedAchievements: [],
       selectedMainHabit: "",
+      titlesArray: [
+        "Productivity Pro",
+        "Fitness Enthusiast",
+        "Nature Explorer",
+        "Coding Expert",
+      ],
       achievementOptions: [],
       habitArray: [],
     };
