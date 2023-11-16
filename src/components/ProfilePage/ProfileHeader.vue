@@ -4,7 +4,10 @@
       <img :src="profileImage" alt="Profile Picture" />
     </div>
     <div class="user-info">
-      <h2 class="user-name">{{ userName }}</h2>
+      <div class="heading-container">
+        <h2 class="user-name">{{ userName }}</h2>
+        <button>Edit Profile</button>
+      </div>
       <p class="user-title">{{ userTitle }}</p>
       <!-- SVG's BELOW -->
       <div class="badge-area">
@@ -652,6 +655,12 @@ export default {
   background-color: #dff1ff;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .user-info {
