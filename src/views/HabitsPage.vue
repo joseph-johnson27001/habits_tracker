@@ -182,6 +182,26 @@ export default {
       this.showModal = false;
     },
     saveHabit() {
+      this.habits.push({
+        name: this.habitName,
+        completionPercentage: 0,
+        dayStreak: {
+          value: 0,
+          label: "Days in a Row",
+        },
+        totalMinutes: {
+          value: 0,
+          label: "Total Minutes:",
+        },
+        numberOfDaysUntilAchievements: {
+          value: 30,
+          label: "Days Until Next Achievement:",
+        },
+        minutesToAchievements: {
+          value: 600,
+          label: "Minutes Until Next Achievement:",
+        },
+      });
       this.habitName = "";
       this.showModal = false;
     },
