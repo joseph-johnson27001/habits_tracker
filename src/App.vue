@@ -161,6 +161,7 @@ label {
   margin-bottom: 5px;
 }
 
+input,
 select,
 textarea {
   box-sizing: border-box;

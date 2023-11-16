@@ -183,4 +183,8 @@ h1 {
 .action-button:hover {
   background-color: #297fb8;
 }
+
+input {
+  width: auto;
+}
 </style>
