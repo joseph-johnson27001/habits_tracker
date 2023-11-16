@@ -55,7 +55,7 @@ export default {
     return {
       fullName: "",
       userTitle: "",
-      displayBadges: false,
+      displayBadges: [],
       selectedAchievements: [],
       selectedMainHabit: "",
       titlesArray: [
