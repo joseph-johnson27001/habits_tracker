@@ -6,9 +6,11 @@
     <div class="user-info">
       <div class="heading-container">
         <h2 class="user-name">{{ userName }}</h2>
-        <button v-if="!this.$store.state.selectedUser" class="edit-btn">
-          Edit Profile
-        </button>
+        <router-link to="/edit-profile">
+          <button v-if="!this.$store.state.selectedUser" class="edit-btn">
+            Edit Profile
+          </button>
+        </router-link>
       </div>
       <p class="user-title">{{ userTitle }}</p>
       <!-- SVG's BELOW -->

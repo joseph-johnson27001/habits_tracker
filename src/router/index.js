@@ -13,6 +13,7 @@ import ArticlePage from "@/views/ArticlePage.vue";
 import ChallengesPage from "@/views/ChallengesPage.vue";
 import StatisticsPage from "@/views/StatisticsPage.vue";
 import AchievementsPage from "@/views/AchievementsPage.vue";
+import EditProfilePage from "@/views/EditProfilePage.vue";
 import Store from "@/store";
 
 Vue.use(VueRouter);
@@ -31,6 +32,7 @@ const routes = [
   { path: "/challenges", component: ChallengesPage },
   { path: "/statistics", component: StatisticsPage },
   { path: "/achievements", component: AchievementsPage },
+  { path: "/edit-profile", component: EditProfilePage },
 ];
 
 const router = new VueRouter({
