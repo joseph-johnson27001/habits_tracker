@@ -13,6 +13,9 @@
       <router-link to="/leaderboard" class="sidebar-item">
         <i class="fas fa-trophy fa-lg"></i>
       </router-link>
+      <router-link to="/events" class="sidebar-item">
+        <i class="far fa-calendar-alt fa-lg" style="margin-left: 2px"></i>
+      </router-link>
       <router-link to="/articles" class="sidebar-item">
         <i class="fas fa-newspaper fa-lg"></i>
       </router-link>

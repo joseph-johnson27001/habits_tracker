@@ -14,6 +14,7 @@ import ChallengesPage from "@/views/ChallengesPage.vue";
 import StatisticsPage from "@/views/StatisticsPage.vue";
 import AchievementsPage from "@/views/AchievementsPage.vue";
 import EditProfilePage from "@/views/EditProfilePage.vue";
+import EventsPage from "@/views/EventsPage.vue";
 import Store from "@/store";
 
 Vue.use(VueRouter);
@@ -26,6 +27,7 @@ const routes = [
   { path: "/habit/", name: "habit", component: HabitPage, props: true },
   { path: "/articles", component: ArticlesPage },
   { path: "/article", component: ArticlePage },
+  { path: "/events", component: EventsPage },
   { path: "/leaderboard", component: LeaderboardPage },
   { path: "/settings", component: SettingsPage },
   { path: "/store", component: StorePage },
