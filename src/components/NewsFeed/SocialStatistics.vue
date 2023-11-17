@@ -77,6 +77,7 @@
         class="article-item"
         v-for="(article, index) in recentArticles"
         :key="index"
+        @click="viewArticle()"
       >
         <h4>{{ article.title }}</h4>
         <p>{{ article.summary }}</p>
@@ -162,6 +163,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    viewArticle() {
+      this.$router.push("/article");
+    },
   },
 };
 </script>
