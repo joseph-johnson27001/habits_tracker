@@ -20,7 +20,7 @@
 
     <!-- Edit Badges Display Preference -->
     <div class="form-group">
-      <label for="displayBadges">Display Badges: </label>
+      <label for="displayBadges">Badges To Display: </label>
       <select id="displayBadges" v-model="displayBadges" multiple>
         <!-- Options for achievements go here -->
         <option v-for="badge in badgesArray" :key="badge">
@@ -31,7 +31,7 @@
 
     <!-- Edit Latest Achievements -->
     <div class="form-group">
-      <label for="latestAchievements">Latest Achievements: </label>
+      <label for="latestAchievements">Achievements To Display: </label>
       <select id="latestAchievements" v-model="selectedAchievements" multiple>
         <!-- Options for achievements go here -->
         <option v-for="achievement in achievementsArray" :key="achievement">
@@ -65,7 +65,20 @@ export default {
       fullName: "",
       userTitle: "",
       displayBadges: [],
-      badgesArray: ["1", "2", "3"],
+      badgesArray: [
+        "🌟",
+        "🏅",
+        "🎖",
+        "🚀",
+        "💡",
+        "🔥",
+        "🌈",
+        "🌺",
+        "👑",
+        "🌟🌟",
+        "🌟🌟🌟",
+      ],
+
       selectedAchievements: [],
       achievementsArray: ["1", "2", "3"],
       selectedMainHabit: ["Running"],
