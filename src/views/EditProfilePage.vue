@@ -80,9 +80,30 @@ export default {
       ],
 
       selectedAchievements: [],
-      achievementsArray: ["1", "2", "3"],
+      achievementsArray: [
+        "Master of Productivity",
+        "Fitness Guru",
+        "Nature Explorer",
+        "Coding Maestro",
+        "Super Achiever",
+        "Mindfulness Master",
+        "Reading Wizard",
+      ],
+
       selectedMainHabit: ["Running"],
-      habitListArray: ["Running", "Reading", "Meditation", "Coding"],
+      habitListArray: [
+        "Running",
+        "Reading",
+        "Meditation",
+        "Coding",
+        "Swimming",
+        "Yoga",
+        "Gardening",
+        "Studying",
+        "Writing",
+        "Cooking",
+      ],
+
       titlesArray: [
         "Productivity Pro",
         "Fitness Enthusiast",
