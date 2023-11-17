@@ -1,9 +1,18 @@
 <template>
   <div class="news" v-show="!this.$store.state.isLoading">
-    <div class="news-feed">
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" v-model="showSocialStats" />
+        <span class="slider"></span>
+      </label>
+      <span>{{
+        showSocialStats ? "Show Social Stats" : "Show News Feed"
+      }}</span>
+    </div>
+    <div class="news-feed" v-show="!this.showSocialStats">
       <NewsFeed />
     </div>
-    <div class="social-stats" v-show="showSocialStats">
+    <div class="social-stats" v-shpw="this.socialStats">
       <SocialStats />
     </div>
   </div>
@@ -21,7 +30,8 @@ export default {
   },
   data() {
     return {
-      showSocialStats: true,
+      showSwitch: true,
+      showSocialStats: false,
     };
   },
   mounted() {
@@ -32,8 +42,12 @@ export default {
     window.removeEventListener("resize", this.handleViewportChange);
   },
   methods: {
-    handleViewportChange() {
-      this.showSocialStats = window.innerWidth > 992;
+    // handleViewportChange() {
+    //   this.showSocialStats = window.innerWidth > 992;
+    // },
+    toggleSocialStats() {
+      this.showSocialStats.style.display = "block";
+      this.NewsFeed.style.display = "none";
     },
   },
 };
@@ -49,13 +63,21 @@ export default {
   padding-left: 5px;
 }
 
+@media (min-width: 993px) {
+  .news-feed {
+    display: block;
+  }
+  .switch-container {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   .news {
     grid-template-columns: 1fr;
   }
-
-  .social-stats {
-    display: none;
+  .switch-container {
+    display: block;
   }
 }
 </style>
