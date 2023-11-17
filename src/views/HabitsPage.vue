@@ -184,7 +184,7 @@ export default {
     },
     saveHabit() {
       this.habits.push({
-        name: this.habitName,
+        name: this.habitName.charAt(0).toUpperCase() + this.habitName.slice(1),
         completionPercentage: 0,
         dayStreak: {
           value: 0,
