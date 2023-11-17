@@ -43,8 +43,9 @@
     <!-- Edit Main Habit -->
     <div class="form-group">
       <label for="mainHabit">Main Habit: </label>
-      <select id="mainHabit" v-model="selectedMainHabit">
+      <select id="mainHabit" v-model="mainHabit">
         <!-- Options for habits go here -->
+        <option>{{ mainHabit }}</option>
         <option v-for="habit in habitListArray" :key="habit">
           {{ habit }}
         </option>
@@ -64,6 +65,7 @@ export default {
     return {
       fullName: "",
       userTitle: "",
+      mainHabit: "Meditating",
       displayBadges: [],
       badgesArray: [
         "🌟",
