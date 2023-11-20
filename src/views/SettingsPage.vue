@@ -106,11 +106,15 @@
         </div>
         <div class="setting-option">
           <label for="promotionEmails">Receive Promotion Emails</label>
-          <input
-            id="promotionEmails"
-            type="checkbox"
-            v-model="receivePromotionEmails"
-          />
+          <div class="switch-container">
+            <input
+              id="promotionEmails"
+              type="checkbox"
+              v-model="receivePromotionEmails"
+              class="switch-input"
+            />
+            <label for="promotionEmails" class="switch-label"></label>
+          </div>
         </div>
       </div>
 
