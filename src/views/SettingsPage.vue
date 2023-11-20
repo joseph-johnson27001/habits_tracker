@@ -1,8 +1,8 @@
 <template>
   <div class="settings-page" v-show="!this.$store.state.isLoading">
-    <div class="card">
+    <!-- <div class="card">
       <h1>SETTINGS</h1>
-    </div>
+    </div> -->
     <div class="card">
       <div class="setting-area">
         <h1>Privacy Settings</h1>
