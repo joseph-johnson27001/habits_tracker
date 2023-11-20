@@ -133,7 +133,7 @@
       </div>
 
       <!-- Save Changes -->
-      <div class="setting-area">
+      <div class="setting-area" style="border-bottom: none">
         <h1>Update Information</h1>
         <div class="setting-option">
           <button class="action-button" @click="submitFeedback">
@@ -153,10 +153,11 @@ export default {
       isAutoStatusUpdates: true,
       isHidingHabits: false,
       emailNotifications: "all",
-      pushNotifications: "On",
+      pushNotifications: "on",
       newsletterFrequency: "daily",
       receivePromotionEmails: true,
       userFeedback: "",
+      isPublicProfile: true,
     };
   },
   methods: {
