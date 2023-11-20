@@ -4,28 +4,43 @@
       <h1>SETTINGS</h1>
     </div>
     <div class="card">
-      <!-- Privacy Settings -->
       <div class="setting-area">
         <h1>Privacy Settings</h1>
         <div class="setting-option">
-          <label for="profileVisibility">Profile Visibility: </label>
-          <select id="profileVisibility" v-model="profileVisibility">
-            <option value="public">Public</option>
-            <option value="private">Private</option>
-            <option value="friends">Friends Only</option>
-          </select>
+          <label for="profileVisibility">Profile Visibility:</label>
+          <div class="switch-container">
+            <input
+              id="profileVisibility"
+              type="checkbox"
+              v-model="isPublicProfile"
+              class="switch-input"
+            />
+            <label for="profileVisibility" class="switch-label"></label>
+          </div>
         </div>
         <div class="setting-option">
-          <label for="autoStatusUpdates">Automatic Status Updates: </label>
-          <input
-            id="autoStatusUpdates"
-            type="checkbox"
-            v-model="isAutoStatusUpdates"
-          />
+          <label for="autoStatusUpdates">Automatic Status Updates:</label>
+          <div class="switch-container">
+            <input
+              id="autoStatusUpdates"
+              type="checkbox"
+              v-model="isAutoStatusUpdates"
+              class="switch-input"
+            />
+            <label for="autoStatusUpdates" class="switch-label"></label>
+          </div>
         </div>
         <div class="setting-option">
-          <label for="hideHabits">Hide Habits from Public: </label>
-          <input id="hideHabits" type="checkbox" v-model="isHidingHabits" />
+          <label for="hideHabits">Hide Habits from Public:</label>
+          <div class="switch-container">
+            <input
+              id="hideHabits"
+              type="checkbox"
+              v-model="isHidingHabits"
+              class="switch-input"
+            />
+            <label for="hideHabits" class="switch-label"></label>
+          </div>
         </div>
       </div>
 
@@ -232,5 +247,47 @@ button {
 
 button:hover {
   background-color: #297fb8;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px; /* Adjust the border-radius for a rounder shape */
+  background: #ccc;
+  position: absolute;
+  cursor: pointer;
+}
+
+.switch-input:checked + .switch-label {
+  background: #3498db;
+}
+
+.switch-label:before {
+  content: "";
+  display: block;
+  width: 16px; /* Adjust the width of the switch handle */
+  height: 16px; /* Adjust the height of the switch handle */
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px; /* Adjust the top position of the switch handle */
+  left: 2px; /* Adjust the left position of the switch handle */
+  transition: 0.3s;
+}
+
+.switch-input:checked + .switch-label:before {
+  transform: translateX(16px);
 }
 </style>
