@@ -53,7 +53,9 @@
     <div class="upcoming-events card">
       <div class="heading-area">
         <h1>UPCOMING EVENTS</h1>
-        <i class="fas fa-angle-right view-more-link"></i>
+        <router-link to="/events">
+          <i class="fas fa-angle-right view-more-link"></i>
+        </router-link>
       </div>
       <ul>
         <li v-for="(event, index) in upcomingEvents" :key="index">
