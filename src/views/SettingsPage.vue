@@ -131,6 +131,16 @@
           </button>
         </div>
       </div>
+
+      <!-- Save Changes -->
+      <div class="setting-area">
+        <h1>Update Information</h1>
+        <div class="setting-option">
+          <button class="action-button" @click="submitFeedback">
+            Save Changes
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
