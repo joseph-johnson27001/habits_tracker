@@ -17,7 +17,7 @@
         <i class="far fa-calendar-alt fa-lg" style="margin-left: 2px"></i>
       </router-link>
       <router-link to="/articles" class="sidebar-item">
-        <i class="fas fa-newspaper fa-lg"></i>
+        <i class="fas fa-newspaper fa-lg" style="margin-left: 1px"></i>
       </router-link>
       <router-link to="/store" class="sidebar-item">
         <i class="fas fa-shopping-cart fa-lg"></i>
