@@ -1,33 +1,30 @@
 <template>
   <div class="active-challenge-page">
-    <div class="card">
-      <h1>{{ this.$store.state.activeChallenge }}</h1>
-      <p>{{ challenge.description }}</p>
-      <div class="aims-section">
-        <h1>Aims</h1>
-        <ul>
-          <li v-for="(aim, index) in challenge.aims" :key="index">{{ aim }}</li>
-        </ul>
+    <div>
+      <div class="card">
+        <h1>{{ this.$store.state.activeChallenge }}</h1>
+        <p>{{ challenge.description }}</p>
+        <div class="aims-section">
+          <h1>Aims</h1>
+          <ul>
+            <li v-for="(aim, index) in challenge.aims" :key="index">
+              {{ aim }}
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="progress-section">
-        <h1>Your Progress</h1>
-        <p><strong>Days Completed:</strong> {{ userProgress.daysCompleted }}</p>
-      </div>
-      <div class="participants-section">
-        <h1>Participants</h1>
-        <ul>
-          <li
-            v-for="participant in challenge.participants"
-            :key="participant.id"
-          >
-            {{ participant.name }} - {{ participant.progress }} days completed
-          </li>
-        </ul>
+      <div class="card">
+        <div class="progress-section">
+          <h1>Your Progress</h1>
+          <p>
+            <strong>Days Completed:</strong> {{ userProgress.daysCompleted }}
+          </p>
+        </div>
       </div>
     </div>
-    <div class="card">
-      <div class="rewards-section">
+    <div>
+      <div class="rewards-section card">
         <h1>Rewards</h1>
         <ul>
           <li v-for="badge in challenge.badges" :key="badge.name">
@@ -39,9 +36,20 @@
           {{ userProgress.experiencePoints }}
         </p>
         <p><strong>Title:</strong> {{ userProgress.title }}</p>
+        <h1>Duration</h1>
+        <p>{{ challenge.duration }} days</p>
       </div>
-      <h1>Duration</h1>
-      <p>{{ challenge.duration }} days</p>
+      <div class="participants-section card">
+        <h1>Participants</h1>
+        <ul>
+          <li
+            v-for="participant in challenge.participants"
+            :key="participant.id"
+          >
+            {{ participant.name }} - {{ participant.progress }} days completed
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
