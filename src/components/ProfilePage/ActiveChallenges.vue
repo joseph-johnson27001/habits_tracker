@@ -2,13 +2,13 @@
   <div class="active-challenges-section">
     <h1>ACTIVE CHALLENGES</h1>
     <ul>
-      <li v-for="challenge in activeChallenges" :key="challenge.id">
-        <router-link
-          :to="'/active-challenge/' + challenge.id"
-          class="challenge-link"
-        >
-          {{ challenge.name }}
-        </router-link>
+      <li
+        v-for="challenge in activeChallenges"
+        :key="challenge.id"
+        @click="updateActiveChallenge(challenge)"
+        class="challenge-link"
+      >
+        {{ challenge.name }}
       </li>
     </ul>
   </div>
@@ -31,6 +31,12 @@ export default {
       ],
     };
   },
+  methods: {
+    updateActiveChallenge(challenge) {
+      this.$store.state.activeChallenge = challenge.name;
+      this.$router.push("active-challenge/" + challenge.id);
+    },
+  },
 };
 </script>
 
@@ -42,6 +48,10 @@ export default {
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+li {
+  cursor: pointer;
 }
 
 .challenge-link {
