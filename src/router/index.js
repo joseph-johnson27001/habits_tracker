@@ -15,7 +15,7 @@ import StatisticsPage from "@/views/StatisticsPage.vue";
 import AchievementsPage from "@/views/AchievementsPage.vue";
 import EditProfilePage from "@/views/EditProfilePage.vue";
 import EventsPage from "@/views/EventsPage.vue";
-import ActiveChallengesPage from "@/views/ActiveChallengesPage.vue";
+import ActiveChallengePage from "@/views/ActiveChallengePage.vue";
 import Store from "@/store";
 
 Vue.use(VueRouter);
@@ -39,7 +39,7 @@ const routes = [
   {
     path: "/active-challenge/:id",
     name: "active-challenge",
-    component: ActiveChallengesPage,
+    component: ActiveChallengePage,
     props: true,
   },
 ];
