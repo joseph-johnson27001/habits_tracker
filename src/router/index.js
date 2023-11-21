@@ -15,6 +15,7 @@ import StatisticsPage from "@/views/StatisticsPage.vue";
 import AchievementsPage from "@/views/AchievementsPage.vue";
 import EditProfilePage from "@/views/EditProfilePage.vue";
 import EventsPage from "@/views/EventsPage.vue";
+import ActiveChallengesPage from "@/views/ActiveChallengesPage.vue";
 import Store from "@/store";
 
 Vue.use(VueRouter);
@@ -35,13 +36,18 @@ const routes = [
   { path: "/statistics", component: StatisticsPage },
   { path: "/achievements", component: AchievementsPage },
   { path: "/edit-profile", component: EditProfilePage },
+  {
+    path: "/active-challenge/:id",
+    name: "active-challenge",
+    component: ActiveChallengesPage,
+    props: true,
+  },
 ];
 
 const router = new VueRouter({
   routes,
   Store,
 });
-
 // Below function is for moving back to the top of the page on route change
 
 router.beforeEach((to, from, next) => {

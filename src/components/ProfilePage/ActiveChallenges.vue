@@ -4,7 +4,7 @@
     <ul>
       <li v-for="challenge in activeChallenges" :key="challenge.id">
         <router-link
-          :to="{ name: 'ChallengeDetails', params: { id: challenge.id } }"
+          :to="'/active-challenge/' + challenge.id"
           class="challenge-link"
         >
           {{ challenge.name }}
@@ -22,7 +22,12 @@ export default {
       activeChallenges: [
         { id: 1, name: "30-Day Fitness Challenge" },
         { id: 2, name: "Meditation Marathon" },
-        // Add more active challenges as needed
+        { id: 3, name: "Healthy Eating Challenge" },
+        { id: 4, name: "Yoga Journey Challenge" },
+        { id: 5, name: "Reading Challenge" },
+        { id: 6, name: "Mindful Walking Challenge" },
+        { id: 7, name: "Daily Water Intake Challenge" },
+        { id: 8, name: "Creativity Boost Challenge" },
       ],
     };
   },
@@ -44,7 +49,8 @@ ul {
   border-bottom: 1px solid #ccc;
   padding: 10px 0px;
   margin-bottom: 10px;
-  text-decoration: none !important;
+  text-decoration: none;
+  color: #333;
   transition: background-color 0.3s;
 }
 
