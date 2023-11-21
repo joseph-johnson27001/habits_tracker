@@ -18,6 +18,9 @@
           <StatisticsSection />
         </div>
         <div class="card">
+          <ActiveChallenges />
+        </div>
+        <div class="card">
           <HabitsSection />
         </div>
         <div class="card">
@@ -31,6 +34,7 @@
 <script>
 import ProfileHeader from "@/components/ProfilePage/ProfileHeader.vue";
 import AchievementsSection from "@/components/ProfilePage/AchievementsSection.vue";
+import ActiveChallenges from "@/components/ProfilePage/ActiveChallenges.vue";
 import BadgesSection from "@/components/ProfilePage/BadgesSection.vue";
 import CompletedSection from "@/components/ProfilePage/CompletedAims.vue";
 import StatisticsSection from "@/components/ProfilePage/StatisticsSection.vue";
@@ -47,6 +51,7 @@ export default {
     StatisticsSection,
     HabitsSection,
     RecentNewsSection,
+    ActiveChallenges,
   },
 };
 </script>
