@@ -1,6 +1,11 @@
 <template>
   <div class="active-challenges-section">
-    <h1>ACTIVE CHALLENGES</h1>
+    <div class="heading-area">
+      <h1>ACTIVE CHALLENGES</h1>
+      <router-link to="/challenges" class="nav-link">
+        <i class="fas fa-angle-right view-more-link"></i>
+      </router-link>
+    </div>
     <ul>
       <li
         v-for="challenge in activeChallenges"
