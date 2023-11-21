@@ -8,11 +8,6 @@
       <div class="progress-section">
         <h2>Your Progress</h2>
         <p><strong>Days Completed:</strong> {{ userProgress.daysCompleted }}</p>
-        <p>
-          <strong>Experience Points:</strong>
-          {{ userProgress.experiencePoints }}
-        </p>
-        <p><strong>Title:</strong> {{ userProgress.title }}</p>
       </div>
       <div class="participants-section">
         <h2>Participants</h2>
@@ -28,7 +23,7 @@
     </div>
     <div class="card">
       <div class="aims-section">
-        <h1>Aims:</h1>
+        <h1>Aims</h1>
         <ul>
           <li v-for="(aim, index) in challenge.aims" :key="index">{{ aim }}</li>
         </ul>
@@ -40,6 +35,11 @@
             <span class="badge-icon">{{ badge.icon }}</span> {{ badge.name }}
           </li>
         </ul>
+        <p>
+          <strong>Experience Points:</strong>
+          {{ userProgress.experiencePoints }}
+        </p>
+        <p><strong>Title:</strong> {{ userProgress.title }}</p>
       </div>
     </div>
   </div>
