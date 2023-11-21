@@ -12,7 +12,7 @@ const store = new Vuex.Store({
     selectedUserName: null,
     selectedUserTitle: null,
     selectedUser: false,
-    activeChallenge: "",
+    activeChallenge: "30-Day Fitness Challenge",
   },
 });
 
