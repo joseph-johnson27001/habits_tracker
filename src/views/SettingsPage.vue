@@ -207,7 +207,7 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  margin: 0px 2px;
+  margin: 2px 2px;
 }
 
 .action-button:hover {
@@ -235,6 +235,7 @@ textarea {
   border-radius: 4px;
   font-size: 16px;
   margin-bottom: 15px;
+  resize: none;
 }
 
 input {
@@ -279,7 +280,7 @@ button:hover {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 20px; /* Adjust the border-radius for a rounder shape */
+  border-radius: 20px;
   background: #ccc;
   position: absolute;
   cursor: pointer;
@@ -292,13 +293,13 @@ button:hover {
 .switch-label:before {
   content: "";
   display: block;
-  width: 16px; /* Adjust the width of the switch handle */
-  height: 16px; /* Adjust the height of the switch handle */
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: white;
   position: absolute;
-  top: 2px; /* Adjust the top position of the switch handle */
-  left: 2px; /* Adjust the left position of the switch handle */
+  top: 2px;
+  left: 2px;
   transition: 0.3s;
 }
 
