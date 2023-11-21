@@ -1,16 +1,21 @@
 <template>
   <div class="active-challenge-page">
     <div class="card">
-      <h1>{{ challenge.name }}</h1>
+      <h1>{{ this.$store.state.activeChallenge }}</h1>
       <p>{{ challenge.description }}</p>
-      <p><strong>Duration:</strong> {{ challenge.duration }} days</p>
+      <div class="aims-section">
+        <h1>Aims</h1>
+        <ul>
+          <li v-for="(aim, index) in challenge.aims" :key="index">{{ aim }}</li>
+        </ul>
+      </div>
 
       <div class="progress-section">
-        <h2>Your Progress</h2>
+        <h1>Your Progress</h1>
         <p><strong>Days Completed:</strong> {{ userProgress.daysCompleted }}</p>
       </div>
       <div class="participants-section">
-        <h2>Participants</h2>
+        <h1>Participants</h1>
         <ul>
           <li
             v-for="participant in challenge.participants"
@@ -22,12 +27,6 @@
       </div>
     </div>
     <div class="card">
-      <div class="aims-section">
-        <h1>Aims</h1>
-        <ul>
-          <li v-for="(aim, index) in challenge.aims" :key="index">{{ aim }}</li>
-        </ul>
-      </div>
       <div class="rewards-section">
         <h1>Rewards</h1>
         <ul>
@@ -41,6 +40,8 @@
         </p>
         <p><strong>Title:</strong> {{ userProgress.title }}</p>
       </div>
+      <h1>Duration</h1>
+      <p>{{ challenge.duration }} days</p>
     </div>
   </div>
 </template>
