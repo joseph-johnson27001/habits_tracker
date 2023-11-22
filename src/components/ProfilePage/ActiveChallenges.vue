@@ -13,7 +13,7 @@
         @click="updateActiveChallenge(challenge)"
         class="challenge-link"
       >
-        {{ challenge.name }}
+        <strong>{{ challenge.name }}</strong>
       </li>
     </ul>
   </div>
