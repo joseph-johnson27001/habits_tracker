@@ -19,6 +19,10 @@
           <h1>Your Progress</h1>
           <p>
             <strong>Days Completed:</strong> {{ userProgress.daysCompleted }}
+            <ChallengeLinegraph
+              :challengeData="challengeData"
+              :key="challengeDataKey"
+            />
           </p>
         </div>
       </div>
@@ -55,10 +59,35 @@
 </template>
 
 <script>
+import ChallengeLinegraph from "@/components/ActiveChallenge/Graphs/ChallengeLineGraph.vue";
+
 export default {
   name: "ActiveChallengePage",
+  components: {
+    ChallengeLinegraph,
+  },
   data() {
     return {
+      challengeDataKey: 0,
+      challengeData: {
+        labels: [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun",
+        ],
+        data: [30, 40, 50, 30, 60, 20, 70, 50, 70, 50, 20, 10, 40, 50],
+      },
       challenge: {
         id: 1,
         name: "30-Day Fitness Challenge",
