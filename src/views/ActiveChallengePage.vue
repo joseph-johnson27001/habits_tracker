@@ -126,5 +126,10 @@ export default {
   grid-template-columns: 3fr 1fr;
   gap: 10px;
 }
-/* Add your styling here */
+
+@media (max-width: 992px) {
+  .active-challenge-page {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
