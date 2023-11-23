@@ -18,7 +18,8 @@
         <div class="progress-section">
           <h1>Your Progress</h1>
           <p>
-            <strong>Days Completed:</strong> {{ userProgress.daysCompleted }}
+            <strong>Days Completed:</strong> {{ challengeData.labels.length }}
+            <br />
             <ChallengeLinegraph
               :challengeData="challengeData"
               :key="challengeDataKey"
