@@ -121,6 +121,13 @@ export default {
 </script>
 
 <style scoped>
+ul {
+  padding-left: 0;
+}
+li {
+  list-style-type: none;
+  margin-left: 0;
+}
 .active-challenge-page {
   display: grid;
   grid-template-columns: 3fr 1fr;
