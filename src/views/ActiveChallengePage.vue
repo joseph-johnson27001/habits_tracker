@@ -41,6 +41,8 @@
           {{ userProgress.experiencePoints }}
         </p>
         <p><strong>Title:</strong> {{ userProgress.title }}</p>
+      </div>
+      <div class="card">
         <h1>Duration</h1>
         <p>{{ challenge.duration }} days</p>
       </div>
