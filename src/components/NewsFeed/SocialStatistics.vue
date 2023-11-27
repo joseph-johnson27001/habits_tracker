@@ -12,6 +12,7 @@
         class="challenge-item"
         v-for="(challenge, index) in challenges"
         :key="index"
+        @click="updateActiveChallenge(challenge)"
       >
         <div class="challenge-info">
           <h4>{{ challenge.name }}</h4>
@@ -138,30 +139,35 @@ export default {
           description: "Exercise daily",
           progress: 15,
           target: 30,
+          id: 1,
         },
         {
           name: "Weekly Reading",
           description: "Read a book every week",
           progress: 2,
           target: 4,
+          id: 2,
         },
         {
           name: "Monthly Meditation",
           description: "Meditate regularly",
           progress: 12,
           target: 30,
+          id: 3,
         },
         {
           name: "Weekly Cooking Challenge",
           description: "Try a new recipe every week",
           progress: 2,
           target: 4,
+          id: 4,
         },
         {
           name: "Gaming Marathon",
           description: "Play video games for 24 hours",
           progress: 0,
           target: 1,
+          id: 5,
         },
       ],
     };
@@ -169,6 +175,10 @@ export default {
   methods: {
     viewArticle() {
       this.$router.push("/article");
+    },
+    updateActiveChallenge(challenge) {
+      this.$store.state.activeChallenge = challenge.name;
+      this.$router.push("active-challenge/" + challenge.id);
     },
   },
 };
