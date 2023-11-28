@@ -89,7 +89,7 @@ h1 {
   margin-right: 50px;
   margin-bottom: 10px;
   padding: 20px;
-  max-height: calc(100vh - 115px);
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
 }
 
