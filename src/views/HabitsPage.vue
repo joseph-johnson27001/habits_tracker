@@ -43,6 +43,22 @@
             v-model="habitName"
             class="form-input"
           />
+          <label for="habitName">Value Tracked:</label>
+          <input
+            type="text"
+            id="habitName"
+            v-model="valueTracked"
+            class="form-input"
+          />
+          <label for="habitName"
+            >How Often Do You Want To Track This Habit:</label
+          >
+          <input
+            type="text"
+            id="habitName"
+            v-model="valueOften"
+            class="form-input"
+          />
         </div>
         <!-- Need to add input fields for if the user has already started -->
         <div style="display: flex; justify-content: center; margin-top: 20px">
@@ -58,6 +74,8 @@ export default {
   data() {
     return {
       habitName: "",
+      valueTracked: "",
+      valueOften: "",
       showModal: false,
       habits: [
         {
