@@ -75,6 +75,21 @@ export default {
           message: "attended a live music concert.",
           timestamp: "2 months ago",
         },
+        {
+          icon: "🚴‍♂️",
+          message: "completed a 20-mile bike ride.",
+          timestamp: "2 months ago",
+        },
+        {
+          icon: "🍲",
+          message: "cooked a delicious homemade meal.",
+          timestamp: "3 months ago",
+        },
+        {
+          icon: "✈️",
+          message: "booked tickets for a vacation.",
+          timestamp: "3 months ago",
+        },
       ],
     };
   },
