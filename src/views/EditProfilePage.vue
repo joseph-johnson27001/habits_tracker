@@ -125,7 +125,7 @@ export default {
       this.$store.state.userName = this.fullName;
       this.$store.state.userTitle = this.userTitle;
       // Implement logic to save changes
-      // You can access the updated data from this.firstName, this.lastName, etc.
+      // Can access the updated data from this.firstName, this.lastName, etc.
     },
   },
 };

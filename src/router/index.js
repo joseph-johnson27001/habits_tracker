@@ -15,6 +15,7 @@ import StatisticsPage from "@/views/StatisticsPage.vue";
 import AchievementsPage from "@/views/AchievementsPage.vue";
 import EditProfilePage from "@/views/EditProfilePage.vue";
 import EventsPage from "@/views/EventsPage.vue";
+import EventPage from "@/views/EventPage.vue";
 import ActiveChallengePage from "@/views/ActiveChallengePage.vue";
 import Store from "@/store";
 
@@ -29,6 +30,7 @@ const routes = [
   { path: "/articles", component: ArticlesPage },
   { path: "/article", component: ArticlePage },
   { path: "/events", component: EventsPage },
+  { path: "/event", component: EventPage },
   { path: "/leaderboard", component: LeaderboardPage },
   { path: "/settings", component: SettingsPage },
   { path: "/store", component: StorePage },
