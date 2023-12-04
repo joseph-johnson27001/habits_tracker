@@ -60,10 +60,12 @@
       </div>
       <ul>
         <li v-for="(event, index) in upcomingEvents" :key="index">
-          <div class="event-info">
-            <h4>{{ event.name }}</h4>
-            <p>Date: {{ event.date }}</p>
-          </div>
+          <router-link to="/event" class="event-info">
+            <div>
+              <h4>{{ event.name }}</h4>
+              <p>Date: {{ event.date }}</p>
+            </div>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -237,6 +239,10 @@ export default {
 .upcoming-events li:hover {
   background-color: #f2f2f2;
   transform: translateY(-2px);
+}
+
+.event-info {
+  text-decoration: none;
 }
 
 .event-info h4 {
