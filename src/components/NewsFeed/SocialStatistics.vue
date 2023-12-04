@@ -248,11 +248,12 @@ export default {
 .event-info h4 {
   font-size: 16px;
   margin: 0;
+  color: black !important;
 }
 
 .event-info p {
   font-size: 14px;
-  color: #888;
+  color: #888 !important;
   margin: 5px 0;
 }
 
