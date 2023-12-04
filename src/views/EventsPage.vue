@@ -37,8 +37,9 @@
               <span class="badge-icon">{{ award.icon }}</span> {{ award.name }}
             </li>
           </ul>
-          <button class="join-button">Join Event</button>
-          <!-- This button will be linked to the join functionality in the future -->
+          <router-link to="/event" class="nav-link">
+            <button class="join-button">Join Event</button>
+          </router-link>
         </div>
       </div>
     </div>
