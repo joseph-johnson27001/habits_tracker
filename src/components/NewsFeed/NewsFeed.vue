@@ -35,7 +35,7 @@
             </div>
           </div>
         </div>
-        <BadgeIcons class="badge-icon" />
+        <BadgeIcons :index="index" class="badge-icon" />
       </div>
       <div class="content">{{ item.content }}</div>
       <div class="timestamp-container">
