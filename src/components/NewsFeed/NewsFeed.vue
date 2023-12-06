@@ -16,22 +16,26 @@
       </form>
     </div>
     <div class="feed-item card" v-for="(item, index) in feedItems" :key="index">
-      <div class="user-info">
-        <img
-          :src="item.userImage"
-          alt="User Profile Image"
-          class="user-image"
-        />
-        <div>
-          <router-link to="/profile" style="text-decoration: none">
-            <span class="user-name" @click="viewProfile(item)">{{
-              item.userName
-            }}</span>
-          </router-link>
-          <BadgeIcons />
-          <br />
-          <span class="user-title">{{ item.userTitle }}</span>
+      <div class="heading-area">
+        <div class="user-info">
+          <img
+            :src="item.userImage"
+            alt="User Profile Image"
+            class="user-image"
+          />
+          <div>
+            <div>
+              <router-link to="/profile" style="text-decoration: none">
+                <span class="user-name" @click="viewProfile(item)">{{
+                  item.userName
+                }}</span>
+              </router-link>
+              <br />
+              <span class="user-title">{{ item.userTitle }}</span>
+            </div>
+          </div>
         </div>
+        <BadgeIcons class="badge-icon" />
       </div>
       <div class="content">{{ item.content }}</div>
       <div class="timestamp-container">
@@ -553,6 +557,12 @@ export default {
   transition: color 0.1s;
 }
 
+.heading-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .commenter-name {
   color: #4169e1;
   cursor: pointer;
@@ -629,8 +639,14 @@ export default {
 
 .comment-header {
   display: flex;
+  justify-content: space-between; /* Add this line */
   align-items: center;
   margin-bottom: 5px;
+}
+
+.badge-icon {
+  height: 28px;
+  width: 28px;
 }
 
 .timestamp-container {
