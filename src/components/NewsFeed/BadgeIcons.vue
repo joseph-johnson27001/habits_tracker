@@ -65,6 +65,18 @@ export default {
           iconClass: "feather-cloud-snow",
           path: "M18 13c-.1 0-.19-.01-.29-.02C17.35 11.54 15.62 10 13.5 10c-1.89 0-3.56 1.08-4.5 2.75C7.06 12.9 5.59 12 4 12c-2.21 0-4 1.79-4 4s1.79 4 4 4h14c2.21 0 4-1.79 4-4s-1.79-4-4-4zm0 6H2v2h16v-2z",
         },
+        {
+          iconClass: "feather-umbrella",
+          path: "M12 2v12m0 0l-4-4m4 4l4-4M6 18h12a6 6 0 0 0-12 0z",
+        },
+        {
+          iconClass: "feather-wifi",
+          path: "M12 21a9 9 0 0 0 0-18c-1.51 0-2.95 0.36-4.23 1L12 10l4.23-8A9 9 0 0 0 12 21zm0-16a7 7 0 0 0 0 14c1.22 0 2.41-0.31 3.45-0.88L12 12l-3.45 6.12A7 7 0 0 0 12 5z",
+        },
+        {
+          iconClass: "feather-flag",
+          path: "M4 2l19 9-19 9z",
+        },
       ],
     };
   },
