@@ -16,7 +16,7 @@
       </form>
     </div>
     <div class="feed-item card" v-for="(item, index) in feedItems" :key="index">
-      <div class="heading-area">
+      <div class="user-heading-container">
         <div class="user-info">
           <img
             :src="item.userImage"
@@ -557,10 +557,9 @@ export default {
   transition: color 0.1s;
 }
 
-.heading-area {
+.user-heading-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .commenter-name {
@@ -639,14 +638,15 @@ export default {
 
 .comment-header {
   display: flex;
-  justify-content: space-between; /* Add this line */
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
 
 .badge-icon {
-  height: 28px;
-  width: 28px;
+  height: 24px;
+  width: 24px;
+  margin-top: 5px;
 }
 
 .timestamp-container {
