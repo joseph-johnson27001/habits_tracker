@@ -28,6 +28,7 @@
               item.userName
             }}</span>
           </router-link>
+          <BadgeIcons />
           <br />
           <span class="user-title">{{ item.userTitle }}</span>
         </div>
@@ -87,11 +88,13 @@
 
 <script>
 import SearchBar from "@/components/NewsFeed/SearchBar.vue";
+import BadgeIcons from "@/components/NewsFeed/BadgeIcons.vue";
 
 export default {
   name: "NewsFeed",
   components: {
     SearchBar,
+    BadgeIcons,
   },
   data() {
     return {
