@@ -1,6 +1,7 @@
 <!-- BadgeIcons.vue -->
 <template>
   <div>
+    <!-- NEED TO UPDATE THE SVG DATA ARRAY - DIFFERENT OBJECTS IN THERE WITH NAME VALUES. IF svgData.name === headphones then show that svg, etc -->
     <svg
       v-if="svgData[0]"
       xmlns="http://www.w3.org/2000/svg"
