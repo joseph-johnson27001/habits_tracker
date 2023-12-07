@@ -3,13 +3,13 @@
   <div>
     <svg
       v-if="svgData.length > 0"
-      :width="svgData[index % svgData.length].width"
-      :height="svgData[index % svgData.length].height"
-      :viewBox="svgData[index % svgData.length].viewBox"
-      :enable-background="svgData[index % svgData.length].enableBackground"
-      :xml:space="svgData[index % svgData.length].xmlSpace"
+      :width="svgData[randomIndex].width"
+      :height="svgData[randomIndex].height"
+      :viewBox="svgData[randomIndex].viewBox"
+      :enable-background="svgData[randomIndex].enableBackground"
+      :xml:space="svgData[randomIndex].xmlSpace"
     >
-      <g v-html="svgData[index % svgData.length].content"></g>
+      <g v-html="svgData[randomIndex].content"></g>
     </svg>
   </div>
 </template>
@@ -346,6 +346,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    randomIndex() {
+      return Math.floor(Math.random() * this.svgData.length);
+    },
   },
 };
 </script>
