@@ -2,14 +2,14 @@
 <template>
   <div>
     <svg
-      v-if="svgData[index] && svgData[index].content"
-      :width="svgData[index].width"
-      :height="svgData[index].height"
-      :viewBox="svgData[index].viewBox"
-      :enable-background="svgData[index].enableBackground"
-      :xml:space="svgData[index].xmlSpace"
+      v-if="svgData.length > 0"
+      :width="svgData[index % svgData.length].width"
+      :height="svgData[index % svgData.length].height"
+      :viewBox="svgData[index % svgData.length].viewBox"
+      :enable-background="svgData[index % svgData.length].enableBackground"
+      :xml:space="svgData[index % svgData.length].xmlSpace"
     >
-      <g v-html="svgData[index].content"></g>
+      <g v-html="svgData[index % svgData.length].content"></g>
     </svg>
   </div>
 </template>
