@@ -2,14 +2,14 @@
 <template>
   <div>
     <svg
-      v-if="index === 0 && svgData.length > 0"
-      :width="svgData[0].width"
-      :height="svgData[0].height"
-      :viewBox="svgData[0].viewBox"
-      :enable-background="svgData[0].enableBackground"
-      :xml:space="svgData[0].xmlSpace"
+      v-if="svgData[index] && svgData[index].content"
+      :width="svgData[index].width"
+      :height="svgData[index].height"
+      :viewBox="svgData[index].viewBox"
+      :enable-background="svgData[index].enableBackground"
+      :xml:space="svgData[index].xmlSpace"
     >
-      <g v-html="svgData[0].content"></g>
+      <g v-html="svgData[index].content"></g>
     </svg>
   </div>
 </template>
@@ -74,6 +74,29 @@ export default {
           />
         </g>
           `,
+        },
+        {
+          name: "medal",
+          width: "24px",
+          height: "24px",
+          viewBox: "0 0 64 64",
+          enableBackground: "new 0 0 64 64",
+          xmlSpace: "preserve",
+          content: `
+    <path
+      fill="#FFD700"
+      d="M32,0C14.326,0,0,14.326,0,32s14.326,32,32,32s32-14.326,32-32S49.674,0,32,0z M32,58.008V6   C47.928,6,58,16.072,58,32s-10.072,26-26,26H32z"
+    />
+    <polygon fill="#C9CCD1" points="32,6 32,58 43,45 52,51 52,13  " />
+    <polygon fill="#E6E9ED" points="32,6 32,58 21,45 12,51 12,13  " />
+    <g opacity="0.2">
+      <path
+        d="M32,0C14.326,0,0,14.326,0,32s14.326,32,32,32s32-14.326,32-32S49.674,0,32,0z M32,58.008V6   C47.928,6,58,16.072,58,32s-10.072,26-26,26H32z"
+      />
+      <polygon points="43,45 52,51 52,13  " />
+      <polygon points="21,45 12,51 12,13  " />
+    </g>
+  `,
         },
         // Add other SVG data objects as needed
       ],
