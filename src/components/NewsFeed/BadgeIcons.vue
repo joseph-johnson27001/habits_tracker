@@ -4,11 +4,6 @@
     <!-- NEED TO UPDATE THE SVG DATA ARRAY - DIFFERENT OBJECTS IN THERE WITH NAME VALUES. IF svgData.name === headphones then show that svg, etc -->
     <!-- THE BADGE SHOULD HAVE A NAME WHICH APPEARS ON HOVER (BADGE FOR COMPLETING A MARATHON - EARNED 24/5/2022 ETC) -->
     <svg
-      v-if="svgData[0]"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      version="1.0"
-      id="Layer_1"
       width="24px"
       height="24px"
       viewBox="0 0 64 64"
