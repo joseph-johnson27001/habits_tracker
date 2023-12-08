@@ -41,7 +41,12 @@
               <span class="badge-icon">{{ award.icon }}</span> {{ award.name }}
             </li>
           </ul>
-          <button class="join-button">Join Challenge</button>
+          <button
+            class="join-button"
+            @click="navigateToChallenge(selectedChallenge.id)"
+          >
+            Join Challenge
+          </button>
           <!-- This button will be linked to the join functionality in the future -->
         </div>
       </div>
@@ -172,6 +177,9 @@ export default {
     closeModal() {
       this.showingModal = false;
       this.selectedChallenge = {};
+    },
+    navigateToChallenge(id) {
+      this.$router.push("active-challenge/" + id);
     },
   },
 };
