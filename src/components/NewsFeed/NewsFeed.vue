@@ -205,7 +205,7 @@ export default {
           ],
         },
         {
-          userName: "Michael Green",
+          userName: "Michael Scott",
           userTitle: "Gratitude Practitioner",
           userImage: "",
           timestamp: "7 hours ago",
