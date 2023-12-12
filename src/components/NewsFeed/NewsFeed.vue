@@ -258,7 +258,7 @@ export default {
           ],
         },
         {
-          userName: "Ethan Wilson",
+          userName: "Ethan Williams",
           userTitle: "Nature Explorer",
           userImage: "",
           timestamp: "9 hours ago",
