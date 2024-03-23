@@ -30,7 +30,7 @@
           />
         </svg>
       </router-link>
-      <h4 class="title">HEADING GOES HERE</h4>
+      <h4 class="title">SELFISH</h4>
       <router-link to="/profile" class="nav-link">
         <img
           :src="profileImage"
@@ -67,17 +67,18 @@ export default {
 <style scoped>
 .navigation-bar {
   display: flex;
-  background-color: white;
-  border-bottom: 1px solid #6da9e4;
+  background-color: #4675d2;
+  color: white;
+  border-bottom: 1px solid white;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
-  margin-top: 5px;
+  padding: 10px 0px;
 }
 
 .title {
-  font-weight: 400;
-  margin: 12px;
+  font-weight: bold;
+  margin: 0px;
+  font-size: 1.2rem;
 }
 
 .icon {
@@ -97,6 +98,11 @@ export default {
   height: 35px;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #6da9e4;
+  border: 1px solid #ccc;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
 }
 </style>
