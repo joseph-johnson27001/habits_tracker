@@ -30,7 +30,7 @@
           />
         </svg>
       </router-link>
-      <h4 class="title">SELFISH</h4>
+      <h4 class="title">MY HABIT TRACKER</h4>
       <router-link to="/profile" class="nav-link">
         <img
           :src="profileImage"
