@@ -1,6 +1,6 @@
 <template>
   <div class="social-stats">
-    <!-- Challenges -->
+    <!-- Challenges Section-->
     <div class="challenges card">
       <div class="heading-area">
         <h1>ACTIVE CHALLENGES</h1>
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <!-- Leaderboard -->
+    <!-- Leaderboard Section -->
     <div class="leaderboard card">
       <div class="heading-area">
         <h1>LEADERBOARD</h1>
@@ -50,7 +50,7 @@
       </table>
     </div>
 
-    <!-- Upcoming Events -->
+    <!-- Upcoming Events Section-->
     <div class="upcoming-events card">
       <div class="heading-area">
         <h1>UPCOMING EVENTS</h1>
