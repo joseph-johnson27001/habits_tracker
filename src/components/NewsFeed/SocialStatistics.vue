@@ -70,7 +70,7 @@
       </ul>
     </div>
 
-    <!-- Recent Articles -->
+    <!-- Recent Articles Section -->
     <div class="recent-articles card">
       <div class="heading-area">
         <h1>RECENT ARTICLES</h1>
